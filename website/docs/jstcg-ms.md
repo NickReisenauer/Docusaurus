@@ -1022,7 +1022,7 @@ On the left side of the editor, there are many helpful tabs, including the searc
 
 ![Mastering Development](./jstcg-ms/static/jstcg-ms24.png)
 
-MDN, or Mozilla Developer Network, is kind of the standard documentation of the web. MDN often includes code examples, syntax specifications, browser support, and many other helpful things. Instead of searching on their site, try Googling something like mdn parseint, and see what comes up.
+MDN, or Mozilla Developer Network, is kind of the standard documentation of the web. MDN often includes code examples, syntax specifications, browser support, and many other helpful things. Instead of searching on their site, try Googling something like mdn parseInt, and see what comes up.
 
 ---
 
@@ -1207,3 +1207,18 @@ See these examples:
 ---
 
 ### Using "if" Statements
+
+The `if` and `else` statements are very useful for determining what types of code we should run. Inside of the if statement, we pass something into the parenthesis as our true or false statement and if that argument is true the code inside the parenthesis will run.
+
+```js
+let name = "Nick";
+if (name === "Nick") {
+  console.log("AYY Nick!!");
+} else {
+  console.log("Who????");
+}
+```
+
+---
+
+### Working with "if", "else", and "else-if"
