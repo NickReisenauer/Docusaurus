@@ -1208,7 +1208,7 @@ See these examples:
 
 ### Using "if" Statements
 
-The `if` and `else` statements are very useful for determining what types of code we should run. Inside of the if statement, we pass something into the parenthesis as our true or false statement and if that argument is true the code inside the parenthesis will run.
+The `if` and `else` statements are very useful for determining if we should run a piece of code. Inside of the if statement, we pass something into the parenthesis as our true or false statement and if that argument is true the code inside the parenthesis will run.
 
 ```js
 let name = "Nick";
@@ -1222,3 +1222,9 @@ if (name === "Nick") {
 ---
 
 ### Working with "if", "else", and "else-if"
+
+What if we wanted to have more than 2 cases in our if statements? This is where the `else if` statement comes in. We can put `else if` after our original `if` statement and use as many `else if` statements if we need to give us more options.
+
+---
+
+### Beware When Comparing Objects & Arrays for Equality!

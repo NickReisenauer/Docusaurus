@@ -1324,3 +1324,31 @@ What's happening is that we're assigning a variable to hold all the data from wh
 ---
 
 ### Comparing For and For...Of
+
+There are different situations where we would use for vs for of. If we need the exact index of something in an array and we're comparing that index to another index in another array it would be easier to use a for loop. If we just have one array that we're looping over, a for of loop might be easier.
+
+---
+
+### For...Of with Objects
+
+If we try to use `for...of` to iterate over a regular object, we get an error saying that the object is not iterable.
+
+We have 2 properties available to help us with objects. `Object.keys()` will give us an array containing strings of all the keys in the object. `Object.values()` will give us an array containing all the values.
+
+So how can we loop over objects using these methods?
+
+```js
+let movies = {
+  "Game of Thrones": 9.8,
+  "Mr. Robot": 7.8
+};
+const keys = Object.keys(movies);
+const values = Object.values(movies);
+for (let movie of keys) {
+  console.log(movie + " " + movies[movie]);
+}
+```
+
+---
+
+### For...In Loops
