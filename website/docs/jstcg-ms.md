@@ -1228,3 +1228,17 @@ What if we wanted to have more than 2 cases in our if statements? This is where 
 ---
 
 ### Beware When Comparing Objects & Arrays for Equality!
+
+If we have 2 objects stored in different variables, and if they look exactly the same, we would assume that they are equal to each other. But, even if they look identical, they are not the same value when we compare with == or ===.
+
+---
+
+### The Logical AND and OR Operators
+
+What if we had multiple conditions that we needed to meet for something to be true? Maybe something like name === max, age === 30, and isAdmin. How would we determine if all 3 are met?
+We can use the AND operator `&&`. The AND operator will only be true if both sides of it are true.
+Or, we can use the OR operator `||`. The OR operator will be true if at least one side is true.
+
+---
+
+### Understanding Operator Precedence

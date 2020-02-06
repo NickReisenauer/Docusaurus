@@ -1352,3 +1352,76 @@ for (let movie of keys) {
 ---
 
 ### For...In Loops
+
+The For...In loop loops over the keys in an object.
+This is very similar to the `Object.keys` method we used earlier but this will automatically loop over the keys for us.
+
+```js
+const jeopardyWinnings = {
+  regularPlay: 2522700,
+  watsonChallenge: 300000,
+  tournamentOfChampions: 500000,
+  battleOfTheDecades: 100000
+};
+
+for (let prop in jeopardyWinnings) {
+  console.log(`${prop} = $${jeopardyWinnings[prop]}`);
+}
+```
+
+---
+
+## Writing Reusable Code with Functions
+
+### Our First Function!
+
+Goals:
+
+- Write valid functions
+- Write functions with arguments
+- Compare function expressions & function statements
+- Write a bunch of functions!
+
+Functions are reusable procedures
+
+- Functions allow us to write reusable, modular code
+- We define a "chunk" of code that we can then execute at a later point
+- We use them ALL THE TIME
+
+First we define a function, which is kind of like registering our function. Then we run our function.
+
+The first kind of function we'll define is a function declaration, or a function statement.
+`function funcName(){//code}`
+
+After we write our function, we have to call it for it to run. We can call it by writing the function name with parenthesis. `funcName()`
+
+---
+
+### Dice Roll Function
+
+```js
+function rollDie() {
+  let roll = Math.floor(Math.random() * (7 - 1) + 1);
+  console.log(roll);
+}
+rollDie();
+```
+
+We can also call function within other functions.
+
+```js
+function rollDie() {
+  let roll = Math.floor(Math.random() * (7 - 1) + 1);
+  console.log(roll);
+}
+function throwDice() {
+  for (i = 0; i < 6; i++) {
+    rollDie();
+  }
+}
+throwDice();
+```
+
+---
+
+### Introducing Arguments
