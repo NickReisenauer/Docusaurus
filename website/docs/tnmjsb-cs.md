@@ -1440,3 +1440,37 @@ greet("Nick");
 ---
 
 ### Functions With Multiple Arguments
+
+The correct terminology for functions is as follows.
+When we're writing our function and we give it that temporary variable name, that's called the `parameter`. When we're calling our function and adding data to our parameter, that's called an `argument`.
+
+```js
+function divide(a, b) {
+  console.log(a / b);
+}
+divide(1, 4);
+```
+
+There are a few problems with the following function. The first problem is that if we input a string or a different type than number, we get `NaN` back, and if we don't put in our second argument, we will get undefined.
+
+---
+
+### The Return Statement
+
+Built-in methods return values when we call them. We can store those values.
+
+Right now, our functions are printing out data but not actually storing any data as a return value. All we have to do to get a return value, we just use the `return` keyword.
+
+```js
+function add(x, y) {
+  return x + y;
+}
+const total = add(5, 5);
+// total = 10
+```
+
+`return` can only return one value, even though there can be multiple return statements in a function.
+
+---
+
+### More on Return Values

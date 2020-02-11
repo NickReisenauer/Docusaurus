@@ -1696,3 +1696,32 @@ let posts = [
 ---
 
 ### Objects Quiz
+
+Exercise 1:
+
+```js
+let someObject = {};
+
+// Which of the following are valid:
+someObject._name = "Noah"; // Valid
+someObject.age = 6; // Valid
+let prop = "color"; // Valid
+someObject[prop] = "red"; // Valid
+someObject.123 = true;
+```
+
+Exercise 2:
+
+```js
+let someObject = {
+  friends: [{ name: "Harry" }, { name: "James" }, { name: "Liam" }],
+  color: "baby blue",
+  isEvil: true
+};
+// Write code that retrieves Harry
+someObject.friends[0].name;
+```
+
+---
+
+### Movie Database Exercise
