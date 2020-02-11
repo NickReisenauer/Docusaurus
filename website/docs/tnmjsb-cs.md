@@ -1425,3 +1425,18 @@ throwDice();
 ---
 
 ### Introducing Arguments
+
+Right now, our simple functions accept zero inputs. They behave the same way every time.
+
+If we want to make our functions dynamic and change based on the content we give it, we need to add an argument. We do this by adding a temporary placeholder "variable" of sorts in the parenthesis of the function name.
+
+```js
+function greet(nickname) {
+  console.log(`Hi there ${nickname}!`);
+}
+greet("Nick");
+```
+
+---
+
+### Functions With Multiple Arguments

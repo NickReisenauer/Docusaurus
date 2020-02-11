@@ -1242,3 +1242,9 @@ Or, we can use the OR operator `||`. The OR operator will be true if at least on
 ---
 
 ### Understanding Operator Precedence
+
+[MDN Operator Precedence](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
+
+---
+
+### Beyond true/false: "Truthy" and "Falsy" Values
