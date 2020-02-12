@@ -7,6 +7,15 @@ module.exports = {
   organizationName: "facebook", // Usually your GitHub org/user name.
   projectName: "docusaurus", // Usually your repo name.
   themeConfig: {
+    // docusaurus.config.js
+    themeConfig: {
+      // ....
+      algolia: {
+        apiKey: "api-key",
+        indexName: "index-name",
+        algoliaOptions: {} // Optional, if provided by Algolia
+      }
+    },
     navbar: {
       title: "My Site",
       logo: {

@@ -1725,3 +1725,46 @@ someObject.friends[0].name;
 ---
 
 ### Movie Database Exercise
+
+We were asked to write an array containing objects of movies with properties.
+
+```js
+let movies = [
+  {
+    title: "Unbroken",
+    rating: 5,
+    hasWatched: true
+  },
+  {
+    title: "Frozen 2",
+    rating: 4.6,
+    hasWatched: false
+  },
+  {
+    title: "Red Dawn",
+    rating: 4.2,
+    hasWatched: true
+  },
+  {
+    title: "Uncut Gems",
+    rating: 4.7,
+    hasWatched: false
+  }
+];
+
+for (i = 0; i < movies.length; i++) {
+  if (movies[i].hasWatched === true) {
+    console.log(
+      `You have watched "${movies[i].title}" - ${movies[i].rating} stars`
+    );
+  } else if (movies[i].hasWatched === false) {
+    console.log(
+      `You have not watched "${movies[i].title}" - ${movies[i].rating} stars`
+    );
+  }
+}
+```
+
+---
+
+### Adding Methods to Objects

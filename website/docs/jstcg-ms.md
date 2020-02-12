@@ -1323,3 +1323,9 @@ And that's exactly what JavaScript automatically does when it finds something li
 ---
 
 ### Setting Up a Bigger Example Project (The "Monster Killer")
+
+We're going to be setting up a monster killer game. This game features player health as well as monster health, and things like a regular attack, strong attack, healing, and a display log option.
+
+---
+
+### Adding an "Attack" Function

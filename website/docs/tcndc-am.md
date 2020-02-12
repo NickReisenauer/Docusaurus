@@ -580,3 +580,39 @@ After exporting it and adding it as an event handler, this will return all of th
 ---
 
 ### Reading a Note
+
+In this lesson, you’ll add a new app feature that allows users to read a note.
+
+Array Find method
+
+The find method allows you to find a single item in an array. It’s similar to `filter`, though `find` returns a single element as opposed to an array of elements. `find` will stop its search `through` the array after finding the first match.
+
+The example below shows how find can be used to locate the user whose name is
+George Hudson.
+
+```js
+const users = [
+  {
+    name: "Andrew Mead",
+    age: 27
+  },
+  {
+    name: "George Hudson",
+    age: 72
+  },
+  {
+    name: "Clay Klay",
+    age: 45
+  }
+];
+const user = users.find(user => user.name === "George Hudson");
+console.log(user); // Will print the second object in the array
+```
+
+[MDN Array Find Method](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/find)
+
+---
+
+## Debugging Node.js
+
+### Section Intro

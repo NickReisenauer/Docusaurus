@@ -1474,3 +1474,44 @@ const total = add(5, 5);
 ---
 
 ### More on Return Values
+
+The `return` statement ends function execution and specifies the value ot be returned by that function.
+
+Here's an example of a function that can be greatly shortened by making use of the return keyword.
+
+```js
+function isPurple(color) {
+  if (color.toLowerCase() === "purple") {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+//
+
+function isPurple(color) {
+  return color.toLowerCase() === "purple";
+}
+```
+
+These two functions will do the same thing but one is much shorter. The reason why the second one can be so much shorter is because a return statement will always stop the flow of code once it is reached, and we're asking it to return a value based on some expression so there's only two options anyways.
+
+How would we make a loop that goes over an array of colors that returns true if it contains purple but will return false if a given color is not found after looping through the whole array.
+
+```js
+function containsPurple(array) {
+  for (let color of array) {
+    if (color === "purple" || color === "magenta") {
+      return true;
+    }
+  }
+  return false;
+}
+let array = ["red", "orange", "yellow", "green", "blue", "purple"];
+containsPurple(array);
+```
+
+---
+
+### Function Challenge 1: passwordValidator
