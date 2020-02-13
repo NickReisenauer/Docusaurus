@@ -1329,3 +1329,23 @@ We're going to be setting up a monster killer game. This game features player he
 ---
 
 ### Adding an "Attack" Function
+
+In this module we set up a function that attacks the monster.
+For this, we used some random math and an event listener to run a function when we click on the attack button.
+
+```js
+const ATTACK_VALUE = 10;
+let chosenMaxLife = 100;
+let currentMonsterHealth = chosenMaxLife;
+let currentPlayerHealth = chosenMaxLife;
+adjustHealthBars(chosenMaxLife);
+function attackHandler() {
+  const damage = dealMonsterDamage(ATTACK_VALUE);
+  currentMonsterHealth -= damage;
+}
+attackBtn.addEventListener("click", attackHandler);
+```
+
+---
+
+### Using "if" Statements for Checking the Win-Condition

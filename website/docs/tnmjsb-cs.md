@@ -1515,3 +1515,27 @@ containsPurple(array);
 ---
 
 ### Function Challenge 1: passwordValidator
+
+In this challenge we were told to write a `isValidPassword` function. It will accept 2 arguments: password and username. The password must be at least 8 characters, not contain spaces, and cannot contain the username. If all requirements are met, return true, otherwise return false.
+
+```js
+function isValidPassword(password, username) {
+  if (password.length < 8) {
+    return console.log(false);
+  } else if (password.indexOf(" ") !== -1) {
+    return console.log(false);
+  } else if (password.includes(username) === true) {
+    return console.log(false);
+  }
+  return console.log(true);
+}
+isValidPassword("chicken1234", "1chicken");
+// true
+```
+
+We also could have written this using conditional logic (|| &&) in a if statement.
+We also could have written this using variable that store true or false based on our requirements.
+
+---
+
+### Function Challenge 2: Average

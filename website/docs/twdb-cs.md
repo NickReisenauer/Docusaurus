@@ -1768,3 +1768,12 @@ for (i = 0; i < movies.length; i++) {
 ---
 
 ### Adding Methods to Objects
+
+A method is just a function that is a property inside of an object.
+
+If we write a function as a property on an object, we cannot reference it like we did before. We have to use dot notation to call it, maybe something like this.
+`object.add(5,6)`
+
+---
+
+### The Keyword This

@@ -613,6 +613,13 @@ console.log(user); // Will print the second object in the array
 
 ---
 
-## Debugging Node.js
+## Debugging Node.js (Notes App)
 
 ### Section Intro
+
+What’s worse than getting an error when you run your application? Not knowing how to fix
+it. In this section, you’ll learn how to effectively debug your Node.js apps. You’ll learn how to track down and fix issues so you can get back to the important work.
+
+---
+
+### Debugging Node.js
