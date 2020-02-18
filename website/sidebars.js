@@ -8,7 +8,13 @@
 module.exports = {
   someSidebar: {
     Docusaurus: ["intro", "doc1", "doc2"],
-    Udemy: ["jstcg-ms", "tnmjsb-cs", "twdb-cs", "tcndc-am"],
-    Features: ["mdx"]
+    Udemy: [
+      "udemy/jstcg-ms",
+      "udemy/tnmjsb-cs",
+      "udemy/twdb-cs",
+      "udemy/tcndc-am"
+    ],
+    Features: ["mdx"],
+    Projects: ["projects/docusaurus"]
   }
 };
