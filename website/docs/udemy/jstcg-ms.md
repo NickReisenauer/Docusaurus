@@ -1349,3 +1349,9 @@ attackBtn.addEventListener("click", attackHandler);
 ---
 
 ### Using "if" Statements for Checking the Win-Condition
+
+In this module we set up if statements to check the monster health and the player health and determine if it was going to be a win, a loss, or a draw.
+
+---
+
+### Adding More "if" Statements & A "Strong Attack" Functionality

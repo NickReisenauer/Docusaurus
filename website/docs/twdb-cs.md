@@ -1777,3 +1777,23 @@ If we write a function as a property on an object, we cannot reference it like w
 ---
 
 ### The Keyword This
+
+For now, the keyword `this` refers to the object in which `this` is contained.
+
+```js
+const test = {
+  prop: 42,
+  func: function() {
+    return this.prop;
+  }
+};
+
+console.log(test.func());
+// expected output: 42
+```
+
+---
+
+## DOM Manipulation
+
+### Introduction to the DOM

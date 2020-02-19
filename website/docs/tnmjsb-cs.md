@@ -1539,3 +1539,37 @@ We also could have written this using variable that store true or false based on
 ---
 
 ### Function Challenge 2: Average
+
+In this challenge we were told to write a `average` function to find the average value in an array of numbers. I did this using a regular for loop as well as a messy forEach function.
+
+```js
+let averageArray = [32, 46, 12, 64, 45, 89, 3, 45, 268, 1, 108, 352];
+function average(array) {
+  let sum = 0;
+  let num = array.length;
+  let average = 0;
+  for (let i = 0; i < array.length; i++) {
+    sum += array[i];
+    average = sum / num;
+  }
+  console.log(
+    `There are ${num} numbers in the array.
+     The sum of the array is ${sum}.
+     The average value is ${average}`
+  );
+  return average;
+}
+
+average([32, 46, 12, 23, 45, 89, 3, 45, 268, 7, 1, 108, 352]);
+
+// There are 13 numbers in the array.
+// The sum of the array is 1031.
+// The average value is 79.3076923076923
+// return value = 79.3076923076923
+```
+
+We don't need both the `averageArray` array and an array in the function but either will return the same result.
+
+---
+
+### Function Challenge 3: Pangrams
