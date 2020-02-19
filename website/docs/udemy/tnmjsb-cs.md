@@ -1573,3 +1573,23 @@ We don't need both the `averageArray` array and an array in the function but eit
 ---
 
 ### Function Challenge 3: Pangrams
+
+Write a function called isPangram, which checks to see if a given sentence
+contains every letter of the alphabet. Make sure you ignore string casing!
+
+```js
+function isPangram(sentence) {
+  let lowerCase = sentence.toLowerCase();
+  for (let char of "abcdefghijklmnopqrstuvwxyz") {
+    if (lowerCase.indexOf(char) === -1) {
+      return false;
+    }
+  }
+  return true;
+}
+isPangram("Pack my box with five dozen liquor jugs");
+```
+
+---
+
+### Function Challenge 4: Get Playing Card
