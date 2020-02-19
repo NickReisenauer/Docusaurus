@@ -1,11 +1,11 @@
 module.exports = {
-  title: "My Site",
-  tagline: "The tagline of my site",
-  url: "https://your-docusaurus-test-site.com",
+  title: "Nick's Notes",
+  tagline: "Notes from Udemy courses and notes on personal research",
+  url: "https://docusaurus-bcn4.onrender.com/",
   baseUrl: "/",
   favicon: "img/favicon.ico",
-  organizationName: "facebook", // Usually your GitHub org/user name.
-  projectName: "docusaurus", // Usually your repo name.
+  organizationName: "NickReisenauer", // Usually your GitHub org/user name.
+  projectName: "Docusaurus Notes", // Usually your repo name.
   themeConfig: {
     // docusaurus.config.js
     themeConfig: {
@@ -17,7 +17,7 @@ module.exports = {
       }
     },
     navbar: {
-      title: "My Site",
+      title: "Notes",
       logo: {
         alt: "My Site Logo",
         src: "img/logo.svg"
@@ -26,7 +26,7 @@ module.exports = {
         { to: "docs/intro", label: "Docs", position: "left" },
         { to: "blog", label: "Blog", position: "left" },
         {
-          href: "https://github.com/facebook/docusaurus",
+          href: "https://github.com/NickReisenauer/Docusaurus",
           label: "GitHub",
           position: "right"
         }
@@ -39,22 +39,18 @@ module.exports = {
           title: "Docs",
           items: [
             {
-              label: "Style Guide",
-              to: "docs/doc1"
+              label: "Udemy",
+              to: "/docs/udemy/jstcg-ms"
             },
             {
-              label: "Second Doc",
-              to: "docs/doc2"
+              label: "Projects",
+              to: "/docs/projects/docusaurus"
             }
           ]
         },
         {
           title: "Community",
           items: [
-            {
-              label: "Stack Overflow",
-              href: "https://stackoverflow.com/questions/tagged/docusaurus"
-            },
             {
               label: "Discord",
               href: "https://discordapp.com/invite/docusaurus"
@@ -70,16 +66,16 @@ module.exports = {
             },
             {
               label: "GitHub",
-              href: "https://github.com/facebook/docusaurus"
+              href: "https://github.com/NickReisenauer"
             },
             {
               label: "Twitter",
-              href: "https://twitter.com/docusaurus"
+              href: "https://twitter.com/NickReisenauer_"
             }
           ]
         }
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`
+      copyright: `Copyright © ${new Date().getFullYear()} Nick Reisenauer. Built with Docusaurus.`
     }
   },
   presets: [
