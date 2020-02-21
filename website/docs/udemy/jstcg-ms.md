@@ -27,7 +27,7 @@ Maximilian Schwarzmüller is a freelance web developer who will be teaching this
 > JavaScript is totally independent from Java and has nothing in common with Java!
 
 How do webpages work?
-![Typical Webpage](./jstcg-ms/static/jstcg-ms1.png)
+![Typical Webpage](static/img/jstcg-ms1.png)
 
 JavaScript helps us to make a simple page like this more reactive by skipping the second request / response flow in some circumstances by changing the already loaded page. Then it can do something on the already loaded page instead of requesting a whole new page.
 
@@ -1355,3 +1355,9 @@ In this module we set up if statements to check the monster health and the playe
 ---
 
 ### Adding More "if" Statements & A "Strong Attack" Functionality
+
+We added more `if` statements to our "monster hunter game". Not fully following along.
+
+---
+
+### Time for a "Heal Player" Functionality!

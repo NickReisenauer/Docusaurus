@@ -1797,3 +1797,25 @@ console.log(test.func());
 ## DOM Manipulation
 
 ### Introduction to the DOM
+
+Objectives:
+
+- Define what the DOM is
+- Understand why DOM Manipulation is awesome
+- List a few examples of sites that use JS to manipulate the DOM
+- Understand the SELECT, then MANIPULATE workflow
+
+Why should you care?
+A few examples:
+
+- Games
+- Scrolling Effects
+- Dropdown Menus
+- Form Validations
+- Interactivity
+- Animations
+- Every awesome site ever
+
+---
+
+### Defining the DOM

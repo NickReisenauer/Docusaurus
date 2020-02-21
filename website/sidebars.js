@@ -7,14 +7,13 @@
 
 module.exports = {
   someSidebar: {
-    Docusaurus: ["intro", "doc1", "doc2"],
+    Docusaurus: ["intro"],
     Udemy: [
       "udemy/jstcg-ms",
       "udemy/tnmjsb-cs",
       "udemy/twdb-cs",
       "udemy/tcndc-am"
     ],
-    Features: ["mdx"],
     Projects: ["projects/docusaurus"]
   }
 };

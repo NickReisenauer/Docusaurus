@@ -1593,3 +1593,38 @@ isPangram("Pack my box with five dozen liquor jugs");
 ---
 
 ### Function Challenge 4: Get Playing Card
+
+```js
+function getCard() {
+  let deck = {
+    value: [
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "Jack",
+      "Queen",
+      "King",
+      "Ace"
+    ],
+    suit: ["Clubs", "Spades", "Hearts", "Diamonds"]
+  };
+  let randomValue = Math.floor(Math.random() * 13);
+  let randomSuit = Math.floor(Math.random() * 4);
+  console.log("Hey");
+  return `The card that has been chosen is: ${deck.value[randomValue]} of ${deck.suit[randomSuit]}`;
+  // return { suit: deck.suit[randomSuit], value: deck.value[randomValue] };
+}
+getCard();
+```
+
+---
+
+## An Advanced Look at Functions
+
+### Function Scope
