@@ -1819,3 +1819,15 @@ A few examples:
 ---
 
 ### Defining the DOM
+
+Document Object Model (DOM) is the interface between your JavaScript and HTML + CSS.
+
+It's really a giant object containing all the HTML and other things behind the scenes that make up the webpages we see.
+
+To see this whole object we can type `console.dir(console)`.
+
+![DOM](Add the link)
+
+---
+
+### Select and Manipulate

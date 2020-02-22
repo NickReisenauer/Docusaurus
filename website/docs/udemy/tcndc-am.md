@@ -724,3 +724,17 @@ easier to fix the next one.
 ## Asynchronous Node.js
 
 ### Section Intro: Asynchronous Node.js
+
+If we read an article about what Node.js is, we'll likely see these 4 terms.
+Asynchronous, Non-Blocking, Single-Threaded, and Event Driven.
+What do these terms mean and how do they affect the Node apps we're building?
+We'll figure out how these terms fit into our apps by building a weather app with a frontend and a backend that will handle our frontend requests.
+
+It’s time to connect your application with the outside world. In this section, you’ll explore
+the asynchronous nature of Node.js. You’ll learn how to use asynchronous programming
+to make HTTP API requests to third-party HTTP APIs. This will allow you to pull in data, like
+real-time weather data, into your app.
+
+---
+
+### Asynchronous Basics

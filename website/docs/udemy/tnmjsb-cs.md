@@ -1628,3 +1628,31 @@ getCard();
 ## An Advanced Look at Functions
 
 ### Function Scope
+
+Goals:
+
+- Understand scope
+- Write higher order functions
+- Pass functions as callbacks
+
+Scope:
+Variable "visibility"
+
+- The location where a variable is defined dictates where we have access to that variable.
+
+Function Scope:
+
+```js
+let bird = "mandarin duck";
+function birdWatch() {
+  let bird = "golden pheasant";
+  bird; // golden pheasant
+}
+bird; // mandarin duck
+```
+
+The variable `msg` has been declared in the function scope and is available for anything in the function, but when we try to access it outside of the function it's undefined because it's not available in the global scope.
+
+---
+
+### Block Scope

@@ -27,7 +27,7 @@ Maximilian Schwarzmüller is a freelance web developer who will be teaching this
 > JavaScript is totally independent from Java and has nothing in common with Java!
 
 How do webpages work?
-![Typical Webpage](static/img/jstcg-ms1.png)
+![Typical Webpage](/img/jstcg-ms/jstcg-ms1.png)
 
 JavaScript helps us to make a simple page like this more reactive by skipping the second request / response flow in some circumstances by changing the already loaded page. Then it can do something on the already loaded page instead of requesting a whole new page.
 
@@ -50,7 +50,7 @@ All we need to do is write our JavaScript and add it in a `script` tag in our HT
 We don't have to fully understand what is happening with the JavaScript code right now.
 
 A visual example of JavaScript definitions and what it is.
-![JavaScript](./jstcg-ms/static/jstcg-ms2.png)
+![JavaScript](/img/jstcg-ms/jstcg-ms2.png)
 
 -/-
 
@@ -1361,3 +1361,9 @@ We added more `if` statements to our "monster hunter game". Not fully following 
 ---
 
 ### Time for a "Heal Player" Functionality!
+
+We made it so that the heal functionality doesn't heal for more than our max initial health.
+
+---
+
+### Controlling the Conditional Bonus Life (Without Boolean Operators!)
