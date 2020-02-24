@@ -1831,3 +1831,31 @@ To see this whole object we can type `console.dir(console)`.
 ---
 
 ### Select and Manipulate
+
+First we need to select the element we're going to manipulate.
+Then we can manipulate using built in JS manipulation features.
+
+```js
+let h1 = document.querySelector("h1");
+h1.style.color = "pink";
+```
+
+Another example is to change the background color from white to blue every second.
+
+```js
+let body = document.querySelector("body");
+let isBlue = false;
+
+setInterval(function() {
+  if (isBlue) {
+    body.style.background = "white";
+  } else {
+    body.style.background = "#3498db";
+  }
+  isBlue = !isBlue;
+}, 1000);
+```
+
+---
+
+### DOM Selectors

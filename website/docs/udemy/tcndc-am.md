@@ -738,3 +738,47 @@ real-time weather data, into your app.
 ---
 
 ### Asynchronous Basics
+
+In this lesson, you’ll explore the basics of asynchronous development. You’ll get a preview
+of what asynchronous code looks like and how it’s different from synchronous code.
+
+Async 101
+
+When running asynchronous code, your code won’t always execute in the order you might
+expect. To get started with asynchronous development, let’s use `setTimeout`.
+
+`setTimeout` is a function that allows you to run some code after a specific amount of time
+has passed. `setTimeout` accepts two arguments. The first is a callback function. This
+function will run after the specified amount of time has passed. The second argument is
+the amount of time in milliseconds to wait.
+Here’s an example.
+
+```js
+console.log("Starting");
+// Wait 2 seconds before running the function
+setTimeout(() => {
+  console.log("2 Second Timer");
+}, 2000);
+console.log("Stopping");
+```
+
+Run the script and you’ll see the logs in the following order.
+
+```js
+$ node app.js
+Starting
+Stopping
+2 Second Timer
+```
+
+Notice that “Stopping” prints before “2 Second Timer”. That’s because `setTimeout` is
+asynchronous and non-blocking. The `setTimeout` call doesn’t block Node.js from running
+other code while it’s waiting for the 2 seconds to pass.
+
+This asynchronous and non-blocking nature makes Node.js ideal for backend
+development. Your server can wait for data from a database while also processing an
+incoming HTTP request.
+
+---
+
+### Call Stack, Callback Queue, and Event Loop

@@ -1656,3 +1656,18 @@ The variable `msg` has been declared in the function scope and is available for 
 ---
 
 ### Block Scope
+
+In the case of a block statement, maybe like an if statement, any variables inside of that will be scoped to the block statement.
+
+```js
+if (true) {
+  let animal = "eel";
+}
+console.log(animal);
+```
+
+If we did this same code block using `var`, we would get different results because var is not scoped to the block statement which it is defined in.
+
+---
+
+### Lexical Scope

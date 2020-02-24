@@ -74,7 +74,7 @@ Joining it is of course free and 100% optional.
 
 Say we write our JavaScript code, and we want it to be executed in the browser and have some effect on our webpage. To do this execution we need a JavaScript engine. These JavaScript engines are built into modern web browsers. Chrome's engine is called V8, Firefox's engine is called SpiderMonkey. The job of these engines is to parse our JavaScript code, then on-the-fly compile our code into Machine Code, and then execute the Machine Code. This whole process is done on a single thread. After all this happens then our code is executed and can then interact with the webpage.
 
-![How is JavaScript Executed](./jstcg-ms/static/jstcg-ms3.png)
+![How is JavaScript Executed](/img/jstcg-ms/jstcg-ms3.png)
 
 -/-
 
@@ -92,7 +92,7 @@ Say we write our JavaScript code, and we want it to be executed in the browser a
 
 JavaScript is a Dynamic, Interpreted Programming Language, but it is also a Weakly Typed Programming Language. But what is the difference between these terms?
 
-![Dynamic and Weakly Typed](./jstcg-ms/static/jstcg-ms4.png)
+![Dynamic and Weakly Typed](/img/jstcg-ms/jstcg-ms4.png)
 
 -/-
 
@@ -1367,3 +1367,9 @@ We made it so that the heal functionality doesn't heal for more than our max ini
 ---
 
 ### Controlling the Conditional Bonus Life (Without Boolean Operators!)
+
+We ran an if check to see if we would die && if we have a bonus life. In the case that we have a bonus life it will take away the most recent attack and let us either heal up or attack again.
+
+---
+
+### Adding a "Reset Game" Functionality
