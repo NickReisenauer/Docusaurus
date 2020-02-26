@@ -1373,3 +1373,9 @@ We ran an if check to see if we would die && if we have a bonus life. In the cas
 ---
 
 ### Adding a "Reset Game" Functionality
+
+Inside of all of our if checks, we can put a reset function inside that will run if we have won, lost, or drawn.
+
+---
+
+### Validating User Input

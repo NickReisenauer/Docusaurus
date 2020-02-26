@@ -1664,6 +1664,7 @@ if (true) {
   let animal = "eel";
 }
 console.log(animal);
+// animal is not defined
 ```
 
 If we did this same code block using `var`, we would get different results because var is not scoped to the block statement which it is defined in.
@@ -1671,3 +1672,37 @@ If we did this same code block using `var`, we would get different results becau
 ---
 
 ### Lexical Scope
+
+If we have nested functions and we declare variables in the parent function, we still have access to the variable in the inside function.
+
+```js
+function outer() {
+  let movie = "Tiger";
+  function inner() {
+    console.log(movie.toUpperCase());
+  }
+  inner();
+}
+outer();
+// TIGER
+```
+
+This is a one way relationship, if we define a variable inside the inner function, we cannot access it from the outer function.
+
+```js
+function outer() {
+  console.log(movie);
+  function inner() {
+    let movie = "nicker";
+  }
+  inner();
+}
+outer();
+// movie is not defined
+```
+
+If we have multiple nested functions, and the function needs to look up for a variable that is declared somewhere above it, it will stop at the first one it finds.
+
+---
+
+### Function Expressions
