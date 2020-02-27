@@ -782,3 +782,11 @@ incoming HTTP request.
 ---
 
 ### Call Stack, Callback Queue, and Event Loop
+
+We take a deeeeeeeeep dive into the call stack and Node APIs and the callback queue and event loop and synchronous vs asynchronous code execution.
+
+WATCH AGAIN AFTER FINISHING PROJECT
+
+---
+
+### Making HTTP Requests

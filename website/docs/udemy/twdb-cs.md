@@ -1858,4 +1858,34 @@ setInterval(function() {
 
 ---
 
-### DOM Selectors
+### Important Selector Methods
+
+All of the selectors we need to use to manipulate HTML live inside of the `document` object.
+The 4 main `document` selectors we have are `body`, `head`, `links`, and `URL`.
+
+The document comes with a bunch of methods for selecting elements. We're going to learn about the following 5:
+
+- document.getElementById()
+- document.getElementsByClassName()
+- document.getElementsByTagName()
+- document.querySelector()
+- document.querySelectorAll()
+
+`getElementById()`
+Takes a string argument and returns the one element with a matching ID
+
+`getElementsByClassName()`
+Takes a string argument and returns a list of elements that have a matching class
+
+`getElementsByTagName()`
+Returns a list of all elements of a given tag name, like <li> or <h1>
+
+`querySelector()`
+Returns the first element that matches a given CSS-style selector
+
+`querySelectorAll()`
+Returns a list of elements that match a given CSS-style selector
+
+---
+
+### Selector Exercise

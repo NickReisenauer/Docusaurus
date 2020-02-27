@@ -1706,3 +1706,29 @@ If we have multiple nested functions, and the function needs to look up for a va
 ---
 
 ### Function Expressions
+
+So far, we've been defining our functions using function statements, which is where we do something like `function add(){}`.
+
+But there's another way we can define a function, we can use a function expression.
+
+```js
+const square = function(num) {
+  return num * num;
+};
+square(5); // 25
+```
+
+The reason we can define a function like this, is because functions are technically just objects. This means that we can store them in variables.
+
+The ES6 method of arrow functions often follows this same syntax.
+
+```js
+const square = num => {
+  return num * num;
+};
+square(5); // 25
+```
+
+---
+
+### Higher Order Functions

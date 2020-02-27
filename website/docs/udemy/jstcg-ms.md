@@ -108,7 +108,7 @@ JavaScript is a Dynamic, Interpreted Programming Language, but it is also a Weak
 
 JavaScript can run in more than one environment. The most common use would be in the browser, but it can also run on the server side of things. Each host environment has pros and cons and limitations to what it can do.
 
-![JavaScript Runs in a Host Environment](./jstcg-ms/static/jstcg-ms5.png)
+![JavaScript Runs in a Host Environment](/img/jstcg-ms/jstcg-ms5.png)
 
 -/-
 
@@ -122,7 +122,7 @@ JavaScript can run in more than one environment. The most common use would be in
 
 We can split the course into 3 main modules. The Core Basics, then Building a Strong Foundation, and finally the Advanced Concepts. This course can be done in order, out of order, or it can be used as a reference for someone looking for a specific concept.
 
-![What's in This Course?](./jstcg-ms/static/jstcg-ms6.png)
+![What's in This Course?](/img/jstcg-ms/jstcg-ms6.png)
 
 ---
 
@@ -1379,3 +1379,9 @@ Inside of all of our if checks, we can put a reset function inside that will run
 ---
 
 ### Validating User Input
+
+In a prompt, we let a user input a number which will be the max life value for the monster and for us. To make sure we get a valid number, we use toInteger, and we also use isNaN.
+
+---
+
+### Utilizing Global Constants as Identifiers in Conditional Code
