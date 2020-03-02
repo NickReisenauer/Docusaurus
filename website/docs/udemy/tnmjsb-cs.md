@@ -1732,3 +1732,11 @@ square(5); // 25
 ---
 
 ### Higher Order Functions
+
+Functions are objects. This means that we can hold the references in arrays or objects, and loop over each function, and call they dynamically, etc...
+
+By adding a function to an object, we are creating a `method`.
+
+---
+
+### Functions as Arguments

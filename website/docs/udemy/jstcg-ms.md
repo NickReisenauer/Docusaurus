@@ -130,7 +130,7 @@ We can split the course into 3 main modules. The Core Basics, then Building a St
 
 Watch the videos at your own pace and code along. Try and implement some features before Max does to make sure you have a full understanding of the concepts. Practice what you learned by doing the included quizzes, projects, and practice problems. If you run into an error, try debugging your code or searching for the problem online. If you get stuck and can't find it online, ask and answer questions in the Q+A or on the Discord server.
 
-![How to Get the Most out of This Course](./jstcg-ms/static/jstcg-ms7.png)
+![How to Get the Most out of This Course](/img/jstcg-ms/jstcg-ms7.png)
 
 ---
 
@@ -158,7 +158,7 @@ JavaScript's environment is in the browser, but Java's environment is server-sid
 
 Visualization of JavaScript vs Java.
 
-![JavaScript vs Java](./jstcg-ms/static/jstcg-ms8.png)
+![JavaScript vs Java](/img/jstcg-ms/jstcg-ms8.png)
 
 Now what's the difference between client-side and server-side JavaScript?
 The main differences are the environments and which API's we have access to.
@@ -1385,3 +1385,9 @@ In a prompt, we let a user input a number which will be the max life value for t
 ---
 
 ### Utilizing Global Constants as Identifiers in Conditional Code
+
+If we want to use a string identifier as something like a parameter in a function, it is very easy to mistype the string and crash our function. To avoid having these kind of typos, we can use something like `const STRONG_ATTACK = "ATTACK"` and this will help us with autocomplete.
+
+---
+
+### Adding a Conditional Battle Log

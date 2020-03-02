@@ -783,10 +783,50 @@ incoming HTTP request.
 
 ### Call Stack, Callback Queue, and Event Loop
 
-We take a deeeeeeeeep dive into the call stack and Node APIs and the callback queue and event loop and synchronous vs asynchronous code execution.
+We take a very deep dive into the call stack and Node APIs and the callback queue and event loop and synchronous vs asynchronous code execution.
 
 WATCH AGAIN AFTER FINISHING PROJECT
 
 ---
 
 ### Making HTTP Requests
+
+In this lesson, you’ll learn how to make HTTP requests from Node. This will enable your
+app to communicate with other APIs and servers to do a wide variety of things. Everything
+from fetching real-time weather data to sending text messages to users.
+
+Making HTTP Requests
+
+There are several libraries that make it easy to fire off HTTP requests. My favorite is
+request. You can install it using the command below.
+
+`npm i request@2.88.0`
+
+Before you use the library in your app, you’ll need to figure out which URL you’re trying to
+fetch. To fetch real-time weather data, you’ll need to sign up for a free Dark Sky API
+account. You can do that [here](https://darksky.net/dev).
+
+Below is an example URL that responds with forecast data for San Francisco.
+
+[https://api.darksky.net/forecast/9d1465c6f3bb7a6c71944bdd8548d026/37.8267,-122.4233](https://api.darksky.net/forecast/9d1465c6f3bb7a6c71944bdd8548d026/37.8267,-122.4233)
+
+If you visit that URL in the browser, you’ll see that the response is JSON data. This same
+data can be fetched by our Node.js app using the request library. The example below
+fetches the forecast data and prints the current temperature to the console.
+
+```js
+const request = require('request')
+const url =
+'https://api.darksky.net/forecast/9d1465c6f3bb7a6c71944bdd8548d026/37.8267,-
+122.4233';
+request({ url: url }, (error, response) => {
+ // Parse the response body from JSON string into JavaScript object
+ const data = JSON.parse(response.body)
+ // Will print the current temperature to the console
+ console.log(data.currently.temperature)
+})
+```
+
+---
+
+### Customizing HTTP Requests

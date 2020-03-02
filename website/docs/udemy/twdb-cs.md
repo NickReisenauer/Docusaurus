@@ -1889,3 +1889,19 @@ Returns a list of elements that match a given CSS-style selector
 ---
 
 ### Selector Exercise
+
+Come up with 4 different ways to select the first <p> tag.
+
+```js
+document.getElementById("first");
+document.getElementsByClassName("special")[0];
+document.querySelector("p");
+document.querySelector("p.special");
+document.querySelector(".special");
+```
+
+There are plenty of other ways we can do this.
+
+---
+
+### Manipulating Style
