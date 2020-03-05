@@ -1905,3 +1905,27 @@ There are plenty of other ways we can do this.
 ---
 
 ### Manipulating Style
+
+DOM Manipulation. We're going to cover different ways of:
+
+- Changing an element's style
+- Adding / removing classes
+- Changing the content of a tag
+- Changing attributes (src, href, etc)
+
+The `style` property is one way to manipulate an element's style.
+
+```js
+const button = document.querySelector("#button");
+button.style.border = "10px solid red";
+```
+
+There is a style property available for every CSS element.
+
+Instead of calling `.style` multiple times and clustering our JavaScript code, we can change the class name on the element and write different class options in our CSS.
+
+There are a few useful `classList` properties we can use to change our CSS from our JS. We have `classList.add`, `classList.remove`, and `classList.toggle`, which will either add or remove a class based on whether or not the element already has the class applied. Could be used for a dark mode stylesheet toggle.
+
+---
+
+### Manipulating Text and Content

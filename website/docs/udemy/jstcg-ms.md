@@ -1391,3 +1391,14 @@ If we want to use a string identifier as something like a parameter in a functio
 ---
 
 ### Adding a Conditional Battle Log
+
+We added a `writeToLog()` function that calls event and value as parameters and checks some if statments to see what it should print.
+
+We added an object containing updated values for each option that we could log into the battle log function.
+Then, we can loop through each of them with if statements and once we find the one we need it will update what we need.
+
+Currently, all of our data is dumped into the console in an array so we can have a large number of arrays, say 30, based on what the gampeplay looked like.
+
+---
+
+### Introducing the Ternary Operator
