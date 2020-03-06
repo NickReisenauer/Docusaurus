@@ -1929,3 +1929,31 @@ There are a few useful `classList` properties we can use to change our CSS from 
 ---
 
 ### Manipulating Text and Content
+
+textContent:
+Returns a string of all the text contained in a given element. Can be used to either view the text or manipulate the text inside a property.
+
+```js
+let tag = document.querySelector("#tag");
+tag.textContent; // "Hello World"
+tag.textContent = "Hello Nick";
+```
+
+There is also a method called `innerText` which is very similar, however there are some differences.
+
+`innerText` returns the visible text contained in a node, while `textContent` returns the full text. For example, on the following HTML `<span>Hello <span style="display: none;">World</span></span>`, `innerText` will return 'Hello', while `textContent` will return 'Hello World'.
+Additionally, `innerText` is defined only for `HTMLElement` objects, while `textContent` is defined for all `Node` objects.
+
+Due to these differences, it is probably best to use `textContent` for a more complete text manipulation experience.
+
+innerHTML:
+Similar to textContent, except it returns a string of all the HTML contained in a given element.
+
+```js
+let tag = document.querySelector("#tag");
+tag.innerHTML = "This is a <strong>tag</strong>";
+```
+
+---
+
+### Manipulating Attributes

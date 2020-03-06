@@ -1741,7 +1741,7 @@ By adding a function to an object, we are creating a `method`.
 
 ### Functions as Arguments
 
-Higher Order Functions: Functions that operate on/with other functions. 
+Higher Order Functions: Functions that operate on/with other functions.
 These higher order functions can:
 
 - Accept other functions as arguments
@@ -1759,7 +1759,7 @@ function laugh() {
   console.log("HAHAHA");
 }
 
-callTwice(laugh)
+callTwice(laugh);
 ```
 
 If we have a function that we want to call x number of times we can initiate a for loop that will loop through a given amount of times, say as many times as the number we give it which is a parameter, and call the function through on each loop.
@@ -1767,3 +1767,20 @@ If we have a function that we want to call x number of times we can initiate a f
 ---
 
 ### Functions as Return Values
+
+We can call / define functions as return values.
+
+```js
+function makeBetweenFunc(min, max) {
+  return function(val) {
+    return val >= min && val <= max;
+  };
+}
+const inAgeRange = makeBetweenFunc(18, 100);
+inAgeRange(17); // false
+inAgeRange(68); // true
+```
+
+---
+
+### Callbacks

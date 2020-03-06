@@ -165,7 +165,7 @@ The main differences are the environments and which API's we have access to.
 
 Visualization of client-side vs server-side JavaScript.
 
-![client-side vs server-side](./jstcg-ms/static/jstcg-ms9.png)
+![client-side vs server-side](/img/jstcg-ms/jstcg-ms9.png)
 
 We will mainly be focusing on the browser-side of things in this course... why is that?
 Because it's JavaScript's origin. There are no alternatives to JavaScript in the browser. Node.JS uses the same syntax so we can always learn it later. Finally, it's more fun to learn it when we can see what it's doing and interact with it more visually.
@@ -176,7 +176,7 @@ Because it's JavaScript's origin. There are no alternatives to JavaScript in the
 
 JavaScript was originally introduced as LiveScript, and competed with Microsoft's version for awhile before being submitted to the ECMA International Foundation to start standardization. Microsoft joined the standardization efforts later on and by 2006 we had the ECMAscript numbering.
 
-![JavaScript History](./jstcg-ms/static/jstcg-ms10.png)
+![JavaScript History](/img/jstcg-ms/jstcg-ms10.png)
 
 JavaScript & ECMAScript
 
@@ -1392,13 +1392,19 @@ If we want to use a string identifier as something like a parameter in a functio
 
 ### Adding a Conditional Battle Log
 
-We added a `writeToLog()` function that calls event and value as parameters and checks some if statments to see what it should print.
+We added a `writeToLog()` function that calls event and value as parameters and checks some if statements to see what it should print.
 
 We added an object containing updated values for each option that we could log into the battle log function.
 Then, we can loop through each of them with if statements and once we find the one we need it will update what we need.
 
-Currently, all of our data is dumped into the console in an array so we can have a large number of arrays, say 30, based on what the gampeplay looked like.
+Currently, all of our data is dumped into the console in an array so we can have a large number of arrays, say 30, based on what the gameplay looked like.
 
 ---
 
 ### Introducing the Ternary Operator
+
+The ternary operator is a helpful way to write inline if statements that will save some space and provide a simple return value with 2 options based on the variable we provide.
+
+---
+
+### A Bit of Theory: Statements vs Expressions
