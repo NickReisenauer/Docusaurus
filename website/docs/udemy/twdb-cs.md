@@ -1878,7 +1878,7 @@ Takes a string argument and returns the one element with a matching ID
 Takes a string argument and returns a list of elements that have a matching class
 
 `getElementsByTagName()`
-Returns a list of all elements of a given tag name, like <li> or <h1>
+Returns a list of all elements of a given tag name, like `<li>` or `<h1>`
 
 `querySelector()`
 Returns the first element that matches a given CSS-style selector
