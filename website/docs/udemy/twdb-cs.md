@@ -1890,7 +1890,7 @@ Returns a list of elements that match a given CSS-style selector
 
 ### Selector Exercise
 
-Come up with 4 different ways to select the first <p> tag.
+Come up with 4 different ways to select the first `<p>` tag.
 
 ```js
 document.getElementById("first");
