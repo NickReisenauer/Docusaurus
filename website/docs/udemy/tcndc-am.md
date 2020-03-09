@@ -867,3 +867,26 @@ There’s a link below where you can explore all available options.
 ---
 
 ### An HTTP Request Challenge
+
+Our challenge was to be able to get the latitude and longitude values of a specific location using the Mapbox geolocation API.
+
+I used the `request` npm module for this, but `Axios` is probably easier.
+
+My request looked like this in the end.
+
+```js
+const geoURL =
+  "https://api.mapbox.com/geocoding/v5/mapbox.places/Los%20Angeles.json?access_token=pk.eyJ1Ijoibmlja3JlaXNlbmF1ZXIiLCJhIjoiY2s3a3JqY294MDAxYzNobXUwb2UzYzV6biJ9.YQi9oFC0rW41CTNhzHAFng&limit=1";
+
+request({ url: geoURL, json: true }, (error, response) => {
+  const latitude = response.body.features[0].center[1];
+  const longitude = response.body.features[0].center[0];
+  console.log(
+    `The lat and long of ${response.body.features[0].place_name} is ${longitude} longitude and ${latitude} latitude`
+  );
+});
+```
+
+---
+
+### Handling Errors

@@ -1784,3 +1784,47 @@ inAgeRange(68); // true
 ---
 
 ### Callbacks
+
+A callback function is a function passed into another function as an argument, which is then invoked inside the outer function.
+
+Sometimes, instead of passing in a function that we have already written as a callback function, we could pass in an anonymous function.
+
+```js
+setTimeout(function() {
+  alert("Hello");
+}, 5000);
+```
+
+---
+
+### Hoisting
+
+When we try to run some code that looks like this...
+
+```js
+console.log(animal);
+var animal = "Doggo";
+// Undefined
+```
+
+What JavaScript is actually doing looks more like this...
+
+```js
+var animal;
+console.log(animal);
+animal = "Doggo";
+```
+
+This is because it will "hoist" `var` to the top, but won't bring the values up to the top.
+
+If we tried to do the same thing with `let` that we did with `var`, we would get a `ReferenceError` saying that we cannot access the variable before initialization.
+
+This means that `let` and `const` are not hoisted, meaning they won't be brought up to the top to be accessed.
+
+Functions however, are hoisted. You can define a function and call a function from anywhere in the script. But, if we use a function expression, aka a function stored in a variable, there is no hoisting to be found.
+
+---
+
+## Apply Functions to Collections of Data
+
+### Intro to Array Callback Methods

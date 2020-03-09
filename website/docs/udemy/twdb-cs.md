@@ -1957,3 +1957,16 @@ tag.innerHTML = "This is a <strong>tag</strong>";
 ---
 
 ### Manipulating Attributes
+
+Use `getAttribute()` and `setAttribute()` to read and write attributes like `src` or `href`.
+
+We can change attributes by calling `setAttribute()` and changing whatever attribute we need.
+
+```js
+let img = document.querySelector("img");
+img.setAttribute("src", "newImage.png");
+```
+
+---
+
+### Playing With Google Code Along

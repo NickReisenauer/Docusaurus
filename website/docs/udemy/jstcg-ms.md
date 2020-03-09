@@ -180,7 +180,7 @@ JavaScript was originally introduced as LiveScript, and competed with Microsoft'
 
 JavaScript & ECMAScript
 
-![JavaScript & ECMAScript](./jstcg-ms/static/jstcg-ms11.png)
+![JavaScript & ECMAScript](/img/jstcg-ms/jstcg-ms11.png)
 
 ---
 
@@ -188,7 +188,7 @@ JavaScript & ECMAScript
 
 For our IDE (Integrated Development Environment) and Browser / Dev Tools we will be using Visual Studio Code and Google Chrome / Chrome Dev Tools
 
-![Development Environment](./jstcg-ms/static/jstcg-ms12.png)
+![Development Environment](/img/jstcg-ms/jstcg-ms12.png)
 
 ---
 
@@ -1408,3 +1408,11 @@ The ternary operator is a helpful way to write inline if statements that will sa
 ---
 
 ### A Bit of Theory: Statements vs Expressions
+
+An expression is something that yields a value that you can store in a variable.
+
+A statement is something that can't be used as an argument.
+
+---
+
+### Logical Operator "Tricks" & Shorthands
