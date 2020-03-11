@@ -296,7 +296,7 @@ Variables and Constants are a core concept of most programming languages. A vari
 
 Then we have `const`. `const` is still a data container, but it's different than variables in the fact that you can't reassign the values of `const`. So why would you want to use `const`? What if we had some code that we wanted to reference without having to type it out every time? and then you changed that code? if it was in a `let` you would have to go all over changing things but with `const` it's just one change. You typically want to use `const` as often as possible.
 
-![Variables & Constants](./jstcg-ms/static/jstcg-ms13.png)
+![Variables & Constants](/img/jstcg-ms/jstcg-ms13.png)
 
 ---
 
@@ -304,7 +304,7 @@ Then we have `const`. `const` is still a data container, but it's different than
 
 What's allowed and not allowed in naming our variables?
 
-![Variable Naming](./jstcg-ms/static/jstcg-ms14.png)
+![Variable Naming](/img/jstcg-ms/jstcg-ms14.png)
 
 We can leave our variable uninitialized like this `let currentResult;`.
 If we have a variable like that, it means that the variable is declared, but not initialized.
@@ -1416,3 +1416,13 @@ A statement is something that can't be used as an argument.
 ---
 
 ### Logical Operator "Tricks" & Shorthands
+
+`!!` Boolean Coercion via double NOT operator. This will give us the actual value, because just 1 `!` will return the opposite of whatever we're evaluating.
+
+`||` Default value assignment via OR operator. Only one value needs to be true to return true for the whole OR evaluation.
+
+`&&` Use value if condition is true via AND operator. All sides need to be true for the AND expression to evaluate to true.
+
+---
+
+### Logical Operators - A Quick Summary

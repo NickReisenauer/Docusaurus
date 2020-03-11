@@ -890,3 +890,48 @@ request({ url: geoURL, json: true }, (error, response) => {
 ---
 
 ### Handling Errors
+
+There are plenty of reasons an HTTP request can fail. Maybe your machine doesn’t have
+an internet connection, or maybe the URL is incorrect. Regardless of what goes wrong, in
+this lesson, you’ll learn how to handle errors that occur when making HTTP requests.
+
+Handling Errors
+
+Handling errors is important. It would be nice if we could always provide the user with a
+forecast for their location, but that’s not going to happen. When things fail, you should aim
+to provide users with clear and useful messages in plain English so they know what’s
+going on.
+
+The callback function you pass to `request` expects an `error` and `response` argument to
+be provided. Either `error` or `response` will have a value, never both. If `error` has a value,
+that means things went wrong. In this case, `response` will be `undefined`, as there is no
+response. If `response` has a value, things went well. In this case, `error` will be `undefined`,
+as no error occurred.
+
+The code below handles two different errors. The if statement first checks if error exists. If
+it does, the program prints a message letting the user know it was unable to connect. The
+second error occurs if there’s no match for the given address. In that case, the program
+prints a message instructing the user to try a different search. Lastly, the coordinates are
+printed to the console if neither error occurs.
+
+```js
+const request = require("request");
+const geocodeURL =
+  "https://api.mapbox.com/geocoding/v5/mapbox.places/philadelphia.json?access_token=pk.eyJ1IjoiYW5kcmV3bWVhZDEiLCJhIjoiY2pvOG8ybW90MDFhazNxcnJ4OTYydzJlOSJ9.njY7HvaalLEVhEOIghPTlw&limit=1";
+
+request({ url: geocodeURL, json: true }, (error, response) => {
+  if (error) {
+    console.log("Unable to connect to location services!");
+  } else if (response.body.features.length === 0) {
+    console.log("Unable to find location. Try another search.");
+  } else {
+    const latitude = response.body.features[0].center[0];
+    const longitude = response.body.features[0].center[1];
+    console.log(latitude, longitude);
+  }
+});
+```
+
+---
+
+### The Callback Function

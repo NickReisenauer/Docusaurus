@@ -1970,3 +1970,11 @@ img.setAttribute("src", "newImage.png");
 ---
 
 ### Playing With Google Code Along
+
+If we wanted to do something like grab all the `a` tags, we could grab all of them with something like `querySelectorAll()`, then we can run a for loop and change all of the `a` tags by looping through and assigning a style to each of them.
+
+---
+
+## Advanced DOM Manipulation
+
+### Introduction to Events
