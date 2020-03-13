@@ -1916,3 +1916,44 @@ Use empty parentheses for functions with no parameters.
 ---
 
 ### Arrow Functions: Implicit Returns
+
+Implicit returns allows us to write an arrow function that is even smaller than a typical arrow function. We can use an implicit return in a scenario where we have 1 expression that we want to be returned, we can return that without a return statement.
+
+```js
+// Arrow Function w/ return
+const square = x => {
+  return x * x;
+};
+
+// Arrow Function w/o return
+const square = x => x * x;
+```
+
+---
+
+### Array.find
+
+`Array.find` returns the value of the first element in the array that satisfies the provided testing function.
+
+```js
+let movies = [
+  "The Fantastic Mr. Fox",
+  "Mr. and Mrs. Smith",
+  "Mrs. Doubtfire",
+  "Mr. Deeds"
+];
+
+let movie = movies.find(movie => {
+  return movie.includes("Mrs.");
+});
+// Mr. and Mrs. Smith
+
+let movie2 = movies.find(m => m.indexOf("Mrs") === 0);
+// Mrs. Doubtfire
+```
+
+Instead of simply storing true or false, we can think of `.find()` as more of a testing suite. We pass in some value we want our answer to contain, and if something matches that value and returns true, we get the whole value as opposed to a boolean, which we can then store into a variable.
+
+---
+
+### Filter
