@@ -1878,3 +1878,41 @@ nums.forEach(function(num, index) {
 ---
 
 ### Map
+
+`map` creates a new array with the results of calling a callback on every element in the array.
+
+```js
+const texts = ["rofl", "lol", "omg", "ttyl"];
+const caps = texts.map(function(t) {
+  return t.toUpperCase();
+});
+// texts = ["rofl", "lol", "omg", "ttyl"];
+// caps = ["ROFL", "LOL", "OMG", "TTYL"];
+```
+
+`forEach` is something similar that we've seen to map, it is different however in the fact that `map` will return us a new array containing all the values we mapped over.
+
+---
+
+### Arrow Functions Intro
+
+Arrow functions are a syntactically compact alternative to a regular function expression.
+
+A simple example...
+
+```js
+const square = x => {
+  return x * x;
+};
+
+const sum = (x, y) => {
+  return x + y;
+};
+```
+
+Parentheses are optional if there is only one parameter.
+Use empty parentheses for functions with no parameters.
+
+---
+
+### Arrow Functions: Implicit Returns

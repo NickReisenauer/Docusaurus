@@ -325,7 +325,7 @@ console.log(currentResult);
 ```
 
 Some other operators include...
-![Operators](./jstcg-ms/static/jstcg-ms15.png)
+![Operators](/img/jstcg-ms/jstcg-ms15.png)
 
 We are not limited in the number of operators we can use per line, we can use all of the operators available. JavaScript will follow all the rules of math.
 
@@ -364,7 +364,7 @@ What we see happening in the example code is we're calling a function and replac
 What data types are available for us in JavaScript?
 Some simple data types include numbers and strings.
 
-![Data Types](./jstcg-ms/static/jstcg-ms16.png)
+![Data Types](/img/jstcg-ms/jstcg-ms16.png)
 
 When we place something inside of quotes, it becomes a string. Even if there is math and operators involved it will still be treated as a string.
 We can add strings together using the `+` operator like this.
@@ -1426,3 +1426,64 @@ A statement is something that can't be used as an argument.
 ---
 
 ### Logical Operators - A Quick Summary
+
+As a reference which you can come back to (or print out), here's a quick summary of how logical operators and comparison operators behave in JavaScript:
+
+```js
+const userName = "Max";
+const altName = "";
+console.log(userName === "Max"); // generates and prints a boolean => true
+console.log(userName); // wasn't touched, still is a string => 'Max'
+
+console.log(userName || null); // userName is truthy and therefore returned by || => 'Max'
+console.log(altName || "Max"); // altName is falsy (empty string), hence 'Max' is returned => 'Max'
+console.log(altName || ""); // both altName and '' are falsy but if the first operand is falsy, the second one is always returned => ''
+console.log(altName || null || "Anna"); // altName and null are falsy, 'Anna' is returned => 'Anna'
+
+console.log(userName && "Anna"); // userName is truthy, hence second (!) value is returned => 'Anna'
+console.log(altName && "Anna"); // altName is falsy, hence first value is returned => ''
+console.log(userName && ""); // userName is truthy, hence second value is returned => ''
+```
+
+Always keep in mind: NO operator (neither ===, > etc. nor && or ||) changes the variable you might be using in the comparison. In the above examples, the values stored in userName and altName are NEVER changed.
+
+===, > etc. just generate new boolean values which are used in the comparison. || and && generate NO booleans, they just treat the values before and after them as conditions (which therefore need to yield boolean values and are coerced to booleans if required).
+
+Because of the above-described behaviors, you often use || in JavaScript to assign default/ fallback values to variables/ constants:
+
+```js
+const enteredValue = ""; // let's assume this is set based on some input provided by the user, therefore it might be an empty string
+
+const userName = enteredValue || "PLACEHOLDER"; // will assign 'PLACEHOLDER' if enteredValue is an empty string
+```
+
+---
+
+### Working with the "switch-case" Statement
+
+The switch case is a smaller alternative to the `if` `else if` `else` blocks we write by testing against a single condition.
+
+```js
+switch (variable) {
+  case case1:
+    console.log("true!");
+    break;
+  case case2:
+    console.log("false!");
+    break;
+  default:
+    console.log("Hmm");
+}
+```
+
+What's happening is that we're comparing the switch parameter, `variable`, and seeing if it matches up with the value in `case1` or `case2` and running the code that follows after depending on whether or not it contains the same value.
+
+When we use the `break` keyword, it will stop execution of the other cases once it finds the first one that meets the value.
+
+We also have a `default` case, which is kind of like an `else` case in the fact that it runs if no other value matches the case.
+
+Behind the scenes, a switch case will always use the === comparison.
+
+---
+
+### Introducing Loops

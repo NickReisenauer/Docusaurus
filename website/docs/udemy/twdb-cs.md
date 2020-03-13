@@ -1978,3 +1978,44 @@ If we wanted to do something like grab all the `a` tags, we could grab all of th
 ## Advanced DOM Manipulation
 
 ### Introduction to Events
+
+Events are everywhere:
+
+- Clicking on a button
+- Hovering over a link
+- Dragging and dropping
+- Pressing the Enter key
+
+The Process:
+We select an element and then add an event listener.
+
+- "Listen for a click on this `<button>`"
+- "Listen for a hover event on the `<h1>`"
+- "Listen for a keypress event on text input"
+
+The Syntax:
+To add a listener, we use a method called `addEventListener(type, functionCall)`
+
+```js
+const button = document.querySelector("button");
+button.addEventListener("click", function() {
+  console.log("Someone clicked the button!");
+});
+```
+
+If we want to refer to a specific element that we're interacting with, say inside of an event listener, the keyword `this` refers to the element that was interacted.
+
+Event listeners can be added without anonymous functions, we can simply write our function in the global scope and then pass the name of the function into the callback of the event listener.
+
+---
+
+### Note about Introduction to Events
+
+Hi Everyone!
+If you're wondering why you get an error when trying to use `lis[i]` instead of `this` then check out this quick video that explains the difference between the two.
+
+[arrayVar[i] vs this](https://www.youtube.com/watch?v=mILVrW1GDfI&feature=youtu.be)
+
+---
+
+### Color Toggle Exercise
