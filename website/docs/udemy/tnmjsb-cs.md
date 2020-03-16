@@ -1957,3 +1957,52 @@ Instead of simply storing true or false, we can think of `.find()` as more of a 
 ---
 
 ### Filter
+
+Creates a new array with all elements that pass the test implemented by the provider function.
+
+```js
+const nums = [9, 8, 7, 6, 5, 4, 3, 2, 1];
+const odds = nums.filter(n => {
+  return n % 2 === 1;
+});
+// odds = [9, 7, 5, 3, 1]
+```
+
+---
+
+### Some & Every
+
+`every` tests whether all elements in the array pass the provided function. It returns a boolean value.
+
+```js
+const words = ["dog", "dig", "log", "bag", "wag"];
+
+words.every(word => {
+  return word.length === 3;
+}); // true
+
+words.every(word => word[0] === "d"); // false
+
+words.every(w => {
+  let lastLetter = w[w.length - 1];
+  return lastLetter === "g";
+}); // true
+```
+
+`some` is similar to `every`, but returns true if ANY of the array elements pass the test function.
+
+```js
+const words = ["dog", "jello", "log", "cupcake", "bag", "wag"];
+
+words.some(word => {
+  return word.length === 3;
+}); // true
+
+words.some(word => word[0] === "z"); // false
+
+words.some(w => w.includes("cake")); // true
+```
+
+---
+
+### Revisiting Sort!

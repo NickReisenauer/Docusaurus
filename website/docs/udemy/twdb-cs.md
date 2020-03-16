@@ -2019,3 +2019,17 @@ If you're wondering why you get an error when trying to use `lis[i]` instead of 
 ---
 
 ### Color Toggle Exercise
+
+Toggle the body's background color between white and a color of your choice when a button is clicked.
+
+```js
+const button = document.querySelector("button");
+
+button.addEventListener("click", () => document.body.classList.toggle("dark"));
+```
+
+This will select a button on the page and toggle the classes on the body when the button is clicked.
+
+---
+
+### Score Keeper Project Part 1

@@ -980,3 +980,63 @@ operation. You can see where `callback` is called with the data inside the `geoc
 function.
 
 ### Callback Abstraction
+
+Callback functions can be used to abstract complex asynchronous code into a simple
+reusable function. In this lesson, you’ll learn how to use this pattern to create a reusable
+function for geocoding an address.
+
+Callback Abstraction
+
+Imagine you want to geocode an address from multiple places in your application. You
+have two options. Option one, you can duplicate the code responsible for making the
+request. This includes the call to request along with all the code responsible for handling
+errors. However, this isn’t ideal. Duplicating code makes your application unnecessarily
+complex and difficult to maintain. The solution is to create a single reusable function that
+can be called whenever you need to geocode an address.
+
+You can see an example of this below. The function `geocode` was created to serve as a
+reusable way to geocode an address. It contains all the logic necessary to make the
+request and process the response. `geocode` accepts two arguments. The first is the
+address to geocode. The second is a callback function which will run once the geocoding
+operation is complete.
+
+```js
+const request = require("request");
+
+const geocode = (address, callback) => {
+  const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(
+    address
+  )}.json?access_token=pk.eyJ1Ijoibmlja3JlaXNlbmF1ZXIiLCJhIjoiY2s3a3JqY294MDAxYzNobXUwb2UzYzV6biJ9.YQi9oFC0rW41CTNhzHAFng&limit=1`;
+  request({ url: url, json: true }, (error, response) => {
+    if (error) {
+      callback("Unable to connect to location services", undefined);
+    } else if (response.body.features.length === 0) {
+      callback("Unable to find location. Try another search", undefined);
+    } else {
+      callback(undefined, {
+        latitude: response.body.features[0].center[0],
+        longitude: response.body.features[0].center[1],
+        location: response.body.features[0].place_name
+      });
+    }
+  });
+};
+
+module.exports = geocode;
+```
+
+Now, `geocode` can be called as many times as needed from anywhere in your application.
+The snippet below imports `geocode` and calls the function to get the latitude and longitude
+for Boston.
+
+```js
+const geocode = require("./utils/geocode");
+geocode("Boston", (error, data) => {
+  console.log("Error", error);
+  console.log("Data", data);
+});
+```
+
+---
+
+### Callback Abstraction Challenge

@@ -377,7 +377,7 @@ We can add strings together using the `+` operator like this.
 
 HTML and JavaScript gets executed from top to bottom.
 
-![JavaScript Execution](./jstcg-ms/static/jstcg-ms17.png)
+![JavaScript Execution](/img/jstcg-ms/jstcg-ms16.png)
 
 Using `const` in a script means that we can assign variables to our `const` value and the `const` will never change. In the example below, we assign our `const` to have a value of `0` , then we assign other variables to the value of our `const` but it never changes its value.
 
@@ -465,7 +465,7 @@ console.log(userInput, result);
 
 ### Introducing Functions
 
-![Functions](./jstcg-ms/static/jstcg-ms18.png)
+![Functions](/img/jstcg-ms/jstcg-ms16.png)
 
 Functions are like code-on-demand. We can define a function and pass in some values, then come back later and call the function with our own values passed in.
 
@@ -1487,3 +1487,13 @@ Behind the scenes, a switch case will always use the === comparison.
 ---
 
 ### Introducing Loops
+
+Loops allow us to execute code multiple times. As opposed to calling a function a certain amount of times, loops allow us to have more control over how often we're running this code.
+
+JavaScript has 4 main loops. `for`, `for of`, `for in`, and `while`.
+
+![Loops](/img/jstcg-ms/jstcg-ms26.png)
+
+---
+
+### The "for" Loop
