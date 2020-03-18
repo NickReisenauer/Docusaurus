@@ -2006,3 +2006,20 @@ words.some(w => w.includes("cake")); // true
 ---
 
 ### Revisiting Sort!
+
+Sort Pt. 2
+
+`arr.sort(compareFunc(a,b))`
+
+- If `compareFunc(a,b)` returns less than 0
+  - Sort `a` before `b`
+- If `compareFunc(a,b)` returns 0
+  - Leave `a` and `b` unchanged with respect to each other
+- If `compareFunc(a,b)` returns greater than 0
+  - Sort `b` before `a`
+
+When we sort our array, we are modifying the original array "in place". If we wanted to create a copy of an array and not touch the original, we could add `.slice()` in to make a copy.
+
+---
+
+### Reduce Intro

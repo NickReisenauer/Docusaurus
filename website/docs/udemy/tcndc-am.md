@@ -1040,3 +1040,40 @@ geocode("Boston", (error, data) => {
 ---
 
 ### Callback Abstraction Challenge
+
+Our challenge was to provide a forecast util that will allow us to run a simple function that will fetch the forecast with arguments for lat and long.
+
+```js
+const request = require("request");
+
+const forecast = (latitude, longitude, callback) => {
+  const url = `https://api.darksky.net/forecast/48142fb7162954af695a6d0aeffd9a6e/${latitude},${longitude}?units=us`;
+  request({ url: url, json: true }, (error, response) => {
+    if (error) {
+      callback("Unable to connect to location services", undefined);
+    } else if (response.body.error) {
+      callback("Unable to find location, try another search", undefined);
+    } else {
+      callback(
+        undefined,
+        `It is currently ${response.body.currently.temperature} degrees out. There is a ${response.body.currently.precipProbability}% chance of rain`
+      );
+    }
+  });
+};
+
+module.exports = forecast;
+```
+
+And our function call
+
+```js
+forecast(-75.7088, 44.1545, (error, data) => {
+  console.log("Error", error);
+  console.log("Data", data);
+});
+```
+
+---
+
+### Callback Chaining

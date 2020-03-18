@@ -1497,3 +1497,17 @@ JavaScript has 4 main loops. `for`, `for of`, `for in`, and `while`.
 ---
 
 ### The "for" Loop
+
+The `for` loop is the oldest and most commonly found loop in other programming languages.
+
+```js
+for (let i = 0; i < 10; i++) {
+  console.log(i);
+} // 0 1 2 3 4 5 6 7 8 9
+```
+
+First, we initialize a index variable, usually `i`. Then, we have a condition to tell our for loop to run as long as the condition is true. Finally, we have our increment, or something to make sure we don't run an infinite loop.
+
+---
+
+### The "for of" Loop

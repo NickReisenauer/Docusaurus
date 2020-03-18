@@ -2032,4 +2032,4 @@ This will select a button on the page and toggle the classes on the body when th
 
 ---
 
-### Score Keeper Project Part 1
+### Score Keeper Project
