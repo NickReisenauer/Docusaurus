@@ -1077,3 +1077,44 @@ forecast(-75.7088, 44.1545, (error, data) => {
 ---
 
 ### Callback Chaining
+
+In this lesson, you’ll learn how to run one asynchronous operation only after another
+asynchronous operation is complete. That’ll allow you to use the output from geocoding
+as the input for fetching the weather.
+
+Callback Chaining
+
+When working with async code, you’ll often find out that you need to use the results from
+one async operation as the input for another async operation. This is something we need
+to do in the weather application too. Step one is to geocode the address. Step two is to
+use the coordinates to fetch the weather forecast. You can’t start step two until step one is
+complete.
+
+You can start one operation after another finishes by using callback chaining. You can see
+an example of this in the code below.
+
+```js
+// Other lines hidden for brevity
+geocode(address, (error, data) => {
+  if (error) {
+    return console.log(error);
+  }
+  forecast(data.latitude, data.longitude, (error, forecastData) => {
+    if (error) {
+      return console.log(error);
+    }
+    console.log(data.location);
+    console.log(forecastData);
+  });
+});
+```
+
+First up is the call to `geocode`. The call to `geocode` provides an address and a callback
+function as it did before. It’s the code inside the callback function that looks a bit different.
+The callback `function` calls forecast. This means that `forecast` won’t get called until after
+`geocode` is complete. The latitude and longitude from the geocoding operation is also
+provided as the input for the `forecast` function call.
+
+---
+
+### ES6 Aside: Object Property Shorthand and Destructuring

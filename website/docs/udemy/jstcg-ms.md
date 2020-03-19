@@ -805,7 +805,7 @@ currentResult = currentResult + 1;
 currentResult++;
 ```
 
-![More Operators](./jstcg-ms/static/jstcg-ms19.png)
+![More Operators](/img/jstcg-ms/jstcg-ms19.png)
 
 ---
 
@@ -813,7 +813,7 @@ currentResult++;
 
 In addition to Numbers and Strings, we have a few more core data types. Booleans, Objects, and Arrays are the remaining core data types.
 
-![Data Types](./jstcg-ms/static/jstcg-ms20.png)
+![Data Types](/img/jstcg-ms/jstcg-ms20.png)
 
 ---
 
@@ -1511,3 +1511,17 @@ First, we initialize a index variable, usually `i`. Then, we have a condition to
 ---
 
 ### The "for of" Loop
+
+Instead of using an index loop like `i`, using for of will give you a brand new variable for every object in the array.
+
+```js
+let arrayName = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+for (const element of arrayName) {
+  console.log(element);
+}
+// 1 2 3 4 5 6 7 8 9 10
+```
+
+---
+
+### The "for in" Loop

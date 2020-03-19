@@ -2033,3 +2033,65 @@ This will select a button on the page and toggle the classes on the body when th
 ---
 
 ### Score Keeper Project
+
+```js
+const p1 = document.querySelector("#p1");
+const p2 = document.querySelector("#p2");
+const reset = document.querySelector("#reset");
+const h1 = document.querySelector("h1");
+const p1Display = document.querySelector("#p1Display");
+const p2Display = document.querySelector("#p2Display");
+const input = document.querySelector("input");
+const p = document.querySelector("#pSpan");
+
+let p1Score = 0;
+let p2Score = 0;
+let gameOver = false;
+let winningScore = 5;
+
+p1.addEventListener("click", () => {
+  if (!gameOver) {
+    p1Score++;
+    if (p1Score === winningScore) {
+      p1Display.classList.add("winner");
+      gameOver = true;
+    }
+    p1Display.textContent = p1Score;
+  }
+});
+
+p2.addEventListener("click", () => {
+  if (!gameOver) {
+    p2Score++;
+    if (p2Score === winningScore) {
+      p2Display.classList.add("winner");
+      gameOver = true;
+    }
+    p2Display.textContent = p2Score;
+  }
+});
+
+reset.addEventListener("click", () => {
+  resetFunc();
+});
+
+input.addEventListener("change", () => {
+  p.textContent = input.value;
+  winningScore = Number(input.value);
+  resetFunc();
+});
+
+const resetFunc = () => {
+  p1Score = 0;
+  p2Score = 0;
+  p1Display.textContent = 0;
+  p2Display.textContent = 0;
+  p1Display.classList.remove("winner");
+  p2Display.classList.remove("winner");
+  gameOver = false;
+};
+```
+
+---
+
+### Other Types of Events: Todo List

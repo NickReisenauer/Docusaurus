@@ -2023,3 +2023,29 @@ When we sort our array, we are modifying the original array "in place". If we wa
 ---
 
 ### Reduce Intro
+
+`reduce` executes a reducer function on each element of the array, resulting in a single value.
+
+You can think of it with these examples.
+`reduce` could be used to take an array of 100 numbers and reduce those numbers into one number. The one number being the maximum value if you added them all together.
+
+![Summing an array](/img/tnmjsb-cs/tnmjsb-cs1.png)
+
+We have 2 parameters when using `reduce`.
+The first one is known as accumulator or total, and this first one will store the end result of reduce.
+
+The second one is called currentValue, or val and this represents each individual element as reduce goes through all the options.
+
+What if we wanted to take an array of numbers and return one number which is the result of multiplying every number.
+
+```js
+const nums = [3, 4, 5, 6, 7, 8, 9];
+const total = nums.reduce((total, currentVal) => {
+  return total * currentVal;
+});
+// 181440
+```
+
+---
+
+### Reduce Pt. 2
