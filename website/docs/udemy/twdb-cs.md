@@ -2095,3 +2095,29 @@ const resetFunc = () => {
 ---
 
 ### Other Types of Events: Todo List
+
+We worked with some of the many JavaScript events available to use. The ones we worked with were `mouseover` and `mouseout`.
+
+```js
+let li = document.querySelectorAll("li");
+for (let i = 0; i < li.length; i++) {
+  li[i].addEventListener("mouseover", () => {
+    li[i].classList.add("selected");
+  });
+
+  li[i].addEventListener("mouseout", () => {
+    li[i].classList.remove("selected");
+  });
+  li[i].addEventListener("click", () => {
+    li[i].classList.toggle("done");
+  });
+}
+```
+
+We toggled and added and removed styles based on what the mouse or click listeners were doing.
+
+[MDN Event Reference](https://developer.mozilla.org/en-US/docs/Web/Events)
+
+---
+
+### Counting Events Exercise

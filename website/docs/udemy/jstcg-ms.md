@@ -915,7 +915,7 @@ writeToLog("ADD", initialResult, enteredNumber, currentResult);
 
 ### undefined, null, & NaN
 
-![undefined, null, & NaN](./jstcg-ms/static/jstcg-ms21.png)
+![undefined, null, & NaN](/img/jstcg-ms/jstcg-ms21.png)
 
 ---
 
@@ -946,7 +946,7 @@ The other method is to use `async`, this tells the browser that the script doesn
 
 The best method is to put scripts in the head of our page and to add the `defer` attribute.
 
-![Timeline Summary](./jstcg-ms/static/jstcg-ms22.png)
+![Timeline Summary](/img/jstcg-ms/jstcg-ms22.png)
 
 ---
 
@@ -1525,3 +1525,22 @@ for (const element of arrayName) {
 ---
 
 ### The "for in" Loop
+
+You can have nested loops or nested loops inside of objects.
+
+```js
+let object = {
+  key: "value",
+  otherKey: "other value"
+};
+
+for (const key in object) {
+  console.log(key, object[key]);
+}
+// key  value
+// otherKey  other value
+```
+
+---
+
+### The "while" & "do while" Loops

@@ -2049,3 +2049,29 @@ const total = nums.reduce((total, currentVal) => {
 ---
 
 ### Reduce Pt. 2
+
+What if we had an array of numbers and we wanted to find the largest number and return said number. We could use a reduce function.
+
+```js
+const grades = [87, 64, 96, 92, 88, 99, 73, 70, 64];
+const maxGrade = grades.reduce((max, currentVal) => {
+  if (currentVal > max) return currentVal;
+  return max;
+});
+// 99
+```
+
+An alternative to this would be to use `Math.max()` which takes some numbers and returns the largest number.
+
+One other thing you can do with reduce is define your own starting value at the end of the function.
+
+```js
+[4, 5, 6, 7, 8].reduce((max, current) => {
+  return max + current;
+}, 100);
+// 130
+```
+
+---
+
+### Even More Reduce!
