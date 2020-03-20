@@ -2121,3 +2121,13 @@ We toggled and added and removed styles based on what the mouse or click listene
 ---
 
 ### Counting Events Exercise
+
+```js
+const events = document.querySelectorAll("td > code");
+```
+
+---
+
+## Color Game Project
+
+### Creating the Color Game Pt: 1

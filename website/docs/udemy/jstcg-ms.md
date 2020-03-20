@@ -972,7 +972,7 @@ This module will be focused on finding, fixing, and avoiding errors.
 
 ### Efficient Development & Debugging - An Overview
 
-![Overview](./jstcg-ms/static/jstcg-ms23.png)
+![Overview](/img/jstcg-ms/jstcg-ms23.png)
 
 ---
 
@@ -1020,7 +1020,7 @@ On the left side of the editor, there are many helpful tabs, including the searc
 
 ### Finding Help & Working with MDN
 
-![Mastering Development](./jstcg-ms/static/jstcg-ms24.png)
+![Mastering Development](/img/jstcg-ms/jstcg-ms22.png)
 
 MDN, or Mozilla Developer Network, is kind of the standard documentation of the web. MDN often includes code examples, syntax specifications, browser support, and many other helpful things. Instead of searching on their site, try Googling something like mdn parseInt, and see what comes up.
 
@@ -1544,3 +1544,29 @@ for (const key in object) {
 ---
 
 ### The "while" & "do while" Loops
+
+The while loop can sometimes be used to replace a `for` loop.
+
+```js
+let i = 0;
+while (i < 3) {
+  console.log(i);
+  i++;
+}
+// 0 1 2
+```
+
+If we want the code to run before we check whether the condition is true or false, we can use a `do while` loop.
+
+```js
+let i = 0;
+do {
+  console.log(i);
+  i++;
+} while (i < 5);
+// 0 1 2 3 4
+```
+
+---
+
+### Quiz 9: Loops - Basics

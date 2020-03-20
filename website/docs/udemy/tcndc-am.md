@@ -1207,3 +1207,9 @@ transaction("order", product);
 ---
 
 ### Destructuring and Property SHorthand Challenge
+
+We did some object destructuring. COME BACK AND REWATCH
+
+---
+
+### Bonus: HTTP Requests Without a Library

@@ -2075,3 +2075,31 @@ One other thing you can do with reduce is define your own starting value at the 
 ---
 
 ### Even More Reduce!
+
+What if we wanted to count the number of "y" or "n" in an array so that we could tally votes, we could use reduce to put the count of both into an object.
+
+```js
+const votes = ["y", "y", "n", "y", "n", "n", "y", "y"];
+
+const results = votes.reduce((tally, val) => {
+  if (tally[val]) {
+    tally[val]++;
+  } else {
+    tally[val] = 1;
+  }
+  return tally;
+}, {});
+// { n: 3, y: 5 }
+```
+
+---
+
+## A Few Miscellaneous JavaScript Features
+
+### New JavaScript Features Intro
+
+Goals:
+
+- Work with rest & spread
+- Add default function parameters
+- Understand destructuring
