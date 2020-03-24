@@ -1569,4 +1569,50 @@ do {
 
 ---
 
-### Quiz 9: Loops - Basics
+### Assignment 3: Control Structures
+
+We were tasked with using some different for loops and some different logical operators.
+
+```js
+const randomNumber = Math.random();
+if (randomNumber >= 0.7) {
+  alert(`Greater or equal than 0.7`);
+}
+
+const numbers = [1, 2, 3, 4, 5, 6];
+
+// for loop
+for (let i = 0; i < numbers.length; i++) {
+  console.log(numbers[i]);
+}
+
+// for of
+for (const num of numbers) {
+  console.log(num);
+}
+
+// while loop
+let counter = 0;
+while (counter < numbers.length) {
+  console.log(numbers[counter]);
+  counter++;
+}
+
+// for loop backwards
+for (let i = numbers.length - 1; i >= 0; i--) {
+  console.log(numbers[i]);
+}
+
+const randomNumber2 = Math.random();
+if (
+  (randomNumber > 0.7 && randomNumber2 > 0.7) ||
+  randomNumber <= 0.2 ||
+  randomNumber2 <= 0.2
+) {
+  alert(`Greater than 0.7`);
+}
+```
+
+---
+
+### Controlling Loops with "break"

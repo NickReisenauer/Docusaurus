@@ -2103,3 +2103,25 @@ Goals:
 - Work with rest & spread
 - Add default function parameters
 - Understand destructuring
+
+---
+
+### Default Parameters
+
+Say we had a function that takes in 2 arguments and returns the value of them added together or something. If we leave off a parameter when we're calling the function, we often times get undefined. A solution to this is to wrap the argument in an if loop saying, If this is not equal to undefined, then execute the function. But, there's a shorter way.
+
+```js
+// Default params, the new way
+const multiply = (a, b = 1) => a * b;
+multiply(5);
+// 5
+multiply(5, 5);
+// 25
+```
+
+The default parameters need to come at the end of the argument list.
+You also can't access a default parameter that is at the end without first filling in the parameters before said default.
+
+---
+
+### Spread for Function Calls

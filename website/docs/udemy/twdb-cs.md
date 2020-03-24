@@ -2131,3 +2131,9 @@ const events = document.querySelectorAll("td > code");
 ## Color Game Project
 
 ### Creating the Color Game Pt: 1
+
+We're going to be creating a color guessing game. How it works is there are 6 random colors when we load up the page, and one of the colors is listed at the top. Our job is to pick which color is the one that is listed at the top.
+
+---
+
+### Creating the Color Game Pt: 2

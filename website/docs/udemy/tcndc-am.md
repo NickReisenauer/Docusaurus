@@ -1213,3 +1213,51 @@ We did some object destructuring. COME BACK AND REWATCH
 ---
 
 ### Bonus: HTTP Requests Without a Library
+
+While the request library is great, it’s not necessary if you want to make HTTP requests
+from Node. In this bonus lesson, you’ll learn how to make an HTTP request without
+`request`.
+
+The HTTPS Module
+
+Node.js provides two core modules for making HTTP requests. The `http` module can be
+used to make `http` requests and the `https` module can be used to make `https` requests.
+One great feature about `request` is that it provides a single module that can make both
+`http` and `https` requests.
+
+The code below uses the https module to fetch the forecast from the Dark Sky API. Notice
+there’s a lot more required to get things working. Separate callbacks are required for
+incoming chunks of data, the end of the response, and the error for the request. This
+means you’ll likely recreate your own function similar to request to make your life easier.
+It’s best to stick with a tested and popular library like `request`.
+
+```js
+const https = require("https");
+const url =
+  "https://api.darksky.net/forecast/9d1465c6f3bb7a6c71944bdd8548d026/40,-75";
+const request = https.request(url, response => {
+  let data = "";
+  response.on("data", chunk => {
+    data = data + chunk.toString();
+  });
+  response.on("end", () => {
+    const body = JSON.parse(data);
+    console.log(body);
+  });
+});
+request.on("error", error => {
+  console.log("An error", error);
+});
+request.end();
+```
+
+[Node.js http documentation](https://nodejs.org/dist/latest-v11.x/docs/api/http.html)
+[Node.js https documentation](https://nodejs.org/dist/latest-v11.x/docs/api/https.html)
+
+---
+
+## Web Servers
+
+<!-- markdownlint-disable MD024 -->
+
+### Section Intro
