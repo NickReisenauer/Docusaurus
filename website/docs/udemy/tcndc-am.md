@@ -1261,3 +1261,66 @@ request.end();
 <!-- markdownlint-disable MD024 -->
 
 ### Section Intro
+
+We'll be looking into express, as it allows us to easily create a website and let users interact with what we've made.
+
+Node.js is commonly used as a web server to serve up websites, JSON, and more. In this
+section, you’ll be creating your first Node server with Express. This will allow users to
+interact with your application by visiting a URL in the browser.
+
+---
+
+### Hello Express!
+
+Serving up websites and JSON data is easy with Express. In this lesson, you’ll learn how to
+create your first web server with Express. Once the server is up and running, users will be
+able to interact with your application via the browser.
+
+To get started, add Express to your project. `npm i express`.
+
+Next, you can require express. You get access to a single function you can call to create a
+new Express application.
+
+```js
+const express = require("express");
+const app = express();
+```
+
+Now, `app` can be used to set up the server. Let’s start by showing a message when
+someone visits the home page at `localhost:3000` and the weather page at
+`localhost:3000/weather`.
+
+```js
+app.get("", (req, res) => {
+  res.send("Hello express!");
+});
+app.get("/weather", (req, res) => {
+  res.send("Your weather");
+});
+```
+
+The code above uses `app.get` to set up a handler for an HTTP GET request. The first
+argument is the path to set up the handler for. The second argument is the function to run
+when that path is visited. Calling `res.send` in the route handler allows you to send back a
+message as the response. This will get shown in the browser.
+
+The last thing to do is start the server. This is done by calling `app.listen` with the port you
+want to listen on.
+
+This can be done using `app.listen` as shown below.
+
+```js
+app.listen(3000, () => {
+  console.log("Server is up on port 3000.");
+});
+```
+
+If you run the app, you’ll see the message printing letting you know that the server is
+running. This process will stay running until you shut it down. You can always use `ctrl + c` to terminate the process. Visit `localhost:3000` or `localhost:3000/weather` to view the
+messages!
+
+[Express](https://expressjs.com)
+
+---
+
+### Serving up HTML and JSON

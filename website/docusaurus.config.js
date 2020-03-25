@@ -1,6 +1,6 @@
 module.exports = {
   title: "Nick's Notes",
-  tagline: "Notes from Udemy courses and notes on personal research",
+  tagline: "Mostly just notes from my Udemy courses",
   url: "https://docusaurus-bcn4.onrender.com/",
   baseUrl: "/",
   favicon: "img/favicon.ico",

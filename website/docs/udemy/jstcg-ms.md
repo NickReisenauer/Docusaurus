@@ -1047,7 +1047,7 @@ Instead of using full sentences, try using keywords.
 
 ### Debugging JavaScript - An Overview
 
-![Debugging](./jstcg-ms/static/jstcg-ms)
+![Debugging](https://raw.githubusercontent.com/NickReisenauer/Notes/master/jstcg-ms/static/jstcg-ms25.png?token=AJF3OCJGH72VHWZ526TP5XS6PKWEC)
 
 ---
 
@@ -1616,3 +1616,21 @@ if (
 ---
 
 ### Controlling Loops with "break"
+
+`break` allows us to break out of a function execution after one or more executions of a loop.
+
+```js
+let i = 0;
+
+while (i < 6) {
+  if (i === 3) {
+    break;
+  }
+  i = i + 1;
+}
+// i = 3
+```
+
+---
+
+### Controlling Iterations with "continue"

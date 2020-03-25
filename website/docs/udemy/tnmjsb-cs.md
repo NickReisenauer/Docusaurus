@@ -2125,3 +2125,42 @@ You also can't access a default parameter that is at the end without first filli
 ---
 
 ### Spread for Function Calls
+
+Spread syntax allows an iterable such as an array to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected, or an object expression to be expanded in places where zero or more key-value pairs (for object literals) are expected.
+
+The first example of `spread` that we'll see is spread for function calls. This expands an iterable (array, string, etc.) into a list of arguments.
+
+```js
+const nums = [9, 3, 2, 8];
+Math.max(nums); // NaN
+// Use spread!
+Math.max(...nums); // 67
+// Same as calling:
+// Math.max(9,3,2,8)
+```
+
+Instead of passing the whole array as an argument into the function, by using spread, we take each individual element inside and pass it in as its own argument.
+
+---
+
+### Spread in Array Literals
+
+Using spread in an array literal creates a new array using an existing array, and spreads the elements from one array into a new array.
+
+```js
+const nums1 = [1, 2, 3];
+const nums2 = [4, 5, 6];
+
+[...nums1, ...nums2];
+// [1, 2, 3, 4, 5, 6]
+
+["a", "b", ...nums2];
+// ["a", "b", 4, 5, 6]
+
+[..."abcdefg"];
+// ["a", "b", "c", "d", "e", "f", "g"]
+```
+
+---
+
+### Spread in Object Literals

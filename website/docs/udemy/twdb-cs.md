@@ -2137,3 +2137,9 @@ We're going to be creating a color guessing game. How it works is there are 6 ra
 ---
 
 ### Creating the Color Game Pt: 2
+
+We set up a grid that has 6 squares and added individual styling to them and then set up an event listener that compares the color that we clicked on to the color that is chosen and if they are the same it will alert us saying correct.
+
+---
+
+### Creating the Color Game Pt: 3
