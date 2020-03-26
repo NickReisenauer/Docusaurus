@@ -1354,3 +1354,46 @@ app.get("/weather", (req, res) => {
 ---
 
 ### Serving up Static Assets
+
+Express can serve up all the assets needed for your website. This includes HTML, CSS,
+JavaScript, images, and more. In this lesson, you’ll learn how to serve up an entire
+directory with Express.
+
+Serving up a Static Directory
+
+A modern website is more than just an HTML file. It’s styles, scripts, images, and fonts.
+Everything needs to be exposed via the web server so the browser can load it in. With
+Express, it’s easy to serve up an entire directory without needing to manually serve up
+each asset. All Express needs is the path to the directory it should serve.
+
+The example below uses Nodes’ path module to generate the absolute path. The call to
+`path.join` allows you to manipulate a path by providing individual path segments. It starts
+with `__dirname` which is the directory path for the current script. From there, the second
+segment moves out of the `src` folder and into the `public` directory.
+
+The path is then provided to `express.static` as shown below.
+
+```js
+const path = require("path");
+const express = require("express");
+const app = express();
+const publicDirectoryPath = path.join(__dirname, "../public");
+app.use(express.static(publicDirectoryPath));
+app.get("/weather", (req, res) => {
+  res.send({
+    forecast: "It is snowing",
+    location: "Philadelphia"
+  });
+});
+app.listen(3000, () => {
+  console.log("Server is up on port 3000.");
+});
+```
+
+Start the server, and the browser will be able to access all assets in the public directory.
+
+[Node.js path Docs](https://nodejs.org/dist/latest-v11.x/docs/api/path.html)
+
+---
+
+### Serving up CSS, JS, Images, and More

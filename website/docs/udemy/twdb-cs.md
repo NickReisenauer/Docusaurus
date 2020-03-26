@@ -2149,3 +2149,18 @@ This episode, we set up a function that will loop over the array and pick a rand
 ---
 
 ### Creating the Color Game Pt: 4
+
+In this video, we added a feature that will randomly pick a color based on RGB color standards for us.
+
+```js
+function randomColor() {
+  let r = Math.floor(Math.random() * 256);
+  let g = Math.floor(Math.random() * 256);
+  let b = Math.floor(Math.random() * 256);
+  return `rgb(${r}, ${g}, ${b})`;
+}
+```
+
+---
+
+### Creating the Color Game Pt: 5

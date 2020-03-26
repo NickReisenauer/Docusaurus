@@ -1659,3 +1659,26 @@ Just be careful as to not create an infinite loop.
 ---
 
 ### Error Handling with "try-catch" - An Introduction
+
+Some errors are beyond our control as a developer and such can't be avoided.
+
+Some examples are if a user inputs the wrong type of information in a field, or a network error or a server being offline, etc...
+
+The best thing is to throw and catch errors to fail gracefully or recover if possible.
+We can do this with `try` and `catch`.
+
+---
+
+### Throwing Custom Errors
+
+We can add a throw statement that looks something like this.
+
+```js
+throw { message: "Error cannot do this right now" };
+```
+
+This creates an error message in the console and it stops our script execution.
+
+---
+
+### Working with "try-catch" to Catch & Handle Errors

@@ -2216,3 +2216,44 @@ sumAll(8, 4, 3, 2);
 ---
 
 ### Rest Parameters (new!)
+
+Rest params collects all remaining arguments into an actual array.
+
+```js
+function sum(...nums) {
+  console.log(nums);
+}
+sum(4, 5, 6, 7);
+// [4, 5, 6, 7] // An actual array!
+```
+
+When we define it as collecting all "Remaining Arguments", that means all the arguments that don't match with a parameter. So we wouldn't have multiple rest statements because it claims everything besides pre-defined arguments.
+
+---
+
+### Destructuring Arrays
+
+Destructuring is a short, clean syntax to "unpack":
+
+- Values from arrays
+- Properties from objects
+  Into distinct variables.
+
+```js
+const raceResults = ["Eluid Kipchoge", "Feyisa Lelisa", "Galen Rupp"];
+
+const [gold, silver, bronze] = raceResults;
+gold; // "Eluid Kipchoge"
+silver; // "Feyisa Lelisa"
+bronze; // "Galen Rupp"
+
+const [fastest, ...everyoneElse] = raceResults;
+fastest; // "Eluid Kipchoge"
+everyoneElse; // ["Feyisa Lelisa", "Galen Rupp"]
+```
+
+We can add extra commas to skip indexes.
+
+---
+
+### Destructuring Objects
