@@ -1634,3 +1634,28 @@ while (i < 6) {
 ---
 
 ### Controlling Iterations with "continue"
+
+Using continue instead of break will simply skip the loop iteration on which it was called.
+
+```js
+for (let i = 0; i < 5; i++) {
+  if (i === 3) {
+    continue;
+  }
+  console.log(i);
+}
+// 0, 1, 2, 4
+```
+
+---
+
+### More Control with Labeled Statements
+
+Labeled statements allow us to give a kind of name to nested loops.
+The syntax is like `nameOfLoop: for()`. Then, when we want to either break or continue a specific loop, we can use `break/continue nameOfLoop`.
+
+Just be careful as to not create an infinite loop.
+
+---
+
+### Error Handling with "try-catch" - An Introduction

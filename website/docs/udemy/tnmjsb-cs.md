@@ -2164,3 +2164,55 @@ const nums2 = [4, 5, 6];
 ---
 
 ### Spread in Object Literals
+
+Spread in object literals copies properties from one object into another object literal.
+
+```js
+const feline = { legs: 4, family: "Felidae" };
+const canine = { family: "Caninae", furry: true };
+
+const dog = { ...canine, isPet: true };
+// { family: "Caninae", furry: true, isPet: true };
+
+const lion = { ...feline, genus: "Panthera" };
+// { legs: 4, family: "Felidae", genus: "Panthera" }
+```
+
+If we have a key in something that we're spreading and we have the same key defined again in our object declaration, the most recent one will be the one that is displayed, so it can overwrite whatever is in the spread.
+
+If we try to spread an object literal into an array literal, we would get an uncaught reference error. We have to spread object into objects and etc...
+
+---
+
+### The Arguments Object (not new)
+
+`rest`. It looks like spread, but it's not!
+
+What if we wanted to support as many parameters as we wanted without hard coding them in?
+
+We have access to an arguments object that lets us do this.
+
+The arguments object
+
+- Available inside every function
+- It's an array-like object
+  - Has a length property
+  - Does not have array methods like push/pop
+- Contains all the arguments passed to the function
+- Not available inside of arrow functions!
+
+```js
+function sumAll() {
+  let total = 0;
+  for (let i = 0; i < arguments.length; i++) {
+    total += arguments[i];
+  }
+  return total;
+}
+sumAll(8, 4, 3, 2);
+// 17
+```
+
+---
+
+### Rest Parameters (new!)

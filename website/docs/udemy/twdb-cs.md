@@ -2143,3 +2143,9 @@ We set up a grid that has 6 squares and added individual styling to them and the
 ---
 
 ### Creating the Color Game Pt: 3
+
+This episode, we set up a function that will loop over the array and pick a random element using a random index generated from using `Math.random` and `Math.floor`.
+
+---
+
+### Creating the Color Game Pt: 4
