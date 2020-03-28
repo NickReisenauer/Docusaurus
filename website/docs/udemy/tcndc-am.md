@@ -1397,3 +1397,31 @@ Start the server, and the browser will be able to access all assets in the publi
 ---
 
 ### Serving up CSS, JS, Images, and More
+
+In this lesson, you’ll use the Express server to serve up a webpage with images, styles,
+and scripts.
+
+Serving up CSS, JS, Images, and More
+
+All files in `public` are exposed via the Express server. This is where your site assets need
+to live. If they’re not in `public`, then they’re not public and the browser won’t be able to
+load them correctly. The HTML file below shows how you can use a CSS file, JavaScript
+file, and image in your website.
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="/js/app.js"></script>
+  </head>
+  <body>
+    <h1>About</h1>
+    <img src="/img/me.png" />
+  </body>
+</html>
+```
+
+---
+
+### Dynamic Pages with Templating

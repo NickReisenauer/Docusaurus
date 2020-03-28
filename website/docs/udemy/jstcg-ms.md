@@ -1682,3 +1682,29 @@ This creates an error message in the console and it stops our script execution.
 ---
 
 ### Working with "try-catch" to Catch & Handle Errors
+
+We might think that it would be a good idea to wrap our entire program into a try statement, but that is bad for performance and bad code behavior. Instead, we should wrap code that we can't control whether or not it fails into a try block.
+
+```js
+try {
+  functionRun();
+} catch (error) {
+  console.log(error);
+}
+```
+
+That's not all we can do with try-catch however, we can add a finally block. We can use finally as a replacement for catch if we desire, but we still need to have our try block. The code inside of finally will always execute whether or not we have an error.
+
+```js
+try {
+  functionRun();
+} catch (error) {
+  console.log(error);
+  throw error;
+} finally {
+}
+```
+
+---
+
+### Wrap Up

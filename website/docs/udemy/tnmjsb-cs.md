@@ -2257,3 +2257,63 @@ We can add extra commas to skip indexes.
 ---
 
 ### Destructuring Objects
+
+In array destructuring, we would make variables based on the indexes of properties, but in objects, we use the keys to create our variables.
+
+```js
+const runner = {
+  first: "Eluid",
+  last: "Kipchoge",
+  country: "Kenya",
+  title: "Elder of the Order of the Golden Heart of Kenya"
+};
+
+const { first: firstName, last, country } = runner;
+console.log(firstName, last, country);
+// Eluid  Kipchoge  Kenya
+```
+
+We can also use the rest operator when destructuring objects.
+
+```js
+const { first, last, ...others } = runner;
+others;
+// { country: "Kenya", title: "Elder of the Order of the Golden Heart of Kenya" }
+```
+
+---
+
+### Nested Destructuring
+
+If we have an array with lots of unnamed objects inside that are all very similar, we can destructure based on index.
+
+```js
+const results = [
+  {
+    first: "Eliud",
+    last: "Kipchoge",
+    country: "Kenya"
+  },
+  {
+    first: "Feyisa",
+    last: "Lilesa",
+    country: "Ethiopia"
+  },
+  {
+    first: "Galen",
+    last: "Rupp",
+    country: "United States"
+  }
+];
+
+const [, { country }] = results;
+// Ethiopia // from the object with the index of 1
+const [{ country }, { first }, { last }] = results;
+
+const [, silverMedal] = results;
+silverMedal.country;
+```
+
+---
+
+### Destructuring Parameters

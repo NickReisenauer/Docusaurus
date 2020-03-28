@@ -2164,3 +2164,21 @@ function randomColor() {
 ---
 
 ### Creating the Color Game Pt: 5
+
+In this lesson, we added a feature that allows us to have a reset button.
+
+```js
+reset.addEventListener("click", () => {
+  colors = generateRandomColors(6);
+  pickedColor = pickColor();
+  colorDisplay.textContent = pickedColor;
+  for (let i = 0; i < squares.length; i++) {
+    squares[i].style.backgroundColor = colors[i];
+  }
+  h1.style.backgroundColor = "#232323";
+});
+```
+
+---
+
+### Creating the Color Game Pt: 6
