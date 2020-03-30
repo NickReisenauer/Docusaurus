@@ -1453,7 +1453,7 @@ document with a few new features. Notice `{{title}}` and `{{name}}`. This is a H
 syntax which allows you to inject variables inside of the template. This is what allows you
 to generate dynamic pages.
 
-```hbs
+```html
 <!DOCTYPE html>
 <html>
   <head>
