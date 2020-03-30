@@ -2182,3 +2182,9 @@ reset.addEventListener("click", () => {
 ---
 
 ### Creating the Color Game Pt: 6
+
+In this module we added 2 buttons that let us switch between hard mode and easy mode and allows us to generate a different amount of color squares based on which mode we're in.
+
+---
+
+### Creating the Color Game Pt: 7

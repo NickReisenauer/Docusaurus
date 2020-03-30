@@ -1708,3 +1708,29 @@ try {
 ---
 
 ### Wrap Up
+
+We learned a lot about boolean statements and loops as well as some error handling + control structures.
+
+---
+
+### Useful Resources & Links
+
+[Control Structures (MDN)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
+
+[JavaScript Loops (MDN)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
+
+---
+
+## Behind the Scenes & The (Weird) Past (ES3, ES5) & Present (ES6+) of JavaScript
+
+### Module Introduction
+
+We'll be looking more behind the scenes of JavaScript and how it works and how it has evolved over time with the different syntax and language changes.
+
+- ES5 vs ES6+ Syntax
+- How JavaScript Works
+- The Weird Parts
+
+---
+
+### ES5 vs ES6+ ("Next Gen JS") - Evolution of JavaScript

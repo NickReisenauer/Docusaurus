@@ -2317,3 +2317,47 @@ silverMedal.country;
 ---
 
 ### Destructuring Parameters
+
+Another way we can use destructuring is by unpacking parameters into separate variables from objects or arrays.
+
+```js
+const fullName = ({ first, last }) => {
+  return `${first} ${last}`;
+};
+const runner = {
+  first: "Eluid",
+  last: "Kipchoge",
+  country: "Kenya"
+};
+fullName(runner); // Eluid Kipchoge
+```
+
+---
+
+## Object Methods and the `This` Keyword
+
+### Shorthand Object Properties
+
+Goals:
+
+- Add methods to objects
+- Use new object shorthand syntax
+- Use computed properties
+- Understand prototypes
+- Explain how the %\$@# this works
+
+If we want to have an object where the key and the value variable are called the same thing, we can just write the value once because the key and the variable are the same.
+
+```js
+return {
+  max: max,
+  min: min,
+  //
+  max,
+  min
+};
+```
+
+---
+
+### Computed Properties
