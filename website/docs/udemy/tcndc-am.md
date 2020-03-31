@@ -1487,3 +1487,20 @@ app.get("", (req, res) => {
 ---
 
 ### Customizing the Views Directory
+
+In this lesson, you’ll learn how to customize the name and location of the views directory.
+
+Customizing the Views Directory
+
+You can customize the location of the views directory by providing Express with the new
+path. Call `app.set` to set a new value for the `'views'` option. The example below
+configures Express to look for views in `templates/views/`.
+
+```js
+const viewsPath = path.join(__dirname, "../templates/views");
+app.set("views", viewsPath);
+```
+
+---
+
+### Advanced Templating

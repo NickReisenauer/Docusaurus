@@ -2361,3 +2361,42 @@ return {
 ---
 
 ### Computed Properties
+
+We can use a variable as a key name in an object literal property!
+
+```js
+const user = "Jools";
+const userRoles = {
+  [user]: "Admin"
+};
+userRoles; // {Jools: "Admin"}
+//
+{
+  [KeyFromVar]: AnotherVar
+}
+```
+
+---
+
+### Adding Methods to Objects
+
+We can add functions as properties on objects. We call them methods. This simplest reason that we could do this is to group functions together.
+
+```js
+const math = {
+  multiply: function(x, y) {
+    return x * y;
+  },
+  divide: function(x, y) {
+    return x / y;
+  },
+  square: function(x) {
+    return x * x;
+  }
+};
+math.multiply(5, 2); // 10
+```
+
+---
+
+### Method Shorthand Syntax

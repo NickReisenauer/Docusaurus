@@ -1734,3 +1734,13 @@ We'll be looking more behind the scenes of JavaScript and how it works and how i
 ---
 
 ### ES5 vs ES6+ ("Next Gen JS") - Evolution of JavaScript
+
+ECMAScript is the committee behind the JavaScript language and they decide the technical aspects of how JavaScript works.
+
+ES5 and older is considered the older version of JavaScript and ES6 and newer is considered to be modern JavaScript.
+
+![ES5 vs ES6](/img/jstcg-ms/jstcg-ms27.png)
+
+---
+
+### var vs let & const - Introducing "Block Scope"

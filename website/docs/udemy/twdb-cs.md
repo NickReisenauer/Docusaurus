@@ -2188,3 +2188,9 @@ In this module we added 2 buttons that let us switch between hard mode and easy 
 ---
 
 ### Creating the Color Game Pt: 7
+
+In this section, we added some CSS transitions as well as some other styling features.
+
+---
+
+### Creating the Color Game Pt: 8
