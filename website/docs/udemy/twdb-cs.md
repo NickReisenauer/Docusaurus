@@ -2194,3 +2194,9 @@ In this section, we added some CSS transitions as well as some other styling fea
 ---
 
 ### Creating the Color Game Pt: 8
+
+In this section, we DRYed our code and moved some things into more compact function calls and smaller event listeners.
+
+---
+
+### Creating the Color Game Pt: 9

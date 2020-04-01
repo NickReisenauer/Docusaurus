@@ -1504,3 +1504,57 @@ app.set("views", viewsPath);
 ---
 
 ### Advanced Templating
+
+In this lesson, you’ll learn how to work with Handlebars partials. As the name suggests,
+partials are just part of a web page. Partials are great for things you need to show on
+multiple pages like headers, footers, and navigation bars.
+
+Setting up Partials
+
+You can use partials by telling Handlebars where you’d like to store them. This is done
+with a call to `hbs.registerPartials`. It expects to get called with the absolute path to the
+partials directory.
+
+```js
+const hbs = require("hbs");
+// Other lines hidden for brevity
+const partialsPath = path.join(__dirname, "../templates/partials");
+hbs.registerPartials(partialsPath);
+// Other lines hidden for brevity
+```
+
+Using Partials
+
+Partials are created with the “hbs” file extension. Partials have access to all the same
+features as your Handlebars templates. The header partial below renders the title followed
+by a list of navigation links which can be shown at the top of every page.
+
+```html
+<h1>{{title}}</h1>
+<div>
+  <a href="/">Weather</a>
+  <a href="/about">About</a>
+  <a href="/help">Help</a>
+</div>
+```
+
+The partial can then be rendered on a page using `{{>header}}` where “header” comes
+from the partial file name. If the partial was `footer.hbs`, it could be rendered using
+`{{>footer}}`
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="/js/app.js"></script>
+  </head>
+  <body>
+    {{>header}}
+  </body>
+</html>
+```
+
+---
+
+### 404 Pages

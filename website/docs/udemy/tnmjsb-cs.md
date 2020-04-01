@@ -2400,3 +2400,28 @@ math.multiply(5, 2); // 10
 ---
 
 ### Method Shorthand Syntax
+
+There is a shorthand syntax that allows us to work with arrow functions as methods.
+
+```js
+const math = {
+  add(x, y) {
+    return x + y;
+  },
+  multiply(x, y) {
+    return x * y;
+  }
+};
+math.add(5, 8); // 13
+```
+
+---
+
+### Intro to Keyword THIS
+
+Think of the `this` keyword as a reference to the current execution scope.
+For example, if we declare a regular function, a function in the global scope, in our script and `console.log(this)`, it will give us a `window` object.
+
+---
+
+### Using THIS in Methods

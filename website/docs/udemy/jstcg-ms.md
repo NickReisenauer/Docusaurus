@@ -1744,3 +1744,11 @@ ES5 and older is considered the older version of JavaScript and ES6 and newer is
 ---
 
 ### var vs let & const - Introducing "Block Scope"
+
+What are some of the differences between `let`, `var`, and `const`? `let` and `var` both create a variable, `const` creates a constant. `var` has been available forever, but `let` and `const` have only been available since ES6. `var` is available in the function and global scope but `let` and `const` are only available in block scope.
+
+If you create variables with `let` or `const` inside of curly braces, such as a function or object, that is where those variables will live and they will not be accessible outside of that block scope.
+
+---
+
+### Understanding "Hoisting"
