@@ -1752,3 +1752,33 @@ If you create variables with `let` or `const` inside of curly braces, such as a 
 ---
 
 ### Understanding "Hoisting"
+
+If we try and call a variable before it is initialized, it will either give us undefined, or error.
+
+```js
+console.log(name);
+var name = "Nick";
+// Undefined
+
+console.log(name);
+let name = "Nick";
+// Error
+```
+
+This is because of "hoisting", which is what the browser does when it pulls all of our variables up to the top of the page.
+
+It is always best practice to declare variables before calling them, usually at the top of the script.
+
+---
+
+### Strict Mode & Writing Good Code
+
+"strict mode" will disallow many of the things JavaScript allows you to do that probably shouldn't be done. One such feature is that is disallows you to initialize and access variables if you forgot the `let` or `var` keyword.
+
+To enable strict mode, just add a string to your script or function that will say `"use strict"`.
+
+[Strict Mode MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode#Changes_in_strict_mode)
+
+---
+
+### How Code is Parsed & Compiled

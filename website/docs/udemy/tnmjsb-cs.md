@@ -2425,3 +2425,36 @@ For example, if we declare a regular function, a function in the global scope, i
 ---
 
 ### Using THIS in Methods
+
+Say we have an object with a method, and in the method we're console logging `this`, does it reference the window or the object? It will actually return the object.
+
+This is useful for us because it means that our function is aware of other keys in the object that it is located in.
+
+```js
+const person = {
+  first: "Cherilyn",
+  last: "Sarkisian",
+  nickName: "Cher",
+  fullName() {
+    const { first, last, nickName } = this;
+    console.log(first, last, nickName);
+  }
+};
+// Cherilyn Sarkisian Cher
+```
+
+If we want to call a function inside of a other function that's a method we need to use this beforehand so it knows where to look for the function.
+
+---
+
+### THIS: Invocation Context
+
+The value of `this` depends on the invocation context of the function it is used in.
+
+If we have a function that is using `this` as a method on an object, and we assign a variable to said function outside of that object scope, `this` will be set to the global window.
+
+Until we learn something like `bind`, we don't get access to the `this` keyword while using arrow functions as methods.
+
+---
+
+### Annoyomatic Demo

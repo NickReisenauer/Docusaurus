@@ -2200,3 +2200,13 @@ In this section, we DRYed our code and moved some things into more compact funct
 ---
 
 ### Creating the Color Game Pt: 9
+
+In this section, we wrapped most of our code into a general `init()` function.
+
+---
+
+## Intro to jQuery
+
+<!-- markdownlint-disable MD026 -->
+
+### What is jQuery?

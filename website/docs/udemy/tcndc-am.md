@@ -1558,3 +1558,28 @@ from the partial file name. If the partial was `footer.hbs`, it could be rendere
 ---
 
 ### 404 Pages
+
+In this lesson, you’ll learn how to set up a 404 page. The 404 page will show when a user
+tries to visit a page that doesn’t exist.
+
+Setting up a 404 Page
+
+Express has support for \* in route paths. This is a special character which matches
+anything. This can be used to create a route handler that matches all requests.
+
+The 404 page should be set up just before the call to `app.listen`. This ensures that
+requests for valid pages still get the correct response.
+
+```js
+app.get("*", (req, res) => {
+  res.render("404", {
+    title: "404",
+    name: "Andrew Mead",
+    errorMessage: "Page not found."
+  });
+});
+```
+
+---
+
+### Styling the Application: Part 1
