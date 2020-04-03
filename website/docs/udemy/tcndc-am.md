@@ -146,7 +146,7 @@ Node.js runs the scripts that you require. That means the require call above wil
 You can see `utils.js` below. A function is defined and then assigned to `module.exports`. The value stored on `module.exports` will be the return value for `require` when the script is imported. That means other scripts could load in the utilities to access the `check` function.
 
 ```js
-const check = function() {
+const check = function () {
   console.log("Doing some work...");
 };
 module.exports = check;
@@ -340,9 +340,9 @@ yargs.version("1.1.0");
 yargs.command({
   command: "add",
   describe: "Add a new note",
-  handler: function() {
+  handler: function () {
     console.log("Adding a new note!");
-  }
+  },
 });
 console.log(yargs.argv);
 ```
@@ -389,18 +389,18 @@ yargs.command({
     title: {
       describe: "Note title",
       demandOption: true,
-      type: "string"
+      type: "string",
     },
     body: {
       describe: "Note body",
       demandOption: true,
-      type: "string"
-    }
+      type: "string",
+    },
   },
-  handler: function(argv) {
+  handler: function (argv) {
     console.log("Title: " + argv.title);
     console.log("Body: " + argv.body);
-  }
+  },
 });
 ```
 
@@ -433,7 +433,7 @@ string, while `JSON.parse` converts a JSON string into a JavaScript object.
 ```js
 const book = {
   title: "Ego is the Enemy",
-  author: "Ryan Holiday"
+  author: "Ryan Holiday",
 };
 // Covert JavaScript object into JSON string
 const bookJSON = JSON.stringify(book);
@@ -482,7 +482,7 @@ a function body.
 // const square = function (x) {
 // return x * x
 // }
-const square = x => {
+const square = (x) => {
   return x * x;
 };
 console.log(square(2)); // Will print: 4
@@ -495,7 +495,7 @@ function that immediately returns a value. The example below shows how this can 
 used.
 
 ```js
-const squareAlt = x => x * x;
+const squareAlt = (x) => x * x;
 console.log(squareAlt(2)); // Will print: 4
 ```
 
@@ -527,10 +527,10 @@ const event = {
   printGuestList() {
     console.log("Guest list for " + this.name);
 
-    this.guestList.forEach(guest => {
+    this.guestList.forEach((guest) => {
       console.log(guest + " is attending " + this.name);
     });
-  }
+  },
 };
 event.printGuestList();
 ```
@@ -550,12 +550,12 @@ function hello(name) {
   console.log(name);
 }
 
-param => {
+(param) => {
   console.log(param);
 };
 
 // Or, if all we're doing is returning one value we can use an even shorter syntax
-param => param + "Hi";
+(param) => param + "Hi";
 // This just returns param + the string hi
 ```
 
@@ -569,7 +569,7 @@ We were required to write a function that will list out all of the notes when we
 const listNotes = () => {
   const notes = loadNotes();
   console.log(chalk.green.inverse("Your Notes"));
-  notes.forEach(element => {
+  notes.forEach((element) => {
     console.log(element.title);
   });
 };
@@ -594,18 +594,18 @@ George Hudson.
 const users = [
   {
     name: "Andrew Mead",
-    age: 27
+    age: 27,
   },
   {
     name: "George Hudson",
-    age: 72
+    age: 72,
   },
   {
     name: "Clay Klay",
-    age: 45
-  }
+    age: 45,
+  },
 ];
-const user = users.find(user => user.name === "George Hudson");
+const user = users.find((user) => user.name === "George Hudson");
 console.log(user); // Will print the second object in the array
 ```
 
@@ -963,12 +963,12 @@ const geocode = (address, callback) => {
   setTimeout(() => {
     const data = {
       latitude: 0,
-      longitude: 0
+      longitude: 0,
     };
     callback(data);
   }, 2000);
 };
-geocode("Philadelphia", data => {
+geocode("Philadelphia", (data) => {
   console.log(data);
 });
 ```
@@ -1016,7 +1016,7 @@ const geocode = (address, callback) => {
       callback(undefined, {
         latitude: response.body.features[0].center[0],
         longitude: response.body.features[0].center[1],
-        location: response.body.features[0].place_name
+        location: response.body.features[0].place_name,
       });
     }
   });
@@ -1135,7 +1135,7 @@ const userAge = 27;
 const user = {
   name: name,
   age: userAge,
-  location: "Philadelphia"
+  location: "Philadelphia",
 };
 ```
 
@@ -1149,7 +1149,7 @@ const userAge = 27;
 const user = {
   name,
   age: userAge,
-  location: "Philadelphia"
+  location: "Philadelphia",
 };
 console.log(user);
 ```
@@ -1167,7 +1167,7 @@ You can see an example of this below
 const user = {
   name: "Andrew",
   age: 27,
-  location: "Philadelphia"
+  location: "Philadelphia",
 };
 // The line below uses destructuring
 const { age, location: address } = user;
@@ -1192,7 +1192,7 @@ const product = {
   price: 3,
   stock: 201,
   salePrice: undefined,
-  rating: 4.2
+  rating: 4.2,
 };
 const transaction = (type, { label, stock }) => {
   console.log(type, label, stock);
@@ -1235,9 +1235,9 @@ It’s best to stick with a tested and popular library like `request`.
 const https = require("https");
 const url =
   "https://api.darksky.net/forecast/9d1465c6f3bb7a6c71944bdd8548d026/40,-75";
-const request = https.request(url, response => {
+const request = https.request(url, (response) => {
   let data = "";
-  response.on("data", chunk => {
+  response.on("data", (chunk) => {
     data = data + chunk.toString();
   });
   response.on("end", () => {
@@ -1245,7 +1245,7 @@ const request = https.request(url, response => {
     console.log(body);
   });
 });
-request.on("error", error => {
+request.on("error", (error) => {
   console.log("An error", error);
 });
 request.end();
@@ -1344,7 +1344,7 @@ app.get("/weather", (req, res) => {
   // Provide an object to send as JSON
   res.send({
     forecast: "It is snowing",
-    location: "Philadelphia"
+    location: "Philadelphia",
   });
 });
 ```
@@ -1382,7 +1382,7 @@ app.use(express.static(publicDirectoryPath));
 app.get("/weather", (req, res) => {
   res.send({
     forecast: "It is snowing",
-    location: "Philadelphia"
+    location: "Philadelphia",
   });
 });
 app.listen(3000, () => {
@@ -1476,7 +1476,7 @@ when rendering. This is where values are provided for `title` and `name`.
 app.get("", (req, res) => {
   res.render("index", {
     title: "My title",
-    name: "Andrew Mead"
+    name: "Andrew Mead",
   });
 });
 ```
@@ -1575,7 +1575,7 @@ app.get("*", (req, res) => {
   res.render("404", {
     title: "404",
     name: "Andrew Mead",
-    errorMessage: "Page not found."
+    errorMessage: "Page not found.",
   });
 });
 ```
@@ -1583,3 +1583,9 @@ app.get("*", (req, res) => {
 ---
 
 ### Styling the Application: Part 1
+
+In this video, we didn't cover any new Node.js topics, we simply worked on styling our templates and views with CSS.
+
+---
+
+### Styling the Application: Part 2

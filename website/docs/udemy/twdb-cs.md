@@ -1328,7 +1328,7 @@ The reason we get undefined in the problem above is because in the brackets we w
 let friendGroups = [
   ["Harry", "Ron", "Hermione"],
   [("Malfoy", "Crabbe", "Goyle")],
-  ["Mooney", "Wormtail", "Prongs"]
+  ["Mooney", "Wormtail", "Prongs"],
 ];
 console.log(friendGroups[2][0]);
 // Mooney
@@ -1347,7 +1347,7 @@ Chrome browser behaves a little strangely when using alert, prompt, or confirm f
 You can avoid this by wrapping your JS code in the following setTimeout function:
 
 ```js
-window.setTimeout(function() {
+window.setTimeout(function () {
   // put all of your JS code from the lecture here
 }, 500);
 ```
@@ -1406,7 +1406,7 @@ forEach:
 JavaScript provides an easy built-in way of iterating over an array.
 
 ```js
-arrayName.forEach(function() {
+arrayName.forEach(function () {
   console.log("Inside the forEach");
 });
 // (4)Inside the forEach
@@ -1417,7 +1417,7 @@ What happens if we pass in a parameter to forEach?
 The parameter takes in each item in the array.
 
 ```js
-arrayName.forEach(function(colors) {
+arrayName.forEach(function (colors) {
   console.log(colors);
 });
 ```
@@ -1434,7 +1434,7 @@ What does the following code print out?
 let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 let colors = ["red", "orange", "yellow", "green"];
 
-numbers.forEach(function(color) {
+numbers.forEach(function (color) {
   if (color % 3 === 0) {
     console.log(color);
   }
@@ -1461,7 +1461,7 @@ You have a couple options when calling .forEach on an array:
 You can pass in an anonymous function:
 
 ```js
-[1, 2, 3].forEach(function(el, i, arr) {
+[1, 2, 3].forEach(function (el, i, arr) {
   console.log(el, i, arr);
 });
 ```
@@ -1502,7 +1502,7 @@ while (input !== "quit") {
 console.log("Ok, you quit");
 
 function listTodos() {
-  todos.forEach(function(todo, index) {
+  todos.forEach(function (todo, index) {
     console.log("----------");
     console.log(index + ": " + todo);
   });
@@ -1556,7 +1556,7 @@ Write a function `sumArray()` that accepts an array of numbers and returns the s
 ```js
 function sumArray(array) {
   let total = 0;
-  array.forEach(function(element) {
+  array.forEach(function (element) {
     total += element;
   });
   return total;
@@ -1627,7 +1627,7 @@ let dogs = ["Sadie", "Jetta", "Scout"];
 // Object
 let dogs = {
   name: "Sadie",
-  breed: "Mutt"
+  breed: "Mutt",
 };
 ```
 
@@ -1641,7 +1641,7 @@ dogs[1]; // Jetta
 // Object
 let dogs = {
   name: "Sadie",
-  breed: "Mutt"
+  breed: "Mutt",
 };
 dogs.name; // Sadie
 dogs["name"]; // Sadie
@@ -1659,7 +1659,7 @@ dogs.push("Walter");
 // Object
 let dogs = {
   name: "Sadie",
-  breed: "Mutt"
+  breed: "Mutt",
 };
 dogs.age = 2;
 ```
@@ -1716,7 +1716,7 @@ Exercise 2:
 let someObject = {
   friends: [{ name: "Harry" }, { name: "James" }, { name: "Liam" }],
   color: "baby blue",
-  isEvil: true
+  isEvil: true,
 };
 // Write code that retrieves Harry
 someObject.friends[0].name;
@@ -1733,23 +1733,23 @@ let movies = [
   {
     title: "Unbroken",
     rating: 5,
-    hasWatched: true
+    hasWatched: true,
   },
   {
     title: "Frozen 2",
     rating: 4.6,
-    hasWatched: false
+    hasWatched: false,
   },
   {
     title: "Red Dawn",
     rating: 4.2,
-    hasWatched: true
+    hasWatched: true,
   },
   {
     title: "Uncut Gems",
     rating: 4.7,
-    hasWatched: false
-  }
+    hasWatched: false,
+  },
 ];
 
 for (i = 0; i < movies.length; i++) {
@@ -1783,9 +1783,9 @@ For now, the keyword `this` refers to the object in which `this` is contained.
 ```js
 const test = {
   prop: 42,
-  func: function() {
+  func: function () {
     return this.prop;
-  }
+  },
 };
 
 console.log(test.func());
@@ -1846,7 +1846,7 @@ Another example is to change the background color from white to blue every secon
 let body = document.querySelector("body");
 let isBlue = false;
 
-setInterval(function() {
+setInterval(function () {
   if (isBlue) {
     body.style.background = "white";
   } else {
@@ -1998,7 +1998,7 @@ To add a listener, we use a method called `addEventListener(type, functionCall)`
 
 ```js
 const button = document.querySelector("button");
-button.addEventListener("click", function() {
+button.addEventListener("click", function () {
   console.log("Someone clicked the button!");
 });
 ```
@@ -2210,3 +2210,46 @@ In this section, we wrapped most of our code into a general `init()` function.
 <!-- markdownlint-disable MD026 -->
 
 ### What is jQuery?
+
+What is jQuery? jQuery is a DOM manipulation library.
+
+jQuery is simply some code that someone else has written that we include into our code and we can access what we need out of that file.
+
+It comes with a bunch of useful methods to things like:
+
+- Select Elements
+- Manipulate Elements
+- Create Elements
+- Add Event Listeners
+- Animate Elements
+- Add Effects
+- Make HTTP Requests (AJAX)
+
+---
+
+### Why Use jQuery?
+
+[YMNNJQ](http://youmightnotneedjquery.com/)
+
+Why Use jQuery?
+
+- Fixes "broken" DOM API
+- Brevity and Clarity
+- Ease of use
+- Cross-Browser Support
+- AJAX
+- Lot's of people use jQuery!
+
+Why Not Use jQuery?
+
+- The DOM API is no longer "broken"
+- It doesn't do anything you can't do on your own
+- It's an unnecessary dependency
+- Performance
+- Lot's of people are moving away from jQuery!
+
+Either way, it's worth knowing.
+
+---
+
+### Selecting with jQuery

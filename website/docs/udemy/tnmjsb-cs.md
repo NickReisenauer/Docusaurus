@@ -1016,7 +1016,7 @@ To access values in nested arrays, just use 2 indexes.
 const animalPairs = [
   ["doe", "buck"],
   ["ewe", "ram"],
-  ["peahen", "peacock"]
+  ["peahen", "peacock"],
 ];
 console.log(animalPairs[2][1]);
 // peacock
@@ -1028,7 +1028,7 @@ A good example of a nested array would be a tic tac toe board.
 const board = [
   ["0", null, "X"],
   [null, "X", "0"],
-  ["X", "0", null]
+  ["X", "0", null],
 ];
 ```
 
@@ -1057,7 +1057,7 @@ const fitBitData = {
   totalMiles: 211.7,
   avgCalorieBurn: 5755,
   workoutsThisWeek: "5 of 7",
-  avgGoodSleep: "2:13"
+  avgGoodSleep: "2:13",
 };
 ```
 
@@ -1071,7 +1071,7 @@ const fitBitData = {
   totalMiles: 211.7,
   avgCalorieBurn: 5755,
   workoutsThisWeek: "5 of 7",
-  avgGoodSleep: "2:13"
+  avgGoodSleep: "2:13",
 };
 ```
 
@@ -1093,7 +1093,7 @@ If we use a number as our key in the key value pair, we can't access that key us
 ```js
 const numbers = {
   100: "one hundred",
-  200: "two hundred"
+  200: "two hundred",
 };
 console.log(numbers[200]); // Or "200" as a string
 ```
@@ -1202,20 +1202,20 @@ There are many use cases where we would need to loop over an array using a for l
 const myStudents = [
   {
     firstName: "Zeus",
-    grade: 86
+    grade: 86,
   },
   {
     firstName: "Artemis",
-    grade: 97
+    grade: 97,
   },
   {
     firstName: "Hera",
-    grade: 72
+    grade: 72,
   },
   {
     firstName: "Apollo",
-    grade: 90
-  }
+    grade: 90,
+  },
 ];
 
 for (let i = 0; i < myStudents.length; i++) {
@@ -1236,7 +1236,7 @@ const gameBoard = [
   [4, 32, 8, 4],
   [64, 8, 32, 2],
   [8, 32, 16, 4],
-  [2, 8, 4, 2]
+  [2, 8, 4, 2],
 ];
 let totalScore = 0;
 for (let i = 0; i < gameBoard.length; i++) {
@@ -1340,7 +1340,7 @@ So how can we loop over objects using these methods?
 ```js
 let movies = {
   "Game of Thrones": 9.8,
-  "Mr. Robot": 7.8
+  "Mr. Robot": 7.8,
 };
 const keys = Object.keys(movies);
 const values = Object.values(movies);
@@ -1361,7 +1361,7 @@ const jeopardyWinnings = {
   regularPlay: 2522700,
   watsonChallenge: 300000,
   tournamentOfChampions: 500000,
-  battleOfTheDecades: 100000
+  battleOfTheDecades: 100000,
 };
 
 for (let prop in jeopardyWinnings) {
@@ -1610,9 +1610,9 @@ function getCard() {
       "Jack",
       "Queen",
       "King",
-      "Ace"
+      "Ace",
     ],
-    suit: ["Clubs", "Spades", "Hearts", "Diamonds"]
+    suit: ["Clubs", "Spades", "Hearts", "Diamonds"],
   };
   let randomValue = Math.floor(Math.random() * 13);
   let randomSuit = Math.floor(Math.random() * 4);
@@ -1712,7 +1712,7 @@ So far, we've been defining our functions using function statements, which is wh
 But there's another way we can define a function, we can use a function expression.
 
 ```js
-const square = function(num) {
+const square = function (num) {
   return num * num;
 };
 square(5); // 25
@@ -1723,7 +1723,7 @@ The reason we can define a function like this, is because functions are technica
 The ES6 method of arrow functions often follows this same syntax.
 
 ```js
-const square = num => {
+const square = (num) => {
   return num * num;
 };
 square(5); // 25
@@ -1772,7 +1772,7 @@ We can call / define functions as return values.
 
 ```js
 function makeBetweenFunc(min, max) {
-  return function(val) {
+  return function (val) {
     return val >= min && val <= max;
   };
 }
@@ -1790,7 +1790,7 @@ A callback function is a function passed into another function as an argument, w
 Sometimes, instead of passing in a function that we have already written as a callback function, we could pass in an anonymous function.
 
 ```js
-setTimeout(function() {
+setTimeout(function () {
   alert("Hello");
 }, 5000);
 ```
@@ -1856,11 +1856,11 @@ Goals:
 ```js
 const nums = [9, 8, 7, 6, 5, 4, 3, 2, 1];
 
-nums.forEach(function(n) {
+nums.forEach(function (n) {
   console.log(n * n);
 });
 
-nums.forEach(function(el) {
+nums.forEach(function (el) {
   if (el % 2 === 0) {
     console.log(el);
   }
@@ -1870,7 +1870,7 @@ nums.forEach(function(el) {
 We can also use a second parameter in a `forEach` loop which will automatically give us the index.
 
 ```js
-nums.forEach(function(num, index) {
+nums.forEach(function (num, index) {
   console.log(num, index);
 });
 ```
@@ -1883,7 +1883,7 @@ nums.forEach(function(num, index) {
 
 ```js
 const texts = ["rofl", "lol", "omg", "ttyl"];
-const caps = texts.map(function(t) {
+const caps = texts.map(function (t) {
   return t.toUpperCase();
 });
 // texts = ["rofl", "lol", "omg", "ttyl"];
@@ -1901,7 +1901,7 @@ Arrow functions are a syntactically compact alternative to a regular function ex
 A simple example...
 
 ```js
-const square = x => {
+const square = (x) => {
   return x * x;
 };
 
@@ -1921,12 +1921,12 @@ Implicit returns allows us to write an arrow function that is even smaller than 
 
 ```js
 // Arrow Function w/ return
-const square = x => {
+const square = (x) => {
   return x * x;
 };
 
 // Arrow Function w/o return
-const square = x => x * x;
+const square = (x) => x * x;
 ```
 
 ---
@@ -1940,15 +1940,15 @@ let movies = [
   "The Fantastic Mr. Fox",
   "Mr. and Mrs. Smith",
   "Mrs. Doubtfire",
-  "Mr. Deeds"
+  "Mr. Deeds",
 ];
 
-let movie = movies.find(movie => {
+let movie = movies.find((movie) => {
   return movie.includes("Mrs.");
 });
 // Mr. and Mrs. Smith
 
-let movie2 = movies.find(m => m.indexOf("Mrs") === 0);
+let movie2 = movies.find((m) => m.indexOf("Mrs") === 0);
 // Mrs. Doubtfire
 ```
 
@@ -1962,7 +1962,7 @@ Creates a new array with all elements that pass the test implemented by the prov
 
 ```js
 const nums = [9, 8, 7, 6, 5, 4, 3, 2, 1];
-const odds = nums.filter(n => {
+const odds = nums.filter((n) => {
   return n % 2 === 1;
 });
 // odds = [9, 7, 5, 3, 1]
@@ -1977,13 +1977,13 @@ const odds = nums.filter(n => {
 ```js
 const words = ["dog", "dig", "log", "bag", "wag"];
 
-words.every(word => {
+words.every((word) => {
   return word.length === 3;
 }); // true
 
-words.every(word => word[0] === "d"); // false
+words.every((word) => word[0] === "d"); // false
 
-words.every(w => {
+words.every((w) => {
   let lastLetter = w[w.length - 1];
   return lastLetter === "g";
 }); // true
@@ -1994,13 +1994,13 @@ words.every(w => {
 ```js
 const words = ["dog", "jello", "log", "cupcake", "bag", "wag"];
 
-words.some(word => {
+words.some((word) => {
   return word.length === 3;
 }); // true
 
-words.some(word => word[0] === "z"); // false
+words.some((word) => word[0] === "z"); // false
 
-words.some(w => w.includes("cake")); // true
+words.some((w) => w.includes("cake")); // true
 ```
 
 ---
@@ -2265,7 +2265,7 @@ const runner = {
   first: "Eluid",
   last: "Kipchoge",
   country: "Kenya",
-  title: "Elder of the Order of the Golden Heart of Kenya"
+  title: "Elder of the Order of the Golden Heart of Kenya",
 };
 
 const { first: firstName, last, country } = runner;
@@ -2292,18 +2292,18 @@ const results = [
   {
     first: "Eliud",
     last: "Kipchoge",
-    country: "Kenya"
+    country: "Kenya",
   },
   {
     first: "Feyisa",
     last: "Lilesa",
-    country: "Ethiopia"
+    country: "Ethiopia",
   },
   {
     first: "Galen",
     last: "Rupp",
-    country: "United States"
-  }
+    country: "United States",
+  },
 ];
 
 const [, { country }] = results;
@@ -2327,7 +2327,7 @@ const fullName = ({ first, last }) => {
 const runner = {
   first: "Eluid",
   last: "Kipchoge",
-  country: "Kenya"
+  country: "Kenya",
 };
 fullName(runner); // Eluid Kipchoge
 ```
@@ -2354,7 +2354,7 @@ return {
   min: min,
   //
   max,
-  min
+  min,
 };
 ```
 
@@ -2384,15 +2384,15 @@ We can add functions as properties on objects. We call them methods. This simple
 
 ```js
 const math = {
-  multiply: function(x, y) {
+  multiply: function (x, y) {
     return x * y;
   },
-  divide: function(x, y) {
+  divide: function (x, y) {
     return x / y;
   },
-  square: function(x) {
+  square: function (x) {
     return x * x;
-  }
+  },
 };
 math.multiply(5, 2); // 10
 ```
@@ -2410,7 +2410,7 @@ const math = {
   },
   multiply(x, y) {
     return x * y;
-  }
+  },
 };
 math.add(5, 8); // 13
 ```
@@ -2438,7 +2438,7 @@ const person = {
   fullName() {
     const { first, last, nickName } = this;
     console.log(first, last, nickName);
-  }
+  },
 };
 // Cherilyn Sarkisian Cher
 ```
@@ -2458,3 +2458,15 @@ Until we learn something like `bind`, we don't get access to the `this` keyword 
 ---
 
 ### Annoyomatic Demo
+
+We want to have an object that contains an array of annoying phrases, and we're going to use `setInterval()` to run it after x amount of times and print annoying phrases to the console.
+
+If we have a function, and inside that function we use `setInterval()` with the `this` keyword, does that provide us with access to the object that it's located in or the window object? It will give us the window object because we are not the ones who are executing the `setInterval()`, that's being done by the window object after we initially call the parent function that holds `setInterval()`.
+
+But, if we use an arrow function we get a different this because arrow functions don't get their own this.
+
+If we want to eventually stop our interval from running we can use `clearInterval()` and that will take an ID that we can use to stop interval execution.
+
+---
+
+### Putting It All Together: Deck of Cards

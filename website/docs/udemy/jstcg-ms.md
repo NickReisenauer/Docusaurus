@@ -849,7 +849,7 @@ You learned the correct syntax for creating an object in the last lecture:
 ```js
 const user = {
   name: "Max",
-  age: 30
+  age: 30,
 };
 ```
 
@@ -879,7 +879,7 @@ How can an object key value pair be accessed? This is accomplished with a simple
 ```js
 const user = {
   name: "Max",
-  age: 30
+  age: 30,
 };
 console.log(user.age);
 // 30
@@ -902,7 +902,7 @@ function writeToLog(
     operation: operationIdentifier,
     prevResult: prevResult,
     number: operationNumber,
-    result: newResult
+    result: newResult,
   };
   logEntries.push(logEntry);
   console.log(logEntries);
@@ -1531,7 +1531,7 @@ You can have nested loops or nested loops inside of objects.
 ```js
 let object = {
   key: "value",
-  otherKey: "other value"
+  otherKey: "other value",
 };
 
 for (const key in object) {
@@ -1782,3 +1782,5 @@ To enable strict mode, just add a string to your script or function that will sa
 ---
 
 ### How Code is Parsed & Compiled
+
+![JavaScript Engines & What They Do](/img/jstcg-ms/jstcg-ms28.png)
