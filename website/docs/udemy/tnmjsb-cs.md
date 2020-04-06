@@ -2470,3 +2470,52 @@ If we want to eventually stop our interval from running we can use `clearInterva
 ---
 
 ### Putting It All Together: Deck of Cards
+
+In this module, we looked at how we could make a deck of cards that includes some options like selecting the number of cards draw, and removing the card once it has been picked. First we looked at how it could work using mostly functions, then we looked at how an object based implementation would work using this and methods.
+
+```js
+const myDeck = {
+  deck: [],
+  drawnCards: [],
+  suits: ["hearts", "diamonds", "spades", "clubs"],
+  values: "2,3,4,5,6,7,8,9,10,J,Q,K,A",
+  initializeDeck() {
+    const { suits, values, deck } = this;
+    for (let value of values.split(",")) {
+      for (let suit of suits) {
+        deck.push({
+          value,
+          suit,
+        });
+      }
+    }
+    // return deck;
+  },
+  drawCard() {
+    const card = this.deck.pop();
+    this.drawnCards.push(card);
+    return card;
+  },
+  drawMultiple(numCards) {
+    const cards = [];
+    for (let i = 0; i < numCards; i++) {
+      cards.push(this.drawCard());
+    }
+    return cards;
+  },
+  shuffle() {
+    const { deck } = this;
+    // loop over array backwards
+    for (let i = deck.length - 1; i > 0; i--) {
+      //pick random index before current element
+      let j = Math.floor(Math.random() * (i + 1));
+      //swap
+      [deck[i], deck[j]] = [deck[j], deck[i]];
+    }
+  },
+};
+```
+
+---
+
+### Creating a Deck Factory

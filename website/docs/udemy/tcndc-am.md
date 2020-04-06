@@ -1589,3 +1589,9 @@ In this video, we didn't cover any new Node.js topics, we simply worked on styli
 ---
 
 ### Styling the Application: Part 2
+
+In this video, we worked on finishing our styling, by putting our footer at the bottom, adding a favicon, and some basics of flexbox.
+
+---
+
+## Accessing API from Browser (Weather App)

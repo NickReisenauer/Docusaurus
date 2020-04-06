@@ -2252,4 +2252,16 @@ Either way, it's worth knowing.
 
 ---
 
+### Including jQuery
+
+Download jQuery and link to it locally:
+`src="jQuery.js"`
+OR
+Link to a CDN (a hosted copy):
+`src="https://jQuery.min.js`
+
+If we're going to download jQuery and include it into our source code, we can add it into a `lib` folder, this is somewhere where we keep our library files.
+
+---
+
 ### Selecting with jQuery

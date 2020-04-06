@@ -1784,3 +1784,15 @@ To enable strict mode, just add a string to your script or function that will sa
 ### How Code is Parsed & Compiled
 
 ![JavaScript Engines & What They Do](/img/jstcg-ms/jstcg-ms28.png)
+
+---
+
+### Inside the JavaScript Engine - How the Code Executes
+
+JavaScript will add our functions to a call stack and go through each item in a stack and then when the function is done running the item is taken off of the stack.
+
+![How Code Gets Executed](/img/jstcg-ms/jstcg-ms29.png)
+
+---
+
+### JavaScript Language vs Browser APIs
