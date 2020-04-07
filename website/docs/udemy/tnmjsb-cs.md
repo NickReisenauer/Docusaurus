@@ -2519,3 +2519,27 @@ const myDeck = {
 ---
 
 ### Creating a Deck Factory
+
+Before we learn about constructors and classes and all the ES6 syntax, there is a dirty approach that we can use to create multiple copies of a specific object.
+
+All we need to do is make a function that will return our entire deck object and we can assign variables equal to the function call and have multiple instances of our deck.
+
+---
+
+## JS in the Browser - DOM Manipulation
+
+### Introduction to the DOM
+
+The DOM allows us to create countless forms of interaction with webpages.
+
+---
+
+### Important Note: HTML & CSS
+
+Make sure you are comfortable with basic HTML & CSS
+
+This video was a review of some basic HTML and CSS concepts.
+
+---
+
+### Taste of the DOM

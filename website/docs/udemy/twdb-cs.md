@@ -2265,3 +2265,41 @@ If we're going to download jQuery and include it into our source code, we can ad
 ---
 
 ### Selecting with jQuery
+
+Objectives:
+
+- Select elements with \$()
+- Use .css() to style elements
+
+Selecting with jQuery: `$("selectorGoesHere")`.
+Selecting with jQuery is very similar to `querySelectorAll`, in that we provide a CSS style selector and jQuery will return all matching elements.
+
+```js
+// Select all image tags
+$("img");
+// Select all elements with the class "sale"
+$(".sale");
+// Select all elements with th eid "bonus"
+$("#bonus");
+// Select all a tags inside of li's
+$("li a");
+```
+
+Manipulating Style:
+The .css() method is jQuery's interface to styling.
+`$("selector").css(property, value)`
+`$("h1").css("color", "yellow");`
+
+We can also pass in an object with styles
+
+```js
+let styles = {
+  backgroundColor: "pink",
+  fontWeight: "bold",
+};
+$(".classes").css(styles);
+```
+
+---
+
+### Selectors Exercise

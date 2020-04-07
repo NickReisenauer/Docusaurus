@@ -1796,3 +1796,34 @@ JavaScript will add our functions to a call stack and go through each item in a 
 ---
 
 ### JavaScript Language vs Browser APIs
+
+The JavaScript language differs from the browser APIs and DOM that we might use for web development. The core language is developed by the ECMAScript foundation and browser vendors implement their own browser APIs.
+
+---
+
+### Primitive vs Reference Values
+
+In JavaScript we have 2 categories of types/values.
+We have primitive values and we have reference values.
+
+Primitive Values: Stored in memory (normally on Stack), variable stores value itself
+
+- Strings
+- Numbers
+- Booleans
+- null
+- undefined
+- Symbol
+- Copying a variable copies the value
+
+Reference Values: All other objects ("more expensive to create")
+
+- All other objects
+- Variable stores a pointer (address) to location in memory
+- Copying a variable copies the pointer / reference
+
+![Primitive vs Reference Values](/img/jstcg-ms/jstcg-ms30.png)
+
+---
+
+### Garbage Collection & Memory Management

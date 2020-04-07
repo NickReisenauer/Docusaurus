@@ -1595,3 +1595,69 @@ In this video, we worked on finishing our styling, by putting our footer at the 
 ---
 
 ## Accessing API from Browser (Weather App)
+
+### Section Intro: Accessing API from Browser
+
+This module is going to teach us how to create a HTTP endpoint with Express so that our browser can talk to our server and give a specific string for a forecast and our server can respond to the browser with the forecast data.
+
+---
+
+### The Query String
+
+In this lesson, you’ll learn how to use query strings to pass data from the client to the
+server. This will be used to send the address from the browser to Node.js. Node.js will
+then be able to fetch the weather for the address and send the forecast back to the
+browser.
+
+Working with Query Strings
+
+The query string is a portion of the URL that allows you to provide additional information to
+the server. For the weather application, the query string will be used to pass the address
+from the browser to the Node.js Express application.
+
+The query string comes after `?` in the URL. The example URL below uses the query string
+to set `address` equal to `boston`. The key/value pair is separated by `=`.
+
+```js
+http:/localhost:3000/weather?address=boston // + "/" after http:
+```
+
+Below is one more example where two key/value pairs are set up. The key/value pairs are
+separated by `&`. `address` equals `philadelphia` and `units` equals `us`.
+
+```js
+http:/localhost:3000/weather?address=philadelphia&units=us
+```
+
+The Express route handler can access the query string key/value pairs on `req.query`. The
+handler below uses `req.query.address` to get the value provided for `address`. This
+address can then be used to fetch the weather information.
+
+```js
+app.get("/weather", (req, res) => {
+  // All query string key/value pairs are on req.query
+  res.send(`You provided ${req.query.address} as the address`);
+});
+```
+
+My setup for adding the weather query string is as follows
+
+```js
+app.get("/weather", (req, res) => {
+  if (!req.query.address) {
+    return res.send({
+      error: "Must provide a valid address",
+    });
+  }
+  res.send({
+    address: req.query.address,
+    forecast: "Probably Sunny",
+  });
+});
+```
+
+[Express - req.query](http://expressjs.com/en/4x/api.html#req.query)
+
+---
+
+### Building a JSON HTTP Endpoint
