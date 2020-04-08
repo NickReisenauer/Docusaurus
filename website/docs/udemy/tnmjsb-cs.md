@@ -2543,3 +2543,23 @@ This video was a review of some basic HTML and CSS concepts.
 ---
 
 ### Taste of the DOM
+
+What is it?
+
+- The DOM is a JavaScript representation of a webpage
+- It's your JS "window" into the contents of a webpage
+- It's just a bunch of objects that you can interact with via JS
+
+Every HTML element is actually a JavaScript object, and as such it has a large number of methods available to us, we can see the id, classes, value, and so many other things. Being an object, we can change the key value pairs of things to represent different values we want.
+
+---
+
+### Another Fun DOM Example
+
+In chrome dev tools, there is a page called snippets that allow us to write some little scripts that are stored in chrome and that we can then run in certain pages.
+
+This lesson was more about showing some of the things we can do to the webpage using JavaScript. For example we took an image and made it spin around and randomly move around the page.
+
+---
+
+### The Document Object

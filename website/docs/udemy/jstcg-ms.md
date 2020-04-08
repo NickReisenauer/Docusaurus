@@ -1827,3 +1827,25 @@ Reference Values: All other objects ("more expensive to create")
 ---
 
 ### Garbage Collection & Memory Management
+
+When we write our objects and then don't assign them to anything or if we have them equal to null, V8's garbage collection will remove that object so that it doesn't take up excessive space.
+
+![Garbage Collection](/img/jstcg-ms/jstcg-ms31.png)
+
+---
+
+### Useful Resources & Links
+
+![More on JavaScript Memory Management (Garbage Collection):](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_Management)
+
+![V8's Garbage Collection Logic:](https://v8.dev/blog/free-garbage-collection)
+
+![V8's JavaScript Engine in Great Detail:](https://hackernoon.com/javascript-v8-engine-explained-3f940148d4ef)
+
+![More on Primitive vs Reference Values:](https://academind.com/learn/javascript/reference-vs-primitive-values/)
+
+---
+
+## More on Functions
+
+### Module Introduction

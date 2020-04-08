@@ -1661,3 +1661,40 @@ app.get("/weather", (req, res) => {
 ---
 
 ### Building a JSON HTTP Endpoint
+
+The weather application already has the code in place to fetch the weather for a given
+address. In this lesson, it’s your job to wire up the route handler to fetch the weather and
+send it back to the browser.
+
+REWATCH THIS VIDEO
+
+```js
+app.get("/weather", (req, res) => {
+  if (!req.query.address) {
+    return res.send({
+      error: "Must provide a valid address",
+    });
+  }
+  geocode(req.query.address, (error, { latitude, longitude, location }) => {
+    if (error) {
+      return res.send({
+        error,
+      });
+    }
+    forecast(latitude, longitude, (error, forecastData) => {
+      if (error) {
+        return res.send({ error });
+      }
+      res.send({
+        forecast: forecastData,
+        location,
+        address: req.query.address,
+      });
+    });
+  });
+});
+```
+
+---
+
+### ES6 Aside: Default Function Parameters
