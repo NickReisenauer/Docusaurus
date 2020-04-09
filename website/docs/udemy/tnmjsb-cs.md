@@ -2563,3 +2563,27 @@ This lesson was more about showing some of the things we can do to the webpage u
 ---
 
 ### The Document Object
+
+Starting with the Document:
+The document object is our entry point into the world of the DOM. It contains representations of all the content ona page, plus tons of useful methods and properties.
+
+If we want to see all the properties of a specific websites document object, we can type
+`console.dir(document)` and see what's going on behind the scenes.
+
+---
+
+### getElementById
+
+If we want to change something on our DOM, first we need to select something, and then we can manipulate it.
+
+Selecting:
+
+- getElementById
+- getElementsByTagName
+- getElementsByClassName
+
+When we pass in a element that we want to find, it will return the whole object to us and we can manipulate anything related to that object that it returns to us.
+
+---
+
+### getElementsByTagName

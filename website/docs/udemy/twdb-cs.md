@@ -2329,3 +2329,24 @@ $("div:nth-of-type(1)").css("color", "pink");
 ---
 
 ### Text and HTML
+
+Objectives:
+
+- val()
+- text()
+- attr()
+- html()
+- addClass()
+- removeClass()
+- toggleClass()
+
+`.text()` is very similar to textContent from vanilla JS. It will return all the text inside the container on which it is called. We can also use it to set text inside of elements.
+
+`html()` is very similar to innerHTML from vanilla JS. It will return the HTML from the element on which it is called, but we can also use it to set some new HTML.
+
+We can't use .text to set HTML it will simply treat anything that is passed inside as a string.
+This is a good option for something like user inputs that we then take the value from. If the user inputs some JavaScript into the input form we could have security vulnerabilities.
+
+---
+
+### Attr and Val

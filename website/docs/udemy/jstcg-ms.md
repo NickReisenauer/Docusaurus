@@ -1849,3 +1849,64 @@ When we write our objects and then don't assign them to anything or if we have t
 ## More on Functions
 
 ### Module Introduction
+
+Beyond function basic() {}
+
+Module Content:
+
+- Different ways of creating functions
+- Anonymous functions
+- Callback functions & functions in functions
+- Default arguments & rest operator
+- bind() & more
+
+---
+
+### Recapping Functions Knowledge - What We Know so Far
+
+What We Already Know:
+
+- Functions are "Code on Demand"
+- Variables and constants created in functions "belong" to that function
+- Functions can take parameters (arguments) and can return a value
+- Functions can be called multiple times (with different arguments)
+- Functions can be called "directly" and "indirectly"
+
+---
+
+### Parameters vs Arguments
+
+Parameters are the variables you specify when you make the function.
+
+Arguments are the concrete values you pass to a function when calling that function.
+
+```js
+// Parameter = name
+const sayHi = (name) => {
+  console.log(name);
+};
+
+// Argument = "Nick"
+sayHi("Nick");
+```
+
+---
+
+### Functions vs Methods
+
+Methods allow us to store functions as a key on an object. Then we can call the function that is stored on that object by saying `objectName.functionName(argument)`.
+
+```js
+const person = {
+  name: "Nick",
+  greet() {
+    console.log(`Hello ${name}`);
+  },
+};
+person.greet();
+// Hello Nick
+```
+
+---
+
+### Functions are Objects!

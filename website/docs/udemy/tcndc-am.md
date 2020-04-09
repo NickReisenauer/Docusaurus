@@ -1698,3 +1698,39 @@ app.get("/weather", (req, res) => {
 ---
 
 ### ES6 Aside: Default Function Parameters
+
+ES6 provides a new syntax to set default values for function arguments. In this lesson,
+you’ll use this new syntax to improve and clean up the application code.
+
+Default Function Parameters
+
+Function parameters are `undefined` unless an argument value is provided when the
+function is called. ES6 now allows function parameters to be configured with a custom
+default value.
+
+You can see this in action for the `greeter` function below. `name` will be `'user'` if no value is
+provided. `age` will be `undefined` if no value is provided.
+
+```js
+const greeter = (name = "user", age) => {
+  console.log("Hello " + name);
+};
+greeter("Andrew"); // Will print: Hello Andrew
+greeter(); // Will print: Hello user
+```
+
+This syntax can also be used to provide default values when using ES6 destructuring. The
+`transaction` function below shows this off by providing a default value for `stock`.
+
+```js
+const transaction = (type, { label, stock = 0 } = {}) => {
+  console.log(type, label, stock);
+};
+transaction("order");
+```
+
+[MDN: Default Function Parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)
+
+---
+
+### Browser HTTP Requests with Fetch
