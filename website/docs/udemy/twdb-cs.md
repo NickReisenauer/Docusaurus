@@ -2350,3 +2350,15 @@ This is a good option for something like user inputs that we then take the value
 ---
 
 ### Attr and Val
+
+`.attr()` allows us to either set or retrieve an attribute.
+
+```js
+$("img").attr("src", "https://image.png");
+```
+
+`.val()` is the same thing as `.value` in vanilla JS, it simply gets the input value and returns a string. We can also use it to add text to the input, or an empty string that acts as a sort of reset functionality.
+
+---
+
+### Manipulating Classes

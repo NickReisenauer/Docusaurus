@@ -1910,3 +1910,17 @@ person.greet();
 ---
 
 ### Functions are Objects!
+
+If we have a function, and we console.dir that function, it will return the object of the function with all the properties and scoping and things.
+
+---
+
+### Function Expressions: Storing Functions is Variables
+
+When we store a function in a variable, we no longer have access to calling the original function name, instead, we can call the function by calling the variable we stored it in.
+
+Often we have a variable that points to an anonymous function and then the return value is stored in the variable.
+
+---
+
+### Function Expression vs Function Declarations

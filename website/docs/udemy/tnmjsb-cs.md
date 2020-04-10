@@ -2587,3 +2587,24 @@ When we pass in a element that we want to find, it will return the whole object 
 ---
 
 ### getElementsByTagName
+
+`getElementsByTagName` gives us a list of all the elements that match the tag name we placed in.
+It gives us an HTMLCollection, which is not an array, it is actually more of a list or collection.
+While it is not an array, we can do some array-like things.
+We can use square bracket notation to access index-based elements.
+We can also iterate over using a loop.
+We can also use `spread` to create an array out of the collection.
+
+---
+
+### getElementsByClassName
+
+Very similar to `getElementsByTagName` in the idea that it returns a collection of elements, and we can iterate over and select individual elements and change things etc.
+
+Something we can do is get the specific elements by class name inside of a specific element by tag name.
+So li = tagName and then inside of that we do li.className and then we can store that into a variable.
+This method doesn't work with getID because ID's are supposed to be singular and specific.
+
+---
+
+### querySelector & querySelectorAll
