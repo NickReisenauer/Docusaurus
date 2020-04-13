@@ -2608,3 +2608,25 @@ This method doesn't work with getID because ID's are supposed to be singular and
 ---
 
 ### querySelector & querySelectorAll
+
+A newer, all-in-one method to select a single element. All you have to do is pass in a CSS selector.
+
+```js
+// Finds first h1 element
+document.querySelector("h1");
+// Finds first element with ID of red
+document.querySelector("#red");
+// Finds first element with class of big
+document.querySelector(".big");
+```
+
+`querySelectorAll()` does the same thing as `querySelector()`, except it returns a NodeList of all the items that match. This NodeList is different than an HTMLCollection in the idea that it's very similar to an array, and with `querySelectorAll()` we get access to `forEach`.
+
+Because we're passing in a CSS selector, we can do more advanced CSS selectors like
+`section ul li.special`.
+
+---
+
+## Twisting the DOM to Our Will!
+
+### Working with innerText & textContent

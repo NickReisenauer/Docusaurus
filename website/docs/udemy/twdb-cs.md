@@ -2362,3 +2362,38 @@ $("img").attr("src", "https://image.png");
 ---
 
 ### Manipulating Classes
+
+Manipulating classes with jQuery is very similar to manipulating with vanilla classList.add etc in JS.
+
+```js
+$("h1").addClass(".done");
+$("h1").removeClass(".remove");
+$("h1").toggleClass(".toggle");
+```
+
+---
+
+## Advanced jQuery
+
+### jQuery Events: Click
+
+Objectives:
+
+- click()
+- keypress()
+- on()
+
+`click()`:
+jQuery's click() method is a quick and easy way to add a click listener to elements.
+
+```js
+$("#submit").click(function () {
+  console.log("Another click");
+});
+```
+
+jQuery has its own `this` inside of `$(this)`.
+
+---
+
+### jQuery Events: Keypress

@@ -1924,3 +1924,41 @@ Often we have a variable that points to an anonymous function and then the retur
 ---
 
 ### Function Expression vs Function Declarations
+
+A different way of defining functions
+
+```js
+// Function Declaration / Function Statement
+function multiply(a, b) {
+  return a * b;
+}
+
+// Function Expression
+const multiply = (a, b) => {
+  return a * b;
+};
+```
+
+In the Function Declaration / Function Statement the function is hoisted to the top and can be declared anywhere in the file (i.e. also after it's used).
+
+In the Function Expression, the function is hoisted to the top but not initialized / defined, can't be declared anywhere in the file (i.e. not after it's used).
+
+---
+
+### Anonymous Functions
+
+Anonymous functions are often created as a part of event listeners or similar cases, and it has no tie to a variable or anything else that is callable.
+
+```js
+button.addEventListener("click", () => {
+  console.log("Anonymous function tied to button click");
+});
+```
+
+This is great if our function only needs to be called in one specific situation and don't want to create a variable for it.
+
+Sometimes it is nice if we have the function tied to a variable in the case that we need better error handling. If we have a webpack build that tells us a line number, it might not line up to the line in our actual code whereas if we have a name we can track down the function in our code.
+
+---
+
+### Working on the Project: Adding User Choices to the Game

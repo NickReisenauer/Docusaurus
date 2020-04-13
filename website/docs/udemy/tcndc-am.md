@@ -1766,3 +1766,50 @@ fetch("http://localhost:3000/weather?address=Boston").then((response) => {
 ---
 
 ### Creating a Search Form
+
+In this lesson, you’ll set up the weather search form. This will allow a visitor to type in their
+address, click a button, and then see their real-time forecast information.
+
+The Search Form
+
+Below is an example HTML form. It contains a text input and a button which can be used to
+submit the form.
+
+```html
+<form>
+  <input placeholder="Location" />
+  <button>Search</button>
+</form>
+```
+
+Using client-side JavaScript, you can set up an event listener that will allow you to run
+some code when the form is submitted. What should that code do? It should grab the
+address from the text field, send off an HTTP request to the Node server for the data, and
+then render the weather data to the screen.
+
+For the moment, the data is logged to the console. That’ll get fixed in the next lesson.
+
+```js
+const weatherForm = document.querySelector("form");
+const search = document.querySelector("input");
+weatherForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const location = search.value;
+  fetch("http://localhost:3000/weather?address=" + location).then(
+    (response) => {
+      response.json().then((data) => {
+        if (data.error) {
+          console.log(data.error);
+        } else {
+          console.log(data.location);
+          console.log(data.forecast);
+        }
+      });
+    }
+  );
+});
+```
+
+---
+
+### Wiring up the User Interface
