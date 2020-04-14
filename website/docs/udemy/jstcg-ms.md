@@ -1962,3 +1962,9 @@ Sometimes it is nice if we have the function tied to a variable in the case that
 ---
 
 ### Working on the Project: Adding User Choices to the Game
+
+In this section, we added a function that will ask the user for a prompt and if the user doesn't have a valid choice we automatically select an option for the Rock, Paper, Scissors game.
+
+---
+
+### Implementing the Core Game Logic

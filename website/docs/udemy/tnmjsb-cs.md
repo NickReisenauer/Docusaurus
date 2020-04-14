@@ -2630,3 +2630,45 @@ Because we're passing in a CSS selector, we can do more advanced CSS selectors l
 ## Twisting the DOM to Our Will!
 
 ### Working with innerText & textContent
+
+Properties and Methods (The Important Ones):
+
+- classList
+- getAttribute()
+- setAttribute()
+- appendChild()
+- append()
+- prepend()
+- removeChild()
+- remove()
+- createElement
+- innerText
+- textContent
+- innerHTML
+- value
+- parentElement
+- value
+- parentElement
+- children
+- nextSibling
+- previousSibling
+- style
+
+`innerText` will give us the text that is inside of the tags. If we call innerText on a parent element, it will also give us the text of its children as well.
+
+`textContent` will give us a more accurate depiction of what the text looks like, but if we have some text content hidden with CSS, textContent will still be able to see.
+
+---
+
+### innerHTML
+
+`innerHTML` will give us all of the text and the elements included as a string.
+
+This allows us to set entire HTML documents as strings, and we can update or remove or fetch whatever we need.
+This is not the best or safest way to edit HTML as there are methods to add elements to the document and innerHTML can be used for scripting attacks.
+
+We can use tags inside of our strings, whereas if we tried to do the same thing in innerText, it would use the tags as part of the string you are setting.
+
+---
+
+### value, src, href, and more

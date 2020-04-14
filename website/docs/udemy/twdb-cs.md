@@ -2397,3 +2397,15 @@ jQuery has its own `this` inside of `$(this)`.
 ---
 
 ### jQuery Events: Keypress
+
+Keypress demo:
+
+```js
+$("target").keypress(function () {
+  console.log("Key was pressed!");
+});
+```
+
+---
+
+### jQuery Events: On
