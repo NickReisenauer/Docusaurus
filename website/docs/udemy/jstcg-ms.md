@@ -1968,3 +1968,11 @@ In this section, we added a function that will ask the user for a prompt and if 
 ---
 
 ### Implementing the Core Game Logic
+
+In this video, we set up a Math.random() function that will let the computer choose between rock paper or scissors.
+
+We also added some conditional logic to determine who won based on precedence of rock vs paper vs scissors.
+
+---
+
+### Introducing Arrow Functions

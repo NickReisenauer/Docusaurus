@@ -2409,3 +2409,25 @@ $("target").keypress(function () {
 ---
 
 ### jQuery Events: On
+
+jQuery's on() works similarly to addEventListener(). It lets you specify the type of event to listen for.
+It has some more advanced features compared to addEventListener() where with on() you can listen for things like double clicks, or on-drag, or other things.
+
+It's not just for click events. on() supports all types of events.
+
+```js
+// Double click event
+$("button").on("dbclick", () => {
+  console.log("Double clicked!");
+});
+```
+
+Why use on()? In most cases, click() and on("click") will both get the job done. However, there is one key difference:
+
+- click() only adds listeners for existing elements
+- on() will add listeners for all potential future elements
+- This will all make sense in the next video
+
+---
+
+### jQuery Effects

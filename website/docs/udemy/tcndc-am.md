@@ -1843,3 +1843,33 @@ messageOne.textContent = "My new text";
 ## Application Deployment
 
 ### Section Intro
+
+In this section, you’ll learn how to deploy your Node.js applications to production. This will
+allow anyone with an internet connection to view and interact with your Node.js app.
+Along the way, you’ll learn how to use Git, GitHub, Heroku, and more!
+
+---
+
+### Joining Heroku and GitHub
+
+In this lesson, you’ll join GitHub and Heroku. GitHub is a development platform that makes
+it easy to manage software development projects. Heroku is an application deployment
+platform which provides everything needed to deploy your Node.js applications.
+
+Joining Heroku and GitHub
+
+Make sure to sign up for an account with both GitHub and Heroku. From there, install the
+Heroku CLI. After running the installer, you can confirm the Heroku CLI was installed
+correctly by running `heroku -v` to print the installed version.
+
+The Heroku CLI gives you commands to deploy and manage your Node.js applications.
+Before you can do that, you’ll need to log in to your Heroku account. This makes sure that
+the command you run actually changes your Heroku applications.
+
+```cmd
+heroku login
+```
+
+---
+
+### Version Control with Git

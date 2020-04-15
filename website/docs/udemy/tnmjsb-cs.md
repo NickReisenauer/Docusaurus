@@ -2672,3 +2672,21 @@ We can use tags inside of our strings, whereas if we tried to do the same thing 
 ---
 
 ### value, src, href, and more
+
+If we have an input and we want to access the value of the input form, we have a .value property. `input.value`. We can also set the value using input.value, this could be used to reset the value to nothing by setting an empty string.
+If we have a checkbox and we want to see if they're checked, we have a `checkbox.checked` property.
+We can change the placeholder text of an input by using `input.placeholder = "string"`.
+We can change the `href` of a link by using `link.href = "link"`.
+We can change the `src` of images by using `image.src = "source"`.
+
+---
+
+### Getting & Setting Attributes
+
+`getAttribute()` allows us to view the values of specific attributes that are set on that element. `element.getAttribute("type")`.
+
+We can use `setAttribute()` to set attributes on elements. It takes 2 arguments, 1 is the attribute we're trying to set and the other is the value of the attribute we're setting.
+
+---
+
+### Finding Parent / Children / Siblings
