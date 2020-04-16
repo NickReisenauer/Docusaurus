@@ -2690,3 +2690,30 @@ We can use `setAttribute()` to set attributes on elements. It takes 2 arguments,
 ---
 
 ### Finding Parent / Children / Siblings
+
+`parentElement` gives us the parent element of whatever element we're calling it on, we can also stack parentElement calls on top of each other and eventually we'll get to the HTML element/tag.
+
+`children` will give us all the children of the selected element.
+
+`nextElementSibling` will give us the next sibling of whatever we have selected.
+
+`previousElementSibling` will give us the previous sibling of whatever element we selected.
+
+---
+
+### Changing Multiple Elements
+
+If we select all elements through something like `querySelectorAll` and assign them to a variable, we can make a for loop that will then do something to all of them by using the `i` index.
+
+```js
+const lis = document.querySelectorAll("li");
+for (let i = 0; i < lis.length; i++) {
+  lis[i].textContent = `Go crazy go stupid ahhh`;
+}
+```
+
+The code above will take any li and change its inner text content to "Go crazy go stupid ahhh" because we're selecting all of them and modifying each one through their index which we got from the for loop.
+
+---
+
+### Altering Styles

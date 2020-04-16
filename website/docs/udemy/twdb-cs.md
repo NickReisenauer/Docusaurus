@@ -2431,3 +2431,26 @@ Why use on()? In most cases, click() and on("click") will both get the job done.
 ---
 
 ### jQuery Effects
+
+jQuery allows us to easily add some CSS type effects with just one line of jQuery.
+
+```js
+$("div").fadeOut(200, () => {
+  console.log("This is a callback for after the fade finishes");
+  $(this).remove();
+});
+```
+
+This doesn't delete or remove our elements from the page it simply hides them, unless we call remove() in the fade callback function.
+
+We also have `fadeIn()` which works just like `fadeOut()`.
+
+`fadeToggle()` works like `classList.toggle` where it will either fade in our fade out based on what effect is currently applied to the element.
+
+`slide` is another animation method which will animate the height and display of an element. we can use `slideToggle`, `slideUp`, `slideIn`.
+
+---
+
+## Todo List Projects
+
+### Intro to the Todo List App

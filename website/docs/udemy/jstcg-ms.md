@@ -1976,3 +1976,25 @@ We also added some conditional logic to determine who won based on precedence of
 ---
 
 ### Introducing Arrow Functions
+
+There is another syntax that doesn't even require the `function` keyword. This is known as an arrow function and an arrow function looks like this.
+
+```js
+const arrowFunction = (x, y) => {
+  return x + y;
+};
+```
+
+One little thing we can do with an arrow function is an implicit return. If we only have 1 return value possible, we can omit the curly braces and the return keyword and just leave the arrow, this will tell JS that we just want to return whatever comes next.
+
+![Arrow Functions](/img/jstcg-ms/jstcg-ms32.png)
+
+---
+
+### Outputting Messages to the User
+
+In this video, we set up a message variable with template literals that will tell the user whether or not they won and all we have to do is call the one message variable and add on the end the result.
+
+---
+
+### Default Arguments in Functions

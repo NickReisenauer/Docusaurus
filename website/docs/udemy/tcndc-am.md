@@ -1873,3 +1873,35 @@ heroku login
 ---
 
 ### Version Control with Git
+
+In this lesson, you’ll learn about version control. Version control allows you to track
+changes to your project code over time. This makes it easy to recover lost code and
+restore your project to a previously working version.
+
+Version Control with Git
+
+Version control lets you track changes to your application code over time. It’s an important
+tool, and it should be used for all personal and professional projects.
+
+Imagine you have an application with 250 paying users. You just finished work on a great
+new feature and you deploy it to production so your customers can use it. Hours later, you
+discover a bug that’s preventing users from using the application. What do you do next?
+
+Without version control, you’re in trouble. The only version of your app is the one you have
+on your machine. The buggy application that’s crashing for your users. You have no way of
+getting back to the old version of your app that was working. Users are stuck with a
+broken application until you can fix the bug and get a new version of the app deployed.
+
+With version control, you’re in the clear. You can revert back to your application’s previous
+working state and deploy that. This means that users can continue to use the original
+version while you can take a breath and get back to working on that new feature until it’s
+ready.
+
+You can grab the Git installer from git-scm.com. After installing Git, run `git --version` to
+print the version of Git installed.
+
+[Git](https://git-scm.com)
+
+---
+
+### Exploring Git
