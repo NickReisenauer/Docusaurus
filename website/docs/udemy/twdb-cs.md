@@ -2454,3 +2454,39 @@ We also have `fadeIn()` which works just like `fadeOut()`.
 ## Todo List Projects
 
 ### Intro to the Todo List App
+
+In this todo project, well get more practice with jQuery and CSS.
+
+- on()
+- keypress()
+- Fade and slide
+- Selecting
+
+- Margin
+- Padding
+- Float
+- Fonts
+
+We'll also learn some new things, including...
+
+- A better folder structure
+
+- .parent()
+- .append()
+- Creating elements
+- Event delegation
+
+- Font-awesome
+- Box-shadow
+- Transition
+- Gradients
+
+---
+
+### Todo List: Folder Structure
+
+In this video we just set up a static folder containing code for our js and css as well as a lib folder that contains code from libraries.
+
+---
+
+### Todo List: Basic HTML

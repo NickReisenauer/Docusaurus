@@ -1905,3 +1905,17 @@ print the version of Git installed.
 ---
 
 ### Exploring Git
+
+Say we're starting a new project and want to include git in our project for version control, first we need to initialize git into our project.
+
+We can think of using git like having 4 columns. Untracked files, unstaged changes, staged changes, and commits.
+
+When we first initialize git our files end up into the untracked files column.
+
+Then, we can stage certain files we want to commit to changes, and then commit them. Once we commit the files they end up in the commits column.
+
+When we make changes to a file that git is already tracking, that goes into the unstaged changes column.
+
+---
+
+### Integrating Git

@@ -2717,3 +2717,21 @@ The code above will take any li and change its inner text content to "Go crazy g
 ---
 
 ### Altering Styles
+
+An important note about the `style` property on JS is that we can use it to set styles on elements but we cannot use it to read the styles that are already applied (unless they're inline styles).
+
+When we're setting styles in JS using `.style` we have to use different syntax than CSS. In CSS, we would use `background-color` but in JS we camelCase everything so it would be `backgroundColor = "black"`.
+
+Using the `.style` adds inline styles which are highly specific and will beat out classes and id's for style specificity.
+
+---
+
+### getComputedStyle
+
+If we select an element and assign getComputedStyle to it, it will return us with an object like syntax that contains all the CSS styles that are applied to the element.
+
+Computed styles is a great way to see what's actually being rendered / styled on the page. If you have a lot of classes and styles and don't know what has higher precedence, getComputedStyles will tell you what's really being applied.
+
+---
+
+### Manipulating Classes

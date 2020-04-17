@@ -1998,3 +1998,41 @@ In this video, we set up a message variable with template literals that will tel
 ---
 
 ### Default Arguments in Functions
+
+If we have a parameter and don't give that parameter some value when we're calling the function, we'll be returned with undefined. But, we can set a default value that will allow us to have a fallback option if nothing is set to the argument.
+
+```js
+const multiply = (x = 2, y = 2) => {
+  return x * y;
+};
+multiply(); // 4
+multiply(3, 2); // 6
+```
+
+---
+
+### Introducing Rest Parameters ("Rest Operator")
+
+What if we had a function that needs to take in more parameters than we originally thought? or if it's located in a user based loop so we will never know for sure the amount of parameters we might need. Instead of hard coding in large numbers of parameters and letting them either be used or become undefined, we can use rest parameters.
+
+The rest parameter will take all possible arguments we receive and build us an array containing all of the values we received.
+
+The rest parameter must be the last parameter we use because if we have regular parameters after our rest, we will never be able to reach it. We can add other params beforehand.
+
+```js
+const sumUp = (...nums) => {
+  let sum = 0;
+  for (const num of nums) {
+    sum += num;
+  }
+  return sum;
+};
+sumUp(5, 3, 7, 87, 5, 4, 6, 5, 3, 5, 6, 76, 45, 3);
+// 260
+```
+
+Another useful thing we have access to is the `arguments` parameter. This will give us an array like list containing all of the arguments the function took in. This is an alternative to using the rest parameter, but the rest version is more recommended.
+
+---
+
+### Creating Functions Inside of Functions
