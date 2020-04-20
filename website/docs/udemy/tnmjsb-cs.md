@@ -2735,3 +2735,28 @@ Computed styles is a great way to see what's actually being rendered / styled on
 ---
 
 ### Manipulating Classes
+
+What if we had some markup, maybe a todo list, that we are going to be applying different style changes to based on user interaction. Normally, we might make a new line of JS and use .style to change individual styles on our elements, but an easier way would be to add a separate class based on user interaction.
+
+One option we have to add classes is with `setAttribute("class", "className")`, but this will completely overwrite whatever class we already had set, what we need is an option to add or remove additional classes without touching our original classes. We can do this by using `classList`.
+
+`classList` gives us the option of `add`, `remove`, or `toggle`. By just typing classList, it will give us a token list (kind of like an array) containing all of the classes that are currently set on an element. `.toggle()` will give us an easy option to either add or remove classes from an element. It saves us the trouble of checking if a element contains a class, then either adding or removing.
+
+---
+
+### Creating Elements
+
+`document.createElement()` is fairly simple, it just asks for a string containing the element we would like to create. We can then store our new element in a variable and access that variable to use something like textContent or classList.
+
+But how do we add our element onto the page? First, we need to select an element to append it to. Our first option is called `appendChild()` and will append whatever we pass in as a child of the element we call it on. This method will append our element as a last child at the bottom of the element.
+
+```js
+const newh2 = document.createElement("h2");
+newh2.textContent = `Hello there`;
+newh2.classList.add("special");
+section.appendChild(newh2);
+```
+
+---
+
+### Append, Prepend, & insertBefore

@@ -2490,3 +2490,9 @@ In this video we just set up a static folder containing code for our js and css 
 ---
 
 ### Todo List: Basic HTML
+
+In this video we added a container div as well as a ul with some li's and a span with an x for when we need to delete elements.
+
+---
+
+### Todo List: Marking Completion

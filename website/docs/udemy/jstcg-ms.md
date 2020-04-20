@@ -2036,3 +2036,19 @@ Another useful thing we have access to is the `arguments` parameter. This will g
 ---
 
 ### Creating Functions Inside of Functions
+
+When we create functions inside of functions, they are tied to that function scope and no longer available in the global scope.
+
+Most of the time, we're going to want to use global functions in case we need to call it in the future.
+
+---
+
+### Understanding Callback Functions
+
+A callback function is a function that we pass into another function, often times as a parameter, and it is called for us. We don't get to control when it's called.
+
+Common examples of callback functions include event listeners. The addEventListener function takes in an event listener to listen for, and a function to execute when the event happens. This is a callback function because it calls our function for us when something happens.
+
+---
+
+### Working with "bind()"
