@@ -2496,3 +2496,9 @@ In this video we added a container div as well as a ul with some li's and a span
 ---
 
 ### Todo List: Marking Completion
+
+In this video, we went over how to add a line-through and turn our text gray when we click on a todo. To do this we can simply use a CSS class toggle method, I did this with vanilla JS but Colt is completing this with jQuery.
+
+---
+
+### Todo List: Deleting Todos

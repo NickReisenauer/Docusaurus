@@ -1971,3 +1971,51 @@ to create new commits.
 ---
 
 ### Setting up SSH Keys
+
+In this lesson, you’ll be setting up SSH on your machine. SSH is the protocol used to
+securely transfer code between your machine and GitHub/Heroku.
+
+Creating SSH Keys
+
+Windows users won’t have access to the necessary SSH commands from the command
+prompt. Make sure to use Git Bash for the following commands.
+
+SSH uses an SSH key pair to secure the connection between your machine and the
+machine you’re communicating with. You can check if you already have an SSH key pair
+with the following command. You have a key pair if you see `id_rsa` and `id_rsa.pub` in the
+output.
+
+```terminal
+ls -a -l ~/.ssh
+```
+
+You can create a new key pair using the following command. Make sure to swap out the
+email for your email address.
+
+```terminal
+ssh-keygen -t rsa -b 4096 -C "youremail@domain.com"
+```
+
+The SSH key needs to be configured to be used for new SSH connections. First, ensure
+that the SSH agent is running. You can do that using the command below.
+
+```terminal
+eval "$(ssh-agent -s)"
+```
+
+Next, add the new SSH private key file to the SSH agent. The following command is for
+macOS users.
+
+```terminal
+ssh-add -K ~/.ssh/id_rsa
+```
+
+The command below is for Linux users and Windows users.
+
+```terminal
+ssh-add ~/.ssh/id_rsa
+```
+
+---
+
+### Pushing Code to GitHub

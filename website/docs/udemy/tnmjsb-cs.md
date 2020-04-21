@@ -2760,3 +2760,15 @@ section.appendChild(newh2);
 ---
 
 ### Append, Prepend, & insertBefore
+
+appendChild() is great when we're adding things to the bottom of an element, but what if we need to add something to the top or some other location besides the bottom? This is where append and prepend and insertBefore come in handy as they allow us to add elements to the top or before some other element.
+
+insertBefore is a method that is called on the method we're trying to insert something into. So we would say `parentEl.insertBefore(newDiv)`.
+
+insertAdjacent will give us 4 options of where we can pass in specific elements, these options allow us to insert before middle after etc..
+
+append and prepend are simpler than insertAdjacent. All we need to do is pass in the name of the parent element and then the name of the element we're inserting.
+
+---
+
+### removeChild & remove
