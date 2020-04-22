@@ -2502,3 +2502,17 @@ In this video, we went over how to add a line-through and turn our text gray whe
 ---
 
 ### Todo List: Deleting Todos
+
+In this video, we went over the jQuery methods available to delete an li element when we clicked on the X span. I did this with the following vanilla JS.
+
+```js
+spans.forEach((span) => {
+  span.addEventListener("click", () => {
+    span.parentElement.remove();
+  });
+});
+```
+
+---
+
+### Todo List: Creating Todos

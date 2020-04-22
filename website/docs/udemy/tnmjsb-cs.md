@@ -2772,3 +2772,11 @@ append and prepend are simpler than insertAdjacent. All we need to do is pass in
 ---
 
 ### removeChild & remove
+
+removeChild is similar to appendChild in the items we have to pass in. removeChild will take 2 parameters, the first being the parent element, and the second is the element that we're trying to remove.
+
+remove is even simpler as all we have to do is call `remove()` on the element that we want to remove. We don't have to find a parent element or anything.
+
+---
+
+### NBA Scores Chart Pt: 1

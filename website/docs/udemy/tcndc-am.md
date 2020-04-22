@@ -2019,3 +2019,41 @@ ssh-add ~/.ssh/id_rsa
 ---
 
 ### Pushing Code to GitHub
+
+In this lesson, you’ll learn how to push your code to GitHub.
+
+Configuring SSH with GitHub
+
+In the last lesson, you generated the SSH key pair. The files were `id_rsa` and `id_rsa.pub`.
+`id_rsa` is a private key file which should be kept secret. `id_rsa.pub` is a public key file
+which should be shared with the services you plan to communicate with.
+
+The command below will allow you to dump the contents of the public key file to the
+terminal. Copy and paste the contents to the clip board and register the SSH key with
+GitHub.
+
+```terminal
+cat ~/.ssh/id_rsa.pub
+```
+
+Pushing Your Code to GitHub
+
+You need to create a new GitHub repository before you’ll be able to push your code. This
+is a remote Git repository that’ll live on the GitHub server. A remote repository is nothing
+more than a version of your project hosted somewhere else. In this case, it’s a version of
+your project stored on GitHub.
+
+```terminal
+git remote add origin <repo url>
+```
+
+You can now push your latest commits to the remote! After pushing your commits, refresh
+the GitHub repository page in your browser to see your project files and folder appear.
+
+```terminal
+git push -u origin master
+```
+
+---
+
+### Deploying Node.js to Heroku

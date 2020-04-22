@@ -2052,3 +2052,25 @@ Common examples of callback functions include event listeners. The addEventListe
 ---
 
 ### Working with "bind()"
+
+`bind()` allows us to take a function and bind an object to it so that we can call off of that specific objects values.
+
+```js
+const c1 = {
+  x: 5,
+  y: 10,
+};
+const c2 = {
+  x: 75,
+  y: 235,
+};
+const printCoordinates = () => {
+  console.log(`${this.x}, ${this.y}`);
+};
+const c1Coor = printCoordinates.bind(c1);
+// 5, 10
+```
+
+---
+
+### Adding bind() to the Calculator Project
