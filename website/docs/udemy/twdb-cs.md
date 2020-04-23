@@ -2516,3 +2516,9 @@ spans.forEach((span) => {
 ---
 
 ### Todo List: Creating Todos
+
+In this video we focused on being able to create different todos and have the ability to mark the new items we create as completed.
+
+---
+
+### Todo List: Styling Pt. 1

@@ -2763,7 +2763,7 @@ section.appendChild(newh2);
 
 appendChild() is great when we're adding things to the bottom of an element, but what if we need to add something to the top or some other location besides the bottom? This is where append and prepend and insertBefore come in handy as they allow us to add elements to the top or before some other element.
 
-insertBefore is a method that is called on the method we're trying to insert something into. So we would say `parentEl.insertBefore(newDiv)`.
+insertBefore is a method that is called on the element we're trying to insert something into. So we would say `parentEl.insertBefore(newDiv)`.
 
 insertAdjacent will give us 4 options of where we can pass in specific elements, these options allow us to insert before middle after etc..
 
@@ -2780,3 +2780,9 @@ remove is even simpler as all we have to do is call `remove()` on the element th
 ---
 
 ### NBA Scores Chart Pt: 1
+
+In this video we worked with object data to make a simple table that displays some NBA scores and either a green or red background depending on who won. The winning score is also bolded. We accomplished this with some some object destructuring and updating HTML content via JS.
+
+---
+
+### NBA Scores Chart Refactor

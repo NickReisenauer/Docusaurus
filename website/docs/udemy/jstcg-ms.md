@@ -2071,6 +2071,18 @@ const c1Coor = printCoordinates.bind(c1);
 // 5, 10
 ```
 
+`bind()` can come in handy in situations where you might want to "pre-configure" a functions arguments, when you're not calling the function on your own.
+
 ---
 
-### Adding bind() to the Calculator Project
+### Useful Resources & Links
+
+[More on Functions (MDN)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions)
+
+[bind()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/bind)
+
+---
+
+## Working With the DOM (Browser HTML Code) in JavaScript
+
+### Module Introduction

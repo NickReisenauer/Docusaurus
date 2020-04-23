@@ -2057,3 +2057,38 @@ git push -u origin master
 ---
 
 ### Deploying Node.js to Heroku
+
+In this lesson, you’ll deploy your application to Heroku. Anyone with an internet connection
+will be able to access and use your application!
+
+Preparing Your Application
+
+Heroku makes it easy to deploy your application to Node.js, but it does require a few small
+changes. First, Heroku needs to know what command to run to start your app. Second,
+Heroku requires your app to listen on a specific port.
+
+The `start` script in `package.json` is used to tell Heroku which command to run. Set `start`
+equal to `node src/app.js` to ensure that Heroku can start your app up correctly.
+
+Heroku uses an environment variable to provide the port value you need to listen on. The
+code below accesses the Heroku port value and uses it to start up the server.
+
+```js
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+  console.log("Server is up on port " + port);
+});
+```
+
+Deploying Your Application
+
+Run `heroku create` from your application root to create a new application. This will create
+the new application and set up a new `heroku` Git remote. Push your code to that remote to
+deploy the application!
+
+You can run `git push heroku master` to deploy. From there, run `heroku open` to open
+your application in the browser.
+
+---
+
+### New Feature Deployment Workflow
