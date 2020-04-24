@@ -2086,3 +2086,21 @@ const c1Coor = printCoordinates.bind(c1);
 ## Working With the DOM (Browser HTML Code) in JavaScript
 
 ### Module Introduction
+
+We'll be looking at:
+
+- HTML, DOM & JavaScript
+- Nodes & Elements
+- Querying DOM Nodes & Traversing the DOM
+- Evaluating & Manipulating DOM Nodes
+- Creating & Removing DOM NOdes
+
+---
+
+### What's the DOM?
+
+The Document Object Model is an API that the browser gives us access to and this DOM allows us to interact with the HTML Document. We also have access to `document` and `window`. Document is the root DOM Node and this is what's providing us access to element querying. The window is the active browser tab/ window and it acts as a global storage for scripts and provides access to window-specific properties and methods.
+
+---
+
+### Document and Window Object

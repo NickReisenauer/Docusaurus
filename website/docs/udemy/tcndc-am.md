@@ -2092,3 +2092,14 @@ your application in the browser.
 ---
 
 ### New Feature Deployment Workflow
+
+In this lesson, you’ll go through the process of adding a new feature to the application.
+This includes committing the changes, pushing them to GitHub, and deploying them to
+Heroku.
+
+There are no notes for this challenge video, as no new information is covered. The goal is
+to give you experience using what was covered in previous lessons.
+
+---
+
+### Avoiding Global Modules

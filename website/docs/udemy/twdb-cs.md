@@ -2522,3 +2522,9 @@ In this video we focused on being able to create different todos and have the ab
 ---
 
 ### Todo List: Styling Pt. 1
+
+In this video, we added custom fonts and background colors as well as styling the li's.
+
+---
+
+### Todo List: Styling Pt. 2

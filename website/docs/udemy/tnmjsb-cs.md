@@ -2786,3 +2786,11 @@ In this video we worked with object data to make a simple table that displays so
 ---
 
 ### NBA Scores Chart Refactor
+
+In this video, we refactored the code so that it is more function based and doesn't hard code from a single data source.
+
+---
+
+## Communicating with Events
+
+### Intro to DOM Events
