@@ -2794,3 +2794,48 @@ In this video, we refactored the code so that it is more function based and does
 ## Communicating with Events
 
 ### Intro to DOM Events
+
+A Small Taste:
+
+- clicks
+- drags
+- drops
+- hovers
+- scrolls
+- form submission
+- key presses
+- focus/blur
+- mouse wheel
+- double click
+- copying
+- pasting
+- audio start
+- screen resize
+- printing
+
+There are hundreds of possible events we can have access to for all types of programming challenges we face. We can access most of these through just 1 single method.
+
+[MDN Event Reference](https://developer.mozilla.org/en-US/docs/Web/Events)
+
+---
+
+### 2 Ways NOT to Add Events
+
+Event listeners follow a kind of pattern. First, we're listening for an event on a given thing, like a button or a form, and when we "hear" the event happen on our selected thing, we run the code that is specified in our event listener.
+
+The first 2 options to add event listeners, (HTML onclick, JS .onclick) are not recommended methods.
+
+```js
+// onclick with HTML
+<button onclick="code / function()">CLICK</button>;
+
+// onclick with JS
+const button = document.querySelector("button");
+button.onclick = () => {
+  console.log("Button was clicked");
+};
+```
+
+---
+
+### addEventListener

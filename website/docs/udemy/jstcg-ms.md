@@ -2104,3 +2104,17 @@ The Document Object Model is an API that the browser gives us access to and this
 ---
 
 ### Document and Window Object
+
+The window object is the topmost object available to us. If we call a function like alert on the window object, we don't actually need to use the .window because the browser will automatically add the window object to anything that is a property of window.
+
+---
+
+### Understanding the DOM and How It's Created
+
+Every HTML page is just text at its core, and the browser doesn't work with just text. Every HTML page is turned into an object containing an information tree containing all the Nodes of our HTML.
+
+We have 2 different types of Nodes in our content. We have Element Nodes and we have Text Nodes.
+
+---
+
+### Nodes & Elements - Querying the DOM Overview
