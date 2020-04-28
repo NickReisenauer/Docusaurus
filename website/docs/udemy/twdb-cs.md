@@ -2528,3 +2528,11 @@ In this video, we added custom fonts and background colors as well as styling th
 ---
 
 ### Todo List: Styling Pt. 2
+
+In this video, we added a liner gradient as our background that will scale with the viewport size.
+
+We also added the delete icon and hover styles so that it increases in width upon hovering.
+
+---
+
+### Todo List: Toggling the Form
