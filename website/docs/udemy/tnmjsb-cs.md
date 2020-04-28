@@ -2839,3 +2839,21 @@ button.onclick = () => {
 ---
 
 ### addEventListener
+
+As we've seen, HTML onclick and JS onclick inline statements are not the best option available to us for working with events. This is where addEventListener() comes in.
+
+addEventListener is a simpler way to specify which event type and then add a callback to run when the event happens.
+
+```js
+const button = document.querySelector("h1");
+
+button.addEventListener("click", () => {
+  console.log("Button was clicked!");
+});
+```
+
+We can also attach as many event listeners we want to a given element, this means we could add multiple click events or 2+ different type of events.
+
+---
+
+### The Impossible Button Demo
