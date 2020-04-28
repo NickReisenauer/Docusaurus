@@ -2857,3 +2857,55 @@ We can also attach as many event listeners we want to a given element, this mean
 ---
 
 ### The Impossible Button Demo
+
+The impossible button is a trick where there's a button on screen and when we try and hover over the button to click on it, it will instantly move to somewhere random on the screen. To accomplish our own impossible button, we need to have a button with an event listener that is listening for mouseover and when that happens it will change the positioning of the button through .style.
+
+In order to keep the button in the viewport, we can access the width and height of a viewport by using `window.innerHeight` and `window.innerWidth`.
+
+The solution involves having the button position be absolute and then simply changing the top and left positioning of the absolute element based on screen size available.
+
+```js
+const button = document.querySelector("button");
+
+button.addEventListener("mouseover", () => {
+  const height = Math.floor(Math.random() * window.innerHeight);
+  const width = Math.floor(Math.random() * window.innerWidth);
+  console.log(width, height);
+  button.style.top = `${height}px`;
+  button.style.left = `${width}px`;
+});
+```
+
+We could then add an event listener for click so that if someone actually can click it we display an alert saying good job or something.
+
+---
+
+### Events on Multiple Events
+
+We've seen how we can attach multiple event listeners to a single element, but how can we attach event listeners to multiple elements (like a todo list of li's).
+
+The simple answer is by using a loop and looping over each element and adding an event listener.
+
+We can use `this` to pass around our element that is being clicked and then we can do specific things to specific elements.
+
+```js
+const colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+const printColor = () => {
+  console.log(this);
+};
+for (let color of colors) {
+  const box = document.createElement("div");
+  box.style.backgroundColor = color;
+  box.classList.add("customClass");
+  body.appendChild(box);
+  box.addEventListener("click", printColor);
+}
+```
+
+Generally, `this` will refer to the element that the event listener has been attached to... in this situation.
+
+We can also use `forEach` to add event listeners to multiple elements.
+
+---
+
+### The Event Object

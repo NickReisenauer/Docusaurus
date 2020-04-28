@@ -2118,3 +2118,22 @@ We have 2 different types of Nodes in our content. We have Element Nodes and we 
 ---
 
 ### Nodes & Elements - Querying the DOM Overview
+
+When querying elements, we have options between selecting single elements or groups of elements.
+
+```js
+querySelector(), getElementById();
+// Returns single elements
+// Different ways of querying elements by CSS selector, by ID
+// Direct reference to DOM element is returned
+querySelectorAll(), getElementsByTagName();
+// Return collections of elements (array like objects): NodeList
+// Different ways of querying elements (by css selector, by tag name, by CSS class)
+// querySelectorAll() returns a non-live NodeList, getXbyY returns live NodeLists
+```
+
+[Nodes & Elements](/img/jstcg-ms/jstcg-ms33.png)
+
+---
+
+### Selecting Elements in the DOM

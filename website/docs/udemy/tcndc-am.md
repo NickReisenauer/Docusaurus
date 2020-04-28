@@ -2103,3 +2103,36 @@ to give you experience using what was covered in previous lessons.
 ---
 
 ### Avoiding Global Modules
+
+In this lesson, you’ll refactor your application to remove the use of global modules. This
+ensures that your application installs all the dependencies you need to run.
+
+Replacing Global Modules with Local Modules
+
+Sick of typing out that long nodemon command? Me too. Let’s turn it into a script.
+
+You can create a `dev` script with the value `nodemon src/app.js -e js,hbs`. This will start
+up the `dev` server anytime you run `npm run dev`.
+
+The `dev` script needs `nodemon` to be installed. The issue is that `nodemon` isn’t listed as a
+dependency in `package.json`. However, this can be fixed by uninstalling `nodemon`
+globally.
+
+```terminal
+npm uninstall -g nodemon
+```
+
+Now, install it as a local dependency.
+
+```terminal
+npm install nodemon --save-dev
+```
+
+Now, `npm install` will be able to install all your application dependencies, including
+`nodemon`!
+
+---
+
+### MongoDB and Promises (Task App)
+
+### Section Intro: Databases and Advanced Asynchronous Development

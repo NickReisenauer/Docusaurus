@@ -2536,3 +2536,12 @@ We also added the delete icon and hover styles so that it increases in width upo
 ---
 
 ### Todo List: Toggling the Form
+
+In this section, we were able to add a toggle to our input form so that when we click the plus button the form will toggle in or out.
+We also sorted our CSS by specificity.
+
+---
+
+## OPTIONAL Project: Patatap Clone
+
+### Project Intro
