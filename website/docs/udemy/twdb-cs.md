@@ -2545,3 +2545,9 @@ We also sorted our CSS by specificity.
 ## OPTIONAL Project: Patatap Clone
 
 ### Project Intro
+
+We are going to be making a project that incorporates 2 libraries, the first being `paper.js` and the second being `howler.js`. We are going to be using paper.js for our graphics and howler for our sounds. The project is a patatap clone, this gives us a blank page but when we type a key, we get a interesting sound and visual animation and each key gets its own sound and color.
+
+---
+
+### Paper.js Intro

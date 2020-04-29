@@ -2137,3 +2137,15 @@ querySelectorAll(), getElementsByTagName();
 ---
 
 ### Selecting Elements in the DOM
+
+To select an element, we can use `document.getElementById("idName")` and it will fetch the first element it finds with that CSS ID on the page.
+We can store this reference to our element in a variable for easy manipulation.
+We can also use `element.getElementById("idName")` to search the children of the element we have selected and call the search method on.
+
+`document.querySelector()` takes in any CSS selector and will return the first matching item unless we run `querySelectorAll()` which will return a NodeList.
+
+It's important that we import our script correctly so that our HTML will load before the script, if our scrips loads first it won't be able to find the HTML elements that we're referencing. We can either add our script at the end of the HTML body or we can add it in the head with the `defer` tag attached.
+
+---
+
+### Exploring and Changing DOM Properties

@@ -2136,3 +2136,23 @@ Now, `npm install` will be able to install all your application dependencies, in
 ### MongoDB and Promises (Task App)
 
 ### Section Intro: Databases and Advanced Asynchronous Development
+
+In this section, you’ll learn how to connect to a MongoDB database from your Node.js
+application. This will allow your application to store data in a secure and reliable fashion.
+The task application will use MongoDB to store user accounts as well as tasks.
+
+---
+
+### MongoDB and NoSQL Databases
+
+In this lesson, you’ll explore NoSQL databases and MongoDB. MongoDB and NoSQL
+database are a bit different than traditional SQL databases such as MySQL, so this lesson
+will bring you up to speed on some key ideas and terminologies related to NoSQL.
+
+Look at the attached image for more information.
+
+[SQL vs NoSQL](/img/tcndc-am/tcndc-am1.png)
+
+---
+
+### Installing MongoDB on macOS and Linux

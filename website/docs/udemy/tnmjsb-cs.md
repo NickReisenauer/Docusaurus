@@ -2909,3 +2909,32 @@ We can also use `forEach` to add event listeners to multiple elements.
 ---
 
 ### The Event Object
+
+When we have an event listener that calls a function, we're not actually calling that function because it is being called for us. When this function is called for us from the eventListener it is passed an `event` object. This event object can be quite useful and provides all the data about what happened in order for the function to be executed.
+
+We get tons of information from the `event` param, including where the event happened, the key that was pressed, if certain other keys were pressed, keycodes, etc... We get different information depending on the event listener we used.
+The event parameter is often called `e` or `event`, and it can be accessed like this.
+
+```js
+document.body.addEventListener("click", (event) => {
+  console.log(event);
+});
+```
+
+---
+
+### Key Events: keypress, keyup, & keydown
+
+keydown fires as soon as a key is depressed and fires on non-letter keys such as shift and control, and keyup will fire as soon as the key is lifted.
+
+keypress will fire the same as keydown, except it will only fire for regular characters and not for things like shift and control.
+
+keypress wouldn't be a good solution if we're making a game or something that involves using the arrow keys, but if we're just trying to fire it when something visible in the input changes, keypress is our best option because it doesn't care about random keys that don't change the visible input.
+
+keypress does count `return` as a keypress, and `delete` is also not considered a keypress.
+
+If we wanted to make a todo list or a form or input that can listen for `enter` or `return` as a keypress, we need to use the `event` object to get the enter keycode on keypress. We can then write an if statement that will execute if the keypress is equal to "Enter".
+
+---
+
+### Coin Game Demo
