@@ -2938,3 +2938,9 @@ If we wanted to make a todo list or a form or input that can listen for `enter` 
 ---
 
 ### Coin Game Demo
+
+In this demo, we have a coin animation and a little character walking animation and our logic is that when you press the arrow keys, the player will move based on which key was pressed, and when the character touches the coin, we move the coin to somewhere else on the screen.
+
+---
+
+### Form Events & PreventDefault

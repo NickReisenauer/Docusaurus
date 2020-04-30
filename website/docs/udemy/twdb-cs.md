@@ -2551,3 +2551,9 @@ We are going to be making a project that incorporates 2 libraries, the first bei
 ---
 
 ### Paper.js Intro
+
+In this video we look at the `paper.js` library and how it interacts with the HTML Canvas by drawing shapes on based on our paperscript code.
+
+---
+
+### Paper.js Exercise

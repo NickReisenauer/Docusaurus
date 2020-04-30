@@ -2149,3 +2149,9 @@ It's important that we import our script correctly so that our HTML will load be
 ---
 
 ### Exploring and Changing DOM Properties
+
+We can store the location of our HTML Element in a variable and then we can access properties like id's and class names and other things that are stored on the elements object.
+
+---
+
+### Attributes vs Properties
