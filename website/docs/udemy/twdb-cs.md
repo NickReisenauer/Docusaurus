@@ -2557,3 +2557,17 @@ In this video we look at the `paper.js` library and how it interacts with the HT
 ---
 
 ### Paper.js Exercise
+
+In order to draw a circle every 100 pixels we need to use a for loop that will draw a circle and change the pixel alignment slightly on every loop.
+
+```js
+for (var x = 0; x < 1000; x += 100) {
+  for (var y = 0; y < 1000; y += 100) {
+    new Path.Circle(new Point(x, y), 10).fillColor = "yellow";
+  }
+}
+```
+
+---
+
+### Adding Keypress Events

@@ -2155,3 +2155,29 @@ We can store the location of our HTML Element in a variable and then we can acce
 ---
 
 ### Attributes vs Properties
+
+When working with our HTML code inside of JS, we have access to our HTML's attributes and our HTML's properties, but what's the difference? Attributes would be things like
+`id="input"` or `value="Enter text"`. Properties would be things like `input.value`.
+
+Often (but not always!), attributes are mapped to properties and "live synchronization" is set up.
+
+```js
+// Attribute
+const input = ...
+input.setAttribute("value", "Hello World")
+
+// Property
+const input = ...
+input.value = "Hello World"
+```
+
+The different in using properties to update values, is that in the HTML, it won't always be mapped as the original attribute.
+
+A workaround for something like `value` where it's not live mapped between attribute and value, we can set the value equal to the actual attribute like so...
+`input.value = input.getAttribute("value");`.
+
+[Attributes vs Properties](/img/jstcg-ms/jstcg-ms34.png)
+
+---
+
+### Selecting Multiple Elements & Summary

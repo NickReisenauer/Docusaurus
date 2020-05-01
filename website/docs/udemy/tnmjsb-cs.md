@@ -2944,3 +2944,43 @@ In this demo, we have a coin animation and a little character walking animation 
 ---
 
 ### Form Events & PreventDefault
+
+By default, when we submit a form we have with HTML, it will refresh the page and send the data to an endpoint of our specification or get data from an endpoint, probably on a server somewhere, to then be validated and added to our database. But we don't always want to refresh the page and send a load of data, sometimes we just want to capture the data and display it to the user. To do this, we can use `preventDefault()` on our event parameter.
+
+This will prevent the page from reloading and then we can simply assign variables and access the data we want, we could then use a callback function to do something with the data.
+
+```js
+const form = document.querySelector("input");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  console.log(checkbox.value);
+  console.log(option.value);
+  console.log(input.value);
+});
+```
+
+---
+
+### Input & Change Events
+
+What if we had an object or some data structure that we wanted to keep live updated with what the user has done so far in the form. So if they check a checkbox it will instantly be set to true in our object, and whatever they have typed so far will also be updated and stored live, as well as any other forms of input. This will give us access to the current data that they are putting in and we can run code based on what's been done so far.
+
+To do this, we can use the `input` event listener. What this will do is fire the event listener anytime anything in the input that we selected changes. We can pass in our event parameter to find out exactly what changed.
+
+```js
+const formData = {}
+for(let input of [creditCardInput, termsCheckbox, optionSelect]){
+  input.addEventListener("input",({target}))=>{
+    formData[target.name] = target.value
+  }
+}
+```
+
+This could also probably be done with a forEach function.
+
+---
+
+## Asynchronous Code, Callbacks & Promises
+
+### The Call Stack

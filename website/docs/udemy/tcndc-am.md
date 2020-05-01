@@ -2156,3 +2156,24 @@ Look at the attached image for more information.
 ---
 
 ### Installing MongoDB on macOS and Linux
+
+In this lesson, you’ll learn how to install MongoDB on macOS and Linux. Using Windows?
+That’s covered in the next lesson.
+
+You can download the MongoDB Community Server from the MongoDB download page.
+The download is a zip file. Unzip the contents, change the folder name to “mongodb”, and
+move it to your users home directory. From there, create a “mongodb-data” directory in
+your user directory to store the database data.
+
+You can start the server using the following command. Make sure to swap out
+“/Users/Andrew/” with the correct path to your users home directory.
+
+```terminal
+/Users/Andrew/mongodb/bin/mongod --dbpath=/Users/Andrew/mongodb-data
+```
+
+[MongoDB Download Page](https://www.mongodb.com/download-center/community)
+
+---
+
+### Installing MongoDB on Windows
