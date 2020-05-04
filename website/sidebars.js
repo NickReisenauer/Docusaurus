@@ -12,8 +12,8 @@ module.exports = {
       "udemy/jstcg-ms",
       "udemy/tnmjsb-cs",
       "udemy/twdb-cs",
-      "udemy/tcndc-am"
+      "udemy/tcndc-am",
     ],
-    Projects: ["projects/docusaurus"]
-  }
+    Projects: ["projects/docusaurus"],
+  },
 };

@@ -2181,3 +2181,11 @@ A workaround for something like `value` where it's not live mapped between attri
 ---
 
 ### Selecting Multiple Elements & Summary
+
+If we use something like `document.querySelectorAll()` which returns a NodeList, we can use a loop that will give us an index which we can use to select individual items in the NodeList. We can also access with a for of loop or a forEach function.
+
+When working with elements, it's best to store the reference into a variable for easy access.
+
+---
+
+### Traversing the DOM - Overview

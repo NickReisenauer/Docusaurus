@@ -2571,3 +2571,9 @@ for (var x = 0; x < 1000; x += 100) {
 ---
 
 ### Adding Keypress Events
+
+In this video, we figured out how to find the maximum available screen size to generate random circles on based on keypress.
+
+---
+
+### Paper.js Animations

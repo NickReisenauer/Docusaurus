@@ -2984,3 +2984,60 @@ This could also probably be done with a forEach function.
 ## Asynchronous Code, Callbacks & Promises
 
 ### The Call Stack
+
+The Call Stack is the mechanism the JS interpreter uses to keep track of its place in a script that calls multiple functions.
+How JS "knows" what function is currently being run and what functions are called from within that function, etc.
+
+A "stack" is similar to a stack of books on your shelf. If you put something on the top, it will be the first thing taken off.
+`"Last thing in... First thing out"`.
+
+How it Works:
+
+- When a script calls a function, the interpreter adds it to the call stack and then starts carrying out the function.
+- Any functions that are called by that function are added to the call stack further up, and run where their calls are reached.
+- When the current function is finished, the interpreter takes it off the stack and resumes execution where it left off in the last code listing.
+
+Here's an example of a function call stack
+
+```js
+const multiply = (x, y) => x * y;
+const square = (x) => multiply(x, x);
+const isRightTriangle = (a, b, c) => {
+  return square(a) + square(b) === square(c);
+};
+isRightTriangle(3, 4, 5);
+```
+
+In this example, our triangle function relies on square function which relies on the multiply function at the very top so we go up the line from the triangle to the square to the multiply and then back down.
+
+---
+
+### Call Stack Debugging with Dev Tools
+
+Once we have our script written, we can access it in Chrome Dev Tools by going to sources, and finding the name of our script. Once we have our script selected, we can add breakpoints in by clicking the left side of the screen where the numbers are.
+
+Once we have our breakpoint set, we can run our script and it will pause as soon as it reaches the breakpoint so we can see what's happening at any time in our application.
+We also get access to the call stack on the right side of the screen and we can step through our script one line at a time and view what's happening on the call stack.
+
+---
+
+### JS is Single Threaded
+
+JavaScript is single threaded. But what does that mean?
+At any given point in time, that single JS thread is running at most one line of JS code.
+
+A simple demonstration of JS single threaded behavior involves a simple alert.
+
+```js
+console.log("I happened first");
+alert("Herro");
+console.log("I happened second");
+```
+
+What will happen in the code above is that the first console.log will run and it will say "I happened first" and then the alert will happen saying "Herro", and finally, after we accept the alert, the second console.log will run saying "I happened second".
+
+So what happens to our app when JavaScript is sending out a request to a server for some API data, which we want to accept and display. Is JS going to sit there and wait for something to happen? actually no, we will discuss why in the next video.
+
+---
+
+### How Asynchronous Callbacks Actually Work
