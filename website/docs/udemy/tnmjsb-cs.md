@@ -3026,7 +3026,7 @@ We also get access to the call stack on the right side of the screen and we can 
 JavaScript is single threaded. But what does that mean?
 At any given point in time, that single JS thread is running at most one line of JS code.
 
-A simple demonstration of JS single threaded behavior involves a simple alert.
+A simple demonstration of JS single threaded behavior involves an alert.
 
 ```js
 console.log("I happened first");
@@ -3041,3 +3041,41 @@ So what happens to our app when JavaScript is sending out a request to a server 
 ---
 
 ### How Asynchronous Callbacks Actually Work
+
+We learned that JavaScript is single-threaded, so what does it do when we have some code like this?
+In the following code, we have no idea how long it will take to save that piece of text to our database, so how long before the form value is reset?
+
+```js
+const newTodo = input.value;
+saveToDatabase(newTodo);
+input.value = "";
+// Obviously a fake function
+```
+
+This is where `callbacks` come in. Callbacks allow us to specify a function that will run at the appropriate time.
+An example of a very simple callback...
+
+```js
+console.log("I print first!");
+setTimeout(() => {
+  console.log("I print after 3 seconds");
+}, 3000);
+console.log("I print second!");
+// I print first
+// I print seconds
+// I print after 3 seconds
+```
+
+But how can JavaScript remember to call our function after 3 seconds and continue calling our other functions and not simply grind to a halt and wait for setTimeout to finish? The browser does the work!
+
+But how does the browser work in sync like this?
+
+- Browsers come with Web APIs that are able to handle certain tasks in the background (like making requests or setTimeout).
+- The JS call stack recognizes these Web API functions and passes them off to the browser to take care of.
+- Once the browser finishes those tasks, they return and are pushed onto the stack as a callback.
+
+[This is a helpful site](http://latentflip.com/loupe/?code=JC5vbignYnV0dG9uJywgJ2NsaWNrJywgZnVuY3Rpb24gb25DbGljaygpIHsKICAgIHNldFRpbWVvdXQoZnVuY3Rpb24gdGltZXIoKSB7CiAgICAgICAgY29uc29sZS5sb2coJ1lvdSBjbGlja2VkIHRoZSBidXR0b24hJyk7ICAgIAogICAgfSwgMjAwMCk7Cn0pOwoKY29uc29sZS5sb2coIkhpISIpOwoKc2V0VGltZW91dChmdW5jdGlvbiB0aW1lb3V0KCkgewogICAgY29uc29sZS5sb2coIkNsaWNrIHRoZSBidXR0b24hIik7Cn0sIDUwMDApOwoKY29uc29sZS5sb2coIldlbGNvbWUgdG8gbG91cGUuIik7!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D) to help visualize the call stack and how the browser APIs play a part in JS execution.
+
+---
+
+### Welcome to Callback Hell

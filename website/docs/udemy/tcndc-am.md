@@ -2198,3 +2198,15 @@ You can start the server using the following command. Make sure to swap out
 ---
 
 ### Installing Database GUI Viewer
+
+In this lesson, you’ll set up Robo 3T. Robo 3T is a MongoDB admin tool that makes it easy
+to manage and visualize the data in your database.
+
+Robo 3T is a completely free MongoDB admin tool. Grab the installer from here and get it
+installed on your machine.
+
+[Robo 3T Download Page](https://robomongo.org/)
+
+---
+
+### Connecting and Inserting Documents

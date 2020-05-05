@@ -2577,3 +2577,9 @@ In this video, we figured out how to find the maximum available screen size to g
 ---
 
 ### Paper.js Animations
+
+In this video, we figured out how to have our circles change color and appear randomly on the screen, then change color while the size shrinks to zero.
+
+---
+
+### Adding Howler.js

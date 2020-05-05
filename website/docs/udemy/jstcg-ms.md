@@ -2189,3 +2189,13 @@ When working with elements, it's best to store the reference into a variable for
 ---
 
 ### Traversing the DOM - Overview
+
+When working with the DOM, we have to understand the differences between child, descendant, parent, and ancestor elements.
+
+[Children, Descendants, Parent & Ancestors](/img/jstcg-ms/jstcg-ms35.png)
+
+We also have a few options for selecting parents or siblings, for example... `firstChild`, `childNodes`, `nextSibling`, and `parentElement`.
+
+---
+
+### Traversing Child Nodes
