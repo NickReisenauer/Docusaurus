@@ -2210,3 +2210,55 @@ installed on your machine.
 ---
 
 ### Connecting and Inserting Documents
+
+In this lesson, you’ll be connecting to your MongoDB database from your Node.js
+application. You’ll also learn how to insert documents into the database to save them for
+later.
+
+Connecting to MongoDB
+
+MongoDB provides a native driver that allows you to connect to your database from Node.
+You can grab the driver by installing the mongodb npm module as shown below.
+
+```terminal
+npm i mongodb@3.1.10
+```
+
+With the driver installed, you can use the following code to connect to the database. You
+just need to provide two pieces of information. The first is the connection URL and the
+second is the name of the database. You can pick any database name that you like.
+
+```js
+const mongodb = require('mongodb')
+const MongoClient = mongodb.MongoClient
+const connectionURL = 'mongodb://127.0.0.1:27017'
+const databaseName = 'task-manager'
+MongoClient.connect(connectionURL, { useNewUrlParser: true }, (error, client)
+=> {
+if (error) {
+return console.log('Unable to connect to database!')
+}
+const db = client.db(databaseName)
+// Start to interact with the database
+})
+```
+
+Inserting a Document
+
+With the connection open, you’re ready to insert documents into the database. Remember
+that a database is made up of collections, and collections are used to store documents.
+The code below inserts a new document into the “users” collection. `db.collection` is used to get a reference to the collection you’re trying to manipulate. `insertOne` is used to insert a new document into that collection.
+
+```js
+db.collection("users").insertOne({
+  name: "Andrew",
+  age: 27,
+});
+```
+
+[NPM MongoDB](https://www.npmjs.com/package/mongodb)
+[MongoDB Driver](http://mongodb.github.io/node-mongodb-native/3.1/api/)
+
+---
+
+### Inserting Documents

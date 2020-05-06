@@ -2199,3 +2199,16 @@ We also have a few options for selecting parents or siblings, for example... `fi
 ---
 
 ### Traversing Child Nodes
+
+Say we have a ul with 3 li's, and we want to access the second child of the ul. To do this, we could first select the ul and then use `ul.children` to access the list of children and from there we can use index based selecting, [1], to find the second or third child. When we access the child NodeList, we also get access to the Text Nodes of our li's.
+If we just want our first child element, we can use `firstChild`.
+
+---
+
+### Using parentNode & parentElement
+
+When we access an element and call the parent on it, it will only return one element or one node. This is because there can only be 1 parent element / node, as opposed to a NodeList of child elements.
+
+---
+
+### Selecting Sibling Elements

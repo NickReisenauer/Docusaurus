@@ -2583,3 +2583,11 @@ In this video, we figured out how to have our circles change color and appear ra
 ---
 
 ### Adding Howler.js
+
+In this video, we added the sound library `howler.js`. This will help us add sound files and play them on clicks.
+
+---
+
+## Backend Basics
+
+### Introduction to Backend

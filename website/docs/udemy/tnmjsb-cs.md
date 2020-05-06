@@ -3079,3 +3079,9 @@ But how does the browser work in sync like this?
 ---
 
 ### Welcome to Callback Hell
+
+In this video, we look at how a function can use callback functions. As a result of using callback functions, we can find ourselves nesting callbacks 5-6-7+ levels deep and if we include an error callback it doubles our code length. Instead of chaining and passing functions into callbacks which call other callbacks and making a tangled web of function callbacks, we can use Promises.
+
+---
+
+### Introducing Promises
