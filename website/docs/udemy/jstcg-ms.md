@@ -2212,3 +2212,15 @@ When we access an element and call the parent on it, it will only return one ele
 ---
 
 ### Selecting Sibling Elements
+
+If we have an li and we want to go out of the li past the ul/ol and into the page header, we can use `previousElementSibling`. This will return an element as opposed to a text node which will contain whitespace and it not exactly what we're looking for.
+
+---
+
+### DOM Traversal vs Query Methods
+
+When we have an li, it is almost always contained inside of a ul/ol. Other elements often change positions when we add things to our HTML. So in the cases where we know things won't change it can be a good idea to use DOM Traversal methods to locate elements, but in cases where things could change it would be a better idea to simply use something like `querySelector`.
+
+---
+
+### Styling DOM Elements

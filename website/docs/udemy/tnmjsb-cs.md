@@ -3085,3 +3085,61 @@ In this video, we look at how a function can use callback functions. As a result
 ---
 
 ### Introducing Promises
+
+Before, we passed callbacks functions into other callbacks and made a long, ugly, unreadable chain of functions. But there's a better way to do things, and this is where Promises come in. What are promises?
+
+A promise is an object representing the eventual completion or failure of an asynchronous operation. It's a pattern for writing async code.
+
+When we create a new Promise, we pass in 2 parameters, which are functions, called `resolve` and `reject`. If we don't call either of those functions after initializing our promise, our promise status is `pending`.
+
+```js
+// New Promise
+const newPromise = new Promise((resolve, reject) => {
+  const rand = Math.random();
+  if (rand < 0.5) resolve();
+  else reject();
+});
+```
+
+But how do we run code based on whether or not our promise is rejected or accepted? We have `.then()` and `.catch()`.
+
+```js
+// New Promise
+const newPromise = new Promise((resolve, reject) => {
+  const rand = Math.random();
+  if (rand < 0.5) resolve();
+  else reject();
+});
+newPromise.then(() => {
+  console.log("Promise was Resolved!");
+});
+newPromise.catch(() => {
+  console.log("Promise was Rejected");
+});
+```
+
+---
+
+### Returning Promises from Functions
+
+Often times, we want to return a promise from a function call. This allows us to make our promise more modular and easy to access, as well as allowing us to chain our catch and then statements to the function once.
+
+```js
+const dogPromise = () => {
+  return new Promise((resolve, reject) => {
+    if (statement) resolve();
+    else reject();
+  });
+};
+dogPromise()
+  .then(() => {
+    console.log("Resolved");
+  })
+  .catch(() => {
+    console.log("Rejected");
+  });
+```
+
+---
+
+### Resolving / Rejecting with Values
