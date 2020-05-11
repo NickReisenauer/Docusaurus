@@ -2224,3 +2224,20 @@ When we have an li, it is almost always contained inside of a ul/ol. Other eleme
 ---
 
 ### Styling DOM Elements
+
+When we want to style our selected elements, we have a few options. We can use the .style, which is similar to adding inline styles and will take the #1 precedence in CSS, or by using the className / classList.
+
+[Styling DOM Elements](/img/jstcg-ms/jstcg-ms36.png)
+
+When using className, we would have to set a string containing a list of all our class names and we would have to update the string if we needed new classes. A much nicer alternative is classList. On classList, we have add, remove, and toggle. All we have to do is pass in our class name as a parameter and whether we're trying to add remove or toggle.
+
+```js
+section.className = "classOne classTwo";
+
+section.classList.add("classOne");
+section.classList.toggle("classOne");
+```
+
+---
+
+### Creating Elements with JS - Overview

@@ -2591,3 +2591,50 @@ In this video, we added the sound library `howler.js`. This will help us add sou
 ## Backend Basics
 
 ### Introduction to Backend
+
+Intro to Backend
+
+- Review Internet Basics
+- Static vs Dynamic Sites
+- Stacks / Backend Technologies
+
+When we visit a site, say "http://www.udemy.com/courses", our computer has to figure out the right address.
+
+- Your query is submitted to your ISP
+- Within your ISP, the DNS takes the Domain name and turns it into an IP address
+
+Once we have the address, we need to actually go there
+
+- A request is sent to the desired IP address via HTTP
+- Your request finds the fastest path possible to the server with the specified IP address
+- This is not a direct journey. It requires hopping from one server to another until we arrive
+
+Once the server gets our request, it can respond
+
+- The requested server figures out exactly what we're asking for (/courses)
+- The server builds us the right content, often pulling information from a database
+- The server responds with any combination of HTML, CSS, and JavaScript
+
+Static VS Dynamic
+If a site is truly dynamic, it will be changing the actual source code underneath because of the response it gets from a database, but if it's static it can appear different but it will have the same underlying code every time we visit.
+Even something like the color game we built is a static site because the code never changes, it just pulls different values from our color options to change the background and tile colors.
+
+A Generic Stack contains a backend language, a server, a database, and a frontend.
+A stack for a popular website like Reddit.com, as of awhile ago, looks like this.
+
+- Backend language = Python / Flask
+- Server = NGINX
+- Databases = PostgreSQL
+- Frontend = Backbone
+
+Our stack will use NodeJS, Express, and MongoDB for the backend and JavaScript for the frontend.
+Here are some examples of what we can do with our fullstack knowledge.
+
+- Backend = Check if the user is logged in, figure out what code to send the user
+- Server = Sign up a user, add new post to DB, create new comment
+- Database = Remove post from DB, sort/rank posts, create subreddit, add to newsletter list
+- Frontend = Compile UI based on data from backend
+
+---
+
+### HTTP in Depth

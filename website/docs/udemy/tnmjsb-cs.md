@@ -3143,3 +3143,32 @@ dogPromise()
 ---
 
 ### Resolving / Rejecting with Values
+
+We've seen that we can use a Promise as a return on a function, and when we call that function we have access to .then and .catch, but how can we return values to .then and
+.catch? We can add data into our promise and when we call reject or resolve, we can pass in that data and we can access that in our .then by giving it a name like data.
+
+```js
+const promiseFunc = (url) => {
+  return new Promise((resolve, reject) => {
+    const data = {
+      url: "website.com",
+      id: 5,
+      weather: 98,
+      name: "Nick",
+    };
+    const error = {
+      status: 404,
+    };
+    if (data) resolve(data);
+    else reject(error);
+  });
+};
+
+promiseFunc("website.com/api")
+  .then(console.log(data))
+  .catch(console.log(error));
+```
+
+---
+
+### The Delights of Promise Chaining

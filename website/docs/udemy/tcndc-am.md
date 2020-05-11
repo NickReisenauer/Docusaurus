@@ -2262,3 +2262,39 @@ db.collection("users").insertOne({
 ---
 
 ### Inserting Documents
+
+In this lesson, you’ll explore another way to insert documents into collections.
+
+Inserting Documents
+
+You already know that `insertOne` can be used to insert a single document. You can also
+use `insertMany` to insert multiple documents at once. The example below inserts two
+documents into “tasks” collection. `insertMany` expects an array of objects, an array of the
+documents you want to insert.
+
+```js
+db.collection("tasks").insertMany(
+  [
+    {
+      description: "Clean the house",
+      completed: true,
+    },
+    {
+      description: "Renew inspection",
+      completed: false,
+    },
+  ],
+  (error, result) => {
+    if (error) {
+      return console.log("Unable to insert tasks!");
+    }
+    console.log(result.ops);
+  }
+);
+```
+
+[insertOne Docs](http://mongodb.github.io/node-mongodb-native/3.1/api/Collection.html#insertOne)
+
+---
+
+### The ObjectID
