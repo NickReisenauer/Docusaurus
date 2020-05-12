@@ -2241,3 +2241,11 @@ section.classList.toggle("classOne");
 ---
 
 ### Creating Elements with JS - Overview
+
+When we want to add elements to our page using JS, we have 2 options. We can either use an HTML string or createElement().
+
+[Creating and Inserting Elements](/img/jstcg-ms/jstcg-ms37.png)
+
+---
+
+### Adding Elements via HTML in Code
