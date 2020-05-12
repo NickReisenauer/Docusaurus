@@ -3172,3 +3172,29 @@ promiseFunc("website.com/api")
 ---
 
 ### The Delights of Promise Chaining
+
+If we want to query specific data and we don't have access to that data until after we get it from our Promise, we can call another promise that includes data from the first promise. Similar to a callback function passing data to the next function.
+
+```js
+request("url/posts").then((response) => {
+  const user = response.data[2];
+  request(`url/posts/${user}`).then((response) => {
+    console.log(response);
+  });
+});
+```
+
+Instead of writing our promise chains like that, which looks very similar to callback chaining / callback hell, we can simply return a promise from our .then() function.
+
+```js
+request("url/posts").then((res) => {
+  const id = res.data[0];
+  return request("url/posts/id").then((res) => {
+    console.log("Yay, promise chaining");
+  });
+});
+```
+
+---
+
+### Refactoring with Promises
