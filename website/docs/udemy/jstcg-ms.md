@@ -2242,10 +2242,21 @@ section.classList.toggle("classOne");
 
 ### Creating Elements with JS - Overview
 
-When we want to add elements to our page using JS, we have 2 options. We can either use an HTML string or createElement().
+When we want to add elements to our page using JS, we have 2 options. We can either use an HTML string, such as innerHTML, or createElement().
 
 [Creating and Inserting Elements](/img/jstcg-ms/jstcg-ms37.png)
 
 ---
 
 ### Adding Elements via HTML in Code
+
+When we select an element in the DOM, we have access to its `innerHTML`. `innerHTML` is a string that we can use to construct HTML, we can pass in tags and data and it will be rendered entirely as HTML. This will replace whatever we had as our previous markup.
+If we are just trying to change one thing and don't want a full page refresh, we should avoid innerHTML as it causes everything inside the element to refresh.
+
+We can also use `insertAdjacentHTML()` to select an element and then insert HTML in one of four locations.
+
+[insertAdjacentHTML() Docs](https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML)
+
+---
+
+### Adding Elements via createElement()

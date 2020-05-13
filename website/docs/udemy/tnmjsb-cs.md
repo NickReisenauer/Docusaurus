@@ -3198,3 +3198,23 @@ request("url/posts").then((res) => {
 ---
 
 ### Refactoring with Promises
+
+In our previous example we used a lot of callback functions to move the button across the screen, this is how we could refactor that example with promises.
+
+```js
+const moveX = () => {
+  return new Promise((resolve, reject) => {
+    resolve();
+    reject();
+  });
+};
+moveX().then(return moveX()).then(return moveX()).catch()
+```
+
+By returning the function that returns a promise initially, we can keep rerunning the function call through .then promise calls.
+
+---
+
+## Making HTTP Requests
+
+### Intro to AJAX

@@ -2298,3 +2298,27 @@ db.collection("tasks").insertMany(
 ---
 
 ### The ObjectID
+
+In this lesson, you’ll learn about ObjectIDs. MongoDB uses ObjectIDs to create unique
+identifiers for all the documents in the database. It’s different than the traditional auto-
+incrementing integer ID, but it comes with its own set of advantages.
+
+Working with ObjectIDs
+
+MongoDB provides `ObjectID` which can be used to generate new ObjectIDs. The
+example below generates a new ID and prints it to the console.
+
+```js
+const { MongoClient, ObjectID } = require("mongodb");
+const id = new ObjectID();
+console.log(id); // Print new id to the console
+```
+
+An ObjectID is a GUID (Globally Unique Identifier). GUIDs are generated randomly via an
+algorithm to ensure uniqueness. These IDs can be generated on the server, but as seen in
+the snippet above, they can be generated on the client as well. That means a client can
+generate the ID for a document it’s about to insert in to the database.
+
+---
+
+### Querying Documents

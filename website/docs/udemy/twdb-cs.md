@@ -2638,3 +2638,12 @@ Here are some examples of what we can do with our fullstack knowledge.
 ---
 
 ### HTTP in Depth
+
+Postman is a tool that lets us visualize our HTTP requests. There are quite a few of HTTP options, but the most common are GET, POST, DELETE.
+We can also add query options, which are key value pairs into our HTTP request string to alter what data the server is going to send back to us.
+
+We are not altering anything when we make requests, we are just asking for some data and the server is sending it to us.
+
+---
+
+### Backend Workflow Pt. 1
