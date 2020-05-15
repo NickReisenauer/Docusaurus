@@ -3233,3 +3233,32 @@ When we send requests, we are most likely going to be getting JSON back. JSON is
 ---
 
 ### JSON & XML
+
+XML is kind of like the parent to HTML. It is very old and has similar markup features to HTML.
+When writing XML, we use HTML like tags to represent parts of the data.
+When writing JSON, we use JavaScript Object Notation, basically just an object.
+
+```xml
+<name>
+  <first>Nick</first>
+  <last>Reisenauer</last>
+</name>
+```
+
+```json
+{
+  "name": "Nick",
+  "age": 18,
+  "education": "Launch School",
+  "grades" {
+    "1": "a",
+    "2": "a"
+  }
+}
+```
+
+Despite JSON being called JavaScript Object Notation, it is not actually JavaScript exclusive code and you can use JSON in any other programming language to build a page from an API JSON response.
+
+---
+
+### XMLHttpRequests: The Basics

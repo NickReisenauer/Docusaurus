@@ -2648,4 +2648,8 @@ We are not altering anything when we make requests, we are just asking for some 
 
 ### Backend Workflow Pt. 1
 
-In this video, we looked at an Express server and how our server can return code based on different URL requests.
+In this video, we looked at an Express server and how our server can return different code based on different URL requests.
+
+---
+
+### Backend Workflow Pt. 2

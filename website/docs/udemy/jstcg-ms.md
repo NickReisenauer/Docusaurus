@@ -2270,3 +2270,13 @@ createElement will take at least 1 argument, being the tag name. But we need to 
 ---
 
 ### Inserting DOM Elements
+
+- `append` is a method that we call on the parent element and it allows us to directly append our new element to the element that we're calling it on. This method can also take more than one element in its arguments.
+- `prepend` is a method called on a parent element and it will add the new element as the first element (first element on whatever we call it on)
+- `lastElementChild .before .after` is a method that allows us to select the last element in an element and insert our element either before or after the selected element.
+- `firstElementChild .replaceWith()` is a method that allows us to replace a selected element with another element of our choosing.
+- `element.insertAdjacentElement()` allows us to select an element and insert our element adjacent to the selected element.
+
+---
+
+### Cloning DOM Nodes
