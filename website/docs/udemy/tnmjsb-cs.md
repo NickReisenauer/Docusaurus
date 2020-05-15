@@ -3218,3 +3218,18 @@ By returning the function that returns a promise initially, we can keep rerunnin
 ## Making HTTP Requests
 
 ### Intro to AJAX
+
+AJAX:
+
+- Asynchronous
+- JavaScript
+- And
+- XML / JSON
+
+The idea behind AJAX and asynchronous pages are that we don't have to reload the page every time we want new data. Consider a site like google, where when you search for something the whole page reloads, then consider something like YouTube, where the site doesn't refresh it just gets updated with content.
+
+When we send requests, we are most likely going to be getting JSON back. JSON is an object-like syntax containing lots of data that the server gives us based on what we asked for. We can use the JSON to update our HTML page with the new data.
+
+---
+
+### JSON & XML

@@ -2260,3 +2260,13 @@ We can also use `insertAdjacentHTML()` to select an element and then insert HTML
 ---
 
 ### Adding Elements via createElement()
+
+We might not want to use `insertAdjacentHTML()` and the reason has nothing to do with performance or user experience, instead it is our own developer experience. When we create an element using insertAdjacentHTML, we have no way of directly accessing the element we just created without running a query.
+
+This is where createElement comes in. This allows us to create any new element and we can store the location in a variable upon creation. We always call this method on the document object, like `document.createElement()`.
+
+createElement will take at least 1 argument, being the tag name. But we need to store our new element in a variable otherwise it will get lost in the void and be garbage collected because we have no reference to it. Once we have a variable assigned, we have to actually add it to the DOM. We could do something like `body.appendChild(ourElement)`.
+
+---
+
+### Inserting DOM Elements
