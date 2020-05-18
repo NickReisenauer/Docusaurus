@@ -3262,3 +3262,29 @@ Despite JSON being called JavaScript Object Notation, it is not actually JavaScr
 ---
 
 ### XMLHttpRequests: The Basics
+
+- The "original" way of sending requests via JS
+- Does not support promises, so lots of callbacks
+- Clunky syntax that's difficult to remember
+
+When using XHR (XMLHttpRequests), we can use it to fetch any kind of data from an API, not just XML, we can use JSON which is the current standard.
+
+Below is an example of an XHR request where we get the data and convert it into readable JS code.
+
+```js
+const myReq = new XMLHttpRequest();
+myReq.addEventListener("load", () => {
+  const data = JSON.parse(this.responseText);
+  console.log(data);
+});
+myReq.addEventListener("error", (error) => {
+  console.log(error);
+});
+myReq.open("GET", "https://api.com/api");
+myReq.setRequestHeader("Accept", "application/json");
+myReq.send();
+```
+
+---
+
+### XMLHttpRequests: Chaining Requests

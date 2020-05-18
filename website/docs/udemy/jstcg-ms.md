@@ -2280,3 +2280,24 @@ createElement will take at least 1 argument, being the tag name. But we need to 
 ---
 
 ### Cloning DOM Nodes
+
+When we insert an element and then insert that same element somewhere else by using a different DOM Insertion technique, the element is not inserted in both places, it is moved to the most recent location. If we want to clone our element and place it in again somewhere, we can use `cloneNode(true)`.
+
+```js
+const list2 = newLi.cloneNode(true);
+```
+
+---
+
+### Live Node Lists vs Static Node Lists
+
+If we have a ul and we query our ul with `querySelectorAll()` and we also query it with `getElementsByTagName()` we get 2 different functionalities.
+
+`querySelectorAll()` will return a static node list.
+`getElementsByTagName()` will return a live node list.
+
+If we were to append a new element onto our ul, and then console.log our variables that contain the node lists, we would see that the static node list still only contains the original li's, but our live node list will contain whatever we just added in.
+
+---
+
+### Removing Elements
