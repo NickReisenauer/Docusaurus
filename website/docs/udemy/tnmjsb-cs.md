@@ -3288,3 +3288,9 @@ myReq.send();
 ---
 
 ### XMLHttpRequests: Chaining Requests
+
+If we want to send a request based on some data returned on our first request we have to chain our requests together. Say we send a request to get the users location and we want to pass that data into a weather request to get the weather for the location. First, we make our location call and then we store the result in a variable, then we make our second request and pass the variable in.
+
+---
+
+### A Better Way: Fetch!

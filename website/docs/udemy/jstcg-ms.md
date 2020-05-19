@@ -2301,3 +2301,24 @@ If we were to append a new element onto our ul, and then console.log our variabl
 ---
 
 ### Removing Elements
+
+The simplest way to remove an element is to call the remove function on it.
+
+The remove method is not supported in Internet Explorer however, so if we need to support farther back we can call a function called removeChild on a parent element.
+
+```js
+element.remove();
+
+// Internet Explorer
+element.parentElement.removeChild(element);
+```
+
+---
+
+### Insertion & Removal Method Summary
+
+[Insertion & Removal Methods](/img/jstcg-ms/jstcg-ms38.png)
+
+---
+
+### Summary: Insert, Replace, Remove

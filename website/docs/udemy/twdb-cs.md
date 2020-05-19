@@ -2659,3 +2659,11 @@ In this video, we looked at how POST requests work and how we use forms and inpu
 ---
 
 ### Introduction to Cloud 9
+
+One advantage to using a cloud-based IDE (Integrated Development Environment) is that every machine is different and when we're installing everything we need for fullstack development, we run into a lot of problems. With a cloud-based IDE, it's set up the same and there are more resources available because it's a unified system.
+
+An alternative to what is commonly offered is Amazon Web Service's Cloud 9 IDE. It is a cloud based IDE that provides a free tier and terminal access with the system running Amazon Linux.
+
+---
+
+### Setting up Cloud 9

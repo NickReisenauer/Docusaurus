@@ -2386,3 +2386,60 @@ doWorkPromise
 ---
 
 ### Updating Documents
+
+In this lesson, you’ll learn how to update documents stored in MongoDB.
+
+Updating Documents
+
+You can update documents in a collection using `updateOne` or `updateMany`. The first
+argument for both `updateOne` and `updateMany` is similar to the first argument used with
+`find` or `findOne`. It’s an object that allows you to filter down all the documents to just the
+ones you want to update.
+
+The update calls require a second argument as well. This is an object where you define
+the updates you want to make. For this, you need to use one of the supported [update operators](https://docs.mongodb.com/manual/reference/operator/update/#id1).
+
+The `updateOne` call below uses `$inc` to increment the `age` field on the targeted document
+by 1.
+
+```js
+db.collection("users")
+  .updateOne(
+    {
+      _id: new ObjectID("5c0fe6634362c1fb75b9d6b5"),
+    },
+    {
+      $inc: {
+        age: 1,
+      },
+    }
+  )
+  .then((result) => {
+    console.log(result);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+```
+
+The `updateMany` call below uses `$set` to set the completed field to `true` for all documents
+where the `completed` field is currently `false`.
+
+```js
+db.collection("tasks")
+  .updateMany({ completed: false }, { $set: { completed: true } })
+  .then((success) => {
+    console.log(success);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+```
+
+[updateOne](http://mongodb.github.io/node-mongodb-native/3.1/api/Collection.html#updateOne)
+[updateMany](http://mongodb.github.io/node-mongodb-native/3.1/api/Collection.html#updateMany)
+[Update operators](https://docs.mongodb.com/manual/reference/operator/update/#id1)
+
+---
+
+### Deleting Documents
