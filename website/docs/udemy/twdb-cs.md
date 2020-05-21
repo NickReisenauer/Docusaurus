@@ -2667,3 +2667,11 @@ An alternative to what is commonly offered is Amazon Web Service's Cloud 9 IDE. 
 ---
 
 ### Setting up Cloud 9
+
+This video goes over the basic features that are included in the Cloud9 Online IDE.
+
+---
+
+## The Command Line
+
+### Introduction to the Command Line

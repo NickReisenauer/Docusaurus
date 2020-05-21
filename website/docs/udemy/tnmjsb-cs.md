@@ -3294,3 +3294,32 @@ If we want to send a request based on some data returned on our first request we
 ---
 
 ### A Better Way: Fetch!
+
+Fetch API:
+
+- The newer way of making requests via JS
+- Supports promises!
+- Not supported in Internet Explorer
+
+```js
+fetch("https://website.com/api/weather")
+  .then((response) => {
+    if (!response.ok) throw new Error(`Error: ${response.status}`);
+    response.json().then((data) => {
+      console.log(data);
+    });
+  })
+  .catch((error) => {
+    console.log(response);
+  });
+```
+
+When our promise is initially resolved, our data comes back on the body object as something called a readable stream. This readable stream is a stream of byte data. These types of streams are useful for transferring very large amounts of data.
+In order to have our stream of data become readable, we need to convert it to JSON. We can do this conversion by using the `json()` function. This `json()` function is itself an asynchronous operation, so we need to add a .then to it.
+
+There is a little catch we have to work around with error handling. In our catch(), we pass in an error and we console.log it. One might expect that if there's a 404 response from our API that our catch function would get the error, but that's not how the fetch error reporting works. The catch error will only execute if there's something that prevents us from ever connecting to the API, such as a network error. So how do we get error reporting set up in the case of a 404?
+We can do that by passing in a check to see if the response.ok property is set to true. We can also throw a new error from our check, and that throw will end up in our catch statement.
+
+---
+
+### Chaining Fetch Requests

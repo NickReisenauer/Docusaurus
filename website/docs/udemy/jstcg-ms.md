@@ -2322,3 +2322,46 @@ element.parentElement.removeChild(element);
 ---
 
 ### Summary: Insert, Replace, Remove
+
+Create & Insert:
+
+- `innerHTML`
+- Creating and inserting DOM objects manually
+
+Insertion Methods:
+
+- `append()`
+- `appendChild()`
+- `prepend()`
+- `insertBefore()`
+- `before()`
+- `after()`
+- `insertBefore()`
+- `insertAdjacentElement()`
+- `element.cloneNode(true)`
+
+Replace:
+
+- `replaceWith()`
+- `replaceChild()`
+
+Remove:
+
+- `element.innerHTML = ""`
+- element.remove()`
+- `element.parentNode.removeChild(element)`
+
+Text Nodes:
+
+- `textContent`
+- `innerText`
+
+---
+
+### Setting up the Practice Project
+
+This project is a personal movie database where we can open a model and add a favorite with a title or image, and we can remove a movie by clicking on it.
+
+---
+
+### Selecting the Modal and "Add" Button
