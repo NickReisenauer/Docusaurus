@@ -3323,3 +3323,36 @@ We can do that by passing in a check to see if the response.ok property is set t
 ---
 
 ### Chaining Fetch Requests
+
+If we want to send a request to somewhere based on some data we received with a different fetch request, we can chain our fetch calls together with promises.
+
+```js
+fetch("https://swapi.co/api/planets/")
+  .then((response) => {
+    if (!response.ok) throw new Error(`Status Code Error: ${response.status}`);
+
+    return response.json();
+  })
+  .then((data) => {
+    console.log("FETCHED ALL PLANETS (first 10)");
+    const filmURL = data.results[0].films[0];
+    return fetch(filmURL);
+  })
+  .then((response) => {
+    if (!response.ok) throw new Error(`Status Code Error: ${response.status}`);
+
+    return response.json();
+  })
+  .then((data) => {
+    console.log("FETCHED FIRST FILM, based off of first planet");
+    console.log(data.title);
+  })
+  .catch((err) => {
+    console.log("SOMETHING WENT WRONG WITH FETCH!");
+    console.log(err);
+  });
+```
+
+---
+
+### Refactoring Fetch Chains

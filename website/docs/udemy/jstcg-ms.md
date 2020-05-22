@@ -2360,8 +2360,14 @@ Text Nodes:
 
 ### Setting up the Practice Project
 
-This project is a personal movie database where we can open a model and add a favorite with a title or image, and we can remove a movie by clicking on it.
+This project is a personal movie database where we can open a modal and add a favorite with a title or image, and we can remove a movie by clicking on it.
 
 ---
 
 ### Selecting the Modal and "Add" Button
+
+In this video, we selected our modal div and added a click listener. Inside our click listener for the modal div we set up a classList function to add a visible class to the modal so that it switches from display none to display block.
+
+---
+
+### Opening a Modal by Changing CSS Classes

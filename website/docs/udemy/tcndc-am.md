@@ -2491,3 +2491,86 @@ db.collection("tasks")
 ## REST APIs and Mongoose
 
 ### Section Intro: REST APIs and Mongoose
+
+In this section, you’ll be creating a REST API using Express. You’ll learn what exactly a
+REST API is and how it can be used as the back-end for a web or mobile application. This
+section also covers data validation, application architecture, async/await, and more.
+
+---
+
+### Setting up Mongoose
+
+In this lesson, you’ll be setting up Mongoose. Mongoose makes it easy to model and
+manage your application data. This includes data sanitization, data validation, and more.
+Mongoose will serve as a replacement for the native driver, providing you with a more
+object-oriented interface.
+
+Setting up Mongoose
+
+First up, install Mongoose.
+
+```bash
+npm i mongoose
+```
+
+Like the MongoDB native driver, Mongoose provides a `connect` function you can use to
+connect to your MongoDB database.
+
+```js
+const mongoose = require("mongoose");
+mongoose.connect("mongodb://127.0.0.1:27017/task-manager-api", {
+  useNewUrlParser: true,
+  useCreateIndex: true,
+});
+```
+
+Modeling Your Data
+
+The core feature of Mongoose is the ability to model your data. A new model can be
+created for the different types of data your application needs to store. You can create as
+many models as your application needs.
+
+The code below defines a user model. The model definition is where you define what
+makes up a user. This would include all the pieces of data you want to store in the
+database. The user model below has just two fields, a name and an age.
+
+```js
+const User = mongoose.model("User", {
+  name: {
+    type: String,
+  },
+  age: {
+    type: Number,
+  },
+});
+```
+
+With the model defined, it’s time to start creating and saving users. The `User` variable
+above stores the Mongoose model. This is a constructor function that can be used to
+create new users. The snippet below creates a new user with the name `'Andrew'` and the
+age `27`. This alone won’t save any data to the database, but it’s a step in the right direction.
+
+```js
+const me = new User({
+  name: "Andrew",
+  age: 27,
+});
+```
+
+The new model instance can be saved to the database using the save method.
+
+```js
+me.save()
+  .then((success) => {
+    console.log(success);
+  })
+  .catch((error) => {
+    console.log("Error!", error);
+  });
+```
+
+[Mongoose](https://mongoosejs.com/)
+
+---
+
+### Creating a Mongoose Model

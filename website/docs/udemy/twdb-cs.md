@@ -2675,3 +2675,9 @@ This video goes over the basic features that are included in the Cloud9 Online I
 ## The Command Line
 
 ### Introduction to the Command Line
+
+The terminal/cli allows us to be a lot more powerful and quick with interacting with our computer.
+
+---
+
+### CD and LS
