@@ -3356,3 +3356,43 @@ fetch("https://swapi.co/api/planets/")
 ---
 
 ### Refactoring Fetch Chains
+
+If we want to clean up our fetch chains to be easier to read and easier to add new requests to, we can split a large amount of our code into separate functions and call the functions inside of our fetch requests.
+
+```js
+const checkStatusAndParse = (response) => {
+  if (!response.ok) throw new Error(`Status Code Error: ${response.status}`);
+
+  return response.json();
+};
+
+const printPlanets = (data) => {
+  console.log("Loaded 10 more planets...");
+  for (let planet of data.results) {
+    console.log(planet.name);
+  }
+  return Promise.resolve(data.next);
+};
+
+const fetchNextPlanets = (url = "https://swapi.co/api/planets/") => {
+  return fetch(url);
+};
+
+fetchNextPlanets()
+  .then(checkStatusAndParse)
+  .then(printPlanets)
+  .then(fetchNextPlanets)
+  .then(checkStatusAndParse)
+  .then(printPlanets)
+  .then(fetchNextPlanets)
+  .then(checkStatusAndParse)
+  .then(printPlanets)
+  .catch((err) => {
+    console.log("SOMETHING WENT WRONG WITH FETCH!");
+    console.log(err);
+  });
+```
+
+---
+
+### An Even Better Way: Axios

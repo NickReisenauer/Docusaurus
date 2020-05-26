@@ -2371,3 +2371,11 @@ In this video, we selected our modal div and added a click listener. Inside our 
 ---
 
 ### Opening a Modal by Changing CSS Classes
+
+First we need to add an event listener to the button and then we can use classList.toggle to determine whether or not to make the modal visible.
+
+Once our modal is selected and opened, we can add a backdrop that will turn the background a darker color and make it so that you can only click on the open modal.
+
+---
+
+### Controlling the Backdrop

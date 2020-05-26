@@ -2681,3 +2681,11 @@ The terminal/cli allows us to be a lot more powerful and quick with interacting 
 ---
 
 ### CD and LS
+
+`ls` will show all of the current files inside of the folder or directory your command was run in.
+
+`cd` will allow us to change directories and move between files and folders.
+
+---
+
+### Touch and Mkdir

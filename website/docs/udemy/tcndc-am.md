@@ -2574,3 +2574,36 @@ me.save()
 ---
 
 ### Creating a Mongoose Model
+
+In this lesson, it’s on you to define a second Mongoose model for tasks.
+
+```js
+const Task = mongoose.model("Task", {
+  description: {
+    type: String,
+  },
+  completed: {
+    type: Boolean,
+  },
+});
+
+const task1 = new Task({
+  description: "Complete MongoDB University",
+  completed: false,
+});
+
+task1
+  .save()
+  .then((success) => {
+    console.log(success);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+```
+
+If we open Robo 3T to view our data, we will notice that it created a new collection called `"tasks"`, even though we didn't write this collection name anywhere. It gets this name from our `mongoose.model` where we define what our model should be called. It takes the name and makes it lowercase as well as pluralizes it.
+
+---
+
+### Data Validation and Sanitization: Part 1
