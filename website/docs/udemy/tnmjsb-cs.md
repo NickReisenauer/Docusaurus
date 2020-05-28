@@ -3396,3 +3396,22 @@ fetchNextPlanets()
 ---
 
 ### An Even Better Way: Axios
+
+Axios is a library that well help us perform HTTP requests in the browser or in Node.js. It works by using the fetch API behind the scenes and supports promise based requests. Axios will automatically call our .catch function if there is an error, so we don't have to do any additional error throwing. Our Axios response data is automatically parsed from JSON into readable and accessible data.
+
+Example of a HTTP GET request with Axios:
+
+```js
+axios
+  .get(`https://api.com/api`)
+  .then((response) => {
+    console.log(response);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+```
+
+---
+
+### Sequential Axios Requests

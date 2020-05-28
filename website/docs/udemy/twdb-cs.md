@@ -2689,3 +2689,11 @@ The terminal/cli allows us to be a lot more powerful and quick with interacting 
 ---
 
 ### Touch and Mkdir
+
+`touch` allows us to make a new file.
+
+`mkdir` allows us to make a new directory.
+
+---
+
+### Removing Files and Folders

@@ -2379,3 +2379,9 @@ Once our modal is selected and opened, we can add a backdrop that will turn the 
 ---
 
 ### Controlling the Backdrop
+
+To add our backdrop we can add an event listener on the add movie button and then once we have it up we can add an event listener to the backdrop so that if we click outside the modal will close.
+
+---
+
+### Fetching and Validating User Input
