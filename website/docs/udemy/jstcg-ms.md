@@ -2385,3 +2385,10 @@ To add our backdrop we can add an event listener on the add movie button and the
 ---
 
 ### Fetching and Validating User Input
+
+In this video, we got the user input and ran some simple vaildation to determine if the numbers were valid.
+We used .trim to ensure that there was no invalid whitespace.
+
+---
+
+### Creating a Move in JavaScript & Clearing the Input
