@@ -2392,3 +2392,9 @@ We used .trim to ensure that there was no invalid whitespace.
 ---
 
 ### Creating a Move in JavaScript & Clearing the Input
+
+Once we have our movie added through the input modal, we need to be able to clear the user inputs as well as store the data the user entered into an object.
+
+---
+
+### Rendering Movie Items on the Screen

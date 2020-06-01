@@ -3415,3 +3415,35 @@ axios
 ---
 
 ### Sequential Axios Requests
+
+Just like we did with fetch, we can string together multiple HTTP requests using Axios.
+
+```js
+const fetchNextPlanets = (url = "https://swapi.co/api/planets/") => {
+  console.log(url);
+  return axios.get(url);
+};
+const printPlanets = ({ data }) => {
+  console.log(data);
+  for (let planet of data.results) {
+    console.log(planet.name);
+  }
+  return Promise.resolve(data.next);
+};
+
+fetchNextPlanets()
+  .then(printPlanets)
+  .then(fetchNextPlanets)
+  .then(printPlanets)
+  .then(fetchNextPlanets)
+  .then(printPlanets)
+  .catch((err) => {
+    console.log("ERROR!!", err);
+  });
+```
+
+---
+
+## Async & Await: JS Magic
+
+### A Quick Overview of Async Functions

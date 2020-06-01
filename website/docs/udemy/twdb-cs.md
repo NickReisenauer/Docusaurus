@@ -2697,3 +2697,70 @@ The terminal/cli allows us to be a lot more powerful and quick with interacting 
 ---
 
 ### Removing Files and Folders
+
+`rm` allows us to remove a file.
+
+`rm -rf` allows us to remove a folder or directory.
+
+---
+
+### Command Line Exercise
+
+- Make a new folder named "Animals"
+
+```bash
+mkdir Animals
+```
+
+- Inside of Animals add 2 directories: AwesomeAnimals and SketchyAnimals
+
+```bash
+mkdir Animals/AwesomeAnimals
+mkdir Animals/SketchyAnimals
+```
+
+- Inside of AwesomeAnimals add the following files: Capybara.js, ArcticFox.html, and TreeFrog.txt
+
+```bash
+cd Animals/AwesomeAnimals
+touch Capybara.js ArcticFox.html TreeFrog.txt
+```
+
+- Inside of SketchyAnimals add the following files: BrownRecluse.html and BulletAnt.js
+
+```bash
+cd ../SketchyAnimals
+touch BrownRecluse.html BulletAnt.js
+```
+
+- Also inside of SketchyAnimals create a Snakes directory.
+
+```bash
+mkdir Snakes
+```
+
+- Inside the Snakes directory create the following files: Cobra.css and ReticulatedPython.js
+
+```bash
+touch Snakes/Cobra.css Snakes/ReticulatedPython.js
+```
+
+- Remove the BulletAnt.js file
+
+```bash
+cd ..
+rm BulletAnt.js
+```
+
+- Delete the entire Animal directory
+
+```bash
+cd
+rm -rf Animals
+```
+
+---
+
+## Node JS
+
+### Introduction to Node

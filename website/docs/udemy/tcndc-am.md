@@ -2607,3 +2607,58 @@ If we open Robo 3T to view our data, we will notice that it created a new collec
 ---
 
 ### Data Validation and Sanitization: Part 1
+
+In this lesson, you’ll set up data validation and sanitization for your models. Validation will
+allow you to restrict what data can be stored in the database, while sanitization will allow
+you to store user data in a uniform and standardized way.
+
+Data Validation and Sanitization
+
+First up, install validator. While Mongoose provides basic tools for performing validation,
+the validator library provides useful methods for validating data such as email addresses,
+phone numbers, zip codes, and more.
+
+```bash
+npm i validator
+```
+
+Mongoose comes with support for basic validation and sanitization. The user model below
+shows how this can be configured. `required` is used to validate that a value is provided for
+a given field. `trim` is used to remove extra spaces before or after data. `lowercase` is used
+to convert the data to lowercase before saving it to the database. You can find a complete
+list of options in the [schema documentation](https://mongoosejs.com/docs/schematypes.html).
+
+You can also define custom validation for your models. This is done using `validate` as
+shown in the example below. The method gets called with the value to validate, and it
+should throw an error if the data is invalid. The example below uses the `isEmail` method
+from validator to validate the email address is valid before saving it to the database.
+
+```js
+const mongoose = require("mongoose");
+const validator = require("validator");
+
+const User = mongoose.model("User", {
+  name: {
+    type: String,
+    required: true,
+    trim: true,
+  },
+  email: {
+    type: String,
+    required: true,
+    trim: true,
+    lowercase: true,
+    validate(value) {
+      if (!validator.isEmail(value)) {
+        throw new Error("Email is invalid");
+      }
+    },
+  },
+});
+```
+
+[npm Validator](https://www.npmjs.com/package/validator)
+
+---
+
+### Data Validation and Sanitization: Part 2
