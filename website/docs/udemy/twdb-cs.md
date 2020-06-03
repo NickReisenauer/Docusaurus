@@ -2764,3 +2764,13 @@ rm -rf Animals
 ## Node JS
 
 ### Introduction to Node
+
+What is Node and why are we learning it?
+
+Node is simply a way for us to write JavaScript code on the server side of things.
+
+A few reasons that we should learn Node include its popularity, community, performance, JavaScript runtime, package ecosystem, and its asynchronous runtime.
+
+---
+
+### Using Node

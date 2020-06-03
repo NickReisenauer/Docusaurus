@@ -3447,3 +3447,47 @@ fetchNextPlanets()
 ## Async & Await: JS Magic
 
 ### A Quick Overview of Async Functions
+
+Imaging we had a function that looked like our example below. What happens when we get the data? We can't actually access the data without using promise syntax.
+
+```js
+const getData = () => {
+  const data = axios.get("url/api");
+  console.log(data);
+};
+```
+
+There are 2 pieces involved with using Async functions. These pieces are `async` and `await`.
+
+---
+
+### The Async Keyword
+
+The `async` keyword:
+
+- Async functions always return a promise.
+- If the function returns a value, the promise will be resolved with that value.
+- If the function throws an exception, the promise will be rejected.
+
+```js
+const add = async (x, y) => {
+  if (typeof x !== "number" || typeof y !== "number") {
+    throw `Must be a number`;
+  }
+  return x + y;
+};
+
+add(5, 5)
+  .then((value) => {
+    console.log(value);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+```
+
+An async function, on one level, is just a shortcut syntax to make a function that returns a promise.
+
+---
+
+### The Await Keyword

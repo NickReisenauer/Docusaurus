@@ -2386,7 +2386,7 @@ To add our backdrop we can add an event listener on the add movie button and the
 
 ### Fetching and Validating User Input
 
-In this video, we got the user input and ran some simple vaildation to determine if the numbers were valid.
+In this video, we got the user input and ran some simple validation to determine if the numbers were valid.
 We used .trim to ensure that there was no invalid whitespace.
 
 ---
@@ -2398,3 +2398,10 @@ Once we have our movie added through the input modal, we need to be able to clea
 ---
 
 ### Rendering Movie Items on the Screen
+
+To render our new movie to the screen, we created a new function that will take in the movie's title, image, and rating. From there we call a function that will create some new elements and add the data that we received from the user input into the new movie modal.
+We also used innerHTML to construct an interpolated string containing the data the user inputted.
+
+---
+
+### Deleting Movie Elements

@@ -2662,3 +2662,24 @@ const User = mongoose.model("User", {
 ---
 
 ### Data Validation and Sanitization: Part 2
+
+Our challenge for this video was to add more data validation and sanitization to our task and user collections.
+Below is the custom password validation schema we set up.
+
+```js
+  password: {
+    required: true,
+    type: String,
+    minlength: 7,
+    trim: true,
+    validate(value) {
+      if (value.toLowerCase().includes("password")) {
+        throw new Error(`Password cannot be "password"`);
+      }
+    },
+  },
+```
+
+---
+
+### Structuring a REST API
