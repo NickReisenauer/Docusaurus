@@ -3491,3 +3491,46 @@ An async function, on one level, is just a shortcut syntax to make a function th
 ---
 
 ### The Await Keyword
+
+The `await` keyword:
+
+- We can only use the await keyword inside of functions declared with async.
+- `await` will pause the execution of the function, waiting for a promise to be resolved.
+
+```js
+const getPlanets = async () => {
+  const response = await axios.get(`website.com/api`);
+  console.log(response);
+};
+
+getPlanets();
+```
+
+---
+
+### Error Handling in Async Functions
+
+Previously, we saw how we could use the `await` keyword to wait for our promise to resolve inside of our function, but we didn't see how we could catch and report any errors.
+
+We have 2 options when it comes to catching errors. One option is using a try catch block inside of our function. Our second option is to add a .catch to our function call.
+
+```js
+const getPlanets = async () => {
+  try {
+    const response = await axios.get(`website.com/api`);
+    console.log(response);
+  } catch (error) {
+    console.log(`Error: ${error}`);
+  }
+};
+// Or
+getPlanets().catch((error) => {
+  console.log(error);
+});
+```
+
+The difference between these two options is the try catch block allows us to be more specific with our error handling and it will only run when that specific function fails, the other option will catch any error and as such is a less precise option.
+
+---
+
+### Multiple Awaits

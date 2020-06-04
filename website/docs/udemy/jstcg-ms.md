@@ -2405,3 +2405,9 @@ We also used innerHTML to construct an interpolated string containing the data t
 ---
 
 ### Deleting Movie Elements
+
+To delete an item, we get the index of the movie that we're trying to delete and we use splice to remove the item with our selected index and move the other items up.
+
+---
+
+### Showing & Hiding the "Are you sure?" Dialog

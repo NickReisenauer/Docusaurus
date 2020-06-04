@@ -2683,3 +2683,19 @@ Below is the custom password validation schema we set up.
 ---
 
 ### Structuring a REST API
+
+What exactly is a REST API?
+
+- Representational State Transfer - Application Programming Interface (REST API of RESTful API)
+
+We are going to use various HTTP methods to interact with the database.
+
+- Create: `POST /tasks`
+- Read: `GET /tasks`
+- Read: `GET /tasks/:id`
+- Update: `PATCH /tasks/:id`
+- Delete: `DELETE /tasks/:id`
+
+---
+
+### Installing Postman

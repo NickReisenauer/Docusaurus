@@ -2774,3 +2774,11 @@ A few reasons that we should learn Node include its popularity, community, perfo
 ---
 
 ### Using Node
+
+Our first experience with Node is using the Node REPL (Read Evaluate Print Loop). This is a terminal operation that allows us to type and execute JavaScript in our console.
+
+We can also use Node to execute our JavaScript files. We do this by typing `node fileName.js` into the terminal.
+
+---
+
+### Node Echo Exercise
