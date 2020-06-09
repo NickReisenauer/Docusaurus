@@ -3533,4 +3533,10 @@ The difference between these two options is the try catch block allows us to be 
 
 ---
 
-### Multiple Awaits
+### Multiple Awaits |REWATCH|
+
+We can pass in multiple await statements by simply returning a promise and then adding await a lot of times.
+
+---
+
+### Parallel vs Sequential Requests

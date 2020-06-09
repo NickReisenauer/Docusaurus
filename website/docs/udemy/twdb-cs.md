@@ -2782,3 +2782,24 @@ We can also use Node to execute our JavaScript files. We do this by typing `node
 ---
 
 ### Node Echo Exercise
+
+Write a function called echo that takes 2 arguments: a string and a number. It should print out the string, number number of times.
+
+```js
+// echo.js
+const echo = (phrase, number) => {
+  for (let i = 0; i < number; i++) {
+    console.log(phrase);
+  }
+};
+
+echo("Echo Log", 4);
+// Echo Log
+// Echo Log
+// Echo Log
+// Echo Log
+```
+
+---
+
+### Node Average Exercise

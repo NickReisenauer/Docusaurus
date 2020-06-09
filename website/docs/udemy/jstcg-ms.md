@@ -2411,3 +2411,9 @@ To delete an item, we get the index of the movie that we're trying to delete and
 ---
 
 ### Showing & Hiding the "Are you sure?" Dialog
+
+To show and hide the confirmation dialog, we simply add event listeners to the backdrop and then toggle the show or hide modals using functions.
+
+---
+
+### Starting with the Confirmation Logic

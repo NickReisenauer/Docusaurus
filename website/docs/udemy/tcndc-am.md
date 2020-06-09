@@ -2699,3 +2699,12 @@ We are going to use various HTTP methods to interact with the database.
 ---
 
 ### Installing Postman
+
+In this lesson, you’ll set up Postman. Postman makes it easy to test your REST API by
+providing you with a set of tools for making HTTP requests. This is not meant to serve as a replacement for a web or mobile application, it’s just a useful way to debug your endpoints as you’re creating them.
+
+You can grab Postman [here](https://www.getpostman.com/). It’s free and available for all operating systems.
+
+---
+
+### Resource Creation Endpoints: Part 1
