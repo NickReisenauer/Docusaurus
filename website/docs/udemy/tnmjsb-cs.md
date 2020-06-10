@@ -3540,3 +3540,38 @@ We can pass in multiple await statements by simply returning a promise and then 
 ---
 
 ### Parallel vs Sequential Requests
+
+When writing requests, we either write them in parallel or sequentially. Sequential requests wait for the request above to finish before sending the next request. If we write them in parallel, we can fire them off all at practically the same time and await them as soon as they come back in no particular order.
+
+```js
+// SEQUENTIAL REQUESTS
+const get3Pokemon = async () => {
+  const poke1 = await axios.get("https://pokeapi.co/api/v2/pokemon1");
+  const poke2 = await axios.get("https://pokeapi.co/api/v2/pokemon2");
+  const poke3 = await axios.get("https://pokeapi.co/api/v2/pokemon3");
+  console.log(poke1.data);
+  console.log(poke2.data);
+  console.log(poke3.data);
+};
+```
+
+```js
+// PARALLEL REQUESTS
+const get3Pokemon = async () => {
+  const poke1 = axios.get("https://pokeapi.co/api/v2/pokemon1");
+  const poke2 = axios.get("https://pokeapi.co/api/v2/pokemon2");
+  const poke3 = axios.get("https://pokeapi.co/api/v2/pokemon3");
+  const res1 = await poke1;
+  const res2 = await poke2;
+  const res3 = await poke3;
+  console.log(res1);
+  console.log(res2);
+  console.log(res3);
+};
+```
+
+If your requests don't build on each other and you simply need to fire off requests as quickly as possible, just use parallel requests
+
+---
+
+### Refactoring with Promise.all

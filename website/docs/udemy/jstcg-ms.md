@@ -2417,3 +2417,9 @@ To show and hide the confirmation dialog, we simply add event listeners to the b
 ---
 
 ### Starting with the Confirmation Logic
+
+In this video, we added some confirmation logic so that when a user clicks the delete movie button, we can verify that they are sure they want to continue.
+
+---
+
+### Finishing the App

@@ -2803,3 +2803,21 @@ echo("Echo Log", 4);
 ---
 
 ### Node Average Exercise
+
+Take an array of test numbers and return the average score in the array, rounded to the nearest whole number.
+
+```js
+const grader = (arr) => {
+  let result = 0;
+  arr.forEach((num) => {
+    result += num;
+  });
+  return Math.round(result / arr.length);
+};
+grader([90, 98, 89, 100, 100, 86, 94]); // 94
+grader([40, 65, 77, 82, 80, 54, 73, 63, 95, 49]); // 68
+```
+
+---
+
+### Introduction to NPM
