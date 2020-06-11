@@ -2821,3 +2821,11 @@ grader([40, 65, 77, 82, 80, 54, 73, 63, 95, 49]); // 68
 ---
 
 ### Introduction to NPM
+
+NPM is the package manager that allows us to include other peoples code into our Node scripts.
+
+Since we don't include a script tag into Node, we use NPM to get packages into our app.
+
+---
+
+### Installing NPM Packages

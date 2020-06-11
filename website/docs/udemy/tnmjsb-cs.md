@@ -3575,3 +3575,22 @@ If your requests don't build on each other and you simply need to fire off reque
 ---
 
 ### Refactoring with Promise.all
+
+A shortcut to what we had written above, where we were awaiting each individual promise, we can use Promise.all to await an array of all of our promises.
+
+```js
+// PARALLEL REQUESTS
+const get3Pokemon = async () => {
+  const poke1 = axios.get("https://pokeapi.co/api/v2/pokemon1");
+  const poke2 = axios.get("https://pokeapi.co/api/v2/pokemon2");
+  const poke3 = axios.get("https://pokeapi.co/api/v2/pokemon3");
+  const results = await Promise.all([poke1, poke2, poke3]);
+  console.log(results);
+};
+```
+
+---
+
+## Prototypes, Classes, & The New Operator
+
+### What on Earth are Prototypes?

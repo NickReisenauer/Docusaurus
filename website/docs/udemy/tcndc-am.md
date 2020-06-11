@@ -2708,3 +2708,37 @@ You can grab Postman [here](https://www.getpostman.com/). It’s free and availa
 ---
 
 ### Resource Creation Endpoints: Part 1
+
+In this lesson, you’ll learn how to create REST API endpoints for creating resources. This
+will allow users of the API to create new users and new tasks.
+
+Resource Creation Endpoints
+
+Resource creation endpoints use the POST HTTP method. The URL structure is
+`/resources`. If you wanted to create a user, it would be `POST /users`. If you wanted to
+create a task, it would be `POST /tasks`.
+
+The code below uses `app.post` to set up a `POST` request handler for `/users`. The handler
+function creates a new instance of the user model and saves it to the database.
+
+`express.json` is also setup to parse incoming JSON into a JavaScript object which you
+can access on `req.body`.
+
+```js
+app.use(express.json());
+app.post("/users", (req, res) => {
+  const user = new User(req.body);
+  user
+    .save()
+    .then(() => {
+      res.send(user);
+    })
+    .catch((e) => {
+      res.status(400).send(e);
+    });
+});
+```
+
+---
+
+### Resource Creation Endpoints: Part 2

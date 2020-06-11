@@ -2423,3 +2423,9 @@ In this video, we added some confirmation logic so that when a user clicks the d
 ---
 
 ### Finishing the App
+
+To finish up our Movie App, we did some bug fixes for the backdrop toggling as well as the cancel button not clearing the inputs.
+
+---
+
+### Wrap Up
