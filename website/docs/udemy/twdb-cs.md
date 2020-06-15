@@ -2829,3 +2829,9 @@ Since we don't include a script tag into Node, we use NPM to get packages into o
 ---
 
 ### Installing NPM Packages
+
+To install npm packages, open a terminal window and type `npm install packageName`, from there a package.json file will be generated and to include the new package in our code we use require like `const packageName = require("packageName")`.
+
+---
+
+### NPM Faker Exercise

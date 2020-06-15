@@ -3594,3 +3594,23 @@ const get3Pokemon = async () => {
 ## Prototypes, Classes, & The New Operator
 
 ### What on Earth are Prototypes?
+
+When we type something into the console, say a empty array, we are given the length as well as something called `__proto__`. When we click on this `__proto__` we see all sorts of common array methods that we've used before to interact with our array. This is done so that instead of having a method called `push` on every single array we ever make, we can call the reference to the `push` method that is found on the prototype object. It saves us a lot of storage so that we don't have so many duplicates and can have a single source of reference.
+
+For example, we can add our own method to the String prototype by setting it on the prototype object.
+
+```js
+String.prototype.myMethod = () => {
+  console.log("AYO HIIII");
+};
+
+const cat = "Chubs";
+cat.myMethod();
+// AYO HIIII
+```
+
+`.prototype` is the actual object where the prototype functions are stores, and `__proto__` is a reference to the original object just mentioned.
+
+---
+
+### An Intro to OOP

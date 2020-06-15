@@ -2429,3 +2429,11 @@ To finish up our Movie App, we did some bug fixes for the backdrop toggling as w
 ---
 
 ### Wrap Up
+
+We learned about attributes vs properties and event listeners and function chaining.
+
+---
+
+## More on Arrays & Iterables
+
+### Module Introduction

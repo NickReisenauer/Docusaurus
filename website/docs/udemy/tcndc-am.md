@@ -2742,3 +2742,45 @@ app.post("/users", (req, res) => {
 ---
 
 ### Resource Creation Endpoints: Part 2
+
+In this video, our task was to set up a resource creation endpoint for creating tasks.
+We set up a model for our Mongoose validation which looked like this:
+
+```js
+const mongoose = require("mongoose");
+
+const Task = mongoose.model("Task", {
+  description: {
+    type: String,
+    required: true,
+    trim: true,
+  },
+  completed: {
+    type: Boolean,
+    default: false,
+  },
+});
+
+module.exports = Task;
+```
+
+From there, we set up a route on Express to listen and add the body data to our database if it's valid.
+
+```js
+app.post("/tasks", (req, res) => {
+  const task = new Task(req.body);
+
+  task
+    .save()
+    .then(() => {
+      res.send(task);
+    })
+    .catch((e) => {
+      res.status(400).send(e);
+    });
+});
+```
+
+---
+
+### Resource Reading Endpoints: Part 1
