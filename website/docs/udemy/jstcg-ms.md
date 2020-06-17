@@ -2437,3 +2437,32 @@ We learned about attributes vs properties and event listeners and function chain
 ## More on Arrays & Iterables
 
 ### Module Introduction
+
+Module Content:
+
+- Different ways of creating arrays
+- Working with arrays, a deep dive
+- Important array methods
+- Other iterables: Maps & Sets
+
+---
+
+### What are "Iterables" and "Array-like Objects"
+
+An Iterable:
+
+- Technical Definition: Objects that implement the "iterable" protocol and have an @@iterator method (i.e. Symbol.iterator).
+
+- Human Definition: Objects where you can use the for-of loop.
+
+Not every iterable is an array! Other iterables are (for example): NodeList, String, Map, Set
+
+Array-like Objects:
+
+- Technical Definition: Objects that have a length property and use indexes to access items.
+
+- Human Definition: See technical explanation.
+
+---
+
+### Creating Arrays

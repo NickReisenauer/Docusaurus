@@ -3614,3 +3614,9 @@ cat.myMethod();
 ---
 
 ### An Intro to OOP
+
+The main idea behind OOP (Object Oriented Programming) is that we create a object that contains methods on it and we can type `new Color` and it will make us a new object and we can still have access to all the methods. This is great for code reusability and understanding what's happening with our code.
+
+---
+
+### Factory Functions

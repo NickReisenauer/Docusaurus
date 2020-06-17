@@ -2784,3 +2784,40 @@ app.post("/tasks", (req, res) => {
 ---
 
 ### Resource Reading Endpoints: Part 1
+
+In this lesson, you’ll learn how to create REST API endpoints for reading resources. This
+will allow users of the API to fetch users and tasks from the database.
+
+Resource Reading Endpoints
+
+Resource reading endpoints use the GET HTTP method. The URL structure is `/resources`
+for a list of resources and `/resources/:id` for fetching an individual resource by its ID. If
+you wanted to fetch all your tasks, it would be `GET /tasks`. If you wanted to fetch an
+individual task with the ID of 198, it would be `GET /tasks/198`.
+
+The code below uses `app.get` to set up a GET request handler for `/users/:id`. `:id` serves
+as a placeholder for the ID of the user to fetch. If the request is `GET /users/321`, then the
+ID will be 321. This is known as a URL parameter, and you can access the value for URL
+parameters on `req.params`.
+
+```js
+app.get("/users/:id", (req, res) => {
+  const _id = req.params.id; // Access the id provided
+  User.findById(_id)
+    .then((user) => {
+      if (!user) {
+        return res.status(404).send();
+      }
+      res.send(user);
+    })
+    .catch((e) => {
+      res.status(500).send();
+    });
+});
+```
+
+[Express Route Parameters](http://expressjs.com/en/guide/routing.html#route-parameters)
+
+---
+
+### Resource Reading Endpoints: Part 2

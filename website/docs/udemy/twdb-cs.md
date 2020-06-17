@@ -2835,3 +2835,32 @@ To install npm packages, open a terminal window and type `npm install packageNam
 ---
 
 ### NPM Faker Exercise
+
+The challenge in this video was to get a package from NPM and generate and print some fake data from the library.
+
+```js
+const faker = require("faker");
+
+for (let i = 0; i < 10; i++) {
+  const name = faker.commerce.productName();
+  const price = faker.finance.amount();
+  console.log(`${name}: $${price}`);
+}
+
+// Generic Concrete Chicken: $801.86
+// Generic Metal Mouse: $89.86
+// Incredible Rubber Car: $528.54
+// Gorgeous Wooden Mouse: $414.52
+// Practical Granite Salad: $313.82
+// Unbranded Granite Sausages: $450.15
+// Practical Metal Table: $956.65
+// Unbranded Plastic Hat: $450.85
+// Tasty Cotton Bike: $263.05
+// Practical Cotton Chicken: $589.32
+```
+
+---
+
+## Server Side Frameworks
+
+### Introduction to Express
