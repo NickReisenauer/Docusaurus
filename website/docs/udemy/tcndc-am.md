@@ -2821,3 +2821,35 @@ app.get("/users/:id", (req, res) => {
 ---
 
 ### Resource Reading Endpoints: Part 2
+
+In this video, our challenge was to create an endpoint that will return either all the tasks or if we have an id specified then we return the task with the matching id.
+
+```js
+// Fetch all tasks
+app.get("/tasks", (req, res) => {
+  Task.find({})
+    .then((tasks) => {
+      res.send(tasks);
+    })
+    .catch((e) => {
+      res.status(500).send(e);
+    });
+});
+
+// Fetch task by id
+app.get("/tasks/:id", (req, res) => {
+  const _id = req.params.id;
+  Task.findById(_id)
+    .then((task) => {
+      if (!task) res.status(404).send();
+      res.send(task);
+    })
+    .catch((e) => {
+      res.status(500).send(e);
+    });
+});
+```
+
+---
+
+### Promise Chaining

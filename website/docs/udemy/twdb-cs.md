@@ -2864,3 +2864,9 @@ for (let i = 0; i < 10; i++) {
 ## Server Side Frameworks
 
 ### Introduction to Express
+
+Express is a framework, but what's the difference between a framework and a library? The most important difference, and in fact the defining difference between a library and a framework is inversion of control. Basically, all the control flow is already in the framework, and there's just a bunch of predefined white spots that you can fill out with your own code. A library on the other hand is a collection of functionality that you can call.
+
+---
+
+### Our First Express App

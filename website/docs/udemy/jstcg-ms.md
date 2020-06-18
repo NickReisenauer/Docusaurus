@@ -2466,3 +2466,21 @@ Array-like Objects:
 ---
 
 ### Creating Arrays
+
+We have a few options for creating arrays.
+
+```js
+const numbers = [1, 2, 3];
+
+const moreNumbers = Array(5);
+// Empty array of 5 objects
+
+const yetMoreNumbers = Array.of(1, 2);
+
+const numbersAgain = Array.from("Hi!");
+// Will put each character into an array
+```
+
+---
+
+### Which Data Can You Store in Arrays?
