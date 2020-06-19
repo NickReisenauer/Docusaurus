@@ -2484,3 +2484,9 @@ const numbersAgain = Array.from("Hi!");
 ---
 
 ### Which Data Can You Store in Arrays?
+
+We can store any form of data inside of our array as well as nested arrays or nested objects or a nested combination of both.
+
+---
+
+### push(), pop(), unshift(), shift() - Adding & Removing Elements

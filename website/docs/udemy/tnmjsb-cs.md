@@ -3654,3 +3654,26 @@ black.hex(); //"#000000"
 ---
 
 ### Constructor Functions
+
+The benefit of this approach is that instead of writing long functions that return other functions which then return objects, this will automatically make us an object and we can add methods to the prototype.
+
+```js
+function Color(r, g, b) {
+  this.r = r;
+  this.g = g;
+  this.b = b;
+  console.log(this);
+}
+
+Color.prototype.rgb = function () {
+  const { r, g, b } = this;
+  return `rgb(${r}, ${g}, ${b})`;
+};
+
+const white = new Color(255, 255, 255);
+console.log(white.rgb());
+```
+
+---
+
+### JS Classes - Syntactical Sugar

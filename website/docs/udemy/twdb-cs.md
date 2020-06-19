@@ -2870,3 +2870,30 @@ Express is a framework, but what's the difference between a framework and a libr
 ---
 
 ### Our First Express App
+
+We started with a very simple Express app that will send some data back when we visit a certain route.
+
+```js
+const express = require("express");
+const app = express();
+
+app.listen(3000, () => {
+  console.log(`Server running on port: 3000`);
+});
+
+app.get("/", (req, res) => {
+  res.send("Hi there!");
+});
+
+app.get("/bye", (req, res) => {
+  res.send(`Goodbye!`);
+});
+
+app.get("/dog", (req, res) => {
+  res.send(`Doggo`);
+});
+```
+
+---
+
+### The package.json
