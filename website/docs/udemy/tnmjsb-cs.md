@@ -3677,3 +3677,32 @@ console.log(white.rgb());
 ---
 
 ### JS Classes - Syntactical Sugar
+
+Classes are a type of syntactical sugar on top of constructor functions.
+
+```js
+class Color {
+  constructor(r, g, b, name) {
+    this.r = r;
+    this.g = g;
+    this.b = b;
+    this.name = name;
+  }
+  greet() {
+    return `Hello from ${name} color!`;
+  }
+  rgb() {
+    return `rgb(${this.r}, ${this.g}, ${this.b})`;
+  }
+}
+
+const c1 = new Color(255, 58, 76, "Tomato");
+c1.greet(); // Hello from Tomato color!
+c1.rgb(); // rgb(255, 58, 76)
+```
+
+Above, we are creating a class and adding a constructor function. We can also add "prototype" functions that we can define and call on top of variables that are defined using our new Class. The constructor function will run no matter what every time we create a new instance of our Class using the new keyword and tying it to a variable.
+
+---
+
+### A Bit More Practice with Classes

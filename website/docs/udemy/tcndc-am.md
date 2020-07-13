@@ -2903,3 +2903,30 @@ add(1, 2)
 ---
 
 ### Promise Chaining Challenge
+
+To use promise chaining, we return new promises in our current `.then` call.
+
+```js
+require("../src/db/mongoose"); // DB Connection
+const Task = require("../src/models/task");
+
+Task.findByIdAndDelete(`5ee7cb9625e4f551013c541f`)
+  .then((response) => {
+    console.log(response);
+    return Task.countDocuments();
+  })
+  .then((result) => {
+    console.log(result);
+    return Task.estimatedDocumentCount();
+  })
+  .then((docCount) => {
+    console.log(docCount);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+```
+
+---
+
+### Async/Await

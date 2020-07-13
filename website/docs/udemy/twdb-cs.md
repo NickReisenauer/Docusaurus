@@ -2897,3 +2897,9 @@ app.get("/dog", (req, res) => {
 ---
 
 ### The package.json
+
+package.json is a list of all the dependencies and metadata that our node_modules requires to run. We can set up our own package.json by using `npm init`.
+
+---
+
+### How to Automate Server Restart

@@ -2490,3 +2490,19 @@ We can store any form of data inside of our array as well as nested arrays or ne
 ---
 
 ### push(), pop(), unshift(), shift() - Adding & Removing Elements
+
+`push` adds elements to the end of an array.
+
+`unshift` adds elements to the beginning of an array.
+
+`pop` removes the last element of the array.
+
+`shift` removes the first element of the array.
+
+`push` and `pop` are faster than `shift` and `unshift` because all they have to do is add something to the end whereas the other methods will have to move everything in the array one place to the right so that our new element can be in front.
+
+If we try and push an element to an index number that does not exist yet, it will return as undefined.
+
+---
+
+### The splice() Method
