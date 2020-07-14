@@ -2506,3 +2506,20 @@ If we try and push an element to an index number that does not exist yet, it wil
 ---
 
 ### The splice() Method
+
+If we have an array that contains `["Sports", "Cooking"]` and we want to insert something in-between sports and cooking we can use `splice()`.
+
+`splice()` takes in 3 arguments. The first is the index which we are going to be starting with (including the number you input), the second is how many items we want to delete, and the third is what item we're going to be adding in the index we specified.
+
+```js
+hobbies.splice(1, 0, "Good Food");
+// ["Sports", "Good Food", "Cooking"]
+```
+
+We can store the elements that were removed from our array by using splice. All we have to do is store them in a variable like so... `const removedElements = hobbies.splice(1, 0, "Good Food");`.
+
+If we specify our index as `-1`, splice will start at the last element and move to the left.
+
+---
+
+### Selecting Ranges & Creating Copies with slice()

@@ -3706,3 +3706,9 @@ Above, we are creating a class and adding a constructor function. We can also ad
 ---
 
 ### A Bit More Practice with Classes
+
+In this video we worked on adding more methods to our Color class.
+
+---
+
+### Extends, Super, and Subclasses

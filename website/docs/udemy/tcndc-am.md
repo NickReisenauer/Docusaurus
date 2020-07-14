@@ -2930,3 +2930,64 @@ Task.findByIdAndDelete(`5ee7cb9625e4f551013c541f`)
 ---
 
 ### Async/Await
+
+In this lesson, you’ll learn how to use async and await. These provide an improved syntax
+for working with promises. You’ll be able to write complex asynchronous code that looks
+like normal synchronous code. This makes it much easier to write and maintain
+asynchronous code.
+
+Exploring Async/Await
+
+The example below uses the `add` function that was created two lessons ago.
+
+The first step to using async and await is to create an asynchronous function. This is done
+using the `async` keyword before the function definition. This can be seen in the definition
+of `doWork` below. Any function can be defined as an asynchronous function, not just arrow
+functions.
+
+With an async function in place, you can now use the `await` operator. The `await` operator
+can only be used inside of asynchronous functions. This removes the need for excess
+callbacks and makes code much easier to read.
+
+The `await` operator is used with promises in asynchronous functions. You can see this
+used three times in `doWork`. The `await` operator allows you to work with promises in a way
+that looks like synchronous code. If the promise is fulfilled, the fulfilled value can be
+accessed as the return value from the function. If the promise is rejected, it would be as
+though the function threw an error. `await` will pause the function execution until the
+promise is either fulfilled or rejected.
+
+It’s important to note that async and await are syntax enhancements for working with
+promises. Promises are still at the core of asynchronous code that uses async and await.
+
+```js
+const add = (a, b) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (a < 0 || b < 0) return reject(`Numbers must be non-negative`);
+      resolve(a + b);
+    }, 2000);
+  });
+};
+
+const doWork = async () => {
+  const sum = await add(1, 99);
+  const sum2 = await add(sum, 50);
+  const sum3 = await add(sum2, 3);
+  return sum3;
+};
+
+doWork()
+  .then((result) => {
+    console.log(result);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+```
+
+[MDN: async function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
+[MDN: await operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await)
+
+---
+
+### Async/Await: Part 2

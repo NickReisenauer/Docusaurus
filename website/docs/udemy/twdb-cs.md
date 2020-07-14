@@ -2903,3 +2903,45 @@ package.json is a list of all the dependencies and metadata that our node_module
 ---
 
 ### How to Automate Server Restart
+
+Use `nodemon` as a global dependency.
+
+---
+
+### Route Params
+
+If we want to have a catch-all route for when we type in a route that we don't have coded yet, we can use the `*` asterisk. What happens now is we will send an error saying "Error 404: Page not found" anytime someone tries to go to a page that we haven't coded yet.
+
+```js
+app.get("*", (req, res) => {
+  res.send(`Error 404: Page not found`);
+});
+```
+
+It's important to note that Express will match the first route handler it finds in chronological order in your code. So if we have our wildcard catch-all route \* at the top of our code, it will catch any route requests even if they are valid routes that we have set up and it will send the error message. If we have any broadly catching routes we should put them at the bottom so that our specific routes can run if they are requested.
+
+What if we have something like Reddit, where the url structure is as follows "reddit.com/r/soccer/comments/randomid/partoftitle". THere's no way we could hard code each of those routes into our Express configuration. This means that we need to use something called route parameters/route variables/path variables.
+
+```js
+app.get("/r/:subreddit", (req, res) => {
+  res.send("Welcome to a subreddit");
+});
+
+// localhost:3000/r/puppies
+// Welcome to a subreddit
+```
+
+If we want to take it one step further and make our routes dynamic so that when a user visits r/puppes we say Welcome to puppies we can do that by using the route parameters that Express gives us on `req.params`.
+
+```js
+app.get("/r/:subreddit", (req, res) => {
+  res.send(`Welcome to r/${req.params.subreddit}`);
+});
+
+// localhost:3000/r/javascript
+// Welcome to r/javascript
+```
+
+---
+
+### Express Basics Exercise
