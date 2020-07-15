@@ -3712,3 +3712,39 @@ In this video we worked on adding more methods to our Color class.
 ---
 
 ### Extends, Super, and Subclasses
+
+If we have a lot of functionality that we would want to share between our classes, we can use a parent class and say our children classes `extend` that class.
+
+```js
+// Parent Class
+class Pet {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+  eat() {
+    return `${this.name} is eating!`;
+  }
+}
+
+// Subclass
+class Cat extends Pet {
+  meow() {
+    return `MEOW`;
+  }
+}
+
+class Dog extends Pet {
+  bark() {
+    return `WOOF`;
+  }
+}
+```
+
+`super` allows us to access the name and age from our Pet constructor.
+
+---
+
+## Drawing Animations
+
+### Welcome to Part 2

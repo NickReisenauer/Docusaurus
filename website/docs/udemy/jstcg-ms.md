@@ -2523,3 +2523,17 @@ If we specify our index as `-1`, splice will start at the last element and move 
 ---
 
 ### Selecting Ranges & Creating Copies with slice()
+
+`slice` is a great way to copy an array because it will return whatever we have sliced.
+
+```js
+const results = [41, 35, 64, 75];
+const results2 = results.slice();
+// Same thing now
+```
+
+We can also specify a start(included) and end(not included) array indexes from which to slice.
+
+---
+
+### Adding Arrays to Arrays with concat()

@@ -2991,3 +2991,25 @@ doWork()
 ---
 
 ### Async/Await: Part 2
+
+In this lesson, we refactored our previous promise chaining call to delete a Task by its id by using async functions.
+
+```js
+const deleteTaskAndCount = async (id) => {
+  const task = await Task.findByIdAndDelete(id);
+  const count = await Task.countDocuments({ completed: false });
+  return count;
+};
+
+deleteTaskAndCount(`5ed811ff69a4895dea309862`)
+  .then((count) => {
+    console.log(count);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+```
+
+---
+
+### Integrating Async/Await
