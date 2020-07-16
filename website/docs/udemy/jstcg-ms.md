@@ -2537,3 +2537,27 @@ We can also specify a start(included) and end(not included) array indexes from w
 ---
 
 ### Adding Arrays to Arrays with concat()
+
+`concat` is great for copying arrays because it will copy whatever we tell it to and then it will return a new array to us. We can also pass in additional items that will be added to the copy upon creation.
+
+```js
+const results = [6, 7, 5, 3, 5, 6, 46, 4, 35, 35];
+const copy = results.concat([69]);
+```
+
+---
+
+### Retrieving Indexes with indexOf() and lastIndexOf()
+
+`indexOf` allows us to search our array for a specific number and we can specify which index to start from. If it finds the element, it will return the index, otherwise if there is no element it will return `-1`. It will stop at the first matching value and will not return all the indexes of all the values that may match the criteria. indexOf won't work with objects.
+
+```js
+const results = [6, 7, 5, 3, 5, 6, 46, 4, 35, 35];
+const resultsIndex = results.indexOf(7); // 1
+```
+
+`lastIndexOf` will start from the right of the array.
+
+---
+
+### Finding Stuff: find() and findIndex()

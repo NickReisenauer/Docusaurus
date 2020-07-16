@@ -3013,3 +3013,28 @@ deleteTaskAndCount(`5ed811ff69a4895dea309862`)
 ---
 
 ### Integrating Async/Await
+
+In this lesson, you’ll be integrating async and await into the Express route handlers.
+
+Integrating Async/Await
+
+Below is a modified version of `GET /users`. The handler function was set up as an
+asynchronous function which allows you to use await in the function. `await` is used with
+the promise from `User.find` to get a list of all the users without needing to call `then` and
+`catch` with handler functions. A try/catch statement is also used to handle any errors that
+might occur.
+
+```js
+app.get("/users", async (req, res) => {
+  try {
+    const users = await User.find({});
+    res.send(users);
+  } catch (e) {
+    res.status(500).send();
+  }
+});
+```
+
+---
+
+### Resource Updating Endpoints: Part 1

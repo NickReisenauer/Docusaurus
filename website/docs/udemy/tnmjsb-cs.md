@@ -3748,3 +3748,32 @@ class Dog extends Pet {
 ## Drawing Animations
 
 ### Welcome to Part 2
+
+Part 1: Colt Steele
+
+- Lots of different, individual topics
+- Focused on the basic features of JavaScript
+- Not too many larger apps
+
+Part 2: Stephen Girder
+
+- Fewer topics
+- Focused on design patterns and more advanced concepts of JS
+- Nothing but large apps!
+- Lots of refactoring
+
+---
+
+### App Overview
+
+This will be a simple 30s timer website with a play and a pause button. The outside border will also revolve around the outside based on the time remaining. The user will also be able to input their own amount of time.
+
+---
+
+### Project Setup
+
+For setup, we created a directory called timer as well as HTML and JS files.
+
+---
+
+### Event-based Architecture

@@ -2946,4 +2946,41 @@ app.get("/r/:subreddit", (req, res) => {
 
 ### Express Basics Exercise
 
-COME BACK ONCE CHALLENGE IS OVER
+Our challenge was to create 3 Express routes. The first would be the root route and just say hello to the user. The second would be /speak/:animal and depending on the animal it would say /cow the cow says moo, or /pig the pig says oink. The third route was /repeat/:phrase/:num and it will take a phrase and repeat the phrase num amount of times.
+
+```js
+const express = require("express");
+const app = express();
+
+app.listen(8080, () => {
+  console.log("Listening on something idk");
+});
+
+app.get("/", (req, res) => res.send("Hi there, welcome to my assignment!"));
+
+app.get("/speak/:animal", (req, res) => {
+  const sounds = {
+    pig: "Oink",
+    cow: "Moo",
+    dog: "Woof",
+  };
+  const reqAnimal = req.params.animal;
+  res.send(`The ${reqAnimal} says ${sounds[reqAnimal]}`);
+});
+
+app.get("/repeat/:phrase/:num", (req, res) => {
+  const num = Number(req.params.num);
+  const phrase = req.params.phrase;
+  let message = "";
+  for (let i = 0; i < num; i++) {
+    message += ` ${phrase}`;
+  }
+  res.send(`${message}`);
+});
+```
+
+---
+
+## Intermediate Express
+
+### Note about Templates and EJS
