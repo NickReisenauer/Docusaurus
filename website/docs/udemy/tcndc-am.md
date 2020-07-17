@@ -3038,3 +3038,61 @@ app.get("/users", async (req, res) => {
 ---
 
 ### Resource Updating Endpoints: Part 1
+
+In this lesson, you’ll learn how to create REST API endpoints for updating resources. This
+will allow users of the API to update users and tasks that are already in the database.
+
+Resource Updating Endpoints
+
+Resource updating endpoints use the PATCH HTTP method. The URL structure is
+`/resources/:id` for updating an individual resource by its ID. If you want to update an
+individual task with the ID of 44, it would be `PATCH /tasks/44`.
+
+`app.patch` is used to set up the Express route handler.
+
+```js
+app.patch("/users/:id", async (req, res) => {
+  // Route handler code here
+});
+```
+
+When working with updates, it’s a good idea to alert the user if they’re trying to update
+something that they can’t update. The code below checks that the user is only updating
+fields that can be updated, otherwise it will send back an error response.
+
+```js
+const updates = Object.keys(req.body);
+const allowedUpdates = ["name", "email", "password", "age"];
+const isValidOperation = updates.every((update) =>
+  allowedUpdates.includes(update)
+);
+if (!isValidOperation) {
+  return res.status(400).send({ error: "Invalid updates!" });
+}
+```
+
+If all goes well, the updates will be applied to the user, then a response will be sent back.
+
+If the provided updates are valid, `findByIdAndUpdate` can be used to update the
+document in the database. Try/catch is used here to send back an error if something goes
+wrong when updating the user. This would include the new data not passing the validation
+defined for the model.
+
+```js
+try {
+  const user = await User.findByIdAndUpdate(req.params.id, req.body, {
+    new: true,
+    runValidators: true,
+  });
+  if (!user) {
+    return res.status(404).send();
+  }
+  res.send(user);
+} catch (e) {
+  res.status(400).send(e);
+}
+```
+
+---
+
+### Resource Creating Endpoints: Part 2

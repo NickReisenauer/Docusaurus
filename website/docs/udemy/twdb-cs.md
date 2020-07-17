@@ -2984,3 +2984,9 @@ app.get("/repeat/:phrase/:num", (req, res) => {
 ## Intermediate Express
 
 ### Note about Templates and EJS
+
+When using `npm init` to create a project, be sure to not name the project the same thing that a dependency is named otherwise there will be conflicts withing node_modules and other issues.
+
+---
+
+### Templates and EJS

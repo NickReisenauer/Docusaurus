@@ -2561,3 +2561,31 @@ const resultsIndex = results.indexOf(7); // 1
 ---
 
 ### Finding Stuff: find() and findIndex()
+
+indexOf doesn't allow us to find things inside of objects, so how do we find inside of objects?
+
+`find` can help us find things. It takes a function as an argument and inside the anonymous function is up to 3 arguments.
+
+```js
+const finding = person.find((thingToFind, index, persons) => {
+  return person.name === "nameOfPerson"; // Boolean
+});
+```
+
+`findIndex` will do the same thing as `find`, it will just return the index of the item instead of the actual item.
+
+---
+
+### Is it Included?
+
+`includes` is good to quickly check if a value is part of an array.
+
+```js
+console.log(arrayName.includes(42)); // Returns Boolean
+```
+
+This is good if you don't care about finding the index and just want to see if the array contains the value anywhere inside.
+
+---
+
+### Alternative to for Loops: The forEach() Method

@@ -3777,3 +3777,36 @@ For setup, we created a directory called timer as well as HTML and JS files.
 ---
 
 ### Event-based Architecture
+
+Things our Program Does:
+
+- Displays a timer
+- Shows an animated border around the timer
+
+Possible Implementation:
+
+- Event listener to watch for a click on "start" button
+  - Draw a full border around the timer
+  - Start counting down the timer
+  - Each time the timer counts down, update the border
+  - Each time the timer counts down, update the text
+  - If we counted down and timer reaches 0, then...
+    - Reset the border
+    - Reset internal timer to get ready for another run
+
+If we look at the code above, we have both of the things that our program does mixed together throughout. One is focused on the styling and the other is focused on actually being a timer. What if we took out the styling portions and added them as "event" based code.
+
+Rethought Implementation:
+
+- Event listener to watch for a click on "start" button
+  - Emit an event stating that the timer has started
+  - Start counting down the timer
+  - Emit an event that the timer has "ticked"
+  - Each time the timer counts down, update the text
+  - If we counted down and timer reaches 0, then...
+    - Emit an event that the timer is done
+    - Reset internal timer to get ready for another run
+
+---
+
+### Class-Based Implementation
