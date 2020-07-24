@@ -2589,3 +2589,19 @@ This is good if you don't care about finding the index and just want to see if t
 ---
 
 ### Alternative to for Loops: The forEach() Method
+
+`forEach()` allows us to loop over an array and run a function for each element in the array. We are given 3 arguments, the first is the current element that we're working with, the second is the index, and the third is if we want access to the full array.
+
+```js
+const prices = [99, 35, 12, 4, 465, 324, 24];
+prices.forEach((price, index, array) => {
+  console.log(price, index);
+});
+// 99 0
+// 35 1
+// 12 2
+```
+
+---
+
+### Transforming Data with map()

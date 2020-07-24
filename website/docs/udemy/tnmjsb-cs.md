@@ -3810,3 +3810,15 @@ Rethought Implementation:
 ---
 
 ### Class-Based Implementation
+
+A good way to implement this timer would be to use a class and inside the class we can make methods that will control the visual aspects of the timer and some methods that will control the time aspects of the timer.
+
+`class Timer` includes `start(), pause(), onDurationChange(), tick()`.
+
+For example, whenever a user clicks on the start button we can call the `start()` method, pause button will call `pause()`, when a user changes the duration of the timer we can call `onDurationChange()`, and finally we can use `tick()` to actually update the numbers on the timer during countdown.
+
+When we initialize our class we can pass in a few callback functions, such as durationInput, startButton, and pauseButton so that our function will have access to the dom elements in the timer.
+
+---
+
+### Binding Events in a Class

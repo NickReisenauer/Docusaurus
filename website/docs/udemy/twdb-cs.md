@@ -2990,3 +2990,36 @@ When using `npm init` to create a project, be sure to not name the project the s
 ---
 
 ### Templates and EJS
+
+In this video we learned about how we can use EJS to dynamically render HTML templates in our views directory. We can run actual JavaScript code inside of our EJS which is then compiled to HTML.
+
+```js
+const express = require("express");
+const app = express();
+
+app.get("/", (req, res) => {
+  res.render("home.ejs");
+});
+
+app.get("/fallinlovewith/:thing", (req, res) => {
+  const thing = req.params.thing;
+  res.render("love.ejs", { thing });
+});
+
+app.listen(process.env.PORT, process.env.IP, () => {
+  console.log("Server is up!");
+});
+```
+
+The EJS looks a little strange but here is the template for our `love` file.
+
+```js
+<h1>You fell in love with: <%= thing %></h1>
+<p>This is the `love.ejs` file</p>
+```
+
+We can also pass variables into our EJS by including an object with variables in our call to res.render.
+
+---
+
+### EJS: Conditionals and Loops
