@@ -3130,3 +3130,38 @@ app.patch("/tasks/:id", async (req, res) => {
 ---
 
 ### Resource Deleting Endpoints
+
+In this lesson, you’ll learn how to set up a REST API endpoint for deleting resources. This
+video covers deleting users as well as a challenge for deleting tasks.
+
+Deleting Resources
+
+Resource deleting endpoints use the DELETE HTTP method. The URL structure is
+`/resources/:id` for deleting an individual resource by its ID. If you want to delete an
+individual task with the ID of 897, it would be `DELETE /tasks/897`.
+
+`app.delete` is used to set up the Express route handler.
+
+```js
+app.delete("/users/:id", async (req, res) => {
+  // Route handler
+});
+```
+
+The handler itself can delete the resource using `findByIdAndDelete`.
+
+```js
+try {
+  const user = await User.findByIdAndDelete(req.params.id);
+  if (!user) {
+    return res.status(404).send();
+  }
+  res.send(user);
+} catch (e) {
+  res.status(500).send();
+}
+```
+
+---
+
+### Separate Route Files

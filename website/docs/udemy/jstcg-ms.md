@@ -2605,3 +2605,17 @@ prices.forEach((price, index, array) => {
 ---
 
 ### Transforming Data with map()
+
+`map()` allows us to loop over each element similar to how `forEach()` works but map will return a brand new element for each object that it loops over.
+
+---
+
+### sort() and reverse()
+
+`sort` by default will convert everything to a string and sort in ascending order. If we want to be more specific with our sorting we can pass in our own sorting function.
+
+`reverse` takes no arguments and simply reverses our array and returns it.
+
+---
+
+### Filtering Arrays with filter()

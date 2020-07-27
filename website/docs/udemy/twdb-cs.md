@@ -3023,3 +3023,34 @@ We can also pass variables into our EJS by including an object with variables in
 ---
 
 ### EJS: Conditionals and Loops
+
+We can use EJS to add logic to our `ejs` template files. This includes things like for loops to loop over data.
+We used the logic template feature to pass in an object of book titles and authors and inside of our ejs we used a for loop to loop over each object inside and make an li that contains the title and the author.
+
+```js
+// Express
+app.get("/posts", (req, res) => {
+  const posts = [
+    { title: "Post 1", author: "John" },
+    { title: "Post 2", author: "Nick" },
+    { title: "Post 3", author: "Colt" },
+  ];
+  res.render("posts.ejs", { posts });
+});
+
+// EJS
+<h1>The Posts Page</h1>
+
+<% for(let i = 0; i < posts.length; i++){ %>
+    <li><%= posts[i].title %> - <strong><%= posts[i].author %></strong></li>
+<% } %>
+```
+
+There's a difference in the EJS syntax that's important to note.
+
+- `<%= %>` will automatically display whatever the result is of the code inside. EG.. 5+5 would render 10.
+- `<% %>` will not render what we put inside. This is where we would write our for loops.
+
+---
+
+### Serving Custom Assets
