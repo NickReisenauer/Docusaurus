@@ -3849,3 +3849,35 @@ const timer = new Timer(durationInput, startButton, pauseButton);
 ---
 
 ### Reminder on "This"
+
+Say we have the class setup below...
+
+```js
+class Timer {
+  constructor(durationInput, startButton, pauseButton) {
+    this.durationInput = durationInput;
+    this.startButton = startButton;
+    this.pauseButton = pauseButton;
+
+    this.startButton.addEventListener("click", this.start);
+  }
+  start() {
+    console.log(this);
+  }
+}
+
+const durationInput = document.getElementById("duration");
+const startButton = document.getElementById("start");
+const pauseButton = document.getElementById("pause");
+
+const timer = new Timer(durationInput, startButton, pauseButton);
+timer.start();
+```
+
+At the bottom, we are initializing our timer to start on page load, but we also can initialize it when we click the start button, but what will the value of `this` be when we define it on page load vs button click?
+
+When we get the value of `this` on page load it's going to be `Timer {durationInput: input#duration, startButton: button#start, pauseButton: button#pause}` which is basically our constructor function. But when we get `this` off of button click we get `<button id="start">START</button>`.
+
+---
+
+### Determining the Value of `this`

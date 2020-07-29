@@ -2619,3 +2619,26 @@ prices.forEach((price, index, array) => {
 ---
 
 ### Filtering Arrays with filter()
+
+If we want to reduce the amount of elements in our array based on a particular filter we can use `filter`. Filter takes a function and that function takes a few parameters, the value, index, and original array. Then we return a new array that contains all the data that passed through our filter.
+
+```js
+const filtered = priceArray.filter((price, index, originalArray) => {
+  return price > 6;
+});
+```
+
+---
+
+### Where Arrow Functions Shine
+
+Arrow functions can definitely help us when we're trying to shorten the length of our code.
+If we take the function above and turn it into a shortened arrow function with an implicit return we can save 2 lines.
+
+```js
+const filtered = priceArray.filter((price) => price > 6);
+```
+
+---
+
+### The Important reduce() Method

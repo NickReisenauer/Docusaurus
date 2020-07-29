@@ -3165,3 +3165,38 @@ try {
 ---
 
 ### Separate Route Files
+
+In this lesson, you’ll learn how to organize your Express application endpoints. Defining all
+endpoints in a single file is a fine way to get started, but that won’t scale well as you add
+more routes to the app.
+
+Creating Separate Routers
+
+Express allows you to create as many routers as you want. These separate routers can
+then be combined into a single Express application. You can create a new router using
+`express.Router` as shown below. The example file below creates the router, adds routes,
+and exports the router from the file.
+
+```js
+const router = new express.Router();
+router.post("/someEndpoint", (req, res) => {
+  // Do something
+});
+module.exports = router;
+```
+
+The router defined in the file above can be added into the Express application in
+`index.js`. This is done by loading the router in with `require` and then passing the router to `app.use`.
+You can set up as many routers as you need for your application, though it’s
+common to have a router for each distinct resource your REST API has.
+
+```js
+// Register with existing application
+app.use(router);
+```
+
+---
+
+## API Authentication and Security
+
+### Section Intro

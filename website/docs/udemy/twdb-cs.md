@@ -3054,3 +3054,30 @@ There's a difference in the EJS syntax that's important to note.
 ---
 
 ### Serving Custom Assets
+
+- Updated EJS Syntax -
+
+```js
+<%- include("partials/header") %>
+<%- include("partials/footer") %>
+```
+
+In this video, we learned about how to use partials to render pre-coded parts of HTML in our EJS files. It looks something like this...
+
+```js
+<%- include("partials/header") %>
+
+<h1>The Posts Page</h1>
+
+<% for(let i = 0; i < posts.length; i++){ %>
+    <li><%= posts[i].title %> - <strong><%= posts[i].author %></strong></li>
+<% } %>
+
+<%- include("partials/footer") %>
+```
+
+Our header.ejs file lives in the views directory but in a special directory inside called partials, and we tell Express to look for our partials in that location.
+
+---
+
+### Post Requests Part 1
