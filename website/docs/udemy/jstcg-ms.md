@@ -2642,3 +2642,17 @@ const filtered = priceArray.filter((price) => price > 6);
 ---
 
 ### The Important reduce() Method
+
+If we want to take an array full of numbers and add up and return the sum, we could do that with either a for loop or a forEach method. But we can also use `reduce` to do the same thing. Reduce is very powerful and takes 4 parameters as well as a second function which is the default value for prevValue when we start it for the first time.
+
+```js
+const sum = prices.reduce((prevValue, curValue, curIndex, prices) => {
+  return prevValue + curValue;
+}, 0);
+```
+
+[Reduce](/img/jstcg-ms/jstcg-ms39.png)
+
+---
+
+### Arrays & Strings - split() and join()

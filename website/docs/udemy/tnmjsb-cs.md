@@ -3881,3 +3881,23 @@ When we get the value of `this` on page load it's going to be `Timer {durationIn
 ---
 
 ### Determining the Value of `this`
+
+How can we determine the value of `this` inside of our Class?
+
+We can ask a few questions to help determine...
+
+- Did you define the function with an arrow function?
+
+  - Write `console.log(this)` on the first value line above the arrow function. Value of `this` in the arrow function will be equal to that console.log
+
+- Did you call `bind`, `call`, or `apply` on the function when you invoked it?
+
+  - `this` is equal to the first argument of `bind`, `call`, or `apply`
+
+- All other cases
+
+  - `this` is equal to whatever is to the left of the `.` in the method call
+
+---
+
+### Solving the `this` Issue

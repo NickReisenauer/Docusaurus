@@ -3081,3 +3081,9 @@ Our header.ejs file lives in the views directory but in a special directory insi
 ---
 
 ### Post Requests Part 1
+
+We set up a simple express server and added a post route that will submit to our post route when we submit a new friend.
+
+---
+
+### Post Requests Part 2

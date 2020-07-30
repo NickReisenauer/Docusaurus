@@ -3200,3 +3200,53 @@ app.use(router);
 ## API Authentication and Security
 
 ### Section Intro
+
+In this section, you’ll set up authentication for the task manager app. This will require users
+to log in before they’ll be able to manage their tasks. This section also covers password
+security, Express middleware, and more.
+
+---
+
+### Securely Storing Passwords: Part 1
+
+In this lesson, you’ll learn how to securely store user passwords by hashing and salting the
+password before storing it in the database.
+
+Hashing Passwords
+
+Storing plain text passwords is a bad idea. Most folks reuse password for multiple
+accounts online. That means if your database gets compromised, the hacker can reuse
+those credentials on other sites such as credit cards or bank accounts. We don’t want to
+leave our users open to further attacks.
+
+The solution is to hash passwords using a secure one-way hashing algorithm. Users
+passwords will stay hidden and secure, even if the database is compromised.
+
+Hashing Passwords with Bcrypt
+
+First up, install the library. `npm i bcryptjs@2.4.3`.
+
+The `hash` method can be used to hash the plain text password. The example below
+hashes the password “Red12345!”.
+
+```js
+const password = "Red12345!";
+const hashedPassword = await bcrypt.hash(password, 8);
+// The hashed password is what would be stored in the database
+```
+
+The `compare` method is used to compare a plain text password against a previously
+hashed password. This would be useful when logging in. The user logging in provides the
+plain text password for their account. The application fetches the hashed password from
+the database for that user. `compare` is then called to confirm it’s a match.
+
+```js
+const isMatch = await bcrypt.compare("red12345!", hashedPassword);
+console.log(isMatch);
+```
+
+[NPM bcryptjs](https://www.npmjs.com/package/bcryptjs)
+
+---
+
+### Securely Storing Passwords: Part 2
