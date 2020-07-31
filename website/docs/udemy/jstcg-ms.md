@@ -2656,3 +2656,11 @@ const sum = prices.reduce((prevValue, curValue, curIndex, prices) => {
 ---
 
 ### Arrays & Strings - split() and join()
+
+`split` will take a string and split it into an array based on what you split on. If you split on "" it will put every letter in its own array index.
+
+`join` allows us to take 2 strings from our array and join them together into one string. We can pass a separator as an argument to join.
+
+---
+
+### The Spread Operator

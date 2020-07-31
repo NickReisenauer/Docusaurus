@@ -3087,3 +3087,11 @@ We set up a simple express server and added a post route that will submit to our
 ---
 
 ### Post Requests Part 2
+
+We set up a post request route and inside the route we're grabbing elements of the req body to add to our friends array. We also added body-parser so that we can grab things off the body of our requests. res.redirect was also used so that the user can stay on the friends page.
+
+---
+
+## Working with APIs
+
+### Intro to APIs

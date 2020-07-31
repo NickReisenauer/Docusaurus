@@ -3901,3 +3901,15 @@ We can ask a few questions to help determine...
 ---
 
 ### Solving the `this` Issue
+
+Of the three ways we could have fixed our problem, we went with the most common which was to make the method on our Class into an arrow function.
+
+```js
+start = () => {
+  console.log(this);
+};
+```
+
+---
+
+### Starting and Pausing the Timer
