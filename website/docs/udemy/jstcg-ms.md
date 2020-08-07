@@ -2664,3 +2664,25 @@ const sum = prices.reduce((prevValue, curValue, curIndex, prices) => {
 ---
 
 ### The Spread Operator
+
+The `spread` operator pulls out all elements of an array and gives them to you as a standalone list of elements.
+
+One use of the spread operator is to copy everything from one array into another array that we can then add other things into.
+
+```js
+const numbers = [1, 2, 3];
+const spreadNumbers = [...numbers, 4, 5, 6];
+console.log(spreadNumbers);
+// 1, 2, 3, 4, 5, 6
+```
+
+Another use case for spread is to spread in the contents of an array into a function as an argument.
+
+```js
+Math.min(numbers); // Error
+Math.min(...numbers); // 1
+```
+
+---
+
+### Understanding Array Destructuring

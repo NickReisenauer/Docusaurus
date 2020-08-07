@@ -3913,3 +3913,23 @@ start = () => {
 ---
 
 ### Starting and Pausing the Timer
+
+In order to pause the timer we need to be able to cancel the interval we set up when we start the timer.
+
+```js
+start = () => {
+  this.tick();
+  this.interval = setInterval(this.tick, 1000);
+};
+
+pause = () => {
+  clearInterval(this.interval);
+};
+```
+
+We can store our interval on `this` so that when we need to access it in pause we can just call `clearInterval(this.interval);`.
+From there, we just add an event listener to the pause button and run the pause function on click.
+
+---
+
+### Where to Store Data?

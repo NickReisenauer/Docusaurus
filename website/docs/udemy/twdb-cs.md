@@ -3095,3 +3095,22 @@ We set up a post request route and inside the route we're grabbing elements of t
 ## Working with APIs
 
 ### Intro to APIs
+
+Connecting with Other Applications:
+
+API stands for Application Programming Interface and they are interfaces for code/computers to talk to one another.
+
+Web API's: Generally communicate via HTTP
+
+- Twitter API: Give me all tweets that mention "Ice Cream"
+- Facebook API: Send me the current user's profile picture
+- Weather API: What is the current weather in Montana
+- Reddit API: What is the current top post
+- GooglePlaces API: What gas stations are near the user?
+- Yelp API: Give me 10 restaurants in the zip 94110
+
+[Programmable Web](https://www.programmableweb.com/category/all/apis) has a great directory containing apis for all sorts of things.
+
+---
+
+### JSON and XML
