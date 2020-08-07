@@ -13,24 +13,24 @@ module.exports = {
       algolia: {
         apiKey: "api-key",
         indexName: "index-name",
-        algoliaOptions: {} // Optional, if provided by Algolia
-      }
+        algoliaOptions: {}, // Optional, if provided by Algolia
+      },
     },
     navbar: {
       title: "Notes",
       logo: {
         alt: "My Site Logo",
-        src: "img/logo.svg"
+        src: "img/logo.svg",
       },
-      links: [
+      items: [
         { to: "docs/intro", label: "Docs", position: "left" },
         { to: "blog", label: "Blog", position: "left" },
         {
           href: "https://github.com/NickReisenauer/Docusaurus",
           label: "GitHub",
-          position: "right"
-        }
-      ]
+          position: "right",
+        },
+      ],
     },
     footer: {
       style: "dark",
@@ -40,43 +40,43 @@ module.exports = {
           items: [
             {
               label: "Udemy",
-              to: "/docs/udemy/jstcg-ms"
+              to: "/docs/udemy/jstcg-ms",
             },
             {
               label: "Projects",
-              to: "/docs/projects/docusaurus"
-            }
-          ]
+              to: "/docs/projects/docusaurus",
+            },
+          ],
         },
         {
           title: "Community",
           items: [
             {
               label: "Discord",
-              href: "https://discordapp.com/invite/docusaurus"
-            }
-          ]
+              href: "https://discordapp.com/invite/docusaurus",
+            },
+          ],
         },
         {
           title: "Social",
           items: [
             {
               label: "Blog",
-              to: "blog"
+              to: "blog",
             },
             {
               label: "GitHub",
-              href: "https://github.com/NickReisenauer"
+              href: "https://github.com/NickReisenauer",
             },
             {
               label: "Twitter",
-              href: "https://twitter.com/NickReisenauer_"
-            }
-          ]
-        }
+              href: "https://twitter.com/NickReisenauer_",
+            },
+          ],
+        },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Nick Reisenauer. Built with Docusaurus.`
-    }
+      copyright: `Copyright © ${new Date().getFullYear()} Nick Reisenauer. Built with Docusaurus.`,
+    },
   },
   presets: [
     [
@@ -84,12 +84,13 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: "https://github.com/facebook/docusaurus/edit/master/website/"
+          editUrl:
+            "https://github.com/facebook/docusaurus/edit/master/website/",
         },
         theme: {
-          customCss: require.resolve("./src/css/custom.css")
-        }
-      }
-    ]
-  ]
+          customCss: require.resolve("./src/css/custom.css"),
+        },
+      },
+    ],
+  ],
 };
