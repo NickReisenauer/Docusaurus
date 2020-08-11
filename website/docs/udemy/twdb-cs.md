@@ -3114,3 +3114,27 @@ Web API's: Generally communicate via HTTP
 ---
 
 ### JSON and XML
+
+JSON: JavaScript Object Notation
+
+- JSON looks exactly like JavaScript objects, but everything is a string
+
+```js
+{
+  "person" : "Nick"
+}
+```
+
+XML: Extended Markup Language
+
+- XML is syntactically similar to HTML, but it does not describe presentation like HTML does
+
+```xml
+<person>
+  <age>21</age>
+</person>
+```
+
+---
+
+### Making API Requests with Node

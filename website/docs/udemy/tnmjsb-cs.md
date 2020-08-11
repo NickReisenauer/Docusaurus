@@ -3933,3 +3933,9 @@ From there, we just add an event listener to the pause button and run the pause 
 ---
 
 ### Where to Store Data?
+
+We have 2 options on where we are going to store our timeRemaining data. We can either 1. store it in the class and update the DOM every time our variable changes, or 2. we can store the value in the DOM. We are going to go with 2. because it's important to learn why everyone changed to option 1.
+
+---
+
+### DOM-Centric Approach

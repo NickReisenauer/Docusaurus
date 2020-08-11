@@ -3282,3 +3282,41 @@ userSchema.pre("save", async function (next) {
 ---
 
 ### Logging in Users
+
+In this lesson, you’ll set up the ability for users to log into their existing accounts.
+
+Logging in Users
+
+Logging in a user is a two-step process. The user provides their email and password, and
+the first thing to do is fetch the user by their email. From there, bcrypt is used to verify the
+password provided matches the hashed password stored in the database. If either step
+fails, the users won’t be able to log in. If both steps succeed, then you know the user is
+who they say they are.
+
+The code below sets up findByCredentials which finds a user by their email and
+password.
+
+```js
+userSchema.statics.findByCredentials = async (email, password) => {
+  const user = await User.findOne({ email });
+  if (!user) {
+    throw new Error("Unable to login");
+  }
+  const isMatch = await bcrypt.compare(password, user.password);
+  if (!isMatch) {
+    throw new Error("Unable to login");
+  }
+  return user;
+};
+```
+
+You can then call `findByCredentials` from you application when users need to login. The
+example below shows how this can be done.
+
+```js
+const user = await User.findByCredentials(req.body.email, req.body.password);
+```
+
+---
+
+### JSON Web Tokens

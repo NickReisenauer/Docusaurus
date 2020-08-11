@@ -2686,3 +2686,39 @@ Math.min(...numbers); // 1
 ---
 
 ### Understanding Array Destructuring
+
+Array destructuring allows us to take data from an array and assign the data to variables.
+We can also spread other data in as a new variable if we don't assign a name to it.
+
+```js
+const nameData = ["Nick", "Reisenauer", "Other name", "Another name"];
+const [firstName, lastName, ...restOfData] = nameData;
+console.log(firstName, lastName, restOfData);
+// Nick, Reisenauer, ["Other name", "Another name"]
+```
+
+---
+
+### Maps & Sets - Overview
+
+Arrays:
+
+- Store (nested) data of any kind and length
+- Iterable, also many special array methods available
+- Order is guaranteed, duplicates are allowed, zero-based index to access elements
+
+Sets:
+
+- Store (nested) data of any kind and length
+- Iterable, also many special set methods available
+- Order is NOT guaranteed, duplicates are NOT allowed, no index-based access
+
+Maps:
+
+- Store key-value data of any knd and length, any key values are allowed
+- Iterable, also has some special map methods available
+- Order is guaranteed, duplicate keys are NOT allowed, key-based access
+
+---
+
+### Working with Sets
