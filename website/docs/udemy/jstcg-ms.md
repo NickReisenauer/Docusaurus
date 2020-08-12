@@ -2722,3 +2722,13 @@ Maps:
 ---
 
 ### Working with Sets
+
+Sets allow only unique identifier elements and we can use iterables to loop over things inside of our Set.
+
+To initialize a new Set we use `new Set()` and we pass in some values, possibly in an array.
+
+You might want to use a Set instead of array if you need uniqueness with your data because Set doesn't allow for multiple copies of the same value.
+
+---
+
+### Working with Maps

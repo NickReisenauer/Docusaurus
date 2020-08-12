@@ -3138,3 +3138,25 @@ XML: Extended Markup Language
 ---
 
 ### Making API Requests with Node
+
+Instead of using `request` which is deprecated, we are going to use `axios`. `axios` is available in both the browser as well as for Node.
+If we're using `axios` in the browser, we need to include it via a CDN, if we're using it with Node we need to install it with NPM and require it.
+
+Here's a simple Node `axios` request to Google.
+
+```js
+const axios = require("axios");
+
+axios
+  .get("https://google.com")
+  .then((response) => {
+    console.log(response);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+```
+
+---
+
+### Sunset Time API Example

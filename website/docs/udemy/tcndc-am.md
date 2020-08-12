@@ -3320,3 +3320,52 @@ const user = await User.findByCredentials(req.body.email, req.body.password);
 ---
 
 ### JSON Web Tokens
+
+In this lesson, you’ll explore JWTs (JSON Web Tokens). JWTs provide a nice system for
+issuing and validating authentication tokens. The authentication token will ensure that the
+client doesn’t need to log in every time they want to perform an operation on the server.
+
+JSON Web Tokens
+
+First up, install the library.
+
+`npm i jsonwebtoken@8.4.0`
+
+The `sign` method can be used to generate a new token. `sign` accepts three arguments:
+
+The first is the data to embed in the token: This needs to include a unique identifier for the
+user.
+
+The second is a secret phrase: This is used to issue and validate tokens, ensuring that the
+token data hasn’t been tampered with.
+
+The third is a set of options: The example below uses `expiresIn` to create a token that’s
+valid for seven days.
+
+```js
+const jwt = require("jsonwebtoken");
+const token = jwt.sign({ _id: "abc123" }, "thisismynewcourse", {
+  expiresIn: "7 days",
+});
+```
+
+Tokens can be issued to users when they sign up or log in to the application. These can
+then be stored on the data and used to authenticate the user when they perform other
+options.
+
+The server can verify the token using `verify`. This requires two arguments:
+
+The first is the token to validate.
+
+The second is the secret phrase that the token was created with. If valid, the embedded
+data will be returned. This would allow the server to figure out which user is performing
+the operation.
+
+```js
+const data = jwt.verify(token, "thisismynewcourse");
+// data._id contains the user id of the user that owns this token
+```
+
+---
+
+### Generating Authentication Tokens

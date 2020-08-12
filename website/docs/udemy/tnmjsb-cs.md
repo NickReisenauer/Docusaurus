@@ -3939,3 +3939,37 @@ We have 2 options on where we are going to store our timeRemaining data. We can 
 ---
 
 ### DOM-Centric Approach
+
+Inside of our DOM we are using the HTML `value` property on our input to store how much time is remaining. To update this we are using our tick method which will get that value and subtract one from it to get our new value.
+
+```js
+tick = () => {
+  const timeRemaining = parseFloat(this.durationInput.value);
+  this.durationInput.value = timeRemaining - 1;
+};
+```
+
+---
+
+### Getters and Setters
+
+Instead of reaching into the DOM every time we want to update the time we can use get and set methods inside of our class that we can call upon to give us the new value.
+
+```js
+  tick = () => {
+    const timeRemaining = this.timeRemaining;
+    this.timeRemaining = timeRemaining - 1;
+  };
+
+  get timeRemaining() {
+    return parseFloat(this.durationInput.value);
+  }
+
+  set timeRemaining(time) {
+    this.durationInput.value = time;
+  }
+```
+
+---
+
+### Stopping the Timer
