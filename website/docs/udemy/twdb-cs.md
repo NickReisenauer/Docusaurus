@@ -3160,3 +3160,24 @@ axios
 ---
 
 ### Sunset Time API Example
+
+We made a request to a weather API service to get the sunset time for a given location.
+
+```js
+axios
+  .get(
+    `https://api.openweathermap.org/data/2.5/onecall?lat=33.441792&lon=-94.037689&exclude=hourly,daily&appid=3dc156bfd685616cc5df11894398edf1`
+  )
+  .then((response) => {
+    console.log(
+      unixToLocal(response.data.current.sunset, response.data.timezone)
+    );
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+```
+
+---
+
+### JSON Placeholder API Example
