@@ -3973,3 +3973,35 @@ Instead of reaching into the DOM every time we want to update the time we can us
 ---
 
 ### Stopping the Timer
+
+We added an if statement inside of our `tick` method that will check if the timer is equal to or less than zero and if so it will pause the timer, otherwise it will subtract one from the time remaining and check again.
+
+```js
+tick = () => {
+  if (this.timeRemaining <= 0) {
+    this.pause();
+  } else {
+    this.timeRemaining = this.timeRemaining - 1;
+  }
+};
+```
+
+---
+
+### Notifying the Outside World
+
+We added some callback functions that we can use to interact with the UI. We first pass these into the class argument constructor thing and then we check if they are there because the arguments are optional.
+
+```js
+{
+  onStart() {
+    console.log("Timer started");
+  },
+  onTick() {},
+  onComplete() {},
+}
+```
+
+---
+
+### onTick and onComplete
