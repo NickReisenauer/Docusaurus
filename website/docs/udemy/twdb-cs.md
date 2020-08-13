@@ -3166,7 +3166,11 @@ We made a request to a weather API service to get the sunset time for a given lo
 ```js
 axios
   .get(
+<<<<<<< HEAD
     `https://api.openweathermap.org/data/2.5/onecall?lat=33.441792&lon=-94.037689&exclude=hourly,daily&appid=APIKEY`
+=======
+    `https://api.openweathermap.org/data/2.5/onecall?lat=33.441792&lon=-94.037689&exclude=hourly,daily&appid=3dc156bfd685616cc5df11894398edf1`
+>>>>>>> e34996d60dad4927de1eab7150aebec15206c43b
   )
   .then((response) => {
     console.log(
