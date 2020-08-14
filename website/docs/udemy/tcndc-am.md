@@ -3422,3 +3422,32 @@ const token = await user.generateAuthToken();
 ---
 
 ### Express Middleware
+
+In this lesson, you’ll explore Express middleware. When working with middleware, you’ll
+have more control over how your server processes requests. This will be used to check
+that a user is authenticated before performing specific operations.
+
+Exploring Express Middleware
+
+Express middleware is nothing more than a function that runs as Express handles a given
+request. You can customize the function to do whatever you want it to do, and you can
+have it run whenever you want it to.
+
+The example below uses middleware to print information about incoming requests.
+Middleware functions should accept three parameters: `req`, `res`, and `next`. The only new
+parameter is `next`. `next` is called to signal to Express that the middleware function is done.
+
+```js
+const loggerMiddleware = (req, res, next) => {
+  console.log("New request to: " + req.method + " " + req.path);
+  next();
+};
+// Register the function as middleware for the application
+app.use(loggerMiddleware);
+```
+
+[Express Middleware](http://expressjs.com/th/guide/using-middleware.html)
+
+---
+
+### Accepting Authentication Tokens

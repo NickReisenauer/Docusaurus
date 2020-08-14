@@ -3181,3 +3181,9 @@ axios
 ---
 
 ### JSON Placeholder API Example
+
+We just fetched weather data to determine the sunset time in Hawaii. This could be done by using Axios and/or redaxios which is an axios fetch wrapper. Axios will automatically convert to JSON.
+
+---
+
+### Movie API App: Introduction

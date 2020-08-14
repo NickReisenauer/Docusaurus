@@ -2740,3 +2740,25 @@ Object is similar to Map. Both let you set keys to values, retrieve those values
 ---
 
 ### Maps vs Objects
+
+Maps:
+
+- Can use ANY values (and types) as keys
+- Better performance for large quantities of data
+- Better performance when adding + removing data frequently
+
+Objects:
+
+- Only may use strings, numbers or symbols as keys
+- Perfect for small / medium-sized sets of data
+- Easier / quicker to create (typically also with better performance)
+
+---
+
+### Understanding WeakSet
+
+WeakSet only has 3 properties, add, delete, and has. WeakSet helps by moving unused data to the garbage collection.
+
+---
+
+### Understanding WeakMap

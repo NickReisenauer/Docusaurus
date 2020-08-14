@@ -4005,3 +4005,27 @@ We added some callback functions that we can use to interact with the UI. We fir
 ---
 
 ### onTick and onComplete
+
+We added our onTick and our onComplete functions into our `tick` method so that if the function exists, it will be called either on every tick or when the timer is completed.
+
+---
+
+### Extracting Timer Code
+
+We just moved our Timer Class into its own file and linked to it from the HTML.
+
+---
+
+### Introducing SVG's
+
+We learned about the HTML `svg` tag and how we can use it to draw simple shapes
+
+```html
+<svg height="200" width="200">
+  <circle r="20" cx="30" cy="30" />
+</svg>
+```
+
+---
+
+### Rules of SVG's
