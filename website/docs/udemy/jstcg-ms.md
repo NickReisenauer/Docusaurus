@@ -2762,3 +2762,11 @@ WeakSet only has 3 properties, add, delete, and has. WeakSet helps by moving unu
 ---
 
 ### Understanding WeakMap
+
+The `WeakMap` object is a collection of key/value pairs in which the keys are weakly referenced. The keys must be objects and the values can be arbitrary values.
+
+---
+
+## More on Objects
+
+### Module Introduction

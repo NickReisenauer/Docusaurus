@@ -3187,3 +3187,10 @@ We just fetched weather data to determine the sunset time in Hawaii. This could 
 ---
 
 ### Movie API App: Introduction
+
+The Open Movie DataBase (OMDB) allows us to search for movies and shows and it will return a plot, rating, cast, etc of the movie. The API is as follows
+`http://www.omdbapi.com/?apikey=APIKEY&t=family%20guy`
+
+---
+
+### Movie API App: Results Route

@@ -3451,3 +3451,51 @@ app.use(loggerMiddleware);
 ---
 
 ### Accepting Authentication Tokens
+
+In this lesson, you’ll use Express middleware to put specific routes behind authentication.
+That will require the client to be authenticated before the operation can be performed
+
+Accepting and Validating Tokens
+
+The goal of the authentication middleware is to validate the authentication token and then
+fetch the profile for that user. `auth` below shows how you can get this done. Notice that
+the user profile is added onto `req.user`. This allows route handler functions to access the
+user profile without needing to fetch it again.
+
+```js
+const jwt = require("jsonwebtoken");
+const User = require("../models/user");
+const auth = async (req, res, next) => {
+  try {
+    const token = req.header("Authorization").replace("Bearer ", "");
+    const decoded = jwt.verify(token, "thisismynewcourse");
+    const user = await User.findOne({
+      _id: decoded._id,
+      "tokens.token": token,
+    });
+    if (!user) {
+      throw new Error();
+    }
+    req.user = user;
+    next();
+  } catch (e) {
+    res.status(401).send({ error: "Please authenticate." });
+  }
+};
+module.exports = auth;
+```
+
+The authentication middleware can be added to individual endpoints to lock them down.
+This is shown with `GET /users/me below`. `auth` is added as the second argument to
+`router.get`, meaning that it will run before the route handler function runs. This will ensure
+the user is authenticated.
+
+```js
+router.get("/users/me", auth, async (req, res) => {
+  res.send(req.user);
+});
+```
+
+---
+
+### Advanced Postman

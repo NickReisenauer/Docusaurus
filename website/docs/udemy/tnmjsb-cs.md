@@ -4029,3 +4029,15 @@ We learned about the HTML `svg` tag and how we can use it to draw simple shapes
 ---
 
 ### Rules of SVG's
+
+We can create shapes and lines on our screen by using an `svg` canvas. We can draw a circle by using the `circle` tag and specifying the cx and the cy positioning.
+
+```html
+<svg height="200" width="200">
+  <circle r="20" cx="30" cy="30" />
+</svg>
+```
+
+---
+
+### Advanced Circle Properties
