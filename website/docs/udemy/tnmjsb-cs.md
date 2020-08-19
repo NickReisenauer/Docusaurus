@@ -4041,3 +4041,25 @@ We can create shapes and lines on our screen by using an `svg` canvas. We can dr
 ---
 
 ### Advanced Circle Properties
+
+The inside of the circle is known as the fill, and the border around the outside is known as the stroke.
+We learned about how to add coloring and fill the outside with a solid color, also about offset so that we can have a set amount of the circle either filled in.
+
+```js
+<svg height="200" width="200">
+  <circle
+    r="90"
+    cx="100"
+    cy="100"
+    fill="transparent"
+    stroke="blue"
+    stroke-width="10"
+    stroke-dasharray="560"
+    stroke-dashoffset="10"
+  />
+</svg>
+```
+
+---
+
+### The Secret to the Animation

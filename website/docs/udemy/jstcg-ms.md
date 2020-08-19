@@ -2770,3 +2770,66 @@ The `WeakMap` object is a collection of key/value pairs in which the keys are we
 ## More on Objects
 
 ### Module Introduction
+
+Objects are everywhere in JavaScript, even arrays are a kind of object. They allow us to group content and many other things.
+
+---
+
+### What's an Object?
+
+Core Data Structure in JavaScript
+
+- Typically reflect "real-world" entities
+
+  - e.g. button, movie {id, title, image, rating}
+  - Allow us to apply real-world logic to coding
+
+- Made up of properties & methods
+
+  - Store data in properties and actions in methods
+
+Objects in JavaScript
+
+- Primitive Values
+
+  - Numbers
+  - Strings
+  - Booleans
+  - null
+  - undefined
+  - Symbol
+
+- Reference Values (=Objects)
+  - Everything else!
+  - {...}
+  - Arrays
+  - DOM Nodes
+  - other built-in objects
+
+---
+
+### Objects - Recap
+
+Objects are reference values - you learned that.
+
+It might not have been obvious yet but it's also important to recognize that, in the end, objects are of course made up of primitive values.
+
+```js
+const complexPerson = {
+    name: 'Max',
+    hobbies: ['Sports', 'Cooking'],
+    address: {
+        street: 'Some Street 5',
+        stateId: 5,
+        country: 'Germany',
+        phone: {
+            number: 12 345 678 9,
+            isMobile: true
+        }
+    },
+};
+```
+
+Event though `complexPerson` has multiple nested reference values (nested arrays and objects), you end up with primitive values if you drill into the object.
+
+So you could say: Primitive values are the core building blocks that hold your data, objects (and arrays) are helpful for organizing and working with that data.

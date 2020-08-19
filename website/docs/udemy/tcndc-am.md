@@ -3499,3 +3499,14 @@ router.get("/users/me", auth, async (req, res) => {
 ---
 
 ### Advanced Postman
+
+In this lesson, you’ll explore Postman environments. Environments make it easy to manage
+your requests and authentication without having to manually add authentication tokens to
+the individual requests.
+
+There are no notes for this video. Refer to the video to learn how to set up Postman
+environments.
+
+---
+
+### Logging Out

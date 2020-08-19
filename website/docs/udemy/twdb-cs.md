@@ -3194,3 +3194,9 @@ The Open Movie DataBase (OMDB) allows us to search for movies and shows and it w
 ---
 
 ### Movie API App: Results Route
+
+We set up a route called /results and inside there's an axios fetch request that will run and display the data in the response body.
+
+---
+
+### Movie API App: Displaying Data
