@@ -2833,3 +2833,20 @@ const complexPerson = {
 Event though `complexPerson` has multiple nested reference values (nested arrays and objects), you end up with primitive values if you drill into the object.
 
 So you could say: Primitive values are the core building blocks that hold your data, objects (and arrays) are helpful for organizing and working with that data.
+
+---
+
+### Adding, Modifying, & Deleting Properties
+
+Adding and modifying properties is quite simple. If the property already exists, just reference it with dot notation and assign a new value. If the property does not exist yet, assign it a value with dot notation and it will be created.
+
+```js
+person.existingProp = true;
+person.newProp = true;
+```
+
+To delete a property, just add the `delete` keyword before the property you're trying to delete. `delete person.age`.
+
+---
+
+### Special Key Names & Square Bracket Property Access

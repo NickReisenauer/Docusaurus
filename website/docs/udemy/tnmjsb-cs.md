@@ -4063,3 +4063,27 @@ We learned about how to add coloring and fill the outside with a solid color, al
 ---
 
 ### The Secret to the Animation
+
+If we rotate the circle by -90 degrees then the opening part of the circle is at the top. If we want the circle to deplete it a clockwise motion, we can use a negative dash-offset number. We can calculate the dash-offset thing by accessing the radius.
+
+---
+
+### First Pass on the Animation
+
+In order to determine how far down to tick every time, we need access to the radius. Then we just made a placeholder variable that we can subtract say 50 from on each tick to move the circle.
+
+```js
+const perimeter = circle.getAttribute("r") * 2 * Math.PI;
+circle.setAttribute("stroke-dasharray", perimeter);
+
+// Inside of Timer class
+  onTick() {
+    console.log(`Timer just ticked down`);
+    circle.setAttribute("stroke-dashoffset", currentOffset);
+    currentOffset = currentOffset - 50;
+  },
+```
+
+---
+
+### Smoothing the Animation

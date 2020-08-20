@@ -3200,3 +3200,9 @@ We set up a route called /results and inside there's an axios fetch request that
 ---
 
 ### Movie API App: Displaying Data
+
+We used ejs to display the data returned from our API call.
+
+---
+
+### Movie API App: Adding Search

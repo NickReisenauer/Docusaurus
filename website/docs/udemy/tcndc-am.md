@@ -3510,3 +3510,35 @@ environments.
 ---
 
 ### Logging Out
+
+In this lesson, it was our task to log out the user. When we log out the user we are removing the token that they used to sign in from their account. As a challenge, we also set up a route that would delete all of the tokens the user has generated. This can be helpful if the user wants to log out of all the devices that they're signed in on.
+
+```js
+// Logout user
+router.post("/users/logout", auth, async (req, res) => {
+  try {
+    req.user.tokens = req.user.tokens.filter((token) => {
+      return token.token !== req.token;
+    });
+    await req.user.save();
+    res.send();
+  } catch (error) {
+    res.status(500).send();
+  }
+});
+
+// Logout of all user sessions
+router.post("/users/logoutAll", auth, async (req, res) => {
+  try {
+    req.user.tokens = [];
+    await req.user.save();
+    res.send(200);
+  } catch (error) {
+    res.status(500).send();
+  }
+});
+```
+
+---
+
+### Hiding Private Data
