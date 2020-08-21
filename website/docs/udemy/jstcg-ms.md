@@ -2850,3 +2850,26 @@ To delete a property, just add the `delete` keyword before the property you're t
 ---
 
 ### Special Key Names & Square Bracket Property Access
+
+You can use strings for your keys in objects.
+
+```js
+let person = {
+  "first name": "Nick",
+};
+```
+
+Now that we have a string as a key property, how do we access that property?
+We can use square bracket notation with a string inside to access string based keys.
+
+```js
+let person = {
+  "first name": "Nick",
+};
+console.log(person["first name"]);
+// Nick
+```
+
+---
+
+### Property Types & Property Order

@@ -3206,3 +3206,11 @@ We used ejs to display the data returned from our API call.
 ---
 
 ### Movie API App: Adding Search
+
+To finalize this video, we added a search functionality that will display the top movie result.
+
+---
+
+## YelpCamp: Basics
+
+### YelpCamp: Initial Routines

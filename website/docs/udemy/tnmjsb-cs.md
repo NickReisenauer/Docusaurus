@@ -4087,3 +4087,9 @@ circle.setAttribute("stroke-dasharray", perimeter);
 ---
 
 ### Smoothing the Animation
+
+To smooth out our circle animation, we changed some code in our `tick()` method so that it runs every 50 milliseconds instead of every 1 second. This allows us to update the dasharray stroke thing on the svg much more often resulting in a smoother animation.
+
+---
+
+### Adjusting by an Even Interval

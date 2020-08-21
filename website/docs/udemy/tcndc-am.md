@@ -3542,3 +3542,26 @@ router.post("/users/logoutAll", auth, async (req, res) => {
 ---
 
 ### Hiding Private Data
+
+In this lesson, you’ll learn how to limit what data gets sent to the client. This will allow you
+to hide authentication tokens and hashed passwords from server responses.
+
+Hiding Private Data
+
+When a Mongoose document is passed to `res.send`, Mongoose converts the object into
+JSON. You can customize this by adding `toJSON` as a method on the object. The method
+below removes the `password` and `tokens` properties before sending the response back.
+
+```js
+userSchema.methods.toJSON = function () {
+  const user = this;
+  const userObject = user.toObject();
+  delete userObject.password;
+  delete userObject.tokens;
+  return userObject;
+};
+```
+
+---
+
+### Authenticating User Endpoints
