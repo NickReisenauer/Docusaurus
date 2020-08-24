@@ -29,3 +29,37 @@ The course Q&A in Udemy is a great way to solve your problems and help others wi
 ## Setting up Your Environment
 
 ### Setting up Your Environment
+
+In this section, we're going to get our machine set up for the rest of the class.
+
+---
+
+### Installing Visual Studio Code
+
+Install Visual Studio Code as this will be the text editor we will be using for the course.
+
+---
+
+### Installing Node.js & Yarn
+
+Install Node.js & Yarn.
+
+---
+
+## Hello React
+
+### Section Intro: Hello React
+
+[What we're going to be building](http://indecision.mead.io/)
+
+[GitHub repo for what we're going to be building](https://github.com/andrewjmead/react-course-2-indecision-app)
+
+---
+
+### Setting up a Web Server
+
+In this video, we started off by creating our file and folder structure. We added a public folder and inside the public folder we added our index.html file. We also added a live server utility to server our public folder. This live server will allow for hot reloading.
+
+---
+
+### Hello React
