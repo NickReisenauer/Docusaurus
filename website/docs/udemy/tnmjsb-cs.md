@@ -4093,3 +4093,13 @@ To smooth out our circle animation, we changed some code in our `tick()` method 
 ---
 
 ### Adjusting by an Even Interval
+
+In this video we did some math to determine how we could smooth out the animation and make sure that the animation will finish right as it gets to 0 seconds.
+
+```js
+(perimeter * timeRemaining) / duration - perimeter;
+```
+
+---
+
+### Using Icons

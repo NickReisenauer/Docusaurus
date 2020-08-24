@@ -3213,4 +3213,48 @@ To finalize this video, we added a search functionality that will display the to
 
 ## YelpCamp: Basics
 
-### YelpCamp: Initial Routines
+### YelpCamp: Initial Routes
+
+We set up some initial routes and displayed some data from an object containing names and images.
+
+```js
+const express = require("express");
+const app = express();
+
+app.set("view engine", "ejs");
+
+// Landing page
+app.get("/", (req, res) => {
+  res.render("landing");
+});
+
+// Campgrounds route
+app.get("/campgrounds", (req, res) => {
+  const campgrounds = [
+    {
+      name: "Salmon Creek",
+      image:
+        "https://images.unsplash.com/photo-1563299796-17596ed6b017?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
+    },
+    {
+      name: "Granite Hill",
+      image:
+        "https://images.unsplash.com/photo-1545572695-789c1407474c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+    },
+    {
+      name: "Camping Place",
+      image:
+        "https://images.unsplash.com/photo-1525811902-f2342640856e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80",
+    },
+  ];
+  res.render("campgrounds", { campgrounds });
+});
+
+app.listen(process.env.PORT, process.env.IP, () => {
+  console.log(`Server started on port: ${process.env.PORT}`);
+});
+```
+
+---
+
+### YelpCamp: Layout

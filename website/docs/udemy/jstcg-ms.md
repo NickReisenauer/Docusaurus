@@ -2873,3 +2873,31 @@ console.log(person["first name"]);
 ---
 
 ### Property Types & Property Order
+
+You can't use negative numbers in a object property type. If you have a number as a property type you have to use square bracket notation to access it.
+
+The order of the properties in the object are ordered in the way that they were generated. This is not true if you have an object with numbers, because then it will be sorted by ascending numerical value.
+
+---
+
+### Dynamic Property Access & Setting Properties Dynamically
+
+We can use square bracket notation to access dynamic values that are stored in variables or results of functions etc...
+
+We can also use square brackets to set property names inside of our object.
+
+```js
+const keyName = "Nick";
+const prop = [keyName];
+const person = {
+  name: "Nick",
+  [keyName]: "Is Awesome",
+};
+person.name[keyName];
+person["Nick"]; // Is Awesome
+// Nick
+```
+
+---
+
+### Quiz 16

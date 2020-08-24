@@ -3565,3 +3565,12 @@ userSchema.methods.toJSON = function () {
 ---
 
 ### Authenticating User Endpoints
+
+In this lesson, you’ll be adding authentication to the other user endpoints.
+
+There are no notes for this challenge video, as no new information is covered. The goal is
+to give you experience using what was covered in previous lessons.
+
+---
+
+### The User/Task Relationship
