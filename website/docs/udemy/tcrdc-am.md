@@ -86,3 +86,9 @@ ReactDOM.render(template, appRoot);
 ---
 
 ### Setting up Babel
+
+In this video we installed Babel as well as 2 Babel presets to compile our code. The presets we installed were `env` and `react`. Then we created a `src` folder to store the React code we're going to be writing. We ran `babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch` which tells babel where our source code is going to live and where we want the compiled code to go. The --watch flag will keep it running in the background so that it will compile into the scripts/app.js file every time we make a change in src/app.js.
+
+---
+
+### Exploring JSX
