@@ -3258,3 +3258,9 @@ app.listen(process.env.PORT, process.env.IP, () => {
 ---
 
 ### YelpCamp: Layout
+
+In this video, we included partials in our Express app.
+
+---
+
+### YelpCamp: Creating Campgrounds

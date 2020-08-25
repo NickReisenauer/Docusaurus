@@ -2900,4 +2900,10 @@ person["Nick"]; // Is Awesome
 
 ---
 
-### Quiz 16
+### Demo App & Shorthand Property Syntax
+
+We just set up the app in this video
+
+---
+
+### Rendering Elements based on Objects

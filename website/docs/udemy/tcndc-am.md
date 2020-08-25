@@ -3574,3 +3574,57 @@ to give you experience using what was covered in previous lessons.
 ---
 
 ### The User/Task Relationship
+
+In this lesson, you’ll learn how to create a relationship between a user and tasks. This will
+make it possible to know which tasks a user created.
+
+Mongoose Relationships
+
+To set up the relationship, both the user and task model will be changed. First up, a new
+field needs to be added onto the task. This will store the ID of the user who created it.
+
+```js
+// Other properties and options omitted for brevity
+const Task = mongoose.model("Task", {
+  owner: {
+    type: mongoose.Schema.Types.ObjectId,
+    required: true,
+    ref: "User",
+  },
+});
+```
+
+Next, a virtual property needs to be added onto the user. The code below adds a `tasks`
+field onto users that can be used to fetch the tasks for a given user. It’s a virtual property
+because users in the database won’t have a `tasks` field. It’s a reference to the task data
+stored in the separate collection.
+
+```js
+userSchema.virtual("tasks", {
+  ref: "Task",
+  localField: "_id",
+  foreignField: "owner",
+});
+```
+
+With the relationship configured, tasks can be created with an `owner` value.
+
+The code below shows how you can fetch the owner of a given task.
+
+```js
+const task = await Task.findById("5c2e505a3253e18a43e612e6");
+await task.populate("owner").execPopulate();
+console.log(task.owner);
+```
+
+The code below shows how you can fetch the tasks for a given user.
+
+```js
+const user = await User.findById("5c2e4dcb5eac678a23725b5b");
+await user.populate("tasks").execPopulate();
+console.log(user.tasks);
+```
+
+---
+
+### Authenticating Task Endpoints

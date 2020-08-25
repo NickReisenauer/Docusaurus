@@ -63,3 +63,26 @@ In this video, we started off by creating our file and folder structure. We adde
 ---
 
 ### Hello React
+
+In this video, we loaded in React and its companion library ReactDOM via script tags. Later on, we'll be loading them in via a different technique using Webpack. We also loaded in a script that we made in the scripts/app.js file. This script is very simple, we log a little message, and then we defined some JSX (JavaScript XML) but the real code that is running is the compiled version using Babel. We then select the element that we're going to render our template and then we used ReactDOM.render() to render the template we made inside the element we selected.
+
+```js
+// JSX
+var template = <p id="Hello">This is JSX from app.js</p>;
+// Babel compiled JSX
+var template = /*#__PURE__*/ React.createElement(
+  "p",
+  {
+    id: "Hello",
+  },
+  "This is JSX from app.js"
+);
+// Selecting the element to render the template in
+var appRoot = document.getElementById("app");
+// ReactDOM to render the template in the selected element
+ReactDOM.render(template, appRoot);
+```
+
+---
+
+### Setting up Babel

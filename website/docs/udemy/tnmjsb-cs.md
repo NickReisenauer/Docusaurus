@@ -4103,3 +4103,11 @@ In this video we did some math to determine how we could smooth out the animatio
 ---
 
 ### Using Icons
+
+In this video, we integrated font-awesome icons as our play and pause buttons.
+
+---
+
+## Application Design Patterns
+
+### Application Overview
