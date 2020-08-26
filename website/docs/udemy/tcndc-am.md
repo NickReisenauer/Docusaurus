@@ -3628,3 +3628,12 @@ console.log(user.tasks);
 ---
 
 ### Authenticating Task Endpoints
+
+In this lesson, you’ll be setting up authentication for the other task endpoints.
+
+There are no notes for this challenge video, as no new information is covered. The goal is
+to give you experience using what was covered in previous lessons.
+
+---
+
+### Cascade Delete Tasks

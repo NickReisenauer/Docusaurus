@@ -2907,3 +2907,15 @@ We just set up the app in this video
 ---
 
 ### Rendering Elements based on Objects
+
+To render out every element from on object to the screen we could use a forEach loop.
+
+---
+
+### for-in Loops & Outputting Dynamic Properties
+
+for-in loops allow us to loop over object key and value pairs.
+
+---
+
+### Adding the Filter Functionality

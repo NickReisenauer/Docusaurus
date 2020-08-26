@@ -4111,3 +4111,23 @@ In this video, we integrated font-awesome icons as our play and pause buttons.
 ## Application Design Patterns
 
 ### Application Overview
+
+This application is called MovieFight and what it does is it will take 2 movies and fetch data for both of them and then compare the differences between the two and highlight which movie did better in the box office.
+
+The search box will also feature autocomplete functionality.
+
+---
+
+### Starter Kit Setup
+
+We got some boilerplate code for our HTML and CSS.
+
+---
+
+### Big Challenges
+
+Our challenges are how we're going to fetch data from movies, building our own autocomplete widget from scratch, and styling our app.
+
+---
+
+### Fetching Movie Data

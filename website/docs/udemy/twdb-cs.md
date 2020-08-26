@@ -3264,3 +3264,11 @@ In this video, we included partials in our Express app.
 ---
 
 ### YelpCamp: Creating Campgrounds
+
+In this video, we worked on setting up a post request to /campgrounds that will create a new campground and add it to our array of campgrounds and then display it on the page.
+
+To send off this post request, we set up a route on campgrounds/new and there's a form on that page that will allow us to specify a name and a campground image url.
+
+---
+
+### YelpCamp: Styling Campgrounds

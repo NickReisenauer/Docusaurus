@@ -92,3 +92,23 @@ In this video we installed Babel as well as 2 Babel presets to compile our code.
 ---
 
 ### Exploring JSX
+
+In this video, we explored JSX and how we can write our HTML inside. An important thing to remember for JSX is that we must have a root element. This means that if we're going to be writing multiple element we need to wrap them in a div tag or something similar. If we want Emmet autocompletion in our editor for writing HTML templates we can go into settings > extensions > emmet > add language support > javascript: javascriptreact.
+
+Here's a basic template that is wrapped in a root div and then rendered using ReactDOM.
+
+```js
+let template2 = (
+  <div>
+    <h1>Nick Reisenauer</h1>
+    <p>Age: 18</p>
+    <p>Location: Phoenix</p>
+  </div>
+);
+
+ReactDOM.render(template2, document.getElementById("app"));
+```
+
+---
+
+### JSX Expressions
