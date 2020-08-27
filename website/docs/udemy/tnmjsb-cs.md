@@ -4131,3 +4131,9 @@ Our challenges are how we're going to fetch data from movies, building our own a
 ---
 
 ### Fetching Movie Data
+
+In this video, we set up Axios to fetch the data from the movie api. We then console logged the response and saw that we are given back a url to the image, the year, the title, and wether or not it's a movie/series.
+
+---
+
+### Fetching a Single Movie

@@ -112,3 +112,29 @@ ReactDOM.render(template2, document.getElementById("app"));
 ---
 
 ### JSX Expressions
+
+In this video, we looked at how we can dynamically pass data into our JSX expressions. We can pass in variables as long as the variables are references to strings or numbers. We can also store our data on an object and then call the properties on that object. We cannot directly render the object however. To actually include the variables in our JSX we use two curly braces between the tag. `<p>{variable}</p>`.
+
+Here's an example of some data that is stored on an object and how we pass it in to our JSX.
+
+```js
+let app = {
+  title: "Indecision App",
+  subtitle: "Put your life in the hands of a computer",
+};
+let variable = 42;
+let template = (
+  <div>
+    <h1>{app.title}</h1>
+    <p>{app.subtitle}</p>
+    <ol>
+      <li>{variable}</li>
+      <li>Item two</li>
+    </ol>
+  </div>
+);
+```
+
+---
+
+### Conditional Rendering in JSX

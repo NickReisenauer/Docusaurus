@@ -2919,3 +2919,15 @@ for-in loops allow us to loop over object key and value pairs.
 ---
 
 ### Adding the Filter Functionality
+
+To implement the filter, we set up a function that will call a function to render the movies and inside is the option to filter by a string.
+
+---
+
+### Understanding "Chaining" (Property & Method Chaining)
+
+We can use the spread operator with objects to make copies of objects. If you make a copy of an object by assigning one object to another, it will point to the same reference value and be updated whenever the original is updated. If you use the spread method, it will make a one time copy of the object.
+
+---
+
+### The Object Spread Operator

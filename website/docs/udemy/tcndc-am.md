@@ -3637,3 +3637,29 @@ to give you experience using what was covered in previous lessons.
 ---
 
 ### Cascade Delete Tasks
+
+In this lesson, you’ll learn how to use Mongoose middleware to clean up a user’s tasks
+when they close their account. This will make sure that all their data is securely removed
+from the database.
+
+Deleting a User’s Tasks
+
+The middleware function below is registered using `pre`. It will run just before `remove` fires
+for the user. The function itself deletes all tasks created by that user. Now when a user
+closes their account, their other data will get deleted too.
+
+```js
+const Task = require("./task");
+// Existing code omitted for brevity
+userSchema.pre("remove", async function (next) {
+  const user = this;
+  await Task.deleteMany({ owner: user._id });
+  next();
+});
+```
+
+---
+
+## Sorting, Pagination, and Filtering
+
+### Section Intro: Sorting, Pagination, and Filtering

@@ -3272,3 +3272,9 @@ To send off this post request, we set up a route on campgrounds/new and there's 
 ---
 
 ### YelpCamp: Styling Campgrounds
+
+In this video, we used Bootstrap 3 to style our images and cards. Also set up EJS support for VSCode.
+
+---
+
+### YelpCamp: Styling Nav and Forms
