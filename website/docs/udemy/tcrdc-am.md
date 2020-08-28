@@ -138,3 +138,60 @@ let template = (
 ---
 
 ### Conditional Rendering in JSX
+
+We can render our JSX based on a condition. We can do this in 3 ways, either with a function return expression, a ternary operator, or a logical && statement.
+
+Here are examples for each method.
+
+The function return method will call a function inside of JSX and render the return value. So in our function we have an if statement that checks if the user is older than 18 and if so it returns a JSX expression with a p tag and the user's age inside. We then call that function in our template and if it's false it won't render anything, but if it's true then it will render the user's age.
+
+```js
+// Function return expression
+const user = {
+  name: "Nick",
+  age: 18,
+};
+function getAge(age) {
+  if (age >= 18) return <p>Age: {age}</p>;
+}
+let template = <body>{getAge(user.age)}</body>;
+```
+
+The Ternary operator is a great option for if you want to display 2 messages, either a success or a failure. The way it works is if the condition is true it will render the first thing and if not it will render the second. We can use it to see if the user's name is a valid string and if it is we can render the name, otherwise we can render a 'stranger' string. We can also write this inline/in-tag in our JSX.
+
+```js
+// Ternary Operator
+const user = {
+  name: "Nick",
+  age: 18,
+};
+let template = (
+  <body>
+    <p>{user.name ? user.name : "Hello stranger"}</p>
+  </body>
+);
+```
+
+The Logical && operator will take an expression and if it evaluates to true it will render the truthy value and if it's false it will return the falsy value. But JSX doesn't render falsy values so it has to be true for JSX to render it. We pass in our tag on the truthy side instead of wrapping this whole expression inside a tag. This is because if it evaluates to false we don't render anything and we only render the tag if it's true.
+This will check if the user provided both a name and an age and if so it will render a p tag saying the user's age and name.
+
+```js
+// Logical &&
+const user = {
+  name: "Nick",
+  age: 18,
+};
+let template = (
+  <body>
+    {user.name && user.age && (
+      <p>
+        Age: {user.age} and Name: {user.name}
+      </p>
+    )}
+  </body>
+);
+```
+
+---
+
+### ES6 Aside: const and let

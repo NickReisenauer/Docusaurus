@@ -3278,3 +3278,11 @@ In this video, we used Bootstrap 3 to style our images and cards. Also set up EJ
 ---
 
 ### YelpCamp: Styling Nav and Forms
+
+In this video, we styled out a nav bar and the input form to use Bootstrap 3 styling.
+
+---
+
+## Databases
+
+### What is a Database

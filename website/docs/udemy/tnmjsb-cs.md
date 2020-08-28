@@ -4137,3 +4137,15 @@ In this video, we set up Axios to fetch the data from the movie api. We then con
 ---
 
 ### Fetching a Single Movie
+
+After we search for a movie, we are returned with some movies that fit our search criteria and in those they each contain an IMDB ID which we can then use to look up the full details on a movie.
+
+---
+
+### AutoComplete Widget Design
+
+When the user presses a key we send off a request with the current input value and when the user clicks on a result the input value will be equal to the movie's title.
+
+---
+
+### Searching the API on Input Change

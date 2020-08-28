@@ -3663,3 +3663,38 @@ userSchema.pre("remove", async function (next) {
 ## Sorting, Pagination, and Filtering
 
 ### Section Intro: Sorting, Pagination, and Filtering
+
+In this section, you’ll explore advanced techniques for fetching data. This includes sorting,
+filtering, and pagination. All three of these will give clients more control over what data
+they get back. This keeps applications fast, as they don’t need to fetch unnecessary data
+
+---
+
+### Working with Timestamps
+
+In this lesson, you’ll enable timestamps for your Mongoose models. Mongoose will
+automatically track when documents were created and updated. This is great data to have
+if you want to allow users to sort by when the document was created or updated.
+
+Enabling Mongoose Timestamps
+
+Schema options can be used to enable timestamps. Schema options are provided by
+passing an object in as the second argument to `mongoose.Schema`. Set `timestamps` to `true`
+to have Mongoose add `createdAt` and `updatedAt` fields to the model. You don’t need to
+write any code to create or manage those fields, as Mongoose does all that for you.
+
+```js
+const taskSchema = new mongoose.Schema(
+  {
+    //Task fields omitted for brevity
+  },
+  {
+    timestamps: true,
+  }
+);
+const Task = mongoose.model("Task", taskSchema);
+```
+
+---
+
+### Filtering Data
