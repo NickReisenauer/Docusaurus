@@ -3286,3 +3286,16 @@ In this video, we styled out a nav bar and the input form to use Bootstrap 3 sty
 ## Databases
 
 ### What is a Database
+
+- What is a database?
+
+  - A collection of information/data
+
+- SQL (relational) vs NOSQL (non-relational)
+
+SQL has patterns that must be followed for every user.
+NOSQL doesn't require us to use tables or patterns for every user, we can define users how we want. It also uses a JSON data structure which makes it easy to nest data objects.
+
+---
+
+### Installing MongoDB

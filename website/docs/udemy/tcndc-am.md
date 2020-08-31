@@ -3698,3 +3698,43 @@ const Task = mongoose.model("Task", taskSchema);
 ---
 
 ### Filtering Data
+
+In this lesson, you’ll use query parameters to allow for data filtering. This will allow clients
+to fetch all tasks, just the complete tasks, or just the incomplete tasks.
+
+Filtering Data
+
+`GET /tasks` below supports a `completed` query parameter which can be set to `true` or
+`false`. This will prevent clients from fetching unnecessary data that they don’t plan on
+using.
+
+First up, create an object to store the search criteria.
+
+```js
+const match = {};
+```
+
+From there, check if the query parameter was provided. The provided value should be
+parsed into a boolean and stored on `match.completed`.
+
+```js
+if (req.query.completed) {
+  match.completed = req.query.completed === "true";
+}
+```
+
+Last up, `match` can be added onto `populate` to fetch just the users that match the search
+criteria.
+
+```js
+await req.user
+  .populate({
+    path: "tasks",
+    match,
+  })
+  .execPopulate();
+```
+
+---
+
+### Paginating Data

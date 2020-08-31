@@ -4149,3 +4149,60 @@ When the user presses a key we send off a request with the current input value a
 ---
 
 ### Searching the API on Input Change
+
+In this video, we set up an input and every time the user types in the input we send a request to the movie API with the data the user typed as our search request.
+
+```js
+const input = document.querySelector("input");
+
+input.addEventListener("input", (e) => {
+  fetchData(e.target.value);
+});
+
+const fetchData = async (searchTerm) => {
+  const response = await axios.get("http://www.omdbapi.com/", {
+    params: {
+      apikey: "thewdb",
+      s: searchTerm,
+    },
+  });
+  console.log(response.data);
+};
+```
+
+---
+
+### Delaying Search Input
+
+In this video, we set up a setInterval timeout so that the API will only be requested if the user hasn't typed in the last second.
+
+```js
+const input = document.querySelector("input");
+
+let timeoutID;
+
+const onInput = (event) => {
+  if (timeoutID) {
+    clearTimeout(timeoutID);
+  }
+  timeoutID = setTimeout(() => {
+    fetchData(event.target.value);
+  }, 1000);
+};
+
+const fetchData = async (searchTerm) => {
+  const response = await axios.get("http://www.omdbapi.com/", {
+    params: {
+      apikey: "thewdb",
+      s: searchTerm,
+    },
+  });
+  console.log(response.data);
+};
+
+input.addEventListener("input", onInput);
+```
+
+---
+
+### Understanding Debounce

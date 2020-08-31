@@ -2943,3 +2943,30 @@ Object assign will make a hard copy of an object and we can add properties to ou
 ---
 
 ### Object Destructuring
+
+We can pull variables out of objects using destructuring.
+
+```js
+const user = {
+  name: "Nick",
+  age: 18,
+};
+const { age: userAge } = user;
+console.log(userAge); // 18
+```
+
+We can also use all the other properties that we didn't pull out specifically by using the spread operator, `...otherProperties`.
+
+---
+
+### Checking for Property Existence
+
+If we want to check and make sure that a property exists on a movie we can use an if in statement.
+
+```js
+if (!"info" in movie) return console.log("Not there");
+```
+
+---
+
+### Introducing 'this'

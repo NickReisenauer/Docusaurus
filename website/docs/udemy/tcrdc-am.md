@@ -195,3 +195,11 @@ let template = (
 ---
 
 ### ES6 Aside: const and let
+
+In this video, we looked at how `var`, `let`, and `const` differ from each other. The block and function scoping for `var` is different than `let` and `const`. For example if we have a function with a var declared inside we can access it from outside the block which we don't want to happen. With both let and const our variables are available in whatever scope we defined them in.
+
+We should always try to use const unless we're going to be reassigning our variables, in which case we can use let. This will help us manage our scopes and not have variables bleeding out into scopes unknown.
+
+---
+
+### ES6 Aside: Arrow Functions
