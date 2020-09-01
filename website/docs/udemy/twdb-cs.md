@@ -3299,3 +3299,9 @@ NOSQL doesn't require us to use tables or patterns for every user, we can define
 ---
 
 ### Installing MongoDB
+
+In this video we installed MongoDB.
+
+---
+
+### Mongo Shell Basics

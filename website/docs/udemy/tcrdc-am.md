@@ -203,3 +203,13 @@ We should always try to use const unless we're going to be reassigning our varia
 ---
 
 ### ES6 Aside: Arrow Functions
+
+One big advantage of using arrow functions is that they have implicit return if we're returning a single value.
+
+```js
+const square = (x) => x * x;
+```
+
+---
+
+### ES6 Aside: Arrow Functions Part 2

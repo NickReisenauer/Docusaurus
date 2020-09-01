@@ -2970,3 +2970,9 @@ if (!"info" in movie) return console.log("Not there");
 ---
 
 ### Introducing 'this'
+
+`this` allows us to access scoped stuff in our objects and functions.
+
+---
+
+### The Method Shorthand Syntax

@@ -4206,3 +4206,9 @@ input.addEventListener("input", onInput);
 ---
 
 ### Understanding Debounce
+
+`debounce` is the process of waiting for a set amount of time before firing off our input.
+
+---
+
+### Implementing a Reusable Debounce
