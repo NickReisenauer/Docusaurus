@@ -4212,3 +4212,23 @@ input.addEventListener("input", onInput);
 ---
 
 ### Implementing a Reusable Debounce
+
+In this video, we set up our debounce function that will delay the api request.
+
+```js
+const debounce = (func, delay = 500) => {
+  let timeoutID;
+  return (...args) => {
+    if (timeoutID) {
+      clearTimeout(timeoutID);
+    }
+    timeoutID = setTimeout(() => {
+      func.apply(null, args);
+    }, delay);
+  };
+};
+```
+
+---
+
+### Extracting Utility Functions

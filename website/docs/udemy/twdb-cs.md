@@ -3305,3 +3305,23 @@ In this video we installed MongoDB.
 ---
 
 ### Mongo Shell Basics
+
+show dbs will show us the available databases that we have.
+
+help will provide a list of helpful commands.
+
+use allows us to easily switch between databases.
+
+db.name.insert allows us to insert data into our database.
+
+db.name.find will return all the objects if we don't specify a specific query.
+
+db.name.find({name:'nick'}) will find things with the name nick.
+
+db.name.update({name:'nick'},{name:'joe'}) will update the object with the name of nick and change it to the name of joe.
+
+These are some of the basic commands when working with the Mongo Shell to interact with our database.
+
+---
+
+### Introduction to Mongoose: Part 1

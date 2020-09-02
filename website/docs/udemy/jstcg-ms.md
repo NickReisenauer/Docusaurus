@@ -2976,3 +2976,23 @@ if (!"info" in movie) return console.log("Not there");
 ---
 
 ### The Method Shorthand Syntax
+
+We can add a method more easily using this syntax.
+
+```js
+const object = {
+  method() {
+    console.log(`I'm a method`);
+  },
+};
+```
+
+---
+
+### The `this` Keyword and its Strange Behavior
+
+To figure out what `this` equals is to look at what comes before the dot that is triggering the function that `this` is inside of
+
+---
+
+### call() and apply()

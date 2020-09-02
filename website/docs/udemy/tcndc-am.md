@@ -3771,3 +3771,55 @@ await req.user
 ---
 
 ### Sorting Data
+
+In this lesson, you’ll add sorting to the application. Clients will be able to fetch the data
+back in any order they like.
+
+Sorting Data
+
+The `options` object used for pagination can also be used for sorting. A `sort` property
+should be set, which is an object containing key/value pairs. The key is the field to sort.
+The value is `1` for ascending and `-1` for descending sorting.
+
+`GET /tasks` will get support for a `sortBy` query parameter. The value should include the
+field to sort and the order in which to sort. `createdAt:asc` would sort the tasks in
+ascending order with the oldest first. `createdAt:asc` would sort the tasks in a descending
+order with the newest first.
+
+Start with an empty object to store the sorting options.
+
+```js
+const sort = {};
+```
+
+If the query parameter is provided, it’ll get parsed and `sort` will be updated.
+
+```js
+if (req.query.sortBy) {
+  const parts = req.query.sortBy.split(":");
+  sort[parts[0]] = parts[1] === "desc" ? -1 : 1;
+}
+```
+
+sort is then added onto `options`. If `sortBy` isn’t provided, `sort` will be an empty object
+and no sorting will occur.
+
+```js
+await req.user
+  .populate({
+    path: "tasks",
+    match,
+    options: {
+      limit: parseInt(req.query.limit),
+      skip: parseInt(req.query.skip),
+      sort,
+    },
+  })
+  .execPopulate();
+```
+
+---
+
+## File Uploads
+
+### Section Intro: File Uploads

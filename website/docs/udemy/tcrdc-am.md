@@ -213,3 +213,39 @@ const square = (x) => x * x;
 ---
 
 ### ES6 Aside: Arrow Functions Part 2
+
+In this video, we explored some of the difference between using arrow functions and regular functions.
+
+One of the first differences is that we no longer have access to the arguments object.
+
+Another difference is how `this` works inside of object methods. If we have an ES5 function method and we use an arrow function inside, say with a map or forEach function, `this` will be able to reference whatever we want, but if we used an arrow function on our object method it would return undefined.
+
+```js
+const user = {
+  name: "Nick",
+  cities: ["Phoenix", "Glenwood Springs", "Frisco"],
+  printPlacesLived() {
+    return this.cities.map((city) => `${this.name} has lived in ${city}`);
+  },
+};
+console.log(user.printPlacesLived());
+// Nick has lived in Phoenix etc...
+```
+
+Another use case we talked about is `map`. `map` will return a new array with the values based on manipulating each element in an existing array.
+
+```js
+const multiplier = {
+  numbers: [1, 2, 3, 4, 5],
+  multiplyBy: 5,
+  multiply() {
+    return this.numbers.map((num) => num * this.multiplyBy);
+  },
+};
+console.log(multiplier.multiply());
+// 5, 10, 15, 20, 25
+```
+
+---
+
+### Events and Attributes
