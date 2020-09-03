@@ -3325,3 +3325,13 @@ These are some of the basic commands when working with the Mongo Shell to intera
 ---
 
 ### Introduction to Mongoose: Part 1
+
+Mongoose is an ORM for MongoDB. (Object Relational Modeling)
+
+To connect to our database with Mongoose we can use `mongoose.connect(mongourl)`
+
+To create a schema we use new mongoose.Schema({})
+
+---
+
+### Introduction to Mongoose: Part 2

@@ -2996,3 +2996,15 @@ To figure out what `this` equals is to look at what comes before the dot that is
 ---
 
 ### call() and apply()
+
+If we want to pass variables and other things into an inline event handler function we can use bind, we also have call and apply to execute the function right away. call allows us to override what the instance of `this` refers to in the function. If we call a function using call it will make this something else because something else called the function instead of the function just regularly executing. apply is useful for passing in additional arguments to a function in an array.
+
+---
+
+### What the Browser (sometimes) Does to 'this'
+
+The browser binds `this` for you (on event listeners) to the DOM element that triggered the event
+
+---
+
+### 'this' and Arrow Functions

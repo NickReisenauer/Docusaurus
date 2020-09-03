@@ -249,3 +249,34 @@ console.log(multiplier.multiply());
 ---
 
 ### Events and Attributes
+
+In this video, we learned about how we can add attributes to our JSX. In HTML we can add a class and id quite easily, the same is true for JSX except we have to use different names for some things. For example, `class` in HTML becomes `className` in JSX, id works the same.
+
+We also learned about how we can set up inline event handlers using the `onClick` functionality to run a function every time a specified element is clicked.
+
+```js
+let count = 0;
+
+const addOne = () => console.log("addOne");
+const minusOne = () => console.log("minusOne");
+const reset = () => console.log("reset");
+
+const templateTwo = (
+  <div>
+    <h1>Count: {count}</h1>
+    <button onClick={addOne} id="addOne">
+      +1
+    </button>
+    <button onClick={minusOne} id="minusOne">
+      -1
+    </button>
+    <button onClick={reset} id="reset">
+      Reset
+    </button>
+  </div>
+);
+```
+
+---
+
+### Manual Data Binding

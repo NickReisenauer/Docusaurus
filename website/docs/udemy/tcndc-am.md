@@ -3823,3 +3823,48 @@ await req.user
 ## File Uploads
 
 ### Section Intro: File Uploads
+
+In this section, you’ll learn how to configure Node.js to support file uploads. This will allow
+users to upload documents, profile pictures, and any other file type you might need to
+support. You’ll also see what it takes to store the uploaded files in MongoDB.
+
+---
+
+### Adding Support for File Uploads
+
+In this lesson, you’ll set up multer. Multer is a library in the Express ecosystem that allows
+your Express application to easily support file uploads. It couldn’t be easier
+
+Configuring Multer
+
+First up, install the library.
+
+```sh
+npm i multer@1.4.1
+```
+
+Multer can then be configured to fit your specific needs. The example below shows off a
+basic configuration where `dest` is set to `avatars`. This will store all uploaded files in a
+directory called `avatars`.
+
+```js
+const multer = require("multer");
+const upload = multer({
+  dest: "avatars",
+});
+```
+
+Multer is then added as middleware for the specific endpoint that should allow for file
+uploads. The route below is expecting a single `avatar` field on the submitted form.
+
+```js
+router.post("/users/me/avatar", upload.single("avatar"), (req, res) => {
+  res.send();
+});
+```
+
+[NPM Multer](https://www.npmjs.com/package/multer)
+
+---
+
+### Validating File Uploads

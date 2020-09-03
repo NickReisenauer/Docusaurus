@@ -4232,3 +4232,15 @@ const debounce = (func, delay = 500) => {
 ---
 
 ### Extracting Utility Functions
+
+In this video, we extracted our debounce function into a seperate file called utils.js that will be used for utility functions.
+
+---
+
+### Awaiting Async Functions
+
+In this video, we worked on awaiting our async function.
+
+---
+
+### Rendering Movies
