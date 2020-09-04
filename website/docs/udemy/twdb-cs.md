@@ -3335,3 +3335,11 @@ To create a schema we use new mongoose.Schema({})
 ---
 
 ### Introduction to Mongoose: Part 2
+
+Mongoose has callback functions
+
+---
+
+## YelpCamp: Data Persistence
+
+### YelpCamp: Adding Mongoose

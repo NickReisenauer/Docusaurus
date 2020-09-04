@@ -280,3 +280,38 @@ const templateTwo = (
 ---
 
 ### Manual Data Binding
+
+In this video, we learned that JSX doesn't automatically bind data for us. For example, when we say count++ in a function call, it won't render the new number because when we initially rendered the function the value was 0. To solve this, we wrapped our template and our call to ReactDOM.render into its own function call. Then when we need to update the state (number) of the application we can re-render our template to the screen with the new data.
+
+You might be thinking that that's inefficient, and it is but not as bad as you think. When ReactDOM re-renders something, it looks at what it needs to actually change. In our case we don't need to change the div, or the h1, or the button, but only the number inside the button text. So that's all that gets changed.
+
+```js
+const reset = () => {
+  count = 0;
+  renderCounterApp();
+};
+
+const renderCounterApp = () => {
+  const templateTwo = (
+    <div>
+      <h1>Count: {count}</h1>
+      <button onClick={addOne} id="addOne">
+        +1
+      </button>
+      <button onClick={minusOne} id="minusOne">
+        -1
+      </button>
+      <button onClick={reset} id="reset">
+        Reset
+      </button>
+    </div>
+  );
+  ReactDOM.render(templateTwo, document.getElementById("app"));
+};
+
+renderCounterApp();
+```
+
+---
+
+### Forms and Inputs

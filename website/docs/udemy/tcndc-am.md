@@ -3868,3 +3868,34 @@ router.post("/users/me/avatar", upload.single("avatar"), (req, res) => {
 ---
 
 ### Validating File Uploads
+
+In this lesson, you’ll learn how to validate file uploads. This will allow you to reject files that
+are too large or files of the wrong type.
+
+Validating Multer Uploads
+
+The multer configuration below adds these two types of validation.
+
+`limits.fileSize` is set to limit the file size in bytes. The configuration below uses
+1,000,000 bytes which is equivalent to 1 megabyte.
+
+`fileFilter` is set to validate the file type. The method below will reject all documents that
+don’t have either `.doc` or `.docx` file extensions. This same technique could be used to limit
+uploads to just images, PDFs, or any other file type.
+
+```js
+const upload = multer({
+  dest: "images",
+  limits: {
+    fileSize: 1000000,
+  },
+  fileFilter(req, file, cb) {
+    if (!file.originalname.match(/\.(doc|docx)$/)) {
+      return cb(new Error("Please upload a Word document"));
+    }
+    cb(undefined, true);
+  },
+});
+```
+
+### Validation Challenge

@@ -3008,3 +3008,9 @@ The browser binds `this` for you (on event listeners) to the DOM element that tr
 ---
 
 ### 'this' and Arrow Functions
+
+`this` works differently with arrow function methods
+
+---
+
+### `this` summary

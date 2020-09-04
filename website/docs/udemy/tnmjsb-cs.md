@@ -4244,3 +4244,9 @@ In this video, we worked on awaiting our async function.
 ---
 
 ### Rendering Movies
+
+In this video, we set up a little function that will take the array of movies that we get back and loop over them, adding a div and image tag for each one.
+
+---
+
+### Handling Errored Responses
