@@ -3014,3 +3014,15 @@ The browser binds `this` for you (on event listeners) to the DOM element that tr
 ---
 
 ### `this` summary
+
+[`this` Summary](https://www.udemy.com/course/javascript-the-complete-guide-2020-beginner-advanced/learn/lecture/16032376#overview)
+
+---
+
+### Getters & Setters
+
+getters and setters allow us to get and set values in an object using methods and they have access to `this`.
+
+---
+
+### Wrap Up

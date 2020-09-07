@@ -4250,3 +4250,15 @@ In this video, we set up a little function that will take the array of movies th
 ---
 
 ### Handling Errored Responses
+
+In this video, we added some basic API Error handling. In the case that the API returns no movie response, we send an empty array so that nothing is going to display on the screen. If the API does respond with movies, we send back the movies.
+
+---
+
+### Opening a Menu
+
+In this video, we used Bulma CSS to add a dropdown menu which will be the backbone of our autocomplete popup.
+
+---
+
+### Style of Widget Creation

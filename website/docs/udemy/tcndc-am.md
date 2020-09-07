@@ -3899,3 +3899,29 @@ const upload = multer({
 ```
 
 ### Validation Challenge
+
+In this video, we looked at how we can accept file uploads from a certain route. We used `multer` to limit the file size as well as the file type.
+
+```js
+// Upload profile avatar
+const upload = multer({
+  dest: "avatars",
+  limits: {
+    fileSize: 1000000,
+  },
+  fileFilter(req, file, cb) {
+    if (!file.originalname.match(/\.(jpg|jpeg|png])$/)) {
+      return cb(new Error("Please upload an image"));
+    }
+    cb(undefined, true);
+  },
+});
+
+router.post("/users/me/avatar", upload.single("avatar"), (req, res) => {
+  res.send();
+});
+```
+
+---
+
+### Handling Express Errors

@@ -3343,3 +3343,9 @@ Mongoose has callback functions
 ## YelpCamp: Data Persistence
 
 ### YelpCamp: Adding Mongoose
+
+In this video, we set up a Mongoose Schema for our campgrounds so that we can model out new campgrounds.
+
+---
+
+### How to Avoid Potential Issues with Mongoose
