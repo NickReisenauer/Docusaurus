@@ -3349,3 +3349,9 @@ In this video, we set up a Mongoose Schema for our campgrounds so that we can mo
 ---
 
 ### How to Avoid Potential Issues with Mongoose
+
+Ian (Course TA) shows us how to avoid common errors in Mongoose by updating to the latest version of Mongoose.
+
+---
+
+### YelpCamp: Campground Show Page Part 1

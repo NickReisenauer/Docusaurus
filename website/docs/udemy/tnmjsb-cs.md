@@ -4262,3 +4262,15 @@ In this video, we used Bulma CSS to add a dropdown menu which will be the backbo
 ---
 
 ### Style of Widget Creation
+
+We have 2 options for how we're going to create our autocomplete widget. We can either hard code it in the HTML and select the elements in JS and update them with the new values, or we can generate the new HTML directly from the JS with the updated values. We are going to use option number 2 because it allows us to hide away the complexity of the autocomplete form.
+
+---
+
+### Moving HTML Generation
+
+As discussed in the last video, we decided to move our HTML dropdown rendering to the JS side of things. In this video, we actually moved everything over.
+
+---
+
+### Repairing References

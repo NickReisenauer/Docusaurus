@@ -3026,3 +3026,9 @@ getters and setters allow us to get and set values in an object using methods an
 ---
 
 ### Wrap Up
+
+We'll come back to objects for more advanced topics
+
+---
+
+## Classes & Object-oriented Programming (OOP)

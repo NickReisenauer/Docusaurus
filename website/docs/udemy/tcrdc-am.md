@@ -365,3 +365,21 @@ We can access the value in the form with `e.target.elements.option.value`. From 
 ---
 
 ### Arrays in JSX
+
+In this video, we learned about how arrays work in JSX.
+
+By default, JSX can work with arrays and if we simply try to render an array it will display all the items in one straight line next to each other. But we can do something more useful with arrays. Say we have an array containing options and we want to loop over each of them and render out a `<p>` tag, we can do that with our JSX inline function expressions.
+
+We also learned about keys and how every element that we're generating from an array must have a unique key because React needs to be able to identify the elements from the array so that it can change them in an optimized fashion.
+
+```js
+<ol>
+  {app.options.map((option) => {
+    <li key={option}>{option}</li>;
+  })}
+</ol>
+```
+
+---
+
+### Picking an Option

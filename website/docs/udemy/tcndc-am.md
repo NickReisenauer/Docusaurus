@@ -3925,3 +3925,32 @@ router.post("/users/me/avatar", upload.single("avatar"), (req, res) => {
 ---
 
 ### Handling Express Errors
+
+In this lesson, you’ll customize the errors that multer provides. This will give you complete
+control of what sort of response the client gets when their upload is rejected.
+
+Handling Express Errors
+
+You can handle errors from middleware function by providing a function to Express. As
+shown below, a new function is passed as the final argument to `router.post`. This function
+accepts `error`, `req`, `res`, and `next`. This call signature lets Express know the function is
+designed to handle errors.
+
+The function itself sends back a JSON response with the error message from multer.
+
+```js
+router.post(
+  "/users/me/avatar",
+  upload.single("avatar"),
+  (req, res) => {
+    res.send();
+  },
+  (error, req, res, next) => {
+    res.status(400).send({ error: error.message });
+  }
+);
+```
+
+---
+
+### Adding Images to User Profile
