@@ -4274,3 +4274,15 @@ As discussed in the last video, we decided to move our HTML dropdown rendering t
 ---
 
 ### Repairing References
+
+In this video, we set up Bulma CSS so that when we search for movies they pop up in our dropdown.
+
+---
+
+### Handling Broken Images
+
+In this video, we set up a ternary expression so that if a movie doesn't have an image associated with it then it won't display the broken image icon in the browser.
+
+---
+
+### Automatically Closing the Dropdown

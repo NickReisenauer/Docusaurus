@@ -3032,3 +3032,34 @@ We'll come back to objects for more advanced topics
 ---
 
 ## Classes & Object-oriented Programming (OOP)
+
+Module Content:
+
+- What is "Object-oriented Programming" (OOP)?
+- Classes & Instances
+- Properties, Fields & Methods
+- Inheritance
+
+---
+
+### What is "Object-oriented Programming" (OOP)?
+
+- Work with (real-life) Entities in your Code
+
+- ProductList
+
+  - Renders a list of products which were fetched from a server (database)
+  - Object holds rendering + fetching logic
+
+- Product
+
+  - Renders details about a product and allows addition to cart
+  - Object holds rendering + cart-adding logic
+
+- ShoppingCart
+  - Renders cart products and total and allows user to order them
+  - Object holds rendering + ordering (server-communication) logic
+
+---
+
+### Getting Started with OOP Code

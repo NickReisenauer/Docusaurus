@@ -3954,3 +3954,44 @@ router.post(
 ---
 
 ### Adding Images to User Profile
+
+In this lesson, you’ll learn how to associate the uploaded avatar with the users account.
+
+Adding Images to the User Profile
+
+A new field needs to be added to the user model to store the avatar image data. The
+snippet below adds `avatar` on the user with the type of `Buffer`. The `Buffer` type should
+be used when storing binary data, which is exactly the type of data that multer provides.
+
+```js
+// Existing code omitted for brevity
+const userSchema = new mongoose.Schema({
+  avatar: {
+    type: Buffer,
+  },
+});
+```
+
+The avatar upload route will be able to change the user profile data, so the route should
+be put behind authentication. The handler function grabs the binary data and stores it on
+the `avatar` field. Finally, the changes are saved.
+
+```js
+router.post(
+  "/users/me/avatar",
+  auth,
+  upload.single("avatar"),
+  async (req, res) => {
+    req.user.avatar = req.file.buffer;
+    await req.user.save();
+    res.send();
+  },
+  (error, req, res, next) => {
+    res.status(400).send({ error: error.message });
+  }
+);
+```
+
+---
+
+### Serving up Files

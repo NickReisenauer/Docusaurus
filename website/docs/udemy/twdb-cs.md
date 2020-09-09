@@ -3355,3 +3355,9 @@ Ian (Course TA) shows us how to avoid common errors in Mongoose by updating to t
 ---
 
 ### YelpCamp: Campground Show Page Part 1
+
+In this video, we discussed how express handles routes.
+
+---
+
+### YelpCamp: Campground Show Page Part 2

@@ -383,3 +383,25 @@ We also learned about keys and how every element that we're generating from an a
 ---
 
 ### Picking an Option
+
+In this video, we learned about how we can make a function that will pick a random element from an array and display it in JSX, as well as how to disable the button if a certain condition is not met.
+
+In order to get a random index from the array, we just use Math.floor and Math.random to pick a random number and we times that times the length of the array we're picking from.
+
+In order to make a button disabled, we can use an inline event handler, called disabled. We can pass a value to disabled and if the value evaluates to true then the button is disabled, otherwise, the button is enabled.
+
+```js
+const onMakeDecision = () => {
+  const randomNum = Math.floor(Math.random() * app.options.length);
+  const option = app.options[randomNum];
+  alert(option);
+};
+
+<button disabled={app.options.length === 0} onClick={onMakeDecision}>
+  What should I do?
+</button>;
+```
+
+---
+
+### Build It: Visibility Toggle
