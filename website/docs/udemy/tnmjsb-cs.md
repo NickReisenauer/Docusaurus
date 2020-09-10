@@ -4286,3 +4286,15 @@ In this video, we set up a ternary expression so that if a movie doesn't have an
 ---
 
 ### Automatically Closing the Dropdown
+
+In this video, we figured out how to close the dropdown modal when a user clicks outside of the modal. We did this by adding an event listener and adding an if statement that will check if the click was in or out of the model.
+
+---
+
+### Handling Empty Responses
+
+In this video, we just did a simple check to make sure that there were movies in our response and if not we returned the function early.
+
+---
+
+### Handling Movie Selection

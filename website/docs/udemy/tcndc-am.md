@@ -3995,3 +3995,35 @@ router.post(
 ---
 
 ### Serving up Files
+
+In this lesson, you’ll learn how to serve up user profile images. These images will be
+served up as if they were static assets for the application.
+
+Serving up Files
+
+Serving up the user avatars will require two pieces of data from the server. The first is the
+image data, and the second is the `Content-Type` header. The image data is stored on the
+user profile. The header should be set equal to `image/png` which lets the client know
+they’re getting a PNG image back.
+
+The route below fetches the image data and sets the `Content-Type` header for the
+response. The URL could be visited to view the profile picture.
+
+```js
+router.get("/users/:id/avatar", async (req, res) => {
+  try {
+    const user = await User.findById(req.params.id);
+    if (!user || !user.avatar) {
+      throw new Error();
+    }
+    res.set("Content-Type", "image/jpg");
+    res.send(user.avatar);
+  } catch (e) {
+    res.status(404).send();
+  }
+});
+```
+
+---
+
+### Auto-Cropping and Image Formatting

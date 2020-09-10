@@ -3063,3 +3063,9 @@ Module Content:
 ---
 
 ### Getting Started with OOP Code
+
+In this video, we looked at how we can use Objects in our code to better structure our data.
+
+---
+
+### Defining and Using a First Class

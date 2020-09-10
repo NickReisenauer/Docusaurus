@@ -3361,3 +3361,11 @@ In this video, we discussed how express handles routes.
 ---
 
 ### YelpCamp: Campground Show Page Part 2
+
+In this video, we talked more about setting up routes, and setting up random routes based on MongoDB IDs
+
+---
+
+## RESTful Routing
+
+### Intro to REST

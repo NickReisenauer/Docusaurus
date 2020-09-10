@@ -405,3 +405,63 @@ const onMakeDecision = () => {
 ---
 
 ### Build It: Visibility Toggle
+
+In this video, our task was to build out our own project. The project was a visibility toggle, there's a button and it says show details and when you click it it shows a p tag with some text and the button text says hide details. Click it again and the button text changes and the details disappear.
+
+Here's my implementation before watching the solution.
+
+```js
+let details = "Shown Details";
+let text = "Show Details";
+
+const onButtonClick = () => {
+  if (text === "Show Details") text = "Hide Details";
+  else text = "Show Details";
+  render();
+};
+
+const render = () => {
+  const template = (
+    <div>
+      <h1>Visibility Toggle</h1>
+      <button onClick={onButtonClick}>{text}</button>
+      {text === "Hide Details" && <p>{details}</p>}
+    </div>
+  );
+  ReactDOM.render(template, document.getElementById("app"));
+};
+
+render();
+```
+
+Here is the final solution by Andrew Mead. I had similar ideas for the execution, I just didn't use a global variable to store the state and instead used the strings as identifiers.
+
+```js
+let visibility = false;
+
+const toggleVisibility = () => {
+  visibility = !visibility;
+  render();
+};
+
+const render = () => {
+  const jsx = (
+    <div>
+      <h1>Visibility Toggle</h1>
+      <button onClick={toggleVisibility}>
+        {visibility ? "Hide Details" : "Show Details"}
+      </button>
+      {visibility === true && <p>Hello I am details</p>}
+    </div>
+  );
+  ReactDOM.render(jsx, document.getElementById("app"));
+};
+
+render();
+```
+
+---
+
+## React Components
+
+### Section Intro: React Components
