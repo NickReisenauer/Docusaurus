@@ -4298,3 +4298,15 @@ In this video, we just did a simple check to make sure that there were movies in
 ---
 
 ### Handling Movie Selection
+
+In this video, we worked on our input so that when a user clicks on a movie option, the text inside the input will be updated to the movies title and the dropdown modal will be closed.
+
+---
+
+### Makign a Followup Request
+
+In this video, we made it so that when a user clicks on a movie option from the dropdown, we do a detailed search for that movie by getting its imdbID property.
+
+---
+
+### Rendering an Expanded Summary

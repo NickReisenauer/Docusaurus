@@ -3069,3 +3069,31 @@ In this video, we looked at how we can use Objects in our code to better structu
 ---
 
 ### Defining and Using a First Class
+
+Classes & Instances
+
+Objects:
+
+- The things you work with in code
+- Instances of classes (= based on classes)
+- Class-based creation is an alternative to using object literals
+
+Classes:
+
+- Blueprint for objects (theoretical definition)
+- Define how objects look like, which properties and methods they have
+- Classes make creation of multiple, similar objects much easier
+
+```js
+class Product {
+  title = "DEFAULT";
+  imageURL;
+  description;
+  price;
+}
+const iPhone = new Product();
+```
+
+---
+
+### Working with Constructor Methods

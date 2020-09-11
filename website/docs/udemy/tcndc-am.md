@@ -4027,3 +4027,36 @@ router.get("/users/:id/avatar", async (req, res) => {
 ---
 
 ### Auto-Cropping and Image Formatting
+
+In this lesson, you’ll learn how to resize and format images. This will let you create uniform
+sizes and file types for user avatars.
+
+Auto-Cropping and Image Formatting
+
+First up, install the npm library.
+
+```sh
+npm i sharp@0.21.1
+```
+
+Now, sharp can be used to manipulate uploaded images. Before the image data is added
+onto the user profile, the data should be passed through sharp. The example below uses
+`resize` to resize all uploads to 250 by 250 pixels. The example also uses `png` to convert
+all images to portable network graphics. Lastly, `toBuffer` is used to retrieve the modified
+image data. The modified data is what should be saved in the database.
+
+```js
+const sharp = require("sharp");
+const buffer = await sharp(req.file.buffer)
+  .resize({ width: 250, height: 250 })
+  .png()
+  .toBuffer();
+```
+
+[NPM sharp](https://www.npmjs.com/package/sharp)
+
+---
+
+## Sending Emails
+
+### Section Intro: Sending Emails

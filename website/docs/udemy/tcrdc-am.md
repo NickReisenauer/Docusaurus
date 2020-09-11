@@ -465,3 +465,26 @@ render();
 ## React Components
 
 ### Section Intro: React Components
+
+Components allow us to take our complex applications and make them simple. Each component is responsible for defining the JSX that should be rendered when that component is used and components can also handle user interaction on anything that is rendered.
+
+We'll refactor our current application to use components.
+
+---
+
+### Thinking in React
+
+If we take a website like Twitter, we can look at how they might use components in their architecture.
+They use these components so that they can easily be reused and simply dropped in on any page that is needed.
+For example, some components might be the header, current trends, who to follow, each tweet is a tweet component, etc...
+
+Component tags look like custom HTML code, a header might be `<Header />` and a tweet might be `<Tweet />`.
+
+We also can have containing components, like `<DashboardPage />` and inside of that we can render our header, trends, etc. So we can just drop in components wherever we need to.
+
+In our Indecision app we're going to have some of the following components: `<Header />`, `<Action />`, `<Options />`, and `<AddOption />`.
+We're then going to have a wrapper/parent rendering component called `<IndecisionApp />` which will be in charge of rendering all of the child components.
+
+---
+
+### ES6 Classes: Part 1

@@ -3369,3 +3369,17 @@ In this video, we talked more about setting up routes, and setting up random rou
 ## RESTful Routing
 
 ### Intro to REST
+
+Using REST we have 7 main RESTful routes we can use.
+
+- index
+- new
+- create
+- show
+- edit
+- update
+- destroy
+
+---
+
+### RESTful Blog App: INDEX
