@@ -3097,3 +3097,9 @@ const iPhone = new Product();
 ---
 
 ### Working with Constructor Methods
+
+The constructor method is called every time we create a new class. This is useful for setting custom variables based on data provided when creating a new class.
+
+---
+
+### Using and "Connecting" Multiple Classes

@@ -4310,3 +4310,15 @@ In this video, we made it so that when a user clicks on a movie option from the 
 ---
 
 ### Rendering an Expanded Summary
+
+In this video, we rendered out an expanded view of the movie details so that when you click on one it becomes the focus of the screen.
+
+---
+
+### Expanded Statistics
+
+In this video, we added some details for the number of awards the movie has recieved as well as the number of votes and rating on IMDb.
+
+---
+
+### Issues with the Codebase

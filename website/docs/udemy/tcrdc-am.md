@@ -488,3 +488,36 @@ We're then going to have a wrapper/parent rendering component called `<Indecisio
 ---
 
 ### ES6 Classes: Part 1
+
+In this video, we learned that we can create classes which are like blueprints and then create instances of our class and customize the data to our individual needs. We can also add methods to our class for custom functionality.
+
+When we create a new Class, we have access to a constructor function. This is called every time we create a new class and is useful for assigning variables using `this`.
+
+Here's a basic class where we create a person with a name and age. We use default values in our parameters so that if there is no data entered they will automatically be assigned some value instead of being undefined.
+
+```js
+class Person {
+  constructor(name = "Anonymous", age = 0) {
+    this.name = name;
+    this.age = age;
+  }
+  getGreeting() {
+    return `Hello ${this.name}!`;
+  }
+  getDescription() {
+    return `${this.name} is ${this.age} years old.`;
+  }
+}
+
+const me = new Person("Nick Reisenauer", 18);
+console.log(me.getDescription());
+// Nick Reisenauer is 18 years old.
+
+const other = new Person();
+console.log(other.getDescription());
+// Anonymous is 0 years old.
+```
+
+---
+
+### ES6 Classes: Part 2

@@ -4060,3 +4060,60 @@ const buffer = await sharp(req.file.buffer)
 ## Sending Emails
 
 ### Section Intro: Sending Emails
+
+In this section, you’ll add email sending to your Node.js application! This will allow you to
+communicate with users as they use the app. This could be useful for welcome emails,
+notifications, and more!
+
+---
+
+### Exploring SendGrid
+
+In this lesson, you’ll integrate SendGrid into your Node app. SendGrid is one of many
+services that allow you to send emails from your application code.
+
+Exploring SendGrid
+
+First up, install the module.
+
+```sh
+npm i sendgrid/mail@6.3.1
+```
+
+Next, create a free SendGrid account and get your API key. Check out the lesson video to
+learn how to get your API key. The code below shows what’s necessary to get the
+SendGrid module configured. All you need to do is call `setApiKey` to... well... set your API
+key.
+
+```js
+const sgMail = require("@sendgrid/mail");
+sgMail.setApiKey(
+  "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"
+);
+```
+
+`send` can be called to send an email from your application. The configuration object can be
+used to provide:
+
+- `to` - Who is the email to?
+- `from` - Who is the email from?
+- `subject` - What’s the subject line of the email?
+- `text` - What’s the body of the email.
+
+```js
+sgMail.send({
+  to: "andrew@mead.io",
+  from: "andrew@mead.io",
+  subject: "This is my first creation!",
+  text: "I hope this one actually get to you.",
+});
+```
+
+In the long term, you’ll want to purchase a custom domain and register it with SendGrid.
+This will increase your sending reliability.
+
+[SendGrid](https://sendgrid.com/)
+
+---
+
+### Sending Welcome and Cancellation Emails

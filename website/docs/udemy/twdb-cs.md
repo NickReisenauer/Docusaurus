@@ -3383,3 +3383,9 @@ Using REST we have 7 main RESTful routes we can use.
 ---
 
 ### RESTful Blog App: INDEX
+
+In this video, we set up our new project for the blog app and we set up an index route as well as a database.
+
+---
+
+### Blog App: Layout
