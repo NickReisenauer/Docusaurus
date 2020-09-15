@@ -3389,3 +3389,9 @@ In this video, we set up our new project for the blog app and we set up an index
 ---
 
 ### Blog App: Layout
+
+In this video, we set up the semantic UI framework as well as the EJS partials for the header and footer.
+
+---
+
+### RESTful Blog App: NEW and CREATE

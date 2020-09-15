@@ -4117,3 +4117,11 @@ This will increase your sending reliability.
 ---
 
 ### Sending Welcome and Cancellation Emails
+
+In this lesson, you’ll be sending email to users when they sign up or cancel their account.
+There are no notes for this challenge video, as no new information is covered. The goal is
+to give you experience using what was covered in previous lessons.
+
+---
+
+### Environment Variables

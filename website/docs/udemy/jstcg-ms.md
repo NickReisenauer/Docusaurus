@@ -3103,3 +3103,9 @@ The constructor method is called every time we create a new class. This is usefu
 ---
 
 ### Using and "Connecting" Multiple Classes
+
+We can connect our classes by extending them and using super.
+
+---
+
+### Binding Class Methods & Working with 'this'

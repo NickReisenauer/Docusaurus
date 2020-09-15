@@ -4322,3 +4322,16 @@ In this video, we added some details for the number of awards the movie has reci
 ---
 
 ### Issues with the Codebase
+
+Here are some issues we have with our code as it is.
+
+- All code touches everything
+- Autocomplete widget was supposed to be reusable
+- Autocomplete has knowledge of what a movie object is
+- Autocomplete has knowledge of what to show for each option
+- Autocomplete has knowledge of what do to when a movie is clicked
+- Many global variables that refer to specific elements - It will be really hard to show a second autocomplete widget
+
+---
+
+### Making the Autocomplete Reusable

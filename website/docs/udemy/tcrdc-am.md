@@ -521,3 +521,50 @@ console.log(other.getDescription());
 ---
 
 ### ES6 Classes: Part 2
+
+In this video, we learned that we can extend an existing class. That allows us to get all of the behavior of the parent class without needing to copy and paste the code. We can customize the behavior by adding new methods or overriding methods from the parent class.
+
+If we want to create a class that is based on a parent class but with some customizations, we would use class extends. If we have a parent class that defines a car, we might wand an extended class that is a Toyota Camry. To do that it would be class Camry extends Car.
+
+Once we extend our class we can pass in the constructor methods from our parent class using the `super` keyword and passing in the parent constructor function parameters.
+
+We can then either use the functions provided to us from the parent function or we can add new ones.
+
+Here's a class that extends a class.
+
+```js
+class Person {
+  constructor(name = "Anonymous", age = 0) {
+    this.name = name;
+    this.age = age;
+  }
+  getGreeting() {
+    return `Hello ${this.name}!`;
+  }
+  getDescription() {
+    return `${this.name} is ${this.age} years old.`;
+  }
+}
+
+class Traveler extends Person {
+  constructor(name, age, homeLocation) {
+    super(name, age);
+    this.homeLocation = homeLocation;
+  }
+  getGreeting() {
+    let greeting = super.getGreeting();
+    if (this.homeLocation) {
+      greeting += ` I'm visiting from ${this.homeLocation}`;
+    }
+    return greeting;
+  }
+}
+
+const joe = new Traveler("Joe", 42, "Phoenix");
+console.log(joe.getGreeting());
+// Hello Joe! I'm visiting from Phoenix
+```
+
+---
+
+### Creating a React Component
