@@ -3109,3 +3109,15 @@ We can connect our classes by extending them and using super.
 ---
 
 ### Binding Class Methods & Working with 'this'
+
+We learned about how `this` is bound inside of class methods.
+
+---
+
+### Adding a Cart and Shop Class
+
+We added some new classes.
+
+---
+
+### Communicating Can be Challenging

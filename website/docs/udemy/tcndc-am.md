@@ -4125,3 +4125,45 @@ to give you experience using what was covered in previous lessons.
 ---
 
 ### Environment Variables
+
+In this lesson, you’ll learn how to use environment variables to securely store API keys and
+other credentials. This will reduce the chance your private keys fall into the wrong hands.
+
+Environment Variables
+
+First up, install the npm module.
+
+```js
+npm i env-cmd@8.0.2
+```
+
+Next up, create an environment file `dev.env` in the `config` directory. This will store your
+environment variables in the following format.
+
+```js
+KEY=value
+ANOTHER_KEY=some other value
+```
+
+Next, update the `dev` script to use env-cmd to load in those environment variables when it
+starts up. That would be `env-cmd -f ./config/dev.env nodemon src/index.js`.
+
+Now, you can remove API keys and database credentials from the application itself. For
+example, you can create `MONGODB_URL` in the development environment file. The
+application code shown below can then reference that environment variable to get its
+value. This can be done with the SendGrid API key and the JWT secret used to generate
+and verify authentication tokens.
+
+```js
+mongoose.connect(process.env.MONGODB_URL, {
+  useNewUrlParser: true,
+  useCreateIndex: true,
+  useFindAndModify: false,
+});
+```
+
+[NPM env-cmd](https://www.npmjs.com/package/env-cmd)
+
+---
+
+### Creating a Production MongoDB Database

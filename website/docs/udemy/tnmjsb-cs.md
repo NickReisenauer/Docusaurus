@@ -4335,3 +4335,15 @@ Here are some issues we have with our code as it is.
 ---
 
 ### Making the Autocomplete Reusable
+
+To make our autocomplete reusable, we can define all of the logic in a seperate file called autocomplete.js and call that function in our index.js
+
+---
+
+### Displaying Multiple Autocompletes
+
+In this video, we split up our code for creating an autocomplete widget into a separate file so that we can pass in some variables and create a custom autocomplete.
+
+---
+
+### Extracting Rendering Logic

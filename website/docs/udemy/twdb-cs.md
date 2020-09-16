@@ -3395,3 +3395,9 @@ In this video, we set up the semantic UI framework as well as the EJS partials f
 ---
 
 ### RESTful Blog App: NEW and CREATE
+
+In this video we set up our blog with NEW and CREATE Routes.
+
+---
+
+### RESTful Blog App: SHOW

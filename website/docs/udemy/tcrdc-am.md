@@ -568,3 +568,32 @@ console.log(joe.getGreeting());
 ---
 
 ### Creating a React Component
+
+React Components allow us to define some functionality in a little contained component with custom jsx and logic. React components are just ES6 Classes that extend something that React gives us. We learned that they have to start with an uppercase letter and they have to define a render method.
+
+It looks like an HTML element but it's actually just rendering custom JSX.
+
+```js
+class Header extends React.Component {
+  render() {
+    return (
+      <div>
+        <h1>Indecision</h1>
+        <h2>Put your life in the hands of a computer</h2>
+      </div>
+    );
+  }
+}
+
+const jsx = (
+  <div>
+    <Header />
+  </div>
+);
+
+ReactDOM.render(jsx, document.getElementById("app"));
+```
+
+---
+
+### Nesting Components
