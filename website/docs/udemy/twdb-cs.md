@@ -3401,3 +3401,9 @@ In this video we set up our blog with NEW and CREATE Routes.
 ---
 
 ### RESTful Blog App: SHOW
+
+In this video, we looked at how we could render new blogs based on their ID, we also looked at how we could let users type HTML in their blog creation. We discussed some potential security risks with this method and that's because user's could enter a script tag and interact with the page when they're not supposed to.
+
+---
+
+### RESTful Blog App: EDIT & UPDATE

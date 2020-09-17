@@ -4167,3 +4167,13 @@ mongoose.connect(process.env.MONGODB_URL, {
 ---
 
 ### Creating a Production MongoDB Database
+
+In this lesson, you’ll set up a production MongoDB database using MongoDB Atlas. Atlas is
+the official MongoDB hosting platform released by the MongoDB organization.
+
+Please refer to the video for the detailed steps required to set up the production
+database.
+
+---
+
+### Heroku Deployment

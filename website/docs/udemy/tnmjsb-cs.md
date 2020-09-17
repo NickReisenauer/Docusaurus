@@ -4347,3 +4347,9 @@ In this video, we split up our code for creating an autocomplete widget into a s
 ---
 
 ### Extracting Rendering Logic
+
+In this video, we changed up our logic so that our autocomplete widget was much more reusable and customizable.
+
+---
+
+### Extracting Selection Logic

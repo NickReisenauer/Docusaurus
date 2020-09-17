@@ -597,3 +597,49 @@ ReactDOM.render(jsx, document.getElementById("app"));
 ---
 
 ### Nesting Components
+
+In this video, we learned that our components can render JSX and this means that we can render other components. That allows us to create the nested structure that we're going to need for our applications. In the rest of the section, we're going to learn how our components can communicate with one another.
+
+First of all, we created a brand new parent component of sorts and inside of that we call all of our other components, so it's holding together everything, then we have an options component that renders an option component which contains JSX so we have a triple nested component right there.
+
+```js
+class IndecisionApp extends React.Component {
+  render() {
+    return (
+      <div>
+        <Header />
+        <Action />
+        <Options />
+        <AddOption />
+      </div>
+    );
+  }
+}
+
+class Options extends React.Component {
+  render() {
+    return (
+      <div>
+        <p>Options component here</p>
+        <Option />
+      </div>
+    );
+  }
+}
+
+class Option extends React.Component {
+  render() {
+    return (
+      <div>
+        <p>Option component here</p>
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<IndecisionApp />, document.getElementById("app"));
+```
+
+---
+
+### Component Props

@@ -3121,3 +3121,27 @@ We added some new classes.
 ---
 
 ### Communicating Can be Challenging
+
+We learned that communicating between our classes and the DOM can be challenging at times.
+
+---
+
+### Static Methods & Properties
+
+Static Field / Property / Method:
+
+- Defined with `static` keyword
+- Only accessible on class itself, without instantiation (i.e. not on instance)
+- Typically used in helper classes, global configuration etc.
+
+Instance Field / Property / Method
+
+- Defined without `static` keyword
+- Only accessible on instances (=objects) based on class
+- Used for core, re-usable logic
+
+In this video we learned about static methods vs properties in our classes.
+
+---
+
+### First Summary & Classes vs Object Literals
