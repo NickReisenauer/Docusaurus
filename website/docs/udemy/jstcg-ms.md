@@ -3145,3 +3145,9 @@ In this video we learned about static methods vs properties in our classes.
 ---
 
 ### First Summary & Classes vs Object Literals
+
+In this video, we talked about the difference between Class and Object Literals.
+
+---
+
+### Getters & Setters

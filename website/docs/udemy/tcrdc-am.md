@@ -643,3 +643,46 @@ ReactDOM.render(<IndecisionApp />, document.getElementById("app"));
 ---
 
 ### Component Props
+
+In this video, we learned that when we create instances of React Components, we can also choose to pass some data into it, that data looks very much like HTML attributes, but it's really just a set of key-value pairs. The key is always some sort of string and the value can be anything we like. When we pass data into a component, we can use that data in the component itself. All of our props are available on `this.props` inside of our component. This gives us a way to set up one-way communication. In the next video, we'll figure out how to reverse that one way communication so that we can communicate up and down from our components.
+
+```js
+class IndecisionApp extends React.Component {
+  render() {
+    const options = ["Thing one", "Thing two", "Thing four"];
+    return (
+      <div>
+        <Options options={options} />
+      </div>
+    );
+  }
+}
+
+class Options extends React.Component {
+  render() {
+    return (
+      <div>
+        {this.props.options.map((option) => (
+          <Option key={option} optionText={option} />
+        ))}
+      </div>
+    );
+  }
+}
+
+class Option extends React.Component {
+  render() {
+    return (
+      <div>
+        <p>Option: {this.props.optionText}</p>
+      </div>
+    );
+  }
+}
+```
+
+In the example above, we have our parent component that is rendering out the Options component, we are passing a prop of `options` with the value of the options array. Then inside of our Options component, we loop over each option in the array that was passed to us, and for each of them we render out a single Option component. When we render out the individual Option component we pass in some props containing information about the option, and inside of the Option component we render out some JSX and access the data from our props on `this.props.propName`. We have passed data down from our Parent, to our Options, to an individual option that renders the text to the screen.
+
+---
+
+### Events & Methods

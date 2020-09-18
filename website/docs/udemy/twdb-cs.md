@@ -3407,3 +3407,9 @@ In this video, we looked at how we could render new blogs based on their ID, we 
 ---
 
 ### RESTful Blog App: EDIT & UPDATE
+
+In this video, we worked on adding the edit and delete endpoints.
+
+---
+
+### RESTful Blog App: DESTROY

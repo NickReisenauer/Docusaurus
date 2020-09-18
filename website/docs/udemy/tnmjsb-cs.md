@@ -4353,3 +4353,9 @@ In this video, we changed up our logic so that our autocomplete widget was much 
 ---
 
 ### Extracting Selection Logic
+
+In this video, we extracted the logic for when a user selects a movie out into a seperate function that lives in our config object and has no references to movies in specific.
+
+---
+
+### Removing Movie References

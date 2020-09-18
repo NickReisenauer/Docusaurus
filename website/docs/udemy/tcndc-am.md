@@ -4177,3 +4177,36 @@ database.
 ---
 
 ### Heroku Deployment
+
+In this lesson, you’ll deploy the task manager API to Heroku.
+
+Heroku Deployment
+
+You already know how to deploy Node.js applications to Heroku. The only difference with
+this application is that your custom environment variables need to be configured on
+Heroku too. This doesn’t include `PORT`, as that’s managed by Heroku.
+
+The command below is used to set an environment variable.
+
+```js
+heroku config:set KEY=VALUE
+```
+
+A variation of that command can be used to fetch all the environment variables currently
+configured.
+
+```js
+heroku config
+```
+
+Lastly, you can delete an environment variable as shown here.
+
+```js
+heroku config:unset KEY
+```
+
+---
+
+## Testing Node.js
+
+### Section Intro: Testing Node.js
