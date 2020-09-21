@@ -686,3 +686,29 @@ In the example above, we have our parent component that is rendering out the Opt
 ---
 
 ### Events & Methods
+
+In this video, we learned about how we can add inline component methods so that all of our logic is contained within our components. We set up some event listeners for button clicks and form submits and reviewed how we can get the value out of an input in a component. We worked mainly on our `AddOption` component.
+
+```js
+class AddOption extends React.Component {
+  handleAddOption(e) {
+    e.preventDefault();
+    const option = e.target.elements.option.value.trim();
+    if (option) alert(option);
+  }
+  render() {
+    return (
+      <div>
+        <form onSubmit={this.handleAddOption}>
+          <input type="text" name="option" />
+          <button>Add Option</button>
+        </form>
+      </div>
+    );
+  }
+}
+```
+
+---
+
+### Method Binding

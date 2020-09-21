@@ -3413,3 +3413,9 @@ In this video, we worked on adding the edit and delete endpoints.
 ---
 
 ### RESTful Blog App: DESTROY
+
+In this video, we worked on our delete route and in the parameter we take in an ID and then we use deleteById to delete from the database.
+
+---
+
+### RESTful Blog App: Final Touches

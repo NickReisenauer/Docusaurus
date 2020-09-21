@@ -4359,3 +4359,9 @@ In this video, we extracted the logic for when a user selects a movie out into a
 ---
 
 ### Removing Movie References
+
+In this video, we finished removing all movie references to movie and changed everything to item. Now, all we have to do is call a function and pass in the data we need and we can have a fully functional autocomplete widget.
+
+---
+
+### Consuming a Different Source of Data

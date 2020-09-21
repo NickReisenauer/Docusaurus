@@ -3151,3 +3151,15 @@ In this video, we talked about the difference between Class and Object Literals.
 ---
 
 ### Getters & Setters
+
+When using a class we have access to getter and setter methods to keep control of our data inside of the class.
+
+---
+
+### Introducing Inheritance
+
+Inheritance
+
+---
+
+### Implementing Inheritance
