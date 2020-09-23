@@ -4365,3 +4365,9 @@ In this video, we finished removing all movie references to movie and changed ev
 ---
 
 ### Consuming a Different Source of Data
+
+In this video, we saw how easy it was to change to a new source of data for our autocomplete.
+
+---
+
+### Refreshed HTML Structure

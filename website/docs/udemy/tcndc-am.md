@@ -4264,3 +4264,36 @@ test("This should fail", () => {
 ---
 
 ### Writing Tests and Assertions
+
+In this lesson, you’ll add assertions to your test cases. Assertions allow you check if a
+given value is what you’re expecting or not.
+
+Testing a Function
+
+For this example, let’s test the `calculateTip` function shown below. All it does is calculate
+the tip for your restaurant bill.
+
+```js
+const calculateTip = (total, tipPercent = 0.25) => total + total * tipPercent;
+module.exports = {
+  calculateTip,
+};
+```
+
+The test suite below has a single test case for the `calculateTip` function. The test case
+itself calculates a 30% tip on a $10 restaurant bill. The assertion checks that the calculated
+total equals $13. The assertion is made using `toBe` to check for equality.
+
+```js
+const { calculateTip } = require("../src/math");
+test("Should calculate total with tip", () => {
+  const total = calculateTip(10, 0.3);
+  expect(total).toBe(13);
+});
+```
+
+[Expect](https://jestjs.io/docs/en/expect)
+
+---
+
+### Writing Your Own Tests

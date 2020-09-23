@@ -3163,3 +3163,5 @@ Inheritance
 ---
 
 ### Implementing Inheritance
+
+Implementing Inheritance

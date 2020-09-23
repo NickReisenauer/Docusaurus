@@ -712,3 +712,33 @@ class AddOption extends React.Component {
 ---
 
 ### Method Binding
+
+In this video, we learned that event handlers inside of our components lose access to `this`. That means that when we try to access our props inside of an event handler function we can't access them. There is a way to fix our problem, and that's with `bind()`. bind allows us to bind the `this` reference to whatever we call it on and we can pass in where we want it to get the `this` from. Instead of writing this for every event handler, we can customize our constructor function in our components so that this.eventHandler = this.eventHandler.bind(this).
+
+In this example, we customize our component's constructor function so that it binds the `this` of the constructor which has access to the `this` as would would expect.
+
+```js
+class Options extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleRemoveALl = this.handleRemoveAll.bind(this);
+  }
+  handleRemoveAll() {
+    this.props.options;
+  }
+  render() {
+    return (
+      <div>
+        <button onClick={this.handleRemoveAll}>Remove All</button>
+        {this.props.options.map((option) => (
+          <Option key={option} optionText={option} />
+        ))}
+      </div>
+    );
+  }
+}
+```
+
+---
+
+### What is Component State?

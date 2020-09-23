@@ -3419,3 +3419,11 @@ In this video, we worked on our delete route and in the parameter we take in an 
 ---
 
 ### RESTful Blog App: Final Touches
+
+In this app, we finished the final touches on our RESTful Blog App.
+
+---
+
+## Data Associations
+
+### Introduction to Associations
