@@ -4371,3 +4371,9 @@ In this video, we saw how easy it was to change to a new source of data for our 
 ---
 
 ### Refreshed HTML Structure
+
+In this video, we fixed our HTML so that we can have two autocompletes.
+
+---
+
+### Avoiding Duplicates of Config

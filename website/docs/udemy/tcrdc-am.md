@@ -742,3 +742,15 @@ class Options extends React.Component {
 ---
 
 ### What is Component State?
+
+State keeps track of our logic behind the scenes and we need to base our UI off of our state. If we have a counter app and the count goes up by 1, we would need to re-render our component to be updated to the current state (which would be +1).
+
+1. Setup default state object
+2. Component rendered with default state values
+3. Change state based on event
+4. Component re-rendered using new state values
+5. Start at 3 again
+
+---
+
+### Adding State to Counter App: Part 1

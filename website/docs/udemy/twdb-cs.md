@@ -3427,3 +3427,9 @@ In this app, we finished the final touches on our RESTful Blog App.
 ## Data Associations
 
 ### Introduction to Associations
+
+Associations allow us to bind our data in one:one or one:many or many:many relationships
+
+---
+
+### Embedded Data

@@ -3165,3 +3165,13 @@ Inheritance
 ### Implementing Inheritance
 
 Implementing Inheritance
+
+---
+
+### Using Inheritance Everywhere
+
+We used `extends` to give our classes more functionality from a parent class.
+
+---
+
+### Overriding Methods and the super() Constructor

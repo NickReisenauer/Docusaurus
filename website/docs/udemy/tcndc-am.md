@@ -4297,3 +4297,12 @@ test("Should calculate total with tip", () => {
 ---
 
 ### Writing Your Own Tests
+
+In this video, it’s on you to write some new test cases using what you’ve learned so far.
+
+There are no notes for this challenge video, as no new information is covered. The goal is
+to give you experience using what was covered in previous lessons.
+
+---
+
+### Testing Asynchronous Code
