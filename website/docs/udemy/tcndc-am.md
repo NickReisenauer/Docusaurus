@@ -4306,3 +4306,41 @@ to give you experience using what was covered in previous lessons.
 ---
 
 ### Testing Asynchronous Code
+
+In this lesson, you’ll learn how to test asynchronous code. This will be necessary to test
+the Express API endpoints.
+
+Testing Asynchronous Code
+
+The two test cases below test the asynchronous `add` function you created earlier in the
+course. Both test cases add up 2 and 3 and assert that the total is 5.
+
+The callback function for the first test case accepts a `done` parameter. This lets Jest know
+that the test function contains asynchronous code. Jest won’t determine if the test passed
+or failed until `done` is called. In the example below, `then` is called to run some code after
+the numbers are added. This is where the assertion is added and it’s where `done` is called.
+
+```js
+test("Should add two numbers", (done) => {
+  add(2, 3).then((sum) => {
+    expect(sum).toBe(5);
+    done();
+  });
+});
+```
+
+Your test cases can use async/await as well. The test case below is a refactored version of
+the test case above. The test case function is defined with `async await` is used in the
+function to ensure that Jest waits for those asynchronous tasks to complete. Both test
+cases are functionally identical.
+
+```js
+test("Should add two numbers async/await", async () => {
+  const sum = await add(2, 3);
+  expect(sum).toBe(3);
+});
+```
+
+---
+
+### Testing an Express Application: Part 1

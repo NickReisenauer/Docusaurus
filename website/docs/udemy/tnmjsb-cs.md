@@ -4377,3 +4377,15 @@ In this video, we fixed our HTML so that we can have two autocompletes.
 ---
 
 ### Avoiding Duplicates of Config
+
+In this video, we set up a config object for our autocomplete rendering function so that all we have to do is write the object config once and then pass it in with spread ...
+
+---
+
+### Hiding the Tutorial
+
+In this video, we hid the tutorial message when the user selects a movie from the dropdown.
+
+---
+
+### Showing Two Summaries

@@ -3433,3 +3433,9 @@ Associations allow us to bind our data in one:one or one:many or many:many relat
 ---
 
 ### Embedded Data
+
+In this video, we learned about data associations and how to set one up with Mongoose.
+
+---
+
+### Object References

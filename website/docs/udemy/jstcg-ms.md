@@ -3175,3 +3175,9 @@ We used `extends` to give our classes more functionality from a parent class.
 ---
 
 ### Overriding Methods and the super() Constructor
+
+We can override methods by using the super() constructor
+
+---
+
+### super() Constructor Execution, Order & `this`
