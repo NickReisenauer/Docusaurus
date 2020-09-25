@@ -792,3 +792,51 @@ ReactDOM.render(<Counter />, document.getElementById("app"));
 ---
 
 ### Adding State to Counter App: Part 2
+
+In this video, we set up state on our counter app. To do this, we defined a state object in our component constructor. Inside there we defined our count and set it to 0.
+To update that state number, we used a method called setState and that gave us access to the prevState in a variable. We can then take the previous state and add one to it and re-render that new state number.
+
+```js
+class Counter extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      count: 0,
+    };
+  }
+  handleAddOne() {
+    this.setState((prevState) => {
+      return {
+        count: prevState.count + 1,
+      };
+    });
+  }
+  handleMinusOne() {
+    this.setState((prevState) => {
+      return {
+        count: prevState.count - 1,
+      };
+    });
+  }
+  handleReset() {
+    this.setState(() => {
+      return {
+        count: 0,
+      };
+    });
+  }
+  render() {
+    return (
+      <div>
+        <h1>Count: {this.state.count}</h1>
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<Counter />, document.getElementById("app"));
+```
+
+---
+
+### Alternative setState Syntax

@@ -4389,3 +4389,15 @@ In this video, we hid the tutorial message when the user selects a movie from th
 ---
 
 ### Showing Two Summaries
+
+In this video, we set up our rendering function to take in a special element of where it should render the output so we can have 2 different outputs.
+
+---
+
+### When to Compare?
+
+In this video, we set up a right and left variable so that we can compare the differences in the two movies.
+
+---
+
+### How to Compare?

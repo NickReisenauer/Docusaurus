@@ -3181,3 +3181,9 @@ We can override methods by using the super() constructor
 ---
 
 ### super() Constructor Execution, Order & `this`
+
+We learned about the different rendering execution in our classes.
+
+---
+
+### Different Ways of Adding Methods
