@@ -4401,3 +4401,9 @@ In this video, we set up a right and left variable so that we can compare the di
 ---
 
 ### How to Compare?
+
+We can add custom `data-value` properties to each of our HTML articles so that we can compare them more easily.
+
+---
+
+### Extracting Statistic Values

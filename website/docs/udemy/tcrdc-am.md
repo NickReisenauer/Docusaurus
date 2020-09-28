@@ -840,3 +840,9 @@ ReactDOM.render(<Counter />, document.getElementById("app"));
 ---
 
 ### Alternative setState Syntax
+
+In this video, we learned about an alternative syntax to the setState method. Instead of using a function with the parameter of `prevState`, we can just use an object. This is not a recommended way to do things and doesn't give us access to prevState if we need it so we should avoid using it but just know it exists.
+
+---
+
+### Build It: Adding State to Visibility Toggle

@@ -3446,3 +3446,11 @@ We also learned about object ID references
 ---
 
 ### module.exports
+
+module.exports allows us to export functions and import them into other files. This helps with code reusability.
+
+---
+
+## YelpCamp: Comments
+
+### YelpCamp: Refactoring App.js

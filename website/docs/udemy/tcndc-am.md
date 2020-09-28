@@ -4377,3 +4377,27 @@ ensure that Jest runs correctly in Node.js.
 ---
 
 ### Testing an Express Application: Part 2
+
+In this lesson, you’ll add tests for the Express API. Each test case will focus on testing a
+specific endpoint, making assertions about the response from the server.
+
+Testing with Supertest
+
+Supertest was created by the Express team to allow you to easily test your Express apps.
+First up, install the module.
+
+`npm i supertest`
+
+Now, supertest can be used to test an endpoint. The test case below tests that new users
+can sign up for accounts. All the account data provided is valid, so a new account should
+be created.
+
+Step one is to pass the express `app` to `request`. Next, supertest methods can be chained
+together to fit the needs of your tests. `post` is used to make an HTTP POST request to
+`/users`. `send` is used to send the correct JSON data to the server. `expect` is used to assert
+that the response status code is correct. In this case, a successful signup should result in a
+`201` status code.
+
+---
+
+### Jest Setup and Teardown

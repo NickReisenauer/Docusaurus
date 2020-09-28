@@ -3187,3 +3187,9 @@ We learned about the different rendering execution in our classes.
 ---
 
 ### Different Ways of Adding Methods
+
+We can use arrow functions as methods but we will lose access to `this`.
+
+---
+
+### Private Properties
