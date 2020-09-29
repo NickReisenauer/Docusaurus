@@ -4407,3 +4407,9 @@ We can add custom `data-value` properties to each of our HTML articles so that w
 ---
 
 ### Extracting Statistic Values
+
+In this video, we parsed strings containing data using regex with replace and then converting it to a number with either parseInt or parseFloat.
+
+---
+
+### Parsing Number of Awards

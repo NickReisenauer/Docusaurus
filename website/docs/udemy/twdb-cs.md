@@ -3454,3 +3454,9 @@ module.exports allows us to export functions and import them into other files. T
 ## YelpCamp: Comments
 
 ### YelpCamp: Refactoring App.js
+
+In this video, we refactored our code to be more modularized using module.exports
+
+---
+
+### YelpCamp: Seeding the Database

@@ -846,3 +846,41 @@ In this video, we learned about an alternative syntax to the setState method. In
 ---
 
 ### Build It: Adding State to Visibility Toggle
+
+In this video, we refactored our visibility toggle app to use React State and Components.
+
+```js
+class VisibilityToggle extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleToggleVisibility = this.handleToggleVisibility.bind(this);
+    this.state = {
+      visibility: false,
+    };
+  }
+  handleToggleVisibility() {
+    this.setState((prevState) => {
+      return {
+        visibility: !prevState.visibility,
+      };
+    });
+  }
+  render() {
+    return (
+      <div>
+        <h1>Visibility Toggle</h1>
+        <button onClick={this.handleToggleVisibility}>
+          {this.state.visibility ? "Hide Details" : "Show Details"}
+        </button>
+        {this.state.visibility && <p>Hello I am details</p>}
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<VisibilityToggle />, document.getElementById("app"));
+```
+
+---
+
+### Indecision State: Part 1

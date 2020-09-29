@@ -3193,3 +3193,9 @@ We can use arrow functions as methods but we will lose access to `this`.
 ---
 
 ### Private Properties
+
+`#` before our variable name will set our variable to private inside of a class.
+
+---
+
+### The "instanceof" Operator
