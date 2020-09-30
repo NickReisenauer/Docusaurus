@@ -3460,3 +3460,9 @@ In this video, we refactored our code to be more modularized using module.export
 ---
 
 ### YelpCamp: Seeding the Database
+
+In this video, we are seeding our database with some data.
+
+---
+
+### YelpCamp: Comment Model

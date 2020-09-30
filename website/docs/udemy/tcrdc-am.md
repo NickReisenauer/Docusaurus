@@ -884,3 +884,9 @@ ReactDOM.render(<VisibilityToggle />, document.getElementById("app"));
 ---
 
 ### Indecision State: Part 1
+
+In this video, we added state to our indecision app. We set up a method in our parent component and added some logic to the pick a random option component. The random option will be taken from this.state. We passed down the method to our child component instead of defining the method in the component.
+
+---
+
+### Indecision State: Part 2

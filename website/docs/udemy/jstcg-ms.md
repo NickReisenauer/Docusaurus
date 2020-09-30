@@ -3199,3 +3199,9 @@ We can use arrow functions as methods but we will lose access to `this`.
 ---
 
 ### The "instanceof" Operator
+
+We can use the instanceof operator to check whether or not an object is an instance of a parent constructor object.
+
+---
+
+### Built-in Classes

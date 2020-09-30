@@ -4413,3 +4413,9 @@ In this video, we parsed strings containing data using regex with replace and th
 ---
 
 ### Parsing Number of Awards
+
+In this video, we used `reduce` to get the values out of a string to compare the number of awards each movie has won.
+
+---
+
+### Applying Parsed Properties
