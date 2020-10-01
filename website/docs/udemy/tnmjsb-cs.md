@@ -4419,3 +4419,9 @@ In this video, we used `reduce` to get the values out of a string to compare the
 ---
 
 ### Applying Parsed Properties
+
+In this video, we added `data-value` attributes to our HTML so that we can later compare things against each other.
+
+---
+
+### Updating Styles

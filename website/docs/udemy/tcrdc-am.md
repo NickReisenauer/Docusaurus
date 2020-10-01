@@ -890,3 +890,9 @@ In this video, we added state to our indecision app. We set up a method in our p
 ---
 
 ### Indecision State: Part 2
+
+In this video, we used function props to communicate our state between both directions. We also set up function props to handle state in our component as well as our main application state. We also added error handling in our form to ensure that we cannot add duplicates or input an empty string.
+
+---
+
+### Summary: Props vs State

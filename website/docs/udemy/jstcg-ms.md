@@ -3205,3 +3205,9 @@ We can use the instanceof operator to check whether or not an object is an insta
 ---
 
 ### Built-in Classes
+
+We can create a new object with either `new Object()` or with `const obj = {}`.
+
+---
+
+### Understanding Object Descriptors

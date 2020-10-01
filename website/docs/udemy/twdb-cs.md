@@ -3466,3 +3466,9 @@ In this video, we are seeding our database with some data.
 ---
 
 ### YelpCamp: Comment Model
+
+In this video, we made a model for our comments on our camp posts.
+
+---
+
+### Advanced Assertions

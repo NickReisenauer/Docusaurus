@@ -4495,3 +4495,11 @@ await request(app)
 ---
 
 ### Advanced Assertions
+
+In this lesson, it’s up to you to write some test cases on your own.
+There are no notes for this challenge video, as no new information is covered. The goal is
+to give you experience using what was covered in previous lessons.
+
+---
+
+### Mocking Libraries
