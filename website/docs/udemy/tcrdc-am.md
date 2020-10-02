@@ -896,3 +896,31 @@ In this video, we used function props to communicate our state between both dire
 ---
 
 ### Summary: Props vs State
+
+In this video we look at the difference between props and state.
+
+Props:
+
+- An Object
+- Can be used when rendering
+- Changes (from above) cause re-renders
+- Come from above
+- Can't be changed by component itself
+
+State:
+
+- An Object
+- Can be used when rendering
+- Changes cause re-renders
+- Defined in component itself
+- Can be changed by component itself
+
+`<MyComponent />`:
+
+- Access to props when rendering
+- Access to state when rendering
+- Can receive props from parent component and pass props to children components.
+
+---
+
+## Stateless Functional Components

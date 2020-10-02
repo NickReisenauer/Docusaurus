@@ -3471,4 +3471,10 @@ In this video, we made a model for our comments on our camp posts.
 
 ---
 
-### Advanced Assertions
+### YelpCamp: Creating Comments Pt. 1
+
+In this video, we worked on adding new comment routes.
+
+---
+
+### YelpCamp: Creating Comments Pt. 2

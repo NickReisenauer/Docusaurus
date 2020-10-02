@@ -4489,7 +4489,7 @@ await request(app)
 .set('Authorization', `Bearer ${userOne.tokens[0].token}`)
 .send()
 .expect(200)
-}
+};
 ```
 
 ---
@@ -4503,3 +4503,29 @@ to give you experience using what was covered in previous lessons.
 ---
 
 ### Mocking Libraries
+
+In this lesson, you’ll learn how to mock npm modules. Jest lets you mock npm modules so
+you can override module functionality in your test environment.
+
+Mocking SendGrid
+
+You can mock an npm module by creating a `__mocks__` directory in the `tests` folder. A
+module can be mocked by creating a file in the `__mocks__` folder. The file name should
+match up with the module name, so `tests/__mocks__/express.js` can be used to mock
+the Express library. If the npm module uses a scope like `@sendgrid/mail`, then a
+`@sendgrid` folder would be created with a `mail.js` file inside.
+
+The job of the mock file is to provide mocked versions of the library features. The
+SendGrid mock below defines and exports `setApiKey` and `send`. This ensures that our
+code still works even though emails will no longer be sent for the tests.
+
+```js
+module.exports = {
+  setApiKey() {},
+  send() {},
+};
+```
+
+---
+
+### Wrapping up User Tests

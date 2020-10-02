@@ -3211,3 +3211,9 @@ We can create a new object with either `new Object()` or with `const obj = {}`.
 ---
 
 ### Understanding Object Descriptors
+
+The static method `Object.defineProperty()` defines a new property directly on an object, or modifies an existing property on an object, and returns the object.
+
+---
+
+### Wrap Up

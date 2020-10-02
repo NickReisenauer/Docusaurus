@@ -4425,3 +4425,9 @@ In this video, we added `data-value` attributes to our HTML so that we can later
 ---
 
 ### Updating Styles
+
+In this video, we bascially finished our project by comparing the values from the movies and changing the color so that whoever won the fight is in a different color.
+
+---
+
+### App Wrapup
