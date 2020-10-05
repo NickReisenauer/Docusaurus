@@ -924,3 +924,40 @@ State:
 ---
 
 ## Stateless Functional Components
+
+### Section Intro: Stateless Functional Components
+
+A functional component is simply a vanilla JavaScript function.
+
+---
+
+### The Stateless Functional Component
+
+Stateless Functional Components are React Components, they are functions, and they are stateless.
+
+Our first stateless function component looks like this...
+
+```js
+const User = () => {
+  return (
+    <div>
+      <p>Name: </p>
+      <p>Age: </p>
+    </div>
+  );
+};
+```
+
+We can render this component in the same way that we rendered our other components, by just calling it like an HTML tag `<User />`.
+
+We can access the props through the props parameter and then we just use them with `props.name`.
+
+Advantages over Class Based Components:
+
+- Faster
+- Easier to read/write
+- Easier to test
+
+---
+
+### Default Prop Values

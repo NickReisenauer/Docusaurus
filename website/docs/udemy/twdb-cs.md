@@ -3478,3 +3478,9 @@ In this video, we worked on adding new comment routes.
 ---
 
 ### YelpCamp: Creating Comments Pt. 2
+
+In this video, we talked about nested routes, we added a campgrounds directory and a comments directory, we added a button for creating a new comment.
+
+---
+
+### YelpCamp: Styling Comments Pt. 1

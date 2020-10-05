@@ -3217,3 +3217,17 @@ The static method `Object.defineProperty()` defines a new property directly on a
 ---
 
 ### Wrap Up
+
+Classes are a template for creating objects. They encapsulate data with code to work on that data. Classes in JS are built on prototypes but also have some syntax and semantics that are not shared with ES5 class like semantics.
+
+---
+
+## Deep Dive: Constructor Functions & Prototypes
+
+### Module Introduction
+
+This module is entirely optional.
+
+---
+
+### First Project Steps & Planning

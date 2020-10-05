@@ -4529,3 +4529,12 @@ module.exports = {
 ---
 
 ### Wrapping up User Tests
+
+In this lesson, it’s your job to finalize the user tests.
+
+There are no notes for this challenge video, as no new information is covered. The goal is
+to give you experience using what was covered in previous lessons.
+
+---
+
+### Setup Task Test Suite
