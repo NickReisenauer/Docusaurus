@@ -961,3 +961,19 @@ Advantages over Class Based Components:
 ---
 
 ### Default Prop Values
+
+In this video, we learned about how we can set default prop values for our components. To set a default value, we can create a special component and set the value of the prop we need.
+
+```js
+Header.defaultProps = {
+  title: "Indecision",
+};
+
+<Header title={"New title"} />;
+```
+
+We can then either let it be the default, or we can customize it when we pass in our prop value.
+
+---
+
+### React Dev Tools

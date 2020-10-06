@@ -4538,3 +4538,13 @@ to give you experience using what was covered in previous lessons.
 ---
 
 ### Setup Task Test Suite
+
+In this lesson, you’ll be refactoring the user test suite. These changes will makes it
+possible to test the task operations too.
+
+Refer to the video for refactoring instructions. The refactoring requires lots of code to be
+shifted between files, which is a little more than could be covered in this guide.
+
+---
+
+### Testing with Task Data

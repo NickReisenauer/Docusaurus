@@ -4465,3 +4465,36 @@ Some of our Big Challenges:
 ---
 
 ### Project Setup
+
+In this video. we set up our index.html and index.js files.
+
+---
+
+### Matter Terminology
+
+Matter JS has very good docs.
+
+Here's some important terminology.
+
+- World
+
+  - Object that contains all of the different 'things' in our Matter app.
+
+- Engine
+
+  - Reads in the current state of the world from the world object, then calculates changes in positions of all the different shapes.
+
+- Runner
+
+  - Gets the engine and world to work together. Runs about 60 times per second.
+
+- Render
+
+  - Whenever the engine processes an update, Render will take a look at all the different shapes and show them on the screen.
+
+- Body
+  - A shape that we are displaying. Can be a circle, rectangle, oval, etc...
+
+---
+
+### Getting Content to Appear

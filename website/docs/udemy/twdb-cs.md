@@ -3484,3 +3484,9 @@ In this video, we talked about nested routes, we added a campgrounds directory a
 ---
 
 ### YelpCamp: Styling Comments Pt. 1
+
+In this video, we worked on styling our comments on the posts.
+
+---
+
+### YelpCamp: Styling Comments Pt. 2

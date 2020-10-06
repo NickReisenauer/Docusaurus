@@ -3231,3 +3231,9 @@ This module is entirely optional.
 ---
 
 ### First Project Steps & Planning
+
+We have the two boxes that we are moving elements to and from so we need to make two arrays.
+
+---
+
+### Creating Project Lists & Parsing Element Data
