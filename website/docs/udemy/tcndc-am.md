@@ -4548,3 +4548,26 @@ shifted between files, which is a little more than could be covered in this guid
 ---
 
 ### Testing with Task Data
+
+In this lesson, you’ll be writing some test cases for tasks.
+
+Testing with Task Data
+
+Testing tasks will require that some test tasks exist in the database. Like with users, tasks
+can be added to the database using `beforeEach`. The test case below fetches all tasks for
+the user. It also asserts that the status code is a `200` and the tasks are sent back correctly.
+
+```js
+test("Should fetch user tasks", async () => {
+  const response = await request(app)
+    .get("/tasks")
+    .set("Authorization", `Bearer ${userOne.tokens[0].token}`)
+    .send()
+    .expect(200);
+  expect(response.body.length).toEqual(2);
+});
+```
+
+---
+
+### Bonus: Extra Test Ideas

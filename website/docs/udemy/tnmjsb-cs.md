@@ -4498,3 +4498,9 @@ Here's some important terminology.
 ---
 
 ### Getting Content to Appear
+
+In this video, we set up a simple box to appear on our screen and we drew a rectangle in the screen. We also set up the whole World and then Engine and Runner.
+
+---
+
+### Boilerplate Overview

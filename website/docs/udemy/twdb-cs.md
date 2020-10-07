@@ -3490,3 +3490,11 @@ In this video, we worked on styling our comments on the posts.
 ---
 
 ### YelpCamp: Styling Comments Pt. 2
+
+In this video, we finished styling our comments.
+
+---
+
+## Authentication
+
+### Introduction to Authentication

@@ -3237,3 +3237,9 @@ We have the two boxes that we are moving elements to and from so we need to make
 ---
 
 ### Creating Project Lists & Parsing Element Data
+
+In this video we set up our list classes.
+
+---
+
+### Starting with the "Switch Project" Logic

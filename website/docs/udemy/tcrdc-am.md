@@ -977,3 +977,9 @@ We can then either let it be the default, or we can customize it when we pass in
 ---
 
 ### React Dev Tools
+
+The React Dev Tools allow us to view all of our components in our component tree and we can also view the state and props for each component.
+
+---
+
+### Removing Individual Options
