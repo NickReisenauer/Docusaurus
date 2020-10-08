@@ -3498,3 +3498,9 @@ In this video, we finished styling our comments.
 ## Authentication
 
 ### Introduction to Authentication
+
+In this unit, we go over how to actually implement authentication with Passport. Later in the course, we go more into depth about how authentication works behind the scenes.
+
+---
+
+### Secret Page Code Along Pt. 1

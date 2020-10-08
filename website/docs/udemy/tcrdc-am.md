@@ -983,3 +983,9 @@ The React Dev Tools allow us to view all of our components in our component tree
 ---
 
 ### Removing Individual Options
+
+In this video, we set up an event handler to remove individual options in our React code and state management. To accomplish this we set up an event handler that will filter through the options state and it will remove the one that is equal to the button clicked on. We pass this function down to Options and then into Option. Instead of calling the function directly `onClick` in our Option component we set up an inline arrow function to first get the event value and then we passed that into our function which was called inside the inline arrow function.
+
+---
+
+### Lifecycle Methods.

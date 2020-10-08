@@ -3243,3 +3243,9 @@ In this video we set up our list classes.
 ---
 
 ### Starting with the "Switch Project" Logic
+
+In this video, we set up our projects array.
+
+---
+
+### Passing Method References Around

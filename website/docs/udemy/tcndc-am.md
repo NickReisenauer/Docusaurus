@@ -4571,3 +4571,13 @@ test("Should fetch user tasks", async () => {
 ---
 
 ### Bonus: Extra Test Ideas
+
+In this lesson, we’ll go over some other test cases you could add to the application.
+
+You can find the list of [optional test cases at](https://links.mead.io/extratests).
+
+---
+
+## Real-Time Web Applications with Socket.io
+
+### Section Intro: Real-Time Web Applications with Socket.io

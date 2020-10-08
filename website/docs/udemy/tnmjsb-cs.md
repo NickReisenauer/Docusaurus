@@ -4504,3 +4504,9 @@ In this video, we set up a simple box to appear on our screen and we drew a rect
 ---
 
 ### Boilerplate Overview
+
+In this video, we walked through the boilerplate of our Matter JS code to understand what everything does.
+
+---
+
+### Drawing Borders
