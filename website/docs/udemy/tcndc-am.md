@@ -4581,3 +4581,11 @@ You can find the list of [optional test cases at](https://links.mead.io/extrates
 ## Real-Time Web Applications with Socket.io
 
 ### Section Intro: Real-Time Web Applications with Socket.io
+
+In this section, you’ll learn how to create real-time web applications with Node. The non-
+blocking nature of Node makes it well-suited for real-time applications such as chat apps,
+social media apps, and more.
+
+---
+
+### Creating the Chat App Project

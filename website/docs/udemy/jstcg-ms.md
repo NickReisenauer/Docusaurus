@@ -3249,3 +3249,9 @@ In this video, we set up our projects array.
 ---
 
 ### Passing Method References Around
+
+In this video, we worked on passing our method references around.
+
+---
+
+### Moving DOM Elements

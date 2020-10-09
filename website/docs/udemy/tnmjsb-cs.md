@@ -4510,3 +4510,9 @@ In this video, we walked through the boilerplate of our Matter JS code to unders
 ---
 
 ### Drawing Borders
+
+In this video, we worked through how we can add more shapes as well as a border to our canvas.
+
+---
+
+### Clicking and Dragging

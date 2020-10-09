@@ -988,4 +988,24 @@ In this video, we set up an event handler to remove individual options in our Re
 
 ---
 
-### Lifecycle Methods.
+### Lifecycle Methods
+
+In this video, we learned that there is something called lifecycle methods. Lifecycle methods, like `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount` fire at various times in the components lifecycle, and these are really handy for a lot of situations. We also learned that they're only available in class based components. Stateless Functions only have access to `render`.
+
+```js
+  componentDidMount() {
+    console.log("Fetching data");
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    console.log("Saving data");
+  }
+
+  componentWillUnmount() {
+    console.log("componentWillUnmount");
+  }
+```
+
+---
+
+### Saving and Loading Options Data

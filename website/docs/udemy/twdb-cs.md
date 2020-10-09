@@ -3504,3 +3504,9 @@ In this unit, we go over how to actually implement authentication with Passport.
 ---
 
 ### Secret Page Code Along Pt. 1
+
+In this video, we installed all of our NPM packages and views and models.
+
+---
+
+### Secret Page Code Along Pt. 2
