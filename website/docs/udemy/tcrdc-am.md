@@ -1009,3 +1009,11 @@ In this video, we learned that there is something called lifecycle methods. Life
 ---
 
 ### Saving and Loading Options Data
+
+In this video we added support for the localStorage API so that we can save our data into key value pairs in the browser and it will still be there when we reload the page.
+
+To accomplish this, we used JSON.parse and JSON.stringify to save our values as a string into localStorage and then we updated our state to be whatever our localStorage would be.
+
+---
+
+### Saving and Loading the Count

@@ -4516,3 +4516,15 @@ In this video, we worked through how we can add more shapes as well as a border 
 ---
 
 ### Clicking and Dragging
+
+In this video, we destructured some more properties off of Matter so that we can use our Mouse to make our canvas much more interactive.
+
+---
+
+### Generating Random Shapes
+
+In this video, we worked on generating random shapes using Math.random and we also learned how we can customize the color of our elements. Also we can take off the wireframe mode and Matter will automatically style our application.
+
+---
+
+### Maze Generation Algorithm

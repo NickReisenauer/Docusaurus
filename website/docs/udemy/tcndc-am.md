@@ -4589,3 +4589,12 @@ social media apps, and more.
 ---
 
 ### Creating the Chat App Project
+
+In this lesson, it’s on you to set up the chat application web server.
+
+There are no notes for this challenge video, as no new information is covered. The goal is
+to give you experience using what was covered in previous lessons.
+
+---
+
+### WebSockets

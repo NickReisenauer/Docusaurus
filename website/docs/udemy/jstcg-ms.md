@@ -3255,3 +3255,9 @@ In this video, we worked on passing our method references around.
 ---
 
 ### Moving DOM Elements
+
+In this video, we set up a method to move an object from one array to another and in each array we are displaying the completed or non-completed elements.
+
+---
+
+### Adding a Tooltip
