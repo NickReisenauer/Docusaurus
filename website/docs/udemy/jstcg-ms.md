@@ -3261,3 +3261,9 @@ In this video, we set up a method to move an object from one array to another an
 ---
 
 ### Adding a Tooltip
+
+In this video, we worked on adding a tooltip.
+
+---
+
+### Adding Inheritance

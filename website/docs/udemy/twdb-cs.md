@@ -3510,3 +3510,5 @@ In this video, we installed all of our NPM packages and views and models.
 ---
 
 ### Secret Page Code Along Pt. 2
+
+Completely redid the course so idk.

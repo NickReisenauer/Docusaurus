@@ -4528,3 +4528,16 @@ In this video, we worked on generating random shapes using Math.random and we al
 ---
 
 ### Maze Generation Algorithm
+
+In order to make our maze generator, we're going to follow these steps.
+
+- Create a grid of 'cells'
+- Pick a random starting cell
+- For that cell, build a randomly-ordered list of neighbors
+- If a neighbor has been visited before, remove it from the list
+- For each remaining neightbor, 'move' to it and remove the wall between the two cells
+- Repeat this for new neighbor
+
+---
+
+### More on Maze Generation

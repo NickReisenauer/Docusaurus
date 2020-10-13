@@ -1017,3 +1017,11 @@ To accomplish this, we used JSON.parse and JSON.stringify to save our values as 
 ---
 
 ### Saving and Loading the Count
+
+In this video, we finished adding support for localStorage in our counter app. To do this we used parseInt to make sure our number coming back from localStorage was a number instead of a string.
+
+---
+
+## Webpack
+
+### Section Intro: Webpack

@@ -4598,3 +4598,17 @@ to give you experience using what was covered in previous lessons.
 ---
 
 ### WebSockets
+
+In this lesson, you’ll learn about the WebSocket protocol. The WebSocket protocol
+supports real-time bi-direction communication, which makes it a great fit for the chat
+application.
+
+WebSockets allow for bi-directional communication between the client and the server.
+
+WebSocket is a separate protocol from HTTP.
+
+Persistent connection between client and server.
+
+---
+
+### Getting Started with Socket.io
