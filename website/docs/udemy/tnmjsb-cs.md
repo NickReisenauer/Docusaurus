@@ -4541,3 +4541,9 @@ In order to make our maze generator, we're going to follow these steps.
 ---
 
 ### More on Maze Generation
+
+In this video, we talked more about our maze generation algorithm. This algorithm will track the vertical and horizontal walls that we come across.
+
+---
+
+### Configuration Variables

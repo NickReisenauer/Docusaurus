@@ -3267,3 +3267,9 @@ In this video, we worked on adding a tooltip.
 ---
 
 ### Adding Inheritance
+
+In this video, we added Class inheritance with `super()`.
+
+---
+
+### Wrap Up

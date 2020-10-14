@@ -4612,3 +4612,67 @@ Persistent connection between client and server.
 ---
 
 ### Getting Started with Socket.io
+
+In this lesson, you’ll install and configure Socket.io. Socket.io comes with everything
+needed to set up a WebSocket server using Node.
+
+Setting up Socket.io
+
+First up, install the module.
+
+`npm i socket.io@2.20`
+
+Socket.io can be used on its own or with Express. Since the chat application will be
+serving up client-side assets, both Express and Socket.io will get set up. The server file
+below shows how to get this done.
+
+```js
+const path = require("path");
+const http = require("http");
+const express = require("express");
+const socketio = require("socket.io");
+
+// Create the Express application
+const app = express();
+// Create the HTTP server using the Express app
+const server = http.createServer(app);
+// Connect socket.io to the HTTP server
+const io = socketio(server);
+const port = process.env.PORT || 3000;
+const publicDirectoryPath = path.join(__dirname, "../public");
+app.use(express.static(publicDirectoryPath));
+// Listen for new connections to Socket.io
+io.on("connection", () => {
+  console.log("New WebSocket connection");
+});
+server.listen(port, () => {
+  console.log(`Server is up on port ${port}!`);
+});
+```
+
+The server above uses `io.on` which is provided by Socket.io. `on` allows the server to listen
+for an event and respond to it. In the example above, the server listens for `connection`
+which allows it to run some code when a client connects to the WebSocket server.
+
+Socket.io on the Client
+
+Socket.io is also used on the client to connect to the server. Socket.io automatically serves
+up `/socket.io/socket.io.js` which contains the client-side code. The script tags below
+load in the client-side library followed by a custom JavaScript file.
+
+```js
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/chat.js"></script>
+```
+
+Your client-side JavaScript can then connect to the Socket.io server by calling `io`. `io` is
+provided by the client-side Socket.io library. Calling this function will set up the connection,
+and it’ll cause the server’s `connection` event handler to run.
+
+`io()`
+
+[Socket.io](https://socket.io/)
+
+---
+
+### Socket.io Events

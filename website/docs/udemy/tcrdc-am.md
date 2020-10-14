@@ -1025,3 +1025,13 @@ In this video, we finished adding support for localStorage in our counter app. T
 ## Webpack
 
 ### Section Intro: Webpack
+
+Webpack is an asset bundler. It's going to combine all of the assets that make up our application with all of the assets needed from third party libraries.
+
+This allows us to take advantage of third party libraries in our projects. Now we can access the vast ecosystem of React plugins and components.
+
+The second thing we're going to use Webpack for is to take our code and break it up into multiple files. Each component will live in it's own file and this helps us to manage our application.
+
+---
+
+### What is Webpack?
