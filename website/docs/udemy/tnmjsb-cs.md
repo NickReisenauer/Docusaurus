@@ -4547,3 +4547,21 @@ In this video, we talked more about our maze generation algorithm. This algorith
 ---
 
 ### Configuration Variables
+
+In this video, we worked on adding variable into our maze height and width generation. This allows us to change the height and width of the canvas by just changing one or two variables.
+
+---
+
+### Grid Generation
+
+In this video, we set up our array with 3 rows of falsy values, we did this using map and the Array constructor.
+
+```js
+const grid = Array(3)
+  .fill(null)
+  .map(() => Array(3).fill(false));
+```
+
+---
+
+### Verticals and Horizontals

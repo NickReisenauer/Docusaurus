@@ -1035,3 +1035,23 @@ The second thing we're going to use Webpack for is to take our code and break it
 ---
 
 ### What is Webpack?
+
+Webpack can take all of our components and bundle them up into a single JavaScript file.
+
+Webpack can also handle 3rd party dependencies from npm or yarn in our application.
+
+Before Webpack: We would have all of our components in different files and then we add script tags into our HTML file in a public folder, and we have to make sure that we add them in the right order etc.
+
+After Webpack: We can have all of our files and dependencies bundled up into a single file which we can link to in our public HTML file.
+
+---
+
+### Avoid Global Modules
+
+In this video, we learned about how to avoid global NPM modules by installing packages into our package.json file and then we can set up custom scripts to run those files.
+
+There are a few advantages to this, all of our dependencies are all defined in one place, we have all of our versions defined in one place, and we have the ability to define custom scripts.
+
+---
+
+### Installing and Configuring Webpack

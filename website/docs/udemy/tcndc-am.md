@@ -4640,11 +4640,14 @@ const server = http.createServer(app);
 const io = socketio(server);
 const port = process.env.PORT || 3000;
 const publicDirectoryPath = path.join(__dirname, "../public");
+
 app.use(express.static(publicDirectoryPath));
+
 // Listen for new connections to Socket.io
 io.on("connection", () => {
   console.log("New WebSocket connection");
 });
+
 server.listen(port, () => {
   console.log(`Server is up on port ${port}!`);
 });
@@ -4676,3 +4679,12 @@ and it’ll cause the server’s `connection` event handler to run.
 ---
 
 ### Socket.io Events
+
+In this lesson, it’s on you to use events to build the chat applications messaging system.
+
+There are no notes for this challenge video, as no new information is covered. The goal is
+to give you experience using what was covered in previous lessons.
+
+---
+
+### Broadcasting Events

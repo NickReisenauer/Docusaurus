@@ -3273,3 +3273,30 @@ In this video, we added Class inheritance with `super()`.
 ---
 
 ### Wrap Up
+
+In this module, we learned all about object oriented programming and learned about using classes.
+
+---
+
+## Back to the DOM & More Browser APIs
+
+### Module Introduction
+
+Module Content:
+
+- Attaching Data to Elements
+- Working with Element Coordinates & Sizes
+- Working with Templates & Dynamic Scripts
+- navigator, location & window.history
+
+---
+
+### Using "dataset" (data-\* Attributes)
+
+When we have custom data that we want to store in our JavaScript, we can use data-set attributes.
+
+We can access these custom properties by using the Element.dataset value in JavaScript.
+
+---
+
+### Getting Element Box Dimensions
