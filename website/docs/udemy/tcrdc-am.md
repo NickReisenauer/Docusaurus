@@ -1055,3 +1055,11 @@ There are a few advantages to this, all of our dependencies are all defined in o
 ---
 
 ### Installing and Configuring Webpack
+
+In this video, we installed webpack locally and we set up a command that lets us run webpack. We tried to do this without a config file and it failed, so we learned that we need to set up a config file.
+
+There are three core things that we have to provide, the input, the entry, and the output. The entry allowed us to provide a relative path to our file but our output required us to use the `path` module to access our directory path.
+
+---
+
+### ES6 import/export

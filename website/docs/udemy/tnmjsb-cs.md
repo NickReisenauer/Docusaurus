@@ -4565,3 +4565,9 @@ const grid = Array(3)
 ---
 
 ### Verticals and Horizontals
+
+In this video, we set up our horizontal and vertical arrays using the same technique as last time.
+
+---
+
+### Abstracting Maze Dimensions

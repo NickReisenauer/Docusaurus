@@ -3300,3 +3300,9 @@ We can access these custom properties by using the Element.dataset value in Java
 ---
 
 ### Getting Element Box Dimensions
+
+In this video, we looked at `getBoundingClientRect()` which will get the corner dimensions for the element that we call it on.
+
+---
+
+### Working with Element Sizes and Positions

@@ -4688,3 +4688,23 @@ to give you experience using what was covered in previous lessons.
 ---
 
 ### Broadcasting Events
+
+In this lesson, you’ll learn how to broadcast events. Broadcasted events are sent to all
+connected clients, expect for the client that initiated the broadcast.
+
+Broadcasting Events
+
+Events can be broadcasted from the server using `socket.broadcast.emit`. This event will
+get sent to all sockets except the one that broadcasted the event. The code below shows
+this off. When a new user joins the chat application, `socket.broadcast.emit` is used to
+send a message to all other users that someone new has joined.
+
+```js
+io.on("connection", (socket) => {
+  socket.broadcast.emit("message", "A new user has joined!");
+});
+```
+
+---
+
+### Sharing Your Location
