@@ -3306,3 +3306,9 @@ In this video, we looked at `getBoundingClientRect()` which will get the corner 
 ---
 
 ### Working with Element Sizes and Positions
+
+Using the methods discussed above, we can get a more accurate representation of a elements actual height and width without a scrollbar or anything attached.
+
+---
+
+### The DOM & Prototypes

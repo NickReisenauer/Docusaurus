@@ -4571,3 +4571,9 @@ In this video, we set up our horizontal and vertical arrays using the same techn
 ---
 
 ### Abstracting Maze Dimensions
+
+In this video, we abstracted away our maze dimensions into variables.
+
+---
+
+### Guiding Comments

@@ -1063,3 +1063,15 @@ There are three core things that we have to provide, the input, the entry, and t
 ---
 
 ### ES6 import/export
+
+In this video, we learned about how we can modularize our application with export and import statements that webpack helps us with.
+
+```js
+export { functionName };
+//
+import { functionName } from "./fileName.js";
+```
+
+---
+
+### Default Exports
