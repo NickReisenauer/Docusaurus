@@ -3312,3 +3312,9 @@ Using the methods discussed above, we can get a more accurate representation of 
 ---
 
 ### The DOM & Prototypes
+
+Every HTMLElement has an Element prototype which has a Node prototype which has a EventTarget prototype.
+
+---
+
+### Positioning the Tooltip

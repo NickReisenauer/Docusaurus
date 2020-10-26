@@ -4577,3 +4577,9 @@ In this video, we abstracted away our maze dimensions into variables.
 ---
 
 ### Guiding Comments
+
+In this video, we set up more functions to handle maze generation algorithms.
+
+---
+
+### Neighbor Coordinates

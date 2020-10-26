@@ -1075,3 +1075,11 @@ import { functionName } from "./fileName.js";
 ---
 
 ### Default Exports
+
+In this video, we learned about default exports. We can then name the function whatever we want in our importing file and name them whatever we want.
+
+Any given file can choose to export as many named exports as they want, and if they desire, they can set up a single default. In order to grab that default, you provide a name in the import statement before any braces for any named functions.
+
+---
+
+### Importing npm Modules
