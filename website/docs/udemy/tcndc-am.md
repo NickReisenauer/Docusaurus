@@ -4807,3 +4807,36 @@ socket.on("sendMessage", (message, callback) => {
 ---
 
 ### Form and Button States
+
+In this lesson, you’ll use a bit of DOM manipulation to provide users with a nicer
+experience.
+
+Form and Button States
+
+First up is the form that allows users to send a new message. This form should be disabled
+while messages are being sent to the server. This will prevent duplicate messages from
+being sent if the user was to double-click the button. The form can be disabled by setting
+the `disabled` attribute on the submit button.
+
+```js
+const $messageFormButton = $messageForm.querySelector("button");
+// Disable button
+$messageFormButton.setAttribute("disabled", "disabled");
+// Enable buttons
+$messageFormButton.removeAttribute("disabled");
+```
+
+The interaction with the text input can also be improved. The text input should be cleared
+and focused on when the form is submitted.
+
+```js
+const $messageFormInput = $messageForm.querySelector("input");
+// Clear the text from the input
+$messageFormInput.value = "";
+// Shift focus back to the input
+$messageFormInput.focus();
+```
+
+---
+
+### Rendering Messages

@@ -1083,3 +1083,14 @@ Any given file can choose to export as many named exports as they want, and if t
 ---
 
 ### Importing npm Modules
+
+In this video, we learned how to import modules from npm and how we can import them into our application using Webpack.
+
+```js
+npm i react
+import React from "react";
+```
+
+---
+
+### Setting up Babel with Webpack

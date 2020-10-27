@@ -4583,3 +4583,23 @@ In this video, we set up more functions to handle maze generation algorithms.
 ---
 
 ### Neighbor Coordinates
+
+In this video, we set up a function to check the coordinates of our neighboring cells.
+
+```js
+const stepThroughCell = (row, column) => {
+  if (grid[row][column]) return;
+  grid[row][column] = true;
+
+  const neighbors = [
+    [row - 1, column],
+    [row, column + 1],
+    [row + 1, column],
+    [row, column - 1],
+  ];
+};
+```
+
+---
+
+### Shuffling Neighbor Pairs

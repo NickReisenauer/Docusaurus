@@ -3318,3 +3318,9 @@ Every HTMLElement has an Element prototype which has a Node prototype which has 
 ---
 
 ### Positioning the Tooltip
+
+In this video, we used absolute positioning to determine where our tooltip should be.
+
+---
+
+### Handling Scrolling
