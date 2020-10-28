@@ -1094,3 +1094,9 @@ import React from "react";
 ---
 
 ### Setting up Babel with Webpack
+
+In this video, we learned that we can't use JSX inside of webpack without first teaching webpack how to run babel. We can teach webpack by using the babel loader. We then set up our loader to look for files ending in .js that can be compiled.
+
+---
+
+### One Component per File

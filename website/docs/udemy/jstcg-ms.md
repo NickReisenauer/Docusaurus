@@ -3324,3 +3324,9 @@ In this video, we used absolute positioning to determine where our tooltip shoul
 ---
 
 ### Handling Scrolling
+
+We can tell JavaScript to scroll to a specific element on the screen by getting the element's coordinates and then scrolling right to those coordinates.
+
+---
+
+### Working with <template> Tags
