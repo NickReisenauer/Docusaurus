@@ -4840,3 +4840,55 @@ $messageFormInput.focus();
 ---
 
 ### Rendering Messages
+
+In this lesson, you’ll learn how to use a client-side templating engine to render messages
+to the screen.
+
+Creating a Template
+
+First up, include these in your HTML. Mustache will be used to render the messages.
+Moment and Qs will be used a bit later in the section.
+
+```html
+<div id="messages"></div>
+```
+
+Second, a template needs to be created for the messages. The template below looks like
+pretty standard HTML. The only addition is `{{message}}`. This is the syntax used to inject a
+value into the template. In this case, the message text will be shown inside the templates
+paragraph.
+
+```html
+<script id="message-template" type="text/html">
+  <div>
+    <p>{{message}}</p>
+  </div>
+</script>
+```
+
+Rendering a Template
+
+The template can be compiled and rendered using client-side JavaScript. The snippet
+below renders a new instance of the message template to the screen whenever it
+receives a new `message` event.
+
+```js
+// Select the element in which you want to render the template
+const $messages = document.querySelector("#messages");
+// Select the template
+const messageTemplate = document.querySelector("#message-template").innerHTML;
+socket.on("message", (message) => {
+  // Render the template with the message data
+  const html = Mustache.render(messageTemplate, {
+    message,
+  });
+  // Insert the template into the DOM
+  $messages.insertAdjacentHTML("beforeend", html);
+});
+```
+
+[Mustache.js](https://github.com/janl/mustache.js/)
+
+---
+
+### Rendering Location Messages

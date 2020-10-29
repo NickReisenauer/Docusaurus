@@ -4603,3 +4603,9 @@ const stepThroughCell = (row, column) => {
 ---
 
 ### Shuffling Neighbor Pairs
+
+In this video, we shuffled our maze array so that we don't generate duplicate mazes.
+
+---
+
+### Determining Movement Direction

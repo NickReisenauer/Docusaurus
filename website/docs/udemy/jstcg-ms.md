@@ -3330,3 +3330,9 @@ We can tell JavaScript to scroll to a specific element on the screen by getting 
 ---
 
 ### Working with <template> Tags
+
+In this video, we learned about the template tag, this tag allows us to write out some HTML markup that we can easily access later in our JavaScript.
+
+---
+
+### Loading Scripts Dynamically

@@ -1100,3 +1100,9 @@ In this video, we learned that we can't use JSX inside of webpack without first 
 ---
 
 ### One Component per File
+
+In this video, we learned how to break up our application into individual components. This allows us to have our components in their own files and that makes it much easier to work with. Then we have to form a dependency tree of sorts. If a component needs access to another component, we import that one, and we export every component so that we can import them where needed. Then we have one parent component that imports the child components which each import their own children and so on.
+
+---
+
+### Source Maps with Webpack
