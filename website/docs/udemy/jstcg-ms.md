@@ -3336,3 +3336,9 @@ In this video, we learned about the template tag, this tag allows us to write ou
 ---
 
 ### Loading Scripts Dynamically
+
+In this video, we saw how we can create script tags with createElement and then append and run them dynamically.
+
+---
+
+### Setting Timers & Intervals

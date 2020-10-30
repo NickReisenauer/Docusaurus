@@ -1106,3 +1106,9 @@ In this video, we learned how to break up our application into individual compon
 ---
 
 ### Source Maps with Webpack
+
+In this video, we learned about Webpack source maps. This property tells webpack to tell us what file an error came from instead of saying `bundle.js`. This makes it much easier to track down errors in our application.
+
+---
+
+### Webpack Dev Server

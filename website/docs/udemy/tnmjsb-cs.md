@@ -4609,3 +4609,9 @@ In this video, we shuffled our maze array so that we don't generate duplicate ma
 ---
 
 ### Determining Movement Direction
+
+In this video, we added directions into our for loop / if statement so that we can know which direction we're travelling in.
+
+---
+
+### Updating Vertical Wall Values

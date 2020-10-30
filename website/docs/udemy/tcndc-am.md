@@ -4892,3 +4892,12 @@ socket.on("message", (message) => {
 ---
 
 ### Rendering Location Messages
+
+In this lesson, it’s on you to render a new template for shared locations.
+
+There are no notes for this challenge video, as no new information is covered. The goal is
+to give you experience using what was covered in previous lessons.
+
+---
+
+### Working with Time
