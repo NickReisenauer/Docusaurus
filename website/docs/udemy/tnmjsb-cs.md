@@ -4615,3 +4615,9 @@ In this video, we added directions into our for loop / if statement so that we c
 ---
 
 ### Updating Vertical Wall Values
+
+In this video, we worked on updating our vertical wall values.
+
+---
+
+### Udating Horizontal Wall Values

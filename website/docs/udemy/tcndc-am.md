@@ -4901,3 +4901,41 @@ to give you experience using what was covered in previous lessons.
 ---
 
 ### Working with Time
+
+In this lesson, you’ll learn how to work with time in JavaScript. This will allow you to show
+users when a given message was sent.
+
+Working with Time
+
+Every message is going to contain a timestamp. This timestamp will represent the time
+when the server sent the message out to everyone in the chat application. The server will
+be the one to generate the timestamp, which prevents the client from lying about when a
+message was sent.
+
+A JavaScript timestamp is nothing more than an integer. This integer represents the
+number of milliseconds since the Unix Epoch. The Unix Epoch was January 1st, 1970 at
+midnight, so the timestamp for the current point in time is a pretty big number.
+
+```js
+// The getTime method is used to get the timestamp
+const timestamp = new Date().getTime();
+console.log(timestamp); // Will print: 1549481884646
+```
+
+Once the server sends the message and timestamp to the client, the client can format the
+timestamp before rendering it. The Moment library provides an easy way to format
+timestamps to fit your needs. For the chat app, showing something like “11:48 am” works
+well.
+
+```js
+moment(message.createdAt).format("h:mm a");
+```
+
+You can find a complete list of the formatting options in the documentation below.
+
+[Moment](https://momentjs.com/)
+[Moment Formatting](https://momentjs.com/docs/#/displaying/format/)
+
+---
+
+### Timestamps for Location Messages

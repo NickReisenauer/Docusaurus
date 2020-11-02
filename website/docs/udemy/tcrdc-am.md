@@ -1112,3 +1112,9 @@ In this video, we learned about Webpack source maps. This property tells webpack
 ---
 
 ### Webpack Dev Server
+
+In this video, we set up our Webpack Dev Server. This allows us to remove the need for live-server and let webpack handle our dependencies.
+
+---
+
+### ES6 Class Properties

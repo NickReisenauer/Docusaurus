@@ -3342,3 +3342,9 @@ In this video, we saw how we can create script tags with createElement and then 
 ---
 
 ### Setting Timers & Intervals
+
+In this video, we learned about setTimeout and setInterval and also how to clear those with clearTimeout and clearInterval.
+
+---
+
+### The "location" and "history" Objects
