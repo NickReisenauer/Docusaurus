@@ -4621,3 +4621,9 @@ In this video, we worked on updating our vertical wall values.
 ---
 
 ### Udating Horizontal Wall Values
+
+In this video, we updated our horizonatl wall values.
+
+---
+
+### Validating Wall Structure

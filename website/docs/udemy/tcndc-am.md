@@ -4939,3 +4939,12 @@ You can find a complete list of the formatting options in the documentation belo
 ---
 
 ### Timestamps for Location Messages
+
+In this lesson, it’s on you to add timestamps for location messages.
+
+There are no notes for this challenge video, as no new information is covered. The goal is
+to give you experience using what was covered in previous lessons.
+
+---
+
+### Styling the Chat App

@@ -1118,3 +1118,11 @@ In this video, we set up our Webpack Dev Server. This allows us to remove the ne
 ---
 
 ### ES6 Class Properties
+
+In this video, we installed and set up a brand new babel plugin which allows us to access a cutting edge feature. In this case it was the transform-class-properties syntax that allowed us to customize how we use classes in our application. Here, we are now able to set up the state outside of the constructor function and we were also able to set the class properties to arrow functions. This is great for things like event handlers who have a hard time maintaining the `this` binding. The `this` binding in our new class syntax always point to the class instance which is perfect to access properties on the class.
+
+---
+
+## Using a Third-Party Component
+
+### Section Intro: Using a Third-Party Component

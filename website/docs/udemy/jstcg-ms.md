@@ -3348,3 +3348,9 @@ In this video, we learned about setTimeout and setInterval and also how to clear
 ---
 
 ### The "location" and "history" Objects
+
+In this video, we learned about the window location and history objects. We can view the past and current pages and history allows us to go forward or back using the history object.
+
+---
+
+### The "navigator" Object
