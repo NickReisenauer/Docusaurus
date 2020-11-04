@@ -1126,3 +1126,35 @@ In this video, we installed and set up a brand new babel plugin which allows us 
 ## Using a Third-Party Component
 
 ### Section Intro: Using a Third-Party Component
+
+In this section, we are going to use a third-party React Component in our app.
+
+---
+
+### Passing Children to Component
+
+In this video, we learned about passing children to our components. Instead of passing them props and accessing the props inside the component, we can type JSX inside the tags as if it were HTML and access the data from props.children.
+
+```js
+const Layout = (props) => {
+  return (
+    <div>
+      <p>Header</p>
+      {props.children}
+      <p>Footer</p>
+    </div>
+  );
+};
+
+ReactDOM.render(
+  <Layout>
+    <h1>Hi</h1>
+    <h2>Hello</h2>
+  </Layout>,
+  document.getElementById("app")
+);
+```
+
+---
+
+### Setting up React-Modal

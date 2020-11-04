@@ -4627,3 +4627,9 @@ In this video, we updated our horizonatl wall values.
 ---
 
 ### Validating Wall Structure
+
+In this video, we tested our code to ensure it creates unique maze walls.
+
+---
+
+### Iterating Over Walls

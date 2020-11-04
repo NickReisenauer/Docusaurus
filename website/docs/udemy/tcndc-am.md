@@ -4948,3 +4948,13 @@ to give you experience using what was covered in previous lessons.
 ---
 
 ### Styling the Chat App
+
+In this lesson, you’ll add styles to the chat application. This will give it a professional and
+polished feel.
+
+This lesson contains detailed instructions to apply the provided styles. Please refer to the
+video for a recap on working with the styles.
+
+---
+
+### Join Page

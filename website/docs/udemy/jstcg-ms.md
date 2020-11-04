@@ -3354,3 +3354,9 @@ In this video, we learned about the window location and history objects. We can 
 ---
 
 ### The "navigator" Object
+
+The navigator object gives us some useful information about what browser the user is using.
+
+---
+
+### Working with Dates
