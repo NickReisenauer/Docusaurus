@@ -4633,3 +4633,9 @@ In this video, we tested our code to ensure it creates unique maze walls.
 ---
 
 ### Iterating Over Walls
+
+In this video, we started looping over our walls array with `forEach`.
+
+---
+
+### Drawing Horizontal Segments

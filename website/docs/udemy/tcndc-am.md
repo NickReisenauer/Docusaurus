@@ -4958,3 +4958,41 @@ video for a recap on working with the styles.
 ---
 
 ### Join Page
+
+Below is the HTML for the join page. This will be `index.html`. The HTML for the chat page
+will move to `chat.html`. This will make sure that users visit the join page when pulling up
+the site.
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chat App</title>
+    <link rel="icon" href="/img/favicon.png" />
+    <link rel="stylesheet" href="/css/styles.min.css" />
+  </head>
+  <body>
+    <div class="centered-form">
+      <div class="centered-form__box">
+        <h1>Join</h1>
+        <form action="/chat.html">
+          <label>Display name</label>
+          <input
+            type="text"
+            name="username"
+            placeholder="Display name"
+            required
+          />
+          <label>Room</label>
+          <input type="text" name="room" placeholder="Room" required />
+          <button>Join</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
+```
+
+---
+
+### Socket.io Rooms

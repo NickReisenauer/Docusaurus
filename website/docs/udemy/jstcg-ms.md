@@ -3360,3 +3360,9 @@ The navigator object gives us some useful information about what browser the use
 ---
 
 ### Working with Dates
+
+`new Date()` initializes a new date constructor object.
+
+---
+
+### The 'Error' Object & Constructor Function
