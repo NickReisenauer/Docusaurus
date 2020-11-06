@@ -1158,3 +1158,9 @@ ReactDOM.render(
 ---
 
 ### Setting up React-Modal
+
+In this video, we set up a third party component, react-modal. We made a new file and set up the modal component inside the file and then imported / exported that from IndecisionApp. Then we used state in IndecisionApp to keep track of whether the modal was opened or closed.
+
+---
+
+### Bonus: Refactoring Other Stateless Functional Components

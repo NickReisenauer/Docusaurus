@@ -3366,3 +3366,9 @@ The navigator object gives us some useful information about what browser the use
 ---
 
 ### The 'Error' Object & Constructor Function
+
+The Error object is really useful for custom error handling.
+
+---
+
+### Wrap Up

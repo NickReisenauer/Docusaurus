@@ -4639,3 +4639,9 @@ In this video, we started looping over our walls array with `forEach`.
 ---
 
 ### Drawing Horizontal Segments
+
+In this video, we actually started drawing our wall onto the screen.
+
+---
+
+### Drawing Vertical Segments
