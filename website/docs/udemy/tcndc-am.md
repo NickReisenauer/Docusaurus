@@ -5036,3 +5036,13 @@ io.to("Center City").emit("message", generateMessage(message));
 ---
 
 ### Storing Users: Part 1
+
+In this lesson, you’ll create functions that allow the chat application to track which users
+are in which rooms.
+
+There are no notes for this challenge video, as no new information is covered. The goal is
+to give you experience using what was covered in previous lessons.
+
+---
+
+### Storing Users: Part 2

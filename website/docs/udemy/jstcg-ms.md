@@ -3372,3 +3372,11 @@ The Error object is really useful for custom error handling.
 ---
 
 ### Wrap Up
+
+In this video, we looked at element positioning as well as scrolling and the history object.
+
+---
+
+## Working with Event
+
+### Module Introduction

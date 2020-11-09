@@ -4645,3 +4645,9 @@ In this video, we actually started drawing our wall onto the screen.
 ---
 
 ### Drawing Vertical Segments
+
+In this video, we drew our wall segments and completed the maze alrogithm.
+
+---
+
+### Drawing the Goal

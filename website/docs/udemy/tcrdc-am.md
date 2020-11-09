@@ -1164,3 +1164,11 @@ In this video, we set up a third party component, react-modal. We made a new fil
 ---
 
 ### Bonus: Refactoring Other Stateless Functional Components
+
+In this video, we refactored our components to implicitly return JSX.
+
+---
+
+## Styling React
+
+### Section Intro: Styling React
