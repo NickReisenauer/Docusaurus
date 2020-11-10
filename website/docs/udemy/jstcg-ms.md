@@ -3380,3 +3380,24 @@ In this video, we looked at element positioning as well as scrolling and the his
 ## Working with Event
 
 ### Module Introduction
+
+In this video, we're going to go in-depth into JavaScript events. This module will take us beyond 'click' events.
+
+---
+
+### Introduction to Events in JavaScript
+
+- Events in JavaScript:
+  Run Code Upon Certain Events
+
+Exact Implementation Differs:
+e.g. Browser: addEventListener()
+e.g. NodeJS: on()
+
+Events Typically Transport Data
+addEventListener(event)
+on(event)
+
+---
+
+### Different Ways of Listening to Events

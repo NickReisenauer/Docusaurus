@@ -1172,3 +1172,13 @@ In this video, we refactored our components to implicitly return JSX.
 ## Styling React
 
 ### Section Intro: Styling React
+
+In this video, we're going to use SCSS to style our React app.
+
+### Setting up Webpack with SCSS
+
+In this video, we added support for SCSS. We added webpack loaders as well as new rules with tests for SCSS files. We then told webpack where to look for our style tags with an import statement into our `app.js`.
+
+---
+
+### Architecture and Header Styles

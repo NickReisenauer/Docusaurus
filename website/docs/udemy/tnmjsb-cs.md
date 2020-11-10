@@ -4651,3 +4651,9 @@ In this video, we drew our wall segments and completed the maze alrogithm.
 ---
 
 ### Drawing the Goal
+
+In this video, we drew the goal that our user is trying to get to.
+
+---
+
+### Drawing the Playing Ball
