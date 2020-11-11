@@ -1182,3 +1182,9 @@ In this video, we added support for SCSS. We added webpack loaders as well as ne
 ---
 
 ### Architecture and Header Styles
+
+In this video, we learned how to break up our styles into multiple files and we started by creating a base partial. We also created a header partial that we then loaded into our main file. We named our CSS using the BEM naming convention.
+
+---
+
+### Reset That Stuff

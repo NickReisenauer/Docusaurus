@@ -4657,3 +4657,9 @@ In this video, we drew the goal that our user is trying to get to.
 ---
 
 ### Drawing the Playing Ball
+
+In this video, we made sure our ball was generated in the right place and at the right size.
+
+---
+
+### Handling Keypresses

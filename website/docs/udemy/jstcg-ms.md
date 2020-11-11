@@ -3401,3 +3401,9 @@ on(event)
 ---
 
 ### Different Ways of Listening to Events
+
+There are a few different methods, such as `onClick` or assigning the value to a variable. The recommended way of doing things is to use `addEventListener` and then use the callback function.
+
+---
+
+### Removing Event Listeners
