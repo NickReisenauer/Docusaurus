@@ -1188,3 +1188,9 @@ In this video, we learned how to break up our styles into multiple files and we 
 ---
 
 ### Reset That Stuff
+
+In this video, we used `normalize.css` to reset our browsers default styling.
+
+---
+
+### Theming with Variables

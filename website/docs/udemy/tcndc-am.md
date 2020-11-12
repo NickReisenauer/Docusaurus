@@ -5118,3 +5118,32 @@ socket.emit("join", { username, room }, (error) => {
 ---
 
 ### Sending Messages to Rooms
+
+In this lesson, you’ll use the tracked user data to send messages to the correct rooms.
+
+Sending Messages to Room
+
+The `sendLocation` event listener below uses `getUser` to get the username and room for
+the user who sent the message. This allows the server to use `to` to emit the message to
+only users in that chat room.
+
+```js
+socket.on("sendLocation", (coords, callback) => {
+  // Get the username and room for the user
+  const user = getUser(socket.id);
+  // Emit the message to just that room
+  io.to(user.room).emit(
+    "locationMessage",
+    generateLocationMessage(
+      user.username,
+      `https://google.com/maps?q=${coords.latitude},${coords.longitude}`
+    )
+  );
+  // Send an acknowledgement to the client
+  callback();
+});
+```
+
+---
+
+### Rendering User List

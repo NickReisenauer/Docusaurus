@@ -3407,3 +3407,9 @@ There are a few different methods, such as `onClick` or assigning the value to a
 ---
 
 ### Removing Event Listeners
+
+We can remove event listener by using `removeEventListener`.
+
+---
+
+### The "event" object

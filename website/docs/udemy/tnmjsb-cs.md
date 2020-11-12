@@ -4663,3 +4663,9 @@ In this video, we made sure our ball was generated in the right place and at the
 ---
 
 ### Handling Keypresses
+
+In this video, we set up support for keypresses.
+
+---
+
+### Adding Keyboard Controls
