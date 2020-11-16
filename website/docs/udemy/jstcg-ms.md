@@ -3413,3 +3413,9 @@ We can remove event listener by using `removeEventListener`.
 ---
 
 ### The "event" object
+
+The `event` object gives us everything we need to know about the event that was fired.
+
+---
+
+### Supported Event Types

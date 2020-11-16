@@ -4669,3 +4669,9 @@ In this video, we set up support for keypresses.
 ---
 
 ### Adding Keyboard Controls
+
+In this video, we added support for key presses to move around our ball.
+
+---
+
+### Disabling Gravity

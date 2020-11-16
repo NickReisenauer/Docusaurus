@@ -1194,3 +1194,9 @@ In this video, we used `normalize.css` to reset our browsers default styling.
 ---
 
 ### Theming with Variables
+
+In this video, we introduced a new way to structure our styles by defining a settings file. We can then import these settings and variables into other files where we can reference them and if we want to change something we only have to change it in one place.
+
+---
+
+### Big Button & Options List
