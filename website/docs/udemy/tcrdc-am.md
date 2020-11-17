@@ -1200,3 +1200,9 @@ In this video, we introduced a new way to structure our styles by defining a set
 ---
 
 ### Big Button & Options List
+
+In this video, we set up our button file with our big button and our regular / link button.
+
+---
+
+### Styling the Options List

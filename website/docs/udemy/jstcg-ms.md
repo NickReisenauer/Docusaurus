@@ -3419,3 +3419,9 @@ The `event` object gives us everything we need to know about the event that was 
 ---
 
 ### Supported Event Types
+
+Instead of just `click` events, we have mouse and keyboard and screen sizing and other events available to us.
+
+---
+
+### Working with "preventDefault()"

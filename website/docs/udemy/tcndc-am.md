@@ -5202,3 +5202,33 @@ socket.on("roomData", ({ room, users }) => {
 ---
 
 ### Automatic Scrolling
+
+In this lesson, you’ll add automatic scrolling to the chat application.
+
+This lesson contains detailed instructions covering automatic scrolling. The function used
+to enable autoscrolling is below, but please refer to the lesson video for a recap of how it
+was designed.
+
+```js
+const autoscroll = () => {
+  // New message element
+  const $newMessage = $messages.lastElementChild;
+  // Height of the new message
+  const newMessageStyles = getComputedStyle($newMessage);
+  const newMessageMargin = parseInt(newMessageStyles.marginBottom);
+  const newMessageHeight = $newMessage.offsetHeight + newMessageMargin;
+  // Visible height
+  const visibleHeight = $messages.offsetHeight;
+  // Height of messages container
+  const containerHeight = $messages.scrollHeight;
+  // How far have I scrolled?
+  const scrollOffset = $messages.scrollTop + visibleHeight;
+  if (containerHeight - newMessageHeight <= scrollOffset) {
+    $messages.scrollTop = $messages.scrollHeight;
+  }
+};
+```
+
+---
+
+### Deploying the Chat Application

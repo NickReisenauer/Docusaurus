@@ -4675,3 +4675,9 @@ In this video, we added support for key presses to move around our ball.
 ---
 
 ### Disabling Gravity
+
+In this video, we disabled the gravity on our world engine.
+
+---
+
+### Detecting a Win
