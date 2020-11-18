@@ -4681,3 +4681,9 @@ In this video, we disabled the gravity on our world engine.
 ---
 
 ### Detecting a Win
+
+In this video, we added some checks to see if the user has won by touching the goal object.
+
+---
+
+### Adding a Win Animation

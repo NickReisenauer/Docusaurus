@@ -1206,3 +1206,9 @@ In this video, we set up our button file with our big button and our regular / l
 ---
 
 ### Styling the Options List
+
+In this video, we worked on adding more styling to our application.
+
+---
+
+### Styling Option Item

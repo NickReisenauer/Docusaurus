@@ -3425,3 +3425,9 @@ Instead of just `click` events, we have mouse and keyboard and screen sizing and
 ---
 
 ### Working with "preventDefault()"
+
+In this video we learned how to prevent default form behavior with preventDefault().
+
+---
+
+### Understanding "Capturing" and "Bubbling" Phases

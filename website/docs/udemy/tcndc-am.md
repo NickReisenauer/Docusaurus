@@ -5232,3 +5232,10 @@ const autoscroll = () => {
 ---
 
 ### Deploying the Chat Application
+
+In this lesson, it’s on you to deploy the chat application to production!\
+
+There are no notes for this challenge video, as no new information is covered. The goal is
+to give you experience using what was covered in previous lessons.
+
+---
