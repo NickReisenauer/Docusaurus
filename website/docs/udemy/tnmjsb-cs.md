@@ -4687,3 +4687,9 @@ In this video, we added some checks to see if the user has won by touching the g
 ---
 
 ### Adding a Win Animation
+
+In this video, we added a feature that will turn off the gravity if the user wins the game.
+
+---
+
+### Stretching the Canvas

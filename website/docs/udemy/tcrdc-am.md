@@ -1212,3 +1212,9 @@ In this video, we worked on adding more styling to our application.
 ---
 
 ### Styling Option Item
+
+In this video, we styled our Option Item with SCSS.
+
+---
+
+### Styling React-Modal

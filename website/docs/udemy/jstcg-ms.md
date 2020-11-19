@@ -3431,3 +3431,9 @@ In this video we learned how to prevent default form behavior with preventDefaul
 ---
 
 ### Understanding "Capturing" and "Bubbling" Phases
+
+When we have an event listener in a nested HTML structure the browser has to go through the capture phase as well as the bubble phase.
+
+---
+
+### Event Propagation & "stopPropagation()"
