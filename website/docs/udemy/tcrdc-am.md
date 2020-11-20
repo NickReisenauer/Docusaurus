@@ -1218,3 +1218,9 @@ In this video, we styled our Option Item with SCSS.
 ---
 
 ### Styling React-Modal
+
+In this video, we looked into the custom Modal classes and overrode some of them so that we could apply our own styles.
+
+---
+
+### Mobile Considerations

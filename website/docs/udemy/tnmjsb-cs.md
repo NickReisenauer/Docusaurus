@@ -4693,3 +4693,7 @@ In this video, we added a feature that will turn off the gravity if the user win
 ---
 
 ### Stretching the Canvas
+
+In this video, we used `window.innerHeight` and `window.innerWidth` to size our canvas to fit the screen.
+
+---

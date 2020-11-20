@@ -3437,3 +3437,9 @@ When we have an event listener in a nested HTML structure the browser has to go 
 ---
 
 ### Event Propagation & "stopPropagation()"
+
+In this video, we learned about event bubbling and stopPropagation events
+
+---
+
+### Using Event Delegation
