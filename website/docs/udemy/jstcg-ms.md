@@ -3443,3 +3443,9 @@ In this video, we learned about event bubbling and stopPropagation events
 ---
 
 ### Using Event Delegation
+
+In this video, we learned about Event Delegation.
+
+---
+
+### Triggering DOM Elements Programmatically

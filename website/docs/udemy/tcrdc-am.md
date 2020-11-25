@@ -1224,3 +1224,23 @@ In this video, we looked into the custom Modal classes and overrode some of them
 ---
 
 ### Mobile Considerations
+
+In this video, we finished our application by styling our mobile screen size.
+
+---
+
+### Bonus: Favicon
+
+In this video, we added a favicon to our project.
+
+---
+
+## React-Router
+
+### Section Intro: React Router
+
+In this video, we started our new project called Expensify.
+
+We're going to have a database, authentication, deployment, user accounts, sorting, adding, removing, validation, routing, etc...
+
+### Server vs. Client Routing
